@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数据结构学习总结-（2.3）顺序表结构插入算法]]></title>
+    <url>%2F2019%2F06%2F15%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-%EF%BC%882.3%EF%BC%89%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%BB%93%E6%9E%84%E6%8F%92%E5%85%A5%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>代码学习</category>
+      </categories>
+      <tags>
+        <tag>学习总结</tag>
+        <tag>数据结构</tag>
+        <tag>数据结构-学习总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[大学学习个人计划及路线规划]]></title>
     <url>%2F2019%2F06%2F15%2F%E5%A4%A7%E5%AD%A6%E5%AD%A6%E4%B9%A0%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E5%8F%8A%E8%B7%AF%E7%BA%BF%E8%A7%84%E5%88%92%2F</url>
     <content type="text"><![CDATA[大一暑假 学习和预习数据结构 总结 使用 C++进阶 总结 java基础总结 Unity总结+教案 绘画进阶（次要） –（本文未完）]]></content>
@@ -14,7 +27,7 @@
   </entry>
   <entry>
     <title><![CDATA[数据结构学习总结-（2.2）顺序表结构]]></title>
-    <url>%2F2019%2F06%2F14%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-%EF%BC%882-2%EF%BC%89%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%BB%93%E6%9E%84%2F</url>
+    <url>%2F2019%2F06%2F14%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-%EF%BC%882.2%EF%BC%89%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%BB%93%E6%9E%84%2F</url>
     <content type="text"><![CDATA[顺序表结构 顺序存储结构的线性表–顺序表 定义：指的是用一段地址连续的存储单元依次存储线性表的数据元素（数组） 顺序表的构成 需要定义线性表的最大存储空间 #define int Max_SIZE = 255; 线性表里需要有统一类型的元素集合 12345678910111213141516#define int MAX_SIZE = 255;//最大存储长度 /*定义线性表*/typedef int ElemType;//给int起一个别名 ElementTypetypedef struct&#123; int num;char* name;&#125;ElementType;/*定义顺序表结构*/typedef struct &#123; ElementType Datas[MAX_SIZE]; int length;//当前长度&#125;SeqList; –(本文完)&lt;待完善&gt;]]></content>
       <categories>
         <category>代码学习</category>
