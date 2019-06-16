@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="根据顺序表的抽象数据类型包含的操作完成情况： 增加元素（完成） bool Push_back(T)   查找元素（完成） bool GetElement(int index,T&amp;amp;c)   扩容（完成） bool realloc()   删除元素 插入元素 清空元素   1234567891011121314151617181920212223242526272829303132333435">
+<meta name="description" content="顺序表结构 顺序存储结构的线性表–顺序表 定义：指的是用一段地址连续的存储单元依次存储线性表的数据元素（数组）  顺序表的构成 需要定义线性表的最大存储空间  #define int Max_SIZE = 255;   线性表里需要有统一类型的元素集合      12345678910111213141516#define int MAX_SIZE = 255;//最大存储长度  /*定义线性表*">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构学习总结-（2.3）顺序表结构代码实现">
-<meta property="og:url" content="http://yoursite.com/2019/06/15/数据结构学习总结-（2.3）顺序表结构插入算法/index.html">
+<meta property="og:title" content="数据结构学习总结-（2.2）顺序表存储结构">
+<meta property="og:url" content="http://yoursite.com/2019/06/14/数据结构学习总结-（2.2）顺序表存储结构/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="根据顺序表的抽象数据类型包含的操作完成情况： 增加元素（完成） bool Push_back(T)   查找元素（完成） bool GetElement(int index,T&amp;amp;c)   扩容（完成） bool realloc()   删除元素 插入元素 清空元素   1234567891011121314151617181920212223242526272829303132333435">
+<meta property="og:description" content="顺序表结构 顺序存储结构的线性表–顺序表 定义：指的是用一段地址连续的存储单元依次存储线性表的数据元素（数组）  顺序表的构成 需要定义线性表的最大存储空间  #define int Max_SIZE = 255;   线性表里需要有统一类型的元素集合      12345678910111213141516#define int MAX_SIZE = 255;//最大存储长度  /*定义线性表*">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-15T17:00:34.500Z">
+<meta property="og:updated_time" content="2019-06-16T03:58:54.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构学习总结-（2.3）顺序表结构代码实现">
-<meta name="twitter:description" content="根据顺序表的抽象数据类型包含的操作完成情况： 增加元素（完成） bool Push_back(T)   查找元素（完成） bool GetElement(int index,T&amp;amp;c)   扩容（完成） bool realloc()   删除元素 插入元素 清空元素   1234567891011121314151617181920212223242526272829303132333435">
+<meta name="twitter:title" content="数据结构学习总结-（2.2）顺序表存储结构">
+<meta name="twitter:description" content="顺序表结构 顺序存储结构的线性表–顺序表 定义：指的是用一段地址连续的存储单元依次存储线性表的数据元素（数组）  顺序表的构成 需要定义线性表的最大存储空间  #define int Max_SIZE = 255;   线性表里需要有统一类型的元素集合      12345678910111213141516#define int MAX_SIZE = 255;//最大存储长度  /*定义线性表*">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/15/数据结构学习总结-（2.3）顺序表结构插入算法/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/14/数据结构学习总结-（2.2）顺序表存储结构/">
 
 
 
 
 
-  <title>数据结构学习总结-（2.3）顺序表结构代码实现 | 双子星Binaryؼ</title>
+  <title>数据结构学习总结-（2.2）顺序表存储结构 | 双子星Binaryؼ</title>
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/15/数据结构学习总结-（2.3）顺序表结构插入算法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/14/数据结构学习总结-（2.2）顺序表存储结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ShuHaoHwang">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（2.3）顺序表结构代码实现</h1>
+          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（2.2）顺序表存储结构</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-15T10:16:28+08:00">
-                2019-06-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-14T23:32:42+08:00">
+                2019-06-14
               </time>
             
 
@@ -379,28 +379,24 @@
       
 
       
-        <h5 id="根据顺序表的抽象数据类型包含的操作完成情况："><a href="#根据顺序表的抽象数据类型包含的操作完成情况：" class="headerlink" title="根据顺序表的抽象数据类型包含的操作完成情况："></a>根据顺序表的抽象数据类型包含的操作完成情况：</h5><ul>
-<li><del>增加元素</del>（完成）<ul>
-<li>bool Push_back(T)</li>
+        <h4 id="顺序表结构"><a href="#顺序表结构" class="headerlink" title="顺序表结构"></a>顺序表结构</h4><ul>
+<li>顺序存储结构的线性表–顺序表</li>
+<li>定义：指的是用一段地址<strong>连续</strong>的存储单元依次存储线性表的数据元素（数组）</li>
+</ul>
+<h4 id="顺序表的构成"><a href="#顺序表的构成" class="headerlink" title="顺序表的构成"></a>顺序表的构成</h4><ul>
+<li><p>需要定义线性表的最大存储空间</p>
+<ul>
+<li>#define int Max_SIZE = 255;</li>
 </ul>
 </li>
-<li><del>查找元素</del>（完成）<ul>
-<li>bool GetElement(int index,T&amp;c)</li>
-</ul>
+<li><p>线性表里需要有统一类型的元素集合</p>
 </li>
-<li><del>扩容</del>（完成）<ul>
-<li>bool realloc()</li>
-</ul>
-</li>
-<li>删除元素</li>
-<li>插入元素</li>
-<li>清空元素</li>
 </ul>
 <hr>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 3 <span class="comment">//定义最大容量</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqList</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T* datas; <span class="comment">//线性表</span></span><br><span class="line">	<span class="keyword">int</span> length = <span class="number">0</span>;<span class="comment">//实际容量</span></span><br><span class="line">	<span class="keyword">int</span> capacity;<span class="comment">//总容量</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*构造函数*/</span></span><br><span class="line">	SqList() &#123;</span><br><span class="line">		capacity = MAX_SIZE;<span class="comment">//总容量等于最大容量（进行初始化）</span></span><br><span class="line">		datas = <span class="keyword">new</span> T[capacity];</span><br><span class="line"></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"初始化成功！！！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*获得总容量*/</span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> length;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*查找并取值操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">GetElement</span><span class="params">(<span class="keyword">int</span> index, T&amp; c)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt; length)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		c = datas[index];</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*增加元素操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">Push_back</span><span class="params">(T NewElem)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (length == MAX_SIZE)<span class="comment">//判断顺序表是否满了</span></span><br><span class="line">		&#123;<span class="comment">//如果满了调用扩容操作</span></span><br><span class="line">			<span class="keyword">if</span>(!<span class="built_in">realloc</span>())<span class="comment">//如果扩容失败那么Push_back也失败</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		datas[length] = NewElem;</span><br><span class="line">		length++;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="comment">/*扩容操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">realloc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		T* p = <span class="keyword">new</span> T[<span class="number">2</span> * capacity];<span class="comment">//最大容量扩大两倍</span></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"扩容成功！！！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">if</span> (!p)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;<span class="comment">//把原顺序表赋值到新顺序表</span></span><br><span class="line">			p[i] = datas[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">delete</span> datas;<span class="comment">//清空原线性表里的元素</span></span><br><span class="line">		datas = p;<span class="comment">//把新扩容后线性表的地址赋给datas</span></span><br><span class="line">		p = null;<span class="comment">//避免临时指针p变为野指针</span></span><br><span class="line">		capacity *= <span class="number">2</span>;<span class="comment">//总容量扩大</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;<span class="comment">//更换扩容操作完成后宣布扩容操作成功</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//打印顺序表操作</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="comment">//模版</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Print</span><span class="params">(SqList&lt;T&gt;&amp; L)</span> </span>&#123;</span><br><span class="line">	T e;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; L.GetLength(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		L.GetElement(i, e);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; e &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	SqList&lt;<span class="keyword">char</span>&gt; List;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (!List.GetElement(<span class="number">1</span>, ch))</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"未找到"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	List.Push_back(<span class="string">'A'</span>); Print(List);</span><br><span class="line">	List.Push_back(<span class="string">'B'</span>); Print(List);</span><br><span class="line">	List.Push_back(<span class="string">'C'</span>); Print(List);</span><br><span class="line">	List.Push_back(<span class="string">'D'</span>); Print(List);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int MAX_SIZE = 255;<span class="comment">//最大存储长度</span></span></span><br><span class="line">  <span class="comment">/*定义线性表*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;<span class="comment">//给int起一个别名 ElementType</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line"><span class="keyword">char</span>* name;</span><br><span class="line">&#125;ElementType;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*定义顺序表结构*/</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	ElementType Datas[MAX_SIZE];</span><br><span class="line">	<span class="keyword">int</span> length;<span class="comment">//当前长度</span></span><br><span class="line">&#125;SeqList;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>–(本文未完)</p>
+<p>–(本文完)&lt;待完善&gt;</p>
 
       
     </div>
@@ -474,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/15/大学学习个人计划及路线规划/" rel="next" title="大学学习个人计划及路线规划">
-                <i class="fa fa-chevron-left"></i> 大学学习个人计划及路线规划
+              <a href="/2019/06/14/石膏球（练习）/" rel="next" title="石膏球（练习）">
+                <i class="fa fa-chevron-left"></i> 石膏球（练习）
               </a>
             
           </div>
@@ -483,6 +479,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/15/大学学习个人计划及路线规划/" rel="prev" title="大学学习个人计划及路线规划">
+                大学学习个人计划及路线规划 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -637,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#根据顺序表的抽象数据类型包含的操作完成情况："><span class="nav-number">1.</span> <span class="nav-text">根据顺序表的抽象数据类型包含的操作完成情况：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序表结构"><span class="nav-number">1.</span> <span class="nav-text">顺序表结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序表的构成"><span class="nav-number">2.</span> <span class="nav-text">顺序表的构成</span></a></li></ol></div>
             
 
           </div>
