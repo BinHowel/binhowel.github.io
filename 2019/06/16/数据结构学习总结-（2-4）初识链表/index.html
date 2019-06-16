@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="绘画练习,素描,">
+  <meta name="keywords" content="数据结构,学习总结,数据结构-学习总结,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="keywords" content="绘画练习,素描">
+<meta name="description" content="链表基本概念 结点包括数据域和指针域。 链表是有n个结点链结成，第一个结点的存储位置叫做头指针，最后一个结点的指针为“空”。   相较于顺序表存储结构的优点： 不用定义时规定长度。 存储的元素个数不受限制。 插入和删除元素时，不用移动其他元素。     链表的头指针和头结点 基本概念 头指针：链表中第一个结点的储存位置。 头结点：在单链表的第一个结点前附设的一个结点。       头指针 头结点">
+<meta name="keywords" content="数据结构,学习总结,数据结构-学习总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="石膏球（练习）">
-<meta property="og:url" content="http://yoursite.com/2019/06/14/石膏球（练习）/index.html">
+<meta property="og:title" content="数据结构学习总结-(2.4)初识链表">
+<meta property="og:url" content="http://yoursite.com/2019/06/16/数据结构学习总结-（2-4）初识链表/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
+<meta property="og:description" content="链表基本概念 结点包括数据域和指针域。 链表是有n个结点链结成，第一个结点的存储位置叫做头指针，最后一个结点的指针为“空”。   相较于顺序表存储结构的优点： 不用定义时规定长度。 存储的元素个数不受限制。 插入和删除元素时，不用移动其他元素。     链表的头指针和头结点 基本概念 头指针：链表中第一个结点的储存位置。 头结点：在单链表的第一个结点前附设的一个结点。       头指针 头结点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/06/14/石膏球（练习）/Binary丶RH-22-088-22.jpg">
-<meta property="og:updated_time" content="2019-06-16T03:59:47.453Z">
+<meta property="og:updated_time" content="2019-06-16T13:00:03.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="石膏球（练习）">
-<meta name="twitter:image" content="http://yoursite.com/2019/06/14/石膏球（练习）/Binary丶RH-22-088-22.jpg">
+<meta name="twitter:title" content="数据结构学习总结-(2.4)初识链表">
+<meta name="twitter:description" content="链表基本概念 结点包括数据域和指针域。 链表是有n个结点链结成，第一个结点的存储位置叫做头指针，最后一个结点的指针为“空”。   相较于顺序表存储结构的优点： 不用定义时规定长度。 存储的元素个数不受限制。 插入和删除元素时，不用移动其他元素。     链表的头指针和头结点 基本概念 头指针：链表中第一个结点的储存位置。 头结点：在单链表的第一个结点前附设的一个结点。       头指针 头结点">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/14/石膏球（练习）/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/16/数据结构学习总结-（2-4）初识链表/">
 
 
 
 
 
-  <title>石膏球（练习） | 双子星Binaryؼ</title>
+  <title>数据结构学习总结-(2.4)初识链表 | 双子星Binaryؼ</title>
   
 
 
@@ -284,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/14/石膏球（练习）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/16/数据结构学习总结-（2-4）初识链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ShuHaoHwang">
@@ -301,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">石膏球（练习）</h1>
+          <h1 class="post-title" itemprop="name headline">数据结构学习总结-(2.4)初识链表</h1>
         
 
         <div class="post-meta">
@@ -313,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-14T16:24:57+08:00">
-                2019-06-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-16T20:07:28+08:00">
+                2019-06-16
               </time>
             
 
@@ -336,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/绘画/" itemprop="url" rel="index">
-                    <span itemprop="name">绘画</span>
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
                   </a>
                 </span>
 
@@ -378,8 +379,59 @@
       
 
       
-        <img src="/2019/06/14/石膏球（练习）/Binary丶RH-22-088-22.jpg" title="石膏球">
-<p><strong><a id="more"></a></strong></p>
+        <h4 id="链表基本概念"><a href="#链表基本概念" class="headerlink" title="链表基本概念"></a>链表基本概念</h4><ul>
+<li>结点包括数据域和指针域。</li>
+<li>链表是有n个结点链结成，第一个结点的存储位置叫做头指针，最后一个结点的指针为“空”。</li>
+</ul>
+<ul>
+<li><strong>相较于顺序表存储结构的优点</strong>：<ol>
+<li>不用定义时规定长度。</li>
+<li>存储的元素个数不受限制。</li>
+<li>插入和删除元素时，不用移动其他元素。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="链表的头指针和头结点"><a href="#链表的头指针和头结点" class="headerlink" title="链表的头指针和头结点"></a>链表的头指针和头结点</h4><ul>
+<li>基本概念<ul>
+<li>头指针：链表中第一个结点的储存位置。</li>
+<li>头结点：在单链表的第一个结点前附设的一个结点。</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">头指针</th>
+<th align="center">头结点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">若链表有头结点，则是指向头结点的指针；若没有则是链表指向第一个结点的指针</td>
+<td align="center">头结点是为了操作的<strong>统一和方便</strong>而设立的，放在第一个结点之前  <font color="red">其数据域一般无意义</font>（可以存储链表的长度）</td>
+</tr>
+<tr>
+<td align="center">头指针具有表示作用，所以常常有头指针表示链表的名字</td>
+<td align="center">有了头结点，在第一个结点前插入和删除第一个结点时，操作与其他结点的操作就统一了</td>
+</tr>
+<tr>
+<td align="center">无论链表是否为空，头指针均不为空。头指针是链表的<strong>必要</strong>元素</td>
+<td align="center"><font color="red">头结点不一定是链表的必须要素</font></td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="链表存储结构"><a href="#链表存储结构" class="headerlink" title="链表存储结构"></a>链表存储结构</h4><ul>
+<li>链表存储结构的特点是如何将数据域与“指标”（指针域）配对，以及指示下一条数据的内存位置。</li>
+<li>链表存储结构中，数据存储在内存中<strong>分散</strong>的位置。各个数据由一个指针相互连接<ul>
+<li>一个数据中的指针域存放的是<strong>下一个</strong>数据的地址。</li>
+</ul>
+</li>
+<li>由于数据储存在不同的位置，每一个数据只能通过指针域中的指针来访问</li>
+</ul>
+<ul>
+<li><strong>删除</strong>：删除元素时只需将前一个数据的指针域指向要删除数据的下一个数据的地址即可，从而避免了顺序表存储结构多次的数据调换的麻烦。</li>
+<li><strong>添加</strong>：添加只需把要添加的位置的前一个数据的指针指向新数据，再让新数据的“指标”指向后一个数据的地址即可。</li>
+</ul>
 
       
     </div>
@@ -421,9 +473,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/绘画练习/" rel="tag"># 绘画练习</a>
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
-            <a href="/tags/素描/" rel="tag"># 素描</a>
+            <a href="/tags/学习总结/" rel="tag"># 学习总结</a>
+          
+            <a href="/tags/数据结构-学习总结/" rel="tag"># 数据结构-学习总结</a>
           
         </div>
       
@@ -451,8 +505,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/14/Java学习心得体会/" rel="next" title="Java学习心得体会">
-                <i class="fa fa-chevron-left"></i> Java学习心得体会
+              <a href="/2019/06/15/数据结构学习总结-（2.3）顺序表存储结构代码、算法实现/" rel="next" title="数据结构学习总结-（2.3）顺序表存储结构代码、算法实现">
+                <i class="fa fa-chevron-left"></i> 数据结构学习总结-（2.3）顺序表存储结构代码、算法实现
               </a>
             
           </div>
@@ -460,10 +514,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/14/数据结构学习总结-（2.2）顺序表存储结构/" rel="prev" title="数据结构学习总结-（2.2）顺序表存储结构">
-                数据结构学习总结-（2.2）顺序表存储结构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -520,8 +570,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -599,6 +658,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#链表基本概念"><span class="nav-number">1.</span> <span class="nav-text">链表基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链表的头指针和头结点"><span class="nav-number">2.</span> <span class="nav-text">链表的头指针和头结点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链表存储结构"><span class="nav-number">3.</span> <span class="nav-text">链表存储结构</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
