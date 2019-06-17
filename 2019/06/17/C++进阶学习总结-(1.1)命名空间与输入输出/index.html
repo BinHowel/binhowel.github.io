@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="学习总结,C++,C++学习总结,">
+  <meta name="keywords" content="C++,学习总结,C++学习总结,">
 
 
 
@@ -80,19 +80,21 @@
 
 
 <meta name="description" content="命名空间的基本概念简介基本概念 命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数    .">
-<meta name="keywords" content="学习总结,C++,C++学习总结">
+<meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-(1.1)命名空间与输入输出">
 <meta property="og:url" content="http://yoursite.com/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
 <meta property="og:description" content="命名空间的基本概念简介基本概念 命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数    .">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/1.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/2.png">
-<meta property="og:updated_time" content="2019-06-17T14:54:54.329Z">
+<meta property="og:image" content="http://yoursite.com/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/3.png">
+<meta property="og:updated_time" content="2019-06-17T14:57:32.954Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-(1.1)命名空间与输入输出">
 <meta name="twitter:description" content="命名空间的基本概念简介基本概念 命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数    .">
-<meta name="twitter:image" content="http://yoursite.com/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/2.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/1.jpg">
 
 
 
@@ -398,7 +400,10 @@
 <li><p>假设同一个工程里面有两个project.cpp和project2.cpp文件并分别给两个程序员去编写，在编写过程中张三和李四都定义了同名、返回值相同、参数也相同的void Print()函数，在编译时将会出现：</p>
 <p><strong>找到一个或多个多重定义的符号</strong></p>
 <p><strong>void_cdecl Print(void)已在project2.obj中定义</strong>的错误</p>
-<p>｛%asset_img 1.jpg %｝</p>
+<img src="/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/1.jpg">
+
+
+
 </li>
 </ul>
 <ul>
@@ -423,7 +428,10 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"project2.h"</span><span class="comment">//张三命名空间定义所在的头文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> ZhangSan;<span class="comment">//使用的张三的命名空间</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	Print();<span class="comment">//张三的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行情况:</p>
-<p>｛%asset_img 3.png %｝</p>
+<img src="/2019/06/17/C++进阶学习总结-(1.1)命名空间与输入输出/3.png">
+
+
+
 </li>
 </ul>
 <p>–(本文未完)&lt;原创&gt;</p>
@@ -468,9 +476,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/学习总结/" rel="tag"># 学习总结</a>
-          
             <a href="/tags/C/" rel="tag"># C++</a>
+          
+            <a href="/tags/学习总结/" rel="tag"># 学习总结</a>
           
             <a href="/tags/C-学习总结/" rel="tag"># C++学习总结</a>
           
