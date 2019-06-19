@@ -79,22 +79,23 @@
 
 
 
-<meta name="description" content="循环链表 相较于非循环链表 在非循环链表中，最后一个元素的next指针是空指针，造成浪费。 每次寻找后继指针的时候都要重新从头开始找。   循环链表 尾指针直接指向表头，使最后一个元素的next指针被利用起来。 从每一个元素开始都能遍历表中每一个元素。 便于类似于链表合并这样的算法实现。            其他不同：  循环链表与非循环链表的判断条件发生了变化    * | 循环链表">
+<meta name="description" content="循环链表 相较于非循环链表 在非循环链表中，最后一个元素的next指针是空指针，造成浪费。 每次寻找后继指针的时候都要重新从头开始找。   循环链表 尾指针直接指向表头，使最后一个元素的next指针被利用起来。 从每一个元素开始都能遍历表中每一个元素。 便于类似于链表合并这样的算法实现。            其他不同：  循环链表与非循环链表的判断条件发生了变化                判">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（2.6）循环链表（单向链表）、清空链表与销毁链表">
 <meta property="og:url" content="http://yoursite.com/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="循环链表 相较于非循环链表 在非循环链表中，最后一个元素的next指针是空指针，造成浪费。 每次寻找后继指针的时候都要重新从头开始找。   循环链表 尾指针直接指向表头，使最后一个元素的next指针被利用起来。 从每一个元素开始都能遍历表中每一个元素。 便于类似于链表合并这样的算法实现。            其他不同：  循环链表与非循环链表的判断条件发生了变化    * | 循环链表">
+<meta property="og:description" content="循环链表 相较于非循环链表 在非循环链表中，最后一个元素的next指针是空指针，造成浪费。 每次寻找后继指针的时候都要重新从头开始找。   循环链表 尾指针直接指向表头，使最后一个元素的next指针被利用起来。 从每一个元素开始都能遍历表中每一个元素。 便于类似于链表合并这样的算法实现。            其他不同：  循环链表与非循环链表的判断条件发生了变化                判">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/3.png">
 <meta property="og:image" content="http://yoursite.com/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/4.png">
-<meta property="og:updated_time" content="2019-06-19T10:03:00.334Z">
+<meta property="og:updated_time" content="2019-06-19T10:06:25.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（2.6）循环链表（单向链表）、清空链表与销毁链表">
-<meta name="twitter:description" content="循环链表 相较于非循环链表 在非循环链表中，最后一个元素的next指针是空指针，造成浪费。 每次寻找后继指针的时候都要重新从头开始找。   循环链表 尾指针直接指向表头，使最后一个元素的next指针被利用起来。 从每一个元素开始都能遍历表中每一个元素。 便于类似于链表合并这样的算法实现。            其他不同：  循环链表与非循环链表的判断条件发生了变化    * | 循环链表">
+<meta name="twitter:description" content="循环链表 相较于非循环链表 在非循环链表中，最后一个元素的next指针是空指针，造成浪费。 每次寻找后继指针的时候都要重新从头开始找。   循环链表 尾指针直接指向表头，使最后一个元素的next指针被利用起来。 从每一个元素开始都能遍历表中每一个元素。 便于类似于链表合并这样的算法实现。            其他不同：  循环链表与非循环链表的判断条件发生了变化                判">
 <meta name="twitter:image" content="http://yoursite.com/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/1.png">
 
 
@@ -411,10 +412,18 @@
 </ul>
 </li>
 </ul>
-<pre><code>* | 循环链表                                                     | 非循环链表                                                   |
-  | ------------------------------------------------------------ | ------------------------------------------------------------ |
-  | 判断到前驱结点while（p-&gt;next != head）                       | 判断到前驱结点：LNode* p = head;int j = 0;                   |
-  | while (p &amp;&amp; j &lt; index-1)More Actions判断到指定结点while（p != head） | 判断到指定结点：LNode* p = head;int j = 0;        while (p &amp;&amp; j &lt; index) |</code></pre><hr>
+<ul>
+<li><img src="/2019/06/19/数据结构学习总结-（2-6）循环链表（单向链表）/5.png">
+
+
+
+
+
+
+
+</li>
+</ul>
+<hr>
 <h5 id="判断的具体解释（循环链表）"><a href="#判断的具体解释（循环链表）" class="headerlink" title="判断的具体解释（循环链表）"></a>判断的具体解释（循环链表）</h5><ul>
 <li><table><tr><td bgcolor="yellow">判断到前驱结点：</td></tr></table>
 
@@ -423,7 +432,7 @@
 </li>
 </ul>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (p-&gt;next != head)</span><br><span class="line">&#123;</span><br><span class="line">	p = p-&gt;next;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (p-&gt;next != head)</span><br><span class="line">  		&#123;</span><br><span class="line">  			p = p-&gt;next;	</span><br><span class="line">  		&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    因为最后一个结点的next指针不再是空指针而是一个指向head的指针，所以在while循环中如果p的next指针下一个为head指针那么这时指针p就定位到head的前驱指针了。</p>
 </li>
@@ -436,7 +445,7 @@
 </li>
 </ul>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (p != head)</span><br><span class="line">&#123;</span><br><span class="line">	p = p-&gt;next;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (p != head)</span><br><span class="line">		&#123;</span><br><span class="line">			p = p-&gt;next;	</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    这个也很好判断，不断移动指针p当等于头结点时就跳出循环，此时p定位到头结点。</p>
 </li>
