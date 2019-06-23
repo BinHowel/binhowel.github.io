@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="C++,学习总结,C++学习总结,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="双子星Binaryؼ" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="讲述函数的新特性、内联函数实质与应用、constchar*、charconst*、等区别，函数杂合（加密文章）">
+<meta name="keywords" content="C++,学习总结,C++学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++进阶学习总结-（1.4）函数新特性、const关键字精解">
+<meta property="og:url" content="https://shuhaohwang.github.io/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/index.html">
+<meta property="og:site_name" content="双子星Binaryؼ">
+<meta property="og:description" content="讲述函数的新特性、内联函数实质与应用、constchar*、charconst*、等区别，函数杂合（加密文章）">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-23T17:39:26.503Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++进阶学习总结-（1.4）函数新特性、const关键字精解">
+<meta name="twitter:description" content="讲述函数的新特性、内联函数实质与应用、constchar*、charconst*、等区别，函数杂合（加密文章）">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shuhaohwang.github.io/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/">
+
+
+
+
+
+  <title>C++进阶学习总结-（1.4）函数新特性、const关键字精解 | 双子星Binaryؼ</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">双子星Binaryؼ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">相逐彼此-却永不能接触</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShuHaoHwang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="双子星Binaryؼ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C++进阶学习总结-（1.4）函数新特性、const关键字精解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-23T17:34:31+08:00">
+                2019-06-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/C-学习/" itemprop="url" rel="index">
+                    <span itemprop="name">C++学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o">本文总阅读量</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="此文章是加密文章，请输入密码后查看.">
+    <label for="pass">此文章是加密文章，请输入密码后查看.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+      
+    </div>
+    
+    
+    
+
+	  <div>
+     
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/">C++进阶学习总结-（1.4）函数新特性、const关键字精解</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
+  <p><span>发布时间:</span>2019年06月23日 - 17:06</p>
+  <p><span>最后更新:</span>2019年06月24日 - 01:06</p>
+  <p><span>原始链接:</span><a href="/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/" title="C++进阶学习总结-（1.4）函数新特性、const关键字精解">https://shuhaohwang.github.io/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>博主提示:</span><i class="fa fa-creative-commons"></i> 如果您想转载本文请保留原文链接及作者哦( • ̀ω•́ )✧。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+	  </div>
+	
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果文章对你有帮助你可以点击下方分享按钮进行分享也可以打赏博主一袋零食哦！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="ShuHaoHwang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+          
+            <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
+          
+            <a href="/tags/C-学习总结/" rel="tag"><i class="fa fa-tag"></i> C++学习总结</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/22/数据结构学习总结-（2-9）顺序存储结构与链式存储结构的逆置/" rel="next" title="数据结构学习总结-（2.9）顺序存储结构与链式存储结构的逆置">
+                <i class="fa fa-chevron-left"></i> 数据结构学习总结-（2.9）顺序存储结构与链式存储结构的逆置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDY4OS8yMTIxNQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="ShuHaoHwang">
+            
+              <p class="site-author-name" itemprop="name">ShuHaoHwang</p>
+              <p class="site-description motion-element" itemprop="description">(,,･∀･)ﾉ゛hello,欢迎来到Mr.House个人博客,博主是一个努力练习画画的准程序员哦 QWQ!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ShuHaoHwang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="1164640427@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ShuHaoHwang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user">本站访客数</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye">本站总访问量</i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
