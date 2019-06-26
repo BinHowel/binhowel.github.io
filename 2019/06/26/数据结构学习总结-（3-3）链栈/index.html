@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="数据结构的基本概念五个基本概念：数据 定义：描述客观事物的符号，是计算机中可以操作的对象。 个人理解：类似于整型，或者一个文件都是可以看出数据。实际情况：例如我输入的账号密码就算是为数据  数据元素 定义：组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。 数据元素是数据结构的聚焦点 个人理解：把数据比喻成一个文件夹，那么数据元素就应该是里面的一个不可分的文件（高达模型上">
+<meta name="description" content="栈的链式实现算法及思路 栈的链式实现是以前插法为基础的。即以头结点next指向的是栈顶，进行入栈出栈等操作。  入栈   思路：创建好空链栈后，每插入一个数据，便创建一个新的结点p，让p结点的next指针等于head的next指针，让head的next指针再指向新结点p，从而完成push_back操作。  具体实现： 12345678bool push_back(T e)&amp;#123;    LNo">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构学习总结-（1.1）数据结构的基本概念">
-<meta property="og:url" content="https://shuhaohwang.github.io/2019/06/11/数据结构学习总结-（1.1）数据结构的基本概念/index.html">
+<meta property="og:title" content="数据结构学习总结-（3.3）链栈">
+<meta property="og:url" content="https://shuhaohwang.github.io/2019/06/26/数据结构学习总结-（3-3）链栈/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="数据结构的基本概念五个基本概念：数据 定义：描述客观事物的符号，是计算机中可以操作的对象。 个人理解：类似于整型，或者一个文件都是可以看出数据。实际情况：例如我输入的账号密码就算是为数据  数据元素 定义：组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。 数据元素是数据结构的聚焦点 个人理解：把数据比喻成一个文件夹，那么数据元素就应该是里面的一个不可分的文件（高达模型上">
+<meta property="og:description" content="栈的链式实现算法及思路 栈的链式实现是以前插法为基础的。即以头结点next指向的是栈顶，进行入栈出栈等操作。  入栈   思路：创建好空链栈后，每插入一个数据，便创建一个新的结点p，让p结点的next指针等于head的next指针，让head的next指针再指向新结点p，从而完成push_back操作。  具体实现： 12345678bool push_back(T e)&amp;#123;    LNo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-22T04:04:35.867Z">
+<meta property="og:updated_time" content="2019-06-26T05:03:16.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构学习总结-（1.1）数据结构的基本概念">
-<meta name="twitter:description" content="数据结构的基本概念五个基本概念：数据 定义：描述客观事物的符号，是计算机中可以操作的对象。 个人理解：类似于整型，或者一个文件都是可以看出数据。实际情况：例如我输入的账号密码就算是为数据  数据元素 定义：组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。 数据元素是数据结构的聚焦点 个人理解：把数据比喻成一个文件夹，那么数据元素就应该是里面的一个不可分的文件（高达模型上">
+<meta name="twitter:title" content="数据结构学习总结-（3.3）链栈">
+<meta name="twitter:description" content="栈的链式实现算法及思路 栈的链式实现是以前插法为基础的。即以头结点next指向的是栈顶，进行入栈出栈等操作。  入栈   思路：创建好空链栈后，每插入一个数据，便创建一个新的结点p，让p结点的next指针等于head的next指针，让head的next指针再指向新结点p，从而完成push_back操作。  具体实现： 12345678bool push_back(T e)&amp;#123;    LNo">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://shuhaohwang.github.io/2019/06/11/数据结构学习总结-（1.1）数据结构的基本概念/">
+  <link rel="canonical" href="https://shuhaohwang.github.io/2019/06/26/数据结构学习总结-（3-3）链栈/">
 
 
 
 
 
-  <title>数据结构学习总结-（1.1）数据结构的基本概念 | 双子星Binaryؼ</title>
+  <title>数据结构学习总结-（3.3）链栈 | 双子星Binaryؼ</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/06/11/数据结构学习总结-（1.1）数据结构的基本概念/">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/06/26/数据结构学习总结-（3-3）链栈/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ShuHaoHwang">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（1.1）数据结构的基本概念</h1>
+          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（3.3）链栈</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-11T23:21:18+08:00">
-                2019-06-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-26T12:27:15+08:00">
+                2019-06-26
               </time>
             
 
@@ -392,43 +392,49 @@
       
 
       
-        <h2 id="数据结构的基本概念"><a href="#数据结构的基本概念" class="headerlink" title="数据结构的基本概念"></a>数据结构的基本概念</h2><h3 id="五个基本概念："><a href="#五个基本概念：" class="headerlink" title="五个基本概念："></a>五个基本概念：</h3><h4 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h4><ul>
-<li>定义：描述客观事物的符号，是计算机中可以操作的对象。</li>
-<li>个人理解：类似于整型，或者一个文件都是可以看出数据。实际情况：例如我输入的账号密码就算是为数据</li>
+        <h4 id="栈的链式实现算法及思路"><a href="#栈的链式实现算法及思路" class="headerlink" title="栈的链式实现算法及思路"></a>栈的链式实现算法及思路</h4><ul>
+<li><p>栈的链式实现是以前插法为基础的。即以头结点next指向的是栈顶，进行入栈出栈等操作。</p>
+</li>
+<li><table><tr><td bgcolor="yellow">入栈</td></tr></table>
+
+<ul>
+<li><p>思路：创建好空链栈后，每插入一个数据，便创建一个新的结点p，让p结点的next指针等于head的next指针，让head的next指针再指向新结点p，从而完成push_back操作。</p>
+</li>
+<li><p>具体实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">push_back</span><span class="params">(T e)</span></span>&#123;</span><br><span class="line">    LNode*p = <span class="keyword">new</span> LNode();</span><br><span class="line">    p-&gt;data = e;</span><br><span class="line">    p-&gt;next = head-&gt;next;</span><br><span class="line">    head-&gt;next = p;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="数据元素"><a href="#数据元素" class="headerlink" title="数据元素"></a>数据元素</h4><ul>
-<li>定义：组成数据的、有一定意义的基本单位，在计算机中通常作为整体处理，也被称为记录。</li>
-<li><strong><em>数据元素是数据结构的聚焦点</em></strong></li>
-<li>个人理解：把数据比喻成一个文件夹，那么数据元素就应该是里面的一个不可分的文件<del>（高达模型上面的一个零件？）</del>。</li>
+</li>
+<li><table><tr><td bgcolor="yellow">出栈</td></tr></table>
+
+<ul>
+<li><p>思路：直接让head的next指针指向head-&gt;next-&gt;next即跳过原栈的数据，所以可以先让一个临时的p指向head-&gt;next,然后让head的next指针直接指向p的next指针。之后释放p的空间。(注意：进行出栈操作要首先判断是否空栈)</p>
+</li>
+<li><p>具体实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LNode* p = head-&gt;next;</span><br><span class="line">    <span class="keyword">if</span>(!head-&gt;next)&#123;</span><br><span class="line">        head-&gt;next = p-&gt;next;</span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h4><ul>
-<li>定义： 一个数据元素可以由若干个数据项组成。</li>
-<li>个人理解 ： 数据元素比作对象，那么数据项就类似于对象的属性（成员变量）。例如：上面输入信息时，用户名和密码分别就算是数据项</li>
-</ul>
-<h4 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h4><ul>
-<li>定义： 性质相同的数据元素的集合，是数据的子集。</li>
-<li>个人理解：这个应该是介于数据和数据项中间的东西</li>
-</ul>
-<h4 id="数据结构（data-structure）"><a href="#数据结构（data-structure）" class="headerlink" title="数据结构（data structure）"></a>数据结构（data structure）</h4><ul>
-<li>定义：数据结构是相互之间存在一种或多种特定关系的数据元素的集合。</li>
-<li>数据元素 + 特定关系 = 数据结构</li>
-</ul>
-<h5 id="总结：用实际情形来描述，你在一个网站上进行注册，要求填写个人形象，其中里面的姓名、密码就是-数据项-，每一个数据项组成的就是一个-数据元素-，数据元素一多起来就统称为：数据"><a href="#总结：用实际情形来描述，你在一个网站上进行注册，要求填写个人形象，其中里面的姓名、密码就是-数据项-，每一个数据项组成的就是一个-数据元素-，数据元素一多起来就统称为：数据" class="headerlink" title="总结：用实际情形来描述，你在一个网站上进行注册，要求填写个人形象，其中里面的姓名、密码就是  数据项 ，每一个数据项组成的就是一个 数据元素 ，数据元素一多起来就统称为：数据"></a>总结：用实际情形来描述，你在一个网站上进行注册，要求填写个人形象，其中里面的姓名、密码就是  <strong>数据项</strong> ，每一个数据项组成的就是一个 <strong>数据元素</strong> ，数据元素一多起来就统称为：数据</h5><hr>
-<h2 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h2><ul>
-<li>集合结构</li>
-<li>图形结构（图）</li>
-<li>树形结构（皇帝与丞民）</li>
-<li>线性结构</li>
-</ul>
-<hr>
-<h2 id="物理结构"><a href="#物理结构" class="headerlink" title="物理结构"></a>物理结构</h2><ul>
-<li>定义：又叫存储结构，是指数据的逻辑结构<strong>在计算机中</strong>的<strong>存储形式</strong>。<ul>
-<li>顺序存储结构 ：类似于数组 ，把数据元素存储在地址连续的储存单元里。</li>
-<li>链式存储结构 ：把数据元素存放在任意的存储单元里 类似于数组，但可以不连续，每一个数值直接有一个类似于绳子或链条的东西相互绑定。  <strong>类似指针</strong></li>
+</li>
+<li><table><tr><td bgcolor="yellow">析构函数</td></tr></table>
+
+<ul>
+<li><p>思路：析构函数就是链栈的销毁操作。总体上先把所有的数据进行出栈并释放空间，最后再把头结点释放了。所以要先用循环，分别释放每一个数据的空间。循环结束的判断条件是head-&gt;next 为空。</p>
+</li>
+<li><p>具体实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">~LkStack()&#123;</span><br><span class="line">    LNode*p = head-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p)&#123;</span><br><span class="line">        head-&gt;next = p-&gt;next;</span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">        p = head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
 </ul>
 </li>
 </ul>
-<p>–（本文完）</p>
+<hr>
+<h4 id="具体代码实现："><a href="#具体代码实现：" class="headerlink" title="具体代码实现："></a>具体代码实现：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="class"><span class="keyword">class</span> <span class="title">LkStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">	&#123;</span></span><br><span class="line">		T data;</span><br><span class="line">		LNode* next;</span><br><span class="line">	&#125;;</span><br><span class="line">	LNode* head;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	LkStack() &#123;</span><br><span class="line">		head = <span class="keyword">new</span> LNode();</span><br><span class="line">		head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	~LkStack() &#123;</span><br><span class="line">		LNode* p = head-&gt;next;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span> (p)</span><br><span class="line">		&#123;</span><br><span class="line">			head-&gt;next = p-&gt;next;</span><br><span class="line">			<span class="keyword">delete</span> p;</span><br><span class="line">			p = head-&gt;next;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">delete</span> head;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">/*入栈操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">push_back</span><span class="params">(T e)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">		LNode* p = <span class="keyword">new</span> LNode();</span><br><span class="line">		p-&gt;data = e;</span><br><span class="line">		p-&gt;next = head-&gt;next;</span><br><span class="line">		head-&gt;next = p;</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">/*出栈操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!isEmpty()) &#123;</span><br><span class="line">			LNode* p = head-&gt;next;</span><br><span class="line">			head-&gt;next = p-&gt;next;</span><br><span class="line">			<span class="keyword">delete</span> p;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">    <span class="comment">/*是否为空*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!head-&gt;next)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*获得栈顶数据*/</span></span><br><span class="line">	<span class="function">T&amp; <span class="title">GetTop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> head-&gt;next-&gt;data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">	LkStack&lt;<span class="keyword">int</span>&gt; <span class="built_in">stack</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈了数据1"</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push_back(<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈了数据2"</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push_back(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈了数据3"</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push_back(<span class="number">3</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈了数据4"</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push_back(<span class="number">4</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈了数据5"</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push_back(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">stack</span>.isEmpty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">stack</span>.GetTop() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">stack</span>.pop();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -445,12 +451,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/06/11/数据结构学习总结-（1.1）数据结构的基本概念/">数据结构学习总结-（1.1）数据结构的基本概念</a></p>
+  <p><span>本文标题:</span><a href="/2019/06/26/数据结构学习总结-（3-3）链栈/">数据结构学习总结-（3.3）链栈</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
-  <p><span>发布时间:</span>2019年06月11日 - 23:06</p>
-  <p><span>最后更新:</span>2019年06月22日 - 12:06</p>
-  <p><span>原始链接:</span><a href="/2019/06/11/数据结构学习总结-（1.1）数据结构的基本概念/" title="数据结构学习总结-（1.1）数据结构的基本概念">https://shuhaohwang.github.io/2019/06/11/数据结构学习总结-（1.1）数据结构的基本概念/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/06/11/数据结构学习总结-（1.1）数据结构的基本概念/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年06月26日 - 12:06</p>
+  <p><span>最后更新:</span>2019年06月26日 - 13:06</p>
+  <p><span>原始链接:</span><a href="/2019/06/26/数据结构学习总结-（3-3）链栈/" title="数据结构学习总结-（3.3）链栈">https://shuhaohwang.github.io/2019/06/26/数据结构学习总结-（3-3）链栈/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/06/26/数据结构学习总结-（3-3）链栈/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>博主提示:</span><i class="fa fa-creative-commons"></i> 如果您想转载本文请保留原文链接及作者哦( • ̀ω•́ )✧。</p>  
 </div>
@@ -537,8 +543,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/11/石膏立方体（练习）/" rel="next" title="石膏立方体（练习）">
-                <i class="fa fa-chevron-left"></i> 石膏立方体（练习）
+              <a href="/2019/06/25/C-个人学习路线/" rel="next" title="C++个人学习路线">
+                <i class="fa fa-chevron-left"></i> C++个人学习路线
               </a>
             
           </div>
@@ -546,10 +552,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/12/Java模拟考心得体会/" rel="prev" title="Java模拟考心得体会">
-                Java模拟考心得体会 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -711,7 +713,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构的基本概念"><span class="nav-number">1.</span> <span class="nav-text">数据结构的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#五个基本概念："><span class="nav-number">1.1.</span> <span class="nav-text">五个基本概念：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据"><span class="nav-number">1.1.1.</span> <span class="nav-text">数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据元素"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据项"><span class="nav-number">1.1.3.</span> <span class="nav-text">数据项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据对象"><span class="nav-number">1.1.4.</span> <span class="nav-text">数据对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据结构（data-structure）"><span class="nav-number">1.1.5.</span> <span class="nav-text">数据结构（data structure）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结：用实际情形来描述，你在一个网站上进行注册，要求填写个人形象，其中里面的姓名、密码就是-数据项-，每一个数据项组成的就是一个-数据元素-，数据元素一多起来就统称为：数据"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">总结：用实际情形来描述，你在一个网站上进行注册，要求填写个人形象，其中里面的姓名、密码就是  数据项 ，每一个数据项组成的就是一个 数据元素 ，数据元素一多起来就统称为：数据</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑结构"><span class="nav-number">2.</span> <span class="nav-text">逻辑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理结构"><span class="nav-number">3.</span> <span class="nav-text">物理结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的链式实现算法及思路"><span class="nav-number">1.</span> <span class="nav-text">栈的链式实现算法及思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体代码实现："><span class="nav-number">2.</span> <span class="nav-text">具体代码实现：</span></a></li></ol></div>
             
 
           </div>
