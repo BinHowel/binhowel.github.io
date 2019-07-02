@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="数据结构,">
 
 
 
@@ -81,16 +81,20 @@
 
 
 
-<meta name="description" content="(,,･∀･)ﾉ゛hello,欢迎来到Mr.House个人博客,博主是一个努力练习画画的准程序员哦 QWQ!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="双子星Binaryؼ">
-<meta property="og:url" content="https://shuhaohwang.github.io/archives/2019/index.html">
+<meta name="description" content="括号匹配 对一段字符串进行检查和判断括号是否匹配。例如：{（）[]{}} 匹配。即出现一个左括号就一定要一个相对应的右括号与其匹配。 实现思路：可以对一个字符串进行扫描和检查，如果是左括号那么就入栈，如果遇到一个与之匹配的右括号，那么就使其出栈。最后判断栈是否为空从而判断括号是否匹配即可。 以（{heheda}[123]())为例。 第一步扫描上方字符串。发现第一个左括号‘(’使其入栈，第二个&amp;#">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="栈的应用-括号匹配">
+<meta property="og:url" content="https://shuhaohwang.github.io/2019/07/02/栈的应用-括号匹配/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="(,,･∀･)ﾉ゛hello,欢迎来到Mr.House个人博客,博主是一个努力练习画画的准程序员哦 QWQ!">
+<meta property="og:description" content="括号匹配 对一段字符串进行检查和判断括号是否匹配。例如：{（）[]{}} 匹配。即出现一个左括号就一定要一个相对应的右括号与其匹配。 实现思路：可以对一个字符串进行扫描和检查，如果是左括号那么就入栈，如果遇到一个与之匹配的右括号，那么就使其出栈。最后判断栈是否为空从而判断括号是否匹配即可。 以（{heheda}[123]())为例。 第一步扫描上方字符串。发现第一个左括号‘(’使其入栈，第二个&amp;#">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://shuhaohwang.github.io/2019/07/02/栈的应用-括号匹配/1.png">
+<meta property="og:updated_time" content="2019-07-02T06:41:25.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="双子星Binaryؼ">
-<meta name="twitter:description" content="(,,･∀･)ﾉ゛hello,欢迎来到Mr.House个人博客,博主是一个努力练习画画的准程序员哦 QWQ!">
+<meta name="twitter:title" content="栈的应用-括号匹配">
+<meta name="twitter:description" content="括号匹配 对一段字符串进行检查和判断括号是否匹配。例如：{（）[]{}} 匹配。即出现一个左括号就一定要一个相对应的右括号与其匹配。 实现思路：可以对一个字符串进行扫描和检查，如果是左括号那么就入栈，如果遇到一个与之匹配的右括号，那么就使其出栈。最后判断栈是否为空从而判断括号是否匹配即可。 以（{heheda}[123]())为例。 第一步扫描上方字符串。发现第一个左括号‘(’使其入栈，第二个&amp;#">
+<meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/02/栈的应用-括号匹配/1.png">
 
 
 
@@ -120,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://shuhaohwang.github.io/archives/2019/">
+  <link rel="canonical" href="https://shuhaohwang.github.io/2019/07/02/栈的应用-括号匹配/">
 
 
 
 
 
-  <title>归档 | 双子星Binaryؼ</title>
+  <title>栈的应用-括号匹配 | 双子星Binaryؼ</title>
   
 
 
@@ -145,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,390 +275,263 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/07/02/栈的应用-括号匹配/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShuHaoHwang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="双子星Binaryؼ">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
-         
+          <h1 class="post-title" itemprop="name headline">栈的应用-括号匹配</h1>
         
-        OK! 目前共计 35 篇日志。 继续努力。
-      </span>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-02T14:12:48+08:00">
+                2019-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o">本文总阅读量</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h4 id="括号匹配"><a href="#括号匹配" class="headerlink" title="括号匹配"></a>括号匹配</h4><ul>
+<li>对一段字符串进行检查和判断括号是否匹配。例如：{（）[]{}} 匹配。即出现一个左括号就一定要一个相对应的右括号与其匹配。</li>
+<li><strong>实现思路</strong>：可以对一个字符串进行扫描和检查，如果是左括号那么就入栈，如果遇到一个与之匹配的右括号，那么就使其出栈。最后判断栈是否为空从而判断括号是否匹配即可。<ul>
+<li>以<code>（{heheda}[123]())</code>为例。</li>
+<li>第一步扫描上方字符串。发现第一个左括号<code>‘(’</code>使其入栈，第二个<code>&#39;{&#39;</code>入栈，发现<code>&#39;}&#39;</code>为右括号，与栈顶数据进行匹配发现，此时栈顶就是<code>&#39;{&#39;</code>与之匹配那么就出栈。（类似消消乐）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="具体代码实现："><a href="#具体代码实现：" class="headerlink" title="具体代码实现："></a>具体代码实现：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"LKStack.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">CheckStr</span><span class="params">(<span class="built_in">string</span> str)</span> </span>&#123;</span><br><span class="line">	LkStack&lt;<span class="keyword">char</span>&gt; <span class="built_in">stack</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"字符串："</span> &lt;&lt; str &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.length(); i++) &#123;</span><br><span class="line">        <span class="comment">/*如果是左括号那么就入栈，等待匹配*/</span></span><br><span class="line">		<span class="keyword">if</span> (str[i] == <span class="string">'['</span> || str[i] == <span class="string">'&#123;'</span> || str[i] == <span class="string">'('</span>) &#123;</span><br><span class="line">			<span class="built_in">stack</span>.push_back(str[i]);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*如果是右括号那么就对栈顶数据进行判断，如果匹配那么就使此时的栈顶数据出栈*/</span></span><br><span class="line">		<span class="keyword">if</span> (str[i] == <span class="string">']'</span> || str[i] == <span class="string">'&#125;'</span> || str[i] == <span class="string">')'</span>) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">/*排除只出现右括号没出现左括号的情况，和多出有右括号的情况*/</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">stack</span>.isEmpty()) &#123;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"括号不匹配！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (!<span class="built_in">stack</span>.isEmpty() &amp;&amp; str[i] == <span class="string">']'</span> &amp;&amp; <span class="built_in">stack</span>.GetTop() == <span class="string">'['</span>)</span><br><span class="line">				 <span class="built_in">stack</span>.pop();</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span> (!<span class="built_in">stack</span>.isEmpty() &amp;&amp; str[i] == <span class="string">'&#125;'</span> &amp;&amp; <span class="built_in">stack</span>.GetTop() == <span class="string">'&#123;'</span>)</span><br><span class="line">				 <span class="built_in">stack</span>.pop();</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span> (!<span class="built_in">stack</span>.isEmpty()&amp;&amp; str[i] == <span class="string">')'</span> &amp;&amp; <span class="built_in">stack</span>.GetTop() == <span class="string">'('</span>)</span><br><span class="line">				 <span class="built_in">stack</span>.pop();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*如果空栈那么就说明左括号全部匹配完毕，括号匹配成功，反之括号不匹配*/</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">stack</span>.isEmpty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"括号匹配成功！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"括号不匹配！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	CheckStr(<span class="string">"12312()()[]&#123;&#123;&#125;&#125; "</span>);</span><br><span class="line">	CheckStr(<span class="string">"&#125;"</span>);</span><br><span class="line">	CheckStr(<span class="string">"[()(),hello&#123;&#125;]"</span>);</span><br><span class="line">	CheckStr(<span class="string">"test"</span>);</span><br><span class="line">	CheckStr(<span class="string">"()(&#125;[]"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>实验结果</strong>：<img src="/2019/07/02/栈的应用-括号匹配/1.png"></li>
+</ul>
+<hr>
+<p>–（本文完）&lt;原创&gt;</p>
+
+      
+    </div>
+    
+    
+    
+
+	  <div>
+     
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/07/02/栈的应用-括号匹配/">栈的应用-括号匹配</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
+  <p><span>发布时间:</span>2019年07月02日 - 14:07</p>
+  <p><span>最后更新:</span>2019年07月02日 - 14:07</p>
+  <p><span>原始链接:</span><a href="/2019/07/02/栈的应用-括号匹配/" title="栈的应用-括号匹配">https://shuhaohwang.github.io/2019/07/02/栈的应用-括号匹配/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/07/02/栈的应用-括号匹配/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>博主提示:</span><i class="fa fa-creative-commons"></i> 如果您想转载本文请保留原文链接及作者哦( • ̀ω•́ )✧。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+	  </div>
+	
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果文章对你有帮助你可以点击下方分享按钮进行分享也可以打赏博主一袋零食哦！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="ShuHaoHwang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
         
+
         
 
         
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
           </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/02/栈的应用-括号匹配/" itemprop="url">
-              
-                <span itemprop="name">栈的应用-括号匹配</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-02T14:12:48+08:00" content="2019-07-02">
-          07-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
-        
-        
-        
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/02/算法性能分析/" rel="next" title="算法性能分析">
+                <i class="fa fa-chevron-left"></i> 算法性能分析
+              </a>
+            
+          </div>
 
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/02/算法性能分析/" itemprop="url">
-              
-                <span itemprop="name">算法性能分析</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-02T10:17:36+08:00" content="2019-07-02">
-          07-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/29/链表应用-两数相加/" itemprop="url">
-              
-                <span itemprop="name">链表应用- 两数相加</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-29T23:29:57+08:00" content="2019-06-29">
-          06-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/29/栈的应用-进制的转换/" itemprop="url">
-              
-                <span itemprop="name">栈的应用-进制的转换</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-29T20:32:55+08:00" content="2019-06-29">
-          06-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/29/C-vector容器常用操作和内存释放/" itemprop="url">
-              
-                <span itemprop="name">C++ vector容器常用操作和内存释放</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-29T00:38:09+08:00" content="2019-06-29">
-          06-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/28/C-迭代器的失控范例和解决方案/" itemprop="url">
-              
-                <span itemprop="name">C++迭代器的失控范例和解决方案</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-28T11:54:43+08:00" content="2019-06-28">
-          06-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/26/C-进阶学习总结-（1-6）迭代器/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-（1.6）迭代器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-26T13:28:56+08:00" content="2019-06-26">
-          06-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/26/数据结构学习总结-（3-3）链栈/" itemprop="url">
-              
-                <span itemprop="name">数据结构学习总结-（3.3）链栈</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-26T12:27:15+08:00" content="2019-06-26">
-          06-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/25/C-个人学习路线/" itemprop="url">
-              
-                <span itemprop="name">C++个人学习路线</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-25T23:41:26+08:00" content="2019-06-25">
-          06-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/25/C-进阶学习总结-（1-5）vector容器详解/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-（1.5）vector容器详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-25T19:01:59+08:00" content="2019-06-25">
-          06-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2019/page/4/">4</a><a class="extend next" rel="next" href="/archives/2019/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -662,6 +539,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDY4OS8yMTIxNQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -682,8 +568,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -768,6 +663,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#括号匹配"><span class="nav-number">1.</span> <span class="nav-text">括号匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#具体代码实现："><span class="nav-number">1.1.</span> <span class="nav-text">具体代码实现：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -942,6 +853,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -970,6 +885,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
