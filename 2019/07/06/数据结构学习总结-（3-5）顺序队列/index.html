@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="数据结构,">
+  <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结,">
 
 
 
@@ -81,21 +81,21 @@
 
 
 
-<meta name="description" content="数制转换 以十进制转八进制为例，十进制转八进制的时候是把十进制模8取其余数直至除尽，最终结果为余数从下到上的数。  例如：  结合数据结构栈，可以发现转换最终结果跟栈的出栈一样，所以用栈来实现十进制的转换就较为方便  123456789101112void changeNumber(int n,int b)&amp;#123;//n为十进制数，b为将要转的进制数    Stack&amp;lt;int&amp;gt; s">
-<meta name="keywords" content="数据结构">
+<meta name="description" content="顺序队列算法即实现思路顺序储存结构的队列定义(以char类型为例) 实现思路：因为顺序队列是要基于数组来实现队列的操作，所以可以定义两个数值头数值(front)和尾数值(rear)，在创建队列的时候根据capacity(队列容量)的大小创建线性表，然后让头数值和尾数值都为0代表数组下标为0的第一个数据的位置，入队时对rear进行操作移动即可实现，出队只需移动front即可完成出队。  123456">
+<meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="栈的应用-进制的转换">
-<meta property="og:url" content="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/index.html">
+<meta property="og:title" content="数据结构学习总结-（3.5）顺序存储结构队列">
+<meta property="og:url" content="https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="数制转换 以十进制转八进制为例，十进制转八进制的时候是把十进制模8取其余数直至除尽，最终结果为余数从下到上的数。  例如：  结合数据结构栈，可以发现转换最终结果跟栈的出栈一样，所以用栈来实现十进制的转换就较为方便  123456789101112void changeNumber(int n,int b)&amp;#123;//n为十进制数，b为将要转的进制数    Stack&amp;lt;int&amp;gt; s">
+<meta property="og:description" content="顺序队列算法即实现思路顺序储存结构的队列定义(以char类型为例) 实现思路：因为顺序队列是要基于数组来实现队列的操作，所以可以定义两个数值头数值(front)和尾数值(rear)，在创建队列的时候根据capacity(队列容量)的大小创建线性表，然后让头数值和尾数值都为0代表数组下标为0的第一个数据的位置，入队时对rear进行操作移动即可实现，出队只需移动front即可完成出队。  123456">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/1.png">
-<meta property="og:image" content="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/2.png">
-<meta property="og:updated_time" content="2019-06-29T13:23:23.375Z">
+<meta property="og:image" content="https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/1.png">
+<meta property="og:image" content="https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/2.png">
+<meta property="og:updated_time" content="2019-07-06T16:44:51.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="栈的应用-进制的转换">
-<meta name="twitter:description" content="数制转换 以十进制转八进制为例，十进制转八进制的时候是把十进制模8取其余数直至除尽，最终结果为余数从下到上的数。  例如：  结合数据结构栈，可以发现转换最终结果跟栈的出栈一样，所以用栈来实现十进制的转换就较为方便  123456789101112void changeNumber(int n,int b)&amp;#123;//n为十进制数，b为将要转的进制数    Stack&amp;lt;int&amp;gt; s">
-<meta name="twitter:image" content="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/1.png">
+<meta name="twitter:title" content="数据结构学习总结-（3.5）顺序存储结构队列">
+<meta name="twitter:description" content="顺序队列算法即实现思路顺序储存结构的队列定义(以char类型为例) 实现思路：因为顺序队列是要基于数组来实现队列的操作，所以可以定义两个数值头数值(front)和尾数值(rear)，在创建队列的时候根据capacity(队列容量)的大小创建线性表，然后让头数值和尾数值都为0代表数组下标为0的第一个数据的位置，入队时对rear进行操作移动即可实现，出队只需移动front即可完成出队。  123456">
+<meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/1.png">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/">
+  <link rel="canonical" href="https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/">
 
 
 
 
 
-  <title>栈的应用-进制的转换 | 双子星Binaryؼ</title>
+  <title>数据结构学习总结-（3.5）顺序存储结构队列 | 双子星Binaryؼ</title>
   
 
 
@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ShuHaoHwang">
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">栈的应用-进制的转换</h1>
+          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（3.5）顺序存储结构队列</h1>
         
 
         <div class="post-meta">
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-29T20:32:55+08:00">
-                2019-06-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-06T23:42:47+08:00">
+                2019-07-06
               </time>
             
 
@@ -342,8 +342,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/数据结构学习/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构学习</span>
                   </a>
                 </span>
 
@@ -384,22 +395,86 @@
       
 
       
-        <h4 id="数制转换"><a href="#数制转换" class="headerlink" title="数制转换"></a>数制转换</h4><ul>
-<li><p>以十进制转八进制为例，十进制转八进制的时候是把十进制模8取其余数直至除尽，最终结果为余数从下到上的数。</p>
+        <h4 id="顺序队列算法即实现思路"><a href="#顺序队列算法即实现思路" class="headerlink" title="顺序队列算法即实现思路"></a>顺序队列算法即实现思路</h4><h5 id="顺序储存结构的队列定义-以char类型为例"><a href="#顺序储存结构的队列定义-以char类型为例" class="headerlink" title="顺序储存结构的队列定义(以char类型为例)"></a>顺序储存结构的队列定义(以char类型为例)</h5><ul>
+<li><p>实现思路：因为顺序队列是要基于数组来实现队列的操作，所以可以定义两个数值头数值(front)和尾数值(rear)，在创建队列的时候根据capacity(队列容量)的大小创建线性表，然后让头数值和尾数值都为0代表数组下标为0的第一个数据的位置，入队时对rear进行操作移动即可实现，出队只需移动front即可完成出队。</p>
 </li>
-<li><p>例如：<img src="/2019/06/29/栈的应用-进制的转换/1.png"></p>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqQueue</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span>* datas;<span class="comment">//线性表</span></span><br><span class="line">    <span class="keyword">int</span> capacity;<span class="comment">//队列容量</span></span><br><span class="line">    <span class="keyword">int</span> front;<span class="comment">//队首</span></span><br><span class="line">    <span class="keyword">int</span> rear;<span class="comment">//队尾</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">    SqQueue(<span class="keyword">int</span> c)&#123;</span><br><span class="line">        capacity = c;</span><br><span class="line">        datas = <span class="keyword">new</span> <span class="keyword">char</span>[capacity];</span><br><span class="line">        front = rear = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>结合数据结构栈，可以发现转换最终结果跟栈的出栈一样，所以用栈来实现十进制的转换就较为方便</p>
-<ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">changeNumber</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> b)</span></span>&#123;<span class="comment">//n为十进制数，b为将要转的进制数</span></span><br><span class="line">    Stack&lt;<span class="keyword">int</span>&gt; <span class="built_in">stack</span>；<span class="comment">//定义一个栈</span></span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="built_in">stack</span>.push(n%b);<span class="comment">//获取余数并入栈</span></span><br><span class="line">        n = n/b;<span class="comment">//更新n</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">stack</span>.isEmpty())&#123;<span class="comment">//出栈并输出。直至为空栈</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">stack</span>.getTop();<span class="comment">//获得栈顶元素</span></span><br><span class="line">        <span class="built_in">stack</span>.pop();<span class="comment">//每输出一个就出栈一个数据</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><img src="/2019/07/06/数据结构学习总结-（3-5）顺序队列/1.png">
 
 </li>
 </ul>
+<h5 id="顺序队列"><a href="#顺序队列" class="headerlink" title="顺序队列"></a>顺序队列</h5><ul>
+<li><p>入队操作</p>
+<ul>
+<li><p>思路：因为顺序队列是要通过数组来实现队列的数据结构。所以可以先定义两个值分别代表尾数值和头数值，创建队列时，这头尾两个数值均为0，代表为数组第一个元素。入队时只需让下标为尾数值的数组元素进行添值即可。</p>
+</li>
+<li><p>具体实现：</p>
+<ul>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">push</span><span class="params">(T e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(rear == capacity)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    datas[rear] = e;</span><br><span class="line">    rear++;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>出队操作</p>
+<ul>
+<li><p>思路：直接让头数值进行自加即可实现出队操作</p>
+</li>
+<li><p>具体实现：</p>
+<ul>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">()</span></span>&#123;</span><br><span class="line">    front++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><font color="red"><strong>出现一个问题</strong></font>:前面只是实现了基本的队列应该有的操作，如果对其进行出队操作，一定量的数据出队后会照成队列无法使用的情况。为此可以对顺序队列进行改造优化使它成为环状的顺序队列从而可以循环使用。</p>
+</li>
+</ul>
+<h5 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h5><ul>
+<li><p>入队操作：</p>
+<ul>
+<li><p>思路：相比顺序队列，循环队列在入队操作时只是对尾数值进行改进使其只能在队列容量之内循环变化。即：<code>rear = (rear+1)%capacity</code></p>
+<ul>
+<li>算法解释：(以容量为5的队列为例)<ul>
+<li>第一步：push入队一个元素rear让其从初值0加1再取模5【(0+1)%5 = 1%5 = 1】以此类推，第二个数据入队，rear为2….第四个为4。</li>
+<li>第二步：当到达尾数值即下标为4的时候再进行上方的运算。即【(4+1)%5 = 5%5=0】重置尾数值为0。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>具体实现：</p>
+<ul>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">push</span><span class="params">(T e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>((rear+<span class="number">1</span>)%capacity == front)<span class="comment">//满队判断</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    datas[rear] = e;</span><br><span class="line">    rear = (rear+<span class="number">1</span>)%capacity;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>满队的处理：这里是用<code>(rear+1)%capacity == front</code>来作为满队判断的，即队首和队尾都只隔了1。例如：当队首为3，队尾为2为满队。因为(2+1)%5 = 3%5 = 3 </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>出队操作</p>
+<ul>
+<li><p>思路：与顺序队列相同，只是队头也要控制在capacity队列容量之内，即<code>front = (front + 1)% capacity</code>。</p>
+</li>
+<li><p>具体实现：</p>
+<ul>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(front == rear)<span class="comment">//空队判断</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    front = (front + <span class="number">1</span>)% capacity;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <hr>
-<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现:"></a>代码实现:</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/***********链栈实现************/</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="class"><span class="keyword">class</span> <span class="title">Stack</span> &#123;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">	&#123;</span></span><br><span class="line">		T data;</span><br><span class="line">		LNode* next;</span><br><span class="line">	&#125;;</span><br><span class="line">	LNode* head;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Stack() &#123;</span><br><span class="line">		head = <span class="keyword">new</span> LNode;</span><br><span class="line">		head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">/*入栈操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">push</span><span class="params">(T e)</span> </span>&#123;</span><br><span class="line">		LNode* p = <span class="keyword">new</span> LNode;</span><br><span class="line">		<span class="keyword">if</span> (!p)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">		p-&gt;data = e;</span><br><span class="line">		p-&gt;next = head-&gt;next;</span><br><span class="line">		head-&gt;next = p;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*出栈操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!head-&gt;next)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		LNode* p = head-&gt;next-&gt;next;</span><br><span class="line">		<span class="keyword">delete</span> head-&gt;next;</span><br><span class="line">		head-&gt;next = p;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*获得栈顶元素*/</span></span><br><span class="line">	<span class="function">T <span class="title">getTop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> head-&gt;next-&gt;data;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">/*判断是否为空栈*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">IsEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> head-&gt;next == <span class="literal">nullptr</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*********************************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*数据转换*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ChangeNumber</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">	Stack&lt;<span class="keyword">int</span>&gt; <span class="built_in">stack</span>;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">stack</span>.push(n % b);</span><br><span class="line">		n = n / b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (!<span class="built_in">stack</span>.IsEmpty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">stack</span>.getTop();</span><br><span class="line">		<span class="built_in">stack</span>.pop();</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ChangeNumber(<span class="number">75</span>, <span class="number">8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实验结果: <img src="/2019/06/29/栈的应用-进制的转换/2.png"></p>
-</li>
+<h4 id="具体代码实现"><a href="#具体代码实现" class="headerlink" title="具体代码实现;"></a>具体代码实现;</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="class"><span class="keyword">class</span> <span class="title">SqQueue</span> &#123;</span></span><br><span class="line">	T* datas;</span><br><span class="line">	<span class="keyword">int</span> capacity;</span><br><span class="line">	<span class="keyword">int</span> rear;</span><br><span class="line">	<span class="keyword">int</span> front;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/*构造函数*/</span></span><br><span class="line">	SqQueue(<span class="keyword">int</span> c = <span class="number">10</span>) &#123;</span><br><span class="line">		capacity = c;</span><br><span class="line">		datas = <span class="keyword">new</span> T[capacity];</span><br><span class="line">		rear = front = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*入队操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">push</span><span class="params">(T e)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> ((rear + <span class="number">1</span>) % capacity == front)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		datas[rear] = e;</span><br><span class="line">		rear = (rear+<span class="number">1</span>)%capacity;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*出队操作*/</span></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (rear == front)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		front = (front + <span class="number">1</span>) % capacity;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">tr</span><span class="params">(<span class="keyword">void</span>(*fb)(T&amp; e))</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = front; i &lt; rear; i++) &#123;</span><br><span class="line">			fb(datas[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Print</span><span class="params">(<span class="keyword">char</span>&amp; a)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	SqQueue&lt;<span class="keyword">char</span>&gt; s;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"数据a入队了"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.push(<span class="string">'a'</span>); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"数据b入队了"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.push(<span class="string">'b'</span>); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"数据c入队了"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.push(<span class="string">'c'</span>); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"数据d入队了"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.push(<span class="string">'d'</span>); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"数据e入队了"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.push(<span class="string">'e'</span>); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"头数据出队了 "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.pop(); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"头数据出队了 "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.pop(); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"头数据出队了 "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.pop(); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"头数据出队了 "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.pop(); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"头数据出队了 "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	s.pop(); s.tr(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>实验结果:<img src="/2019/07/06/数据结构学习总结-（3-5）顺序队列/2.png"></li>
 </ul>
 <p>–（本文完）&lt;原创&gt;</p>
 
@@ -418,12 +493,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/06/29/栈的应用-进制的转换/">栈的应用-进制的转换</a></p>
+  <p><span>本文标题:</span><a href="/2019/07/06/数据结构学习总结-（3-5）顺序队列/">数据结构学习总结-（3.5）顺序存储结构队列</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
-  <p><span>发布时间:</span>2019年06月29日 - 20:06</p>
-  <p><span>最后更新:</span>2019年06月29日 - 21:06</p>
-  <p><span>原始链接:</span><a href="/2019/06/29/栈的应用-进制的转换/" title="栈的应用-进制的转换">https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年07月06日 - 23:07</p>
+  <p><span>最后更新:</span>2019年07月07日 - 00:07</p>
+  <p><span>原始链接:</span><a href="/2019/07/06/数据结构学习总结-（3-5）顺序队列/" title="数据结构学习总结-（3.5）顺序存储结构队列">https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/07/06/数据结构学习总结-（3-5）顺序队列/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>博主提示:</span><i class="fa fa-creative-commons"></i> 如果您想转载本文请保留原文链接及作者哦( • ̀ω•́ )✧。</p>  
 </div>
@@ -478,7 +553,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
+          
             <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+            <a href="/tags/数据结构-学习总结/" rel="tag"><i class="fa fa-tag"></i> 数据结构-学习总结</a>
           
         </div>
       
@@ -506,8 +585,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/29/C-vector容器常用操作和内存释放/" rel="next" title="C++ vector容器常用操作和内存释放">
-                <i class="fa fa-chevron-left"></i> C++ vector容器常用操作和内存释放
+              <a href="/2019/07/04/C++进阶学习总结-(1.7)数据类型转换/" rel="next" title="C++进阶学习总结-(1.7)数据类型转换">
+                <i class="fa fa-chevron-left"></i> C++进阶学习总结-(1.7)数据类型转换
               </a>
             
           </div>
@@ -515,10 +594,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/29/链表应用-两数相加/" rel="prev" title="链表应用- 两数相加">
-                链表应用- 两数相加 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -680,7 +755,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数制转换"><span class="nav-number">1.</span> <span class="nav-text">数制转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现"><span class="nav-number">2.</span> <span class="nav-text">代码实现:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序队列算法即实现思路"><span class="nav-number">1.</span> <span class="nav-text">顺序队列算法即实现思路</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#顺序储存结构的队列定义-以char类型为例"><span class="nav-number">1.1.</span> <span class="nav-text">顺序储存结构的队列定义(以char类型为例)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#顺序队列"><span class="nav-number">1.2.</span> <span class="nav-text">顺序队列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#循环队列"><span class="nav-number">1.3.</span> <span class="nav-text">循环队列</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体代码实现"><span class="nav-number">2.</span> <span class="nav-text">具体代码实现;</span></a></li></ol></div>
             
 
           </div>
