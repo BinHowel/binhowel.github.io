@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="算法性能分析好的算法应当满足 正确性：算法应能满足具体问题的需求 可读性：算法应应易于阅读和理解 健壮性：输入数据非法时，算法也能适当作出反应或进行处理 高效性：算法执行时间短，占用存储空间少   时间复杂度 程序：算法在计算机上的实现 程序的执行时间取决于如下因素： 算法本身 问题规模 编程语言 硬件性能    选择一个“基本操作”，分析基本操作执行的次数 用该基本操作的重复次数表示算法的执行时">
+<meta name="description" content="¶算法性能分析 ¶好的算法应当满足  正确性：算法应能满足具体问题的需求 可读性：算法应应易于阅读和理解 健壮性：输入数据非法时，算法也能适当作出反应或进行处理 高效性：算法执行时间短，占用存储空间少   ¶时间复杂度  程序：算法在计算机上的实现 程序的执行时间取决于如下因素：  算法本身 问题规模 编程语言 硬件性能   选择一个“基本操作”，分析基本操作执行的次数 用该基本操作的重复次数表示">
 <meta name="keywords" content="数据结构,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法性能分析">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/02/算法性能分析/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="算法性能分析好的算法应当满足 正确性：算法应能满足具体问题的需求 可读性：算法应应易于阅读和理解 健壮性：输入数据非法时，算法也能适当作出反应或进行处理 高效性：算法执行时间短，占用存储空间少   时间复杂度 程序：算法在计算机上的实现 程序的执行时间取决于如下因素： 算法本身 问题规模 编程语言 硬件性能    选择一个“基本操作”，分析基本操作执行的次数 用该基本操作的重复次数表示算法的执行时">
+<meta property="og:description" content="¶算法性能分析 ¶好的算法应当满足  正确性：算法应能满足具体问题的需求 可读性：算法应应易于阅读和理解 健壮性：输入数据非法时，算法也能适当作出反应或进行处理 高效性：算法执行时间短，占用存储空间少   ¶时间复杂度  程序：算法在计算机上的实现 程序的执行时间取决于如下因素：  算法本身 问题规模 编程语言 硬件性能   选择一个“基本操作”，分析基本操作执行的次数 用该基本操作的重复次数表示">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-02T03:20:18.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法性能分析">
-<meta name="twitter:description" content="算法性能分析好的算法应当满足 正确性：算法应能满足具体问题的需求 可读性：算法应应易于阅读和理解 健壮性：输入数据非法时，算法也能适当作出反应或进行处理 高效性：算法执行时间短，占用存储空间少   时间复杂度 程序：算法在计算机上的实现 程序的执行时间取决于如下因素： 算法本身 问题规模 编程语言 硬件性能    选择一个“基本操作”，分析基本操作执行的次数 用该基本操作的重复次数表示算法的执行时">
+<meta name="twitter:description" content="¶算法性能分析 ¶好的算法应当满足  正确性：算法应能满足具体问题的需求 可读性：算法应应易于阅读和理解 健壮性：输入数据非法时，算法也能适当作出反应或进行处理 高效性：算法执行时间短，占用存储空间少   ¶时间复杂度  程序：算法在计算机上的实现 程序的执行时间取决于如下因素：  算法本身 问题规模 编程语言 硬件性能   选择一个“基本操作”，分析基本操作执行的次数 用该基本操作的重复次数表示">
 
 
 
@@ -392,20 +392,24 @@
       
 
       
-        <h4 id="算法性能分析"><a href="#算法性能分析" class="headerlink" title="算法性能分析"></a>算法性能分析</h4><h5 id="好的算法应当满足"><a href="#好的算法应当满足" class="headerlink" title="好的算法应当满足"></a>好的算法应当满足</h5><ul>
+        <h4 id="算法性能分析"><a class="header-anchor" href="#算法性能分析">¶</a>算法性能分析</h4>
+<h5 id="好的算法应当满足"><a class="header-anchor" href="#好的算法应当满足">¶</a>好的算法应当满足</h5>
+<ul>
 <li>正确性：算法应能满足具体问题的需求</li>
 <li>可读性：算法应应易于阅读和理解</li>
 <li>健壮性：输入数据非法时，算法也能适当作出反应或进行处理</li>
 <li><strong>高效性</strong>：算法执行时间短，占用存储空间少</li>
 </ul>
 <hr>
-<h5 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h5><ul>
+<h5 id="时间复杂度"><a class="header-anchor" href="#时间复杂度">¶</a>时间复杂度</h5>
+<ul>
 <li>程序：算法在计算机上的实现</li>
-<li>程序的执行时间取决于如下因素：<ul>
+<li>程序的执行时间取决于如下因素：
+<ul>
 <li>算法本身</li>
 <li>问题规模</li>
 <li>编程语言</li>
-<li>硬件性能 </li>
+<li>硬件性能</li>
 </ul>
 </li>
 <li>选择一个“基本操作”，分析基本操作执行的次数</li>
@@ -692,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法性能分析"><span class="nav-number">1.</span> <span class="nav-text">算法性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#好的算法应当满足"><span class="nav-number">1.1.</span> <span class="nav-text">好的算法应当满足</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#时间复杂度"><span class="nav-number">1.2.</span> <span class="nav-text">时间复杂度</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法性能分析"><span class="nav-number">1.</span> <span class="nav-text">¶算法性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#好的算法应当满足"><span class="nav-number">1.1.</span> <span class="nav-text">¶好的算法应当满足</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#时间复杂度"><span class="nav-number">1.2.</span> <span class="nav-text">¶时间复杂度</span></a></li></ol></li></ol></div>
             
 
           </div>
