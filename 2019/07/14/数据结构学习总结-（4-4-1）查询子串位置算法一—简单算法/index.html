@@ -81,18 +81,20 @@
 
 
 
-<meta name="description" content="¶抽象数据类型 ¶数据类型  定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称 ¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型  原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型">
+<meta name="description" content="¶简单(BF)算法的代码实现及思路   算法作用🔍：查找在给定的子串在主串中的位置。例如：子串“llo”在主串“hello”的位置为3。   实现思路💡：BF的算法的核心就是子串对主串逐一比较。所以只需用第一个循环来匹配子串的首字符与主串中的字符是否相等，如果相等那么在对子串后面的字符与此时主串的后面的字符进行比较。   具体实现💻:   12345678910111213141516171">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构学习总结-(1.2)抽象数据类型">
-<meta property="og:url" content="https://shuhaohwang.github.io/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/index.html">
+<meta property="og:title" content="数据结构学习总结-（4.4.1）查询子串位置算法一—简单算法">
+<meta property="og:url" content="https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶抽象数据类型 ¶数据类型  定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称 ¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型  原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型">
+<meta property="og:description" content="¶简单(BF)算法的代码实现及思路   算法作用🔍：查找在给定的子串在主串中的位置。例如：子串“llo”在主串“hello”的位置为3。   实现思路💡：BF的算法的核心就是子串对主串逐一比较。所以只需用第一个循环来匹配子串的首字符与主串中的字符是否相等，如果相等那么在对子串后面的字符与此时主串的后面的字符进行比较。   具体实现💻:   12345678910111213141516171">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-22T04:04:50.920Z">
+<meta property="og:image" content="https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/1.png">
+<meta property="og:updated_time" content="2019-07-14T02:05:02.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构学习总结-(1.2)抽象数据类型">
-<meta name="twitter:description" content="¶抽象数据类型 ¶数据类型  定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称 ¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型  原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型">
+<meta name="twitter:title" content="数据结构学习总结-（4.4.1）查询子串位置算法一—简单算法">
+<meta name="twitter:description" content="¶简单(BF)算法的代码实现及思路   算法作用🔍：查找在给定的子串在主串中的位置。例如：子串“llo”在主串“hello”的位置为3。   实现思路💡：BF的算法的核心就是子串对主串逐一比较。所以只需用第一个循环来匹配子串的首字符与主串中的字符是否相等，如果相等那么在对子串后面的字符与此时主串的后面的字符进行比较。   具体实现💻:   12345678910111213141516171">
+<meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/1.png">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://shuhaohwang.github.io/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/">
+  <link rel="canonical" href="https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/">
 
 
 
 
 
-  <title>数据结构学习总结-(1.2)抽象数据类型 | 双子星Binaryؼ</title>
+  <title>数据结构学习总结-（4.4.1）查询子串位置算法一—简单算法 | 双子星Binaryؼ</title>
   
 
 
@@ -287,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ShuHaoHwang">
@@ -304,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构学习总结-(1.2)抽象数据类型</h1>
+          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（4.4.1）查询子串位置算法一—简单算法</h1>
         
 
         <div class="post-meta">
@@ -316,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-12T20:50:24+08:00">
-                2019-06-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T09:16:48+08:00">
+                2019-07-14
               </time>
             
 
@@ -392,159 +394,34 @@
       
 
       
-        <h2 id="抽象数据类型"><a class="header-anchor" href="#抽象数据类型">¶</a>抽象数据类型</h2>
-<h4 id="数据类型"><a class="header-anchor" href="#数据类型">¶</a>数据类型</h4>
-<ul>
-<li>定义： 计算机中，<strong>内存空间是最有限的</strong>，不同的类型的数据分配的内存空间大小不同。</li>
-<li>例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等</li>
-</ul>
-<p><font color="red">数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称</font></p>
-<h5 id="例如在c-c-语言中的数据类型中是按取值不同分类的数据类型"><a class="header-anchor" href="#例如在c-c-语言中的数据类型中是按取值不同分类的数据类型">¶</a>例如在C/C++语言中的数据类型中是按<em>取值不同</em>分类的数据类型</h5>
-<ul>
-<li>原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型）等等</li>
-<li>结构型（可再分）：若干个数据类型（包括原子型和结构型）组成的一个组合。例如：<strong>数组</strong>，类，结构体（C/C++）等。</li>
-</ul>
-<h4 id="抽象数据类型-abstruct-data-type-adt"><a class="header-anchor" href="#抽象数据类型-abstruct-data-type-adt">¶</a>抽象数据类型（Abstruct Data Type[ADT])</h4>
-<ul>
-<li>定义：是对已有的数据类型进行抽象</li>
-</ul>
-<p><font color="red">抽象数据类型是指一个数据<strong>模型</strong>及定义在该模型上的一组操作</font></p>
-<ul>
-<li>模板：</li>
-</ul>
-<hr>
+        <h4 id="简单-bf-算法的代码实现及思路"><a class="header-anchor" href="#简单-bf-算法的代码实现及思路">¶</a>简单(BF)算法的代码实现及思路</h4>
 <ul>
 <li>
-<ul>
-<li>ADT 抽象数据类型名</li>
-</ul>
+<p>算法作用🔍：查找在给定的子串在主串中的位置。例如：子串<code>“llo”</code>在主串<code>“hello”</code>的位置为3。</p>
 </li>
 <li>
-<ul>
-<li>Data
-<ul>
-<li>
-<pre><code>数据元素之间的逻辑关系的定义
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
+<p>实现思路💡：BF的算法的核心就是子串对主串逐一比较。所以只需用第一个循环来匹配子串的首字符与主串中的字符是否相等，如果相等那么在对子串后面的字符与此时主串的后面的字符进行比较。</p>
 </li>
 <li>
+<p>具体实现💻:</p>
 <ul>
-<li>Operation
-<ul>
-<li>操作1
-<ul>
-<li>初始条件</li>
-<li>操作结果描述</li>
-</ul>
-</li>
-<li>操作2
-<ul>
-<li>…</li>
-</ul>
-</li>
-<li>操作n
-<ul>
-<li>…</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">       </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size &amp;&amp; j &lt; str.size; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;str[k] == str.str[j]) &#123;</span><br><span class="line">			j++;</span><br><span class="line">			k++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">    </span><br><span class="line">			j = <span class="number">0</span>;</span><br><span class="line">			n++;</span><br><span class="line">			k = n;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">       </span><br><span class="line">	<span class="keyword">if</span> (j &lt;= str.size)<span class="keyword">return</span> n;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<ul>
-<li>endADT</li>
-</ul>
-</li>
-</ul>
-<h5 id="个人理解：通过套用上面的模板-解释int-整型数据类型"><a class="header-anchor" href="#个人理解：通过套用上面的模板-解释int-整型数据类型">¶</a>个人理解：通过套用上面的模板 解释int（整型数据类型）</h5>
-<ul>
-<li>int（整型）</li>
-<li>
-<ul>
-<li>是以线性结构存储一个int（整型）数据类型占4个字节</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Operation
-<ul>
-<li>操作1：加法
-<ul>
-<li>需要两个数</li>
-<li>结果为两个数的和</li>
-</ul>
-</li>
-<li>操作2：减法
-<ul>
-<li>需要两个数</li>
-<li>结果为两个数的差</li>
-</ul>
-</li>
-<li>操作3：乘法
-<ul>
-<li>…</li>
-</ul>
-</li>
-<li>操作4：除法
-<ul>
-<li>…</li>
-</ul>
-</li>
-</ul>
+<p>实验结果🔑: <img src="/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/1.png">;</p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="个人总结："><a class="header-anchor" href="#个人总结：">¶</a>个人总结：</h4>
-<ol>
-<li>
-<p><strong>用自己的话简述下列术语：</strong></p>
-<ul>
-<li>数据：类似一个或几个人的全部基本信息（姓名、性别、爱好等）。</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>数据元素：人基本类型里面的单一个姓名、性别等。</li>
-</ul>
-<ul>
-<li>数据对象：单一个人的基本信息。</li>
-</ul>
-<ul>
-<li>数据结构：数据通过一定的结构、关系（计算方法【算法】）存储起来就是数据结构 例如：上面所说的数据 --多个人的基本信息 一般是用列表格的形式存储的，即所用的是<em>线性逻辑结构</em>存储的。</li>
-</ul>
-<ul>
-<li>存储结构（物理结构）：是对逻辑结构在计算机上的表示。即对上面的数据结构在计算机进行实习，如果是顺序存储结构，那么这些个人基本信息可能是用数组储存起来的。</li>
-</ul>
-<ul>
-<li>数据类型：例如 整型、浮点型就是一个数据类型，数据类型是一组相同值和其每个值之间特有的关系上的操作的总称。例如整型，它每一个数据元素都是一个整数，他们可以进行加减乘除等操作。</li>
-</ul>
-<ul>
-<li>抽象数据类型：类似于数据类型，但是把一些东西抽象化成数据类型。例如游戏角色，它的数据元素（对比就是整型里面的整数）有很多，例如武器、玩家属性等、这个数据类型可以执行的动作有移动攻击等。</li>
-</ul>
-<ol start="2">
-<li><strong>数据结构和抽象数据类型的概念与程序设计语言中的数据类型概念的区别</strong></li>
-</ol>
+<h4 id="算法优化🔧："><a class="header-anchor" href="#算法优化🔧：">¶</a>算法优化🔧：</h4>
 <ul>
 <li>
-<p>抽象数据类型是对软件设计过程中问题模型抽象出来的逻辑结构和在逻辑结构上的运算。</p>
-<p>数据结构是计算机处理元素的组织形式的相互关系。</p>
-<p><em>程序设计语言中的数据类型是已经实现了的数据结构。</em></p>
-</li>
-<li>
-<p>即：一个还没有被实现（抽象数据类型）一个是已经实现的了（程序设计语言中的数据类型）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(String ch)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; size &amp;&amp; j &lt; ch.size)&#123;</span><br><span class="line">        <span class="keyword">if</span>(str[i] == ch.str[j])&#123;</span><br><span class="line">            i++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            i = i + <span class="number">1</span> - j;</span><br><span class="line">            j = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(j &lt;= ch.size) <span class="keyword">return</span> i - j;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<pre><code> 而数据结构是指： 数据的相互之间存在一种或多种特点关系的数据元素的集合。
-
- --（本文完）&lt;待完善&gt;
-</code></pre>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -561,12 +438,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/">数据结构学习总结-(1.2)抽象数据类型</a></p>
+  <p><span>本文标题:</span><a href="/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/">数据结构学习总结-（4.4.1）查询子串位置算法一—简单算法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
-  <p><span>发布时间:</span>2019年06月12日 - 20:06</p>
-  <p><span>最后更新:</span>2019年06月22日 - 12:06</p>
-  <p><span>原始链接:</span><a href="/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/" title="数据结构学习总结-(1.2)抽象数据类型">https://shuhaohwang.github.io/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年07月14日 - 09:07</p>
+  <p><span>最后更新:</span>2019年07月14日 - 10:07</p>
+  <p><span>原始链接:</span><a href="/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/" title="数据结构学习总结-（4.4.1）查询子串位置算法一—简单算法">https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-1）查询子串位置算法一—简单算法/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>博主提示:</span><i class="fa fa-creative-commons"></i> 如果您想转载本文请保留原文链接及作者哦( • ̀ω•́ )✧。</p>  
 </div>
@@ -653,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/12/Java模拟考心得体会/" rel="next" title="Java模拟考心得体会">
-                <i class="fa fa-chevron-left"></i> Java模拟考心得体会
+              <a href="/2019/07/12/数据结构学习总结-（4-3）实现字符串结构、相关操作代码和实现思路/" rel="next" title="数据结构学习总结-（4.3）实现字符串结构、相关操作代码和实现思路">
+                <i class="fa fa-chevron-left"></i> 数据结构学习总结-（4.3）实现字符串结构、相关操作代码和实现思路
               </a>
             
           </div>
@@ -662,10 +539,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/12/数据结构学习总结-（2）第二章预习/" rel="prev" title="数据结构学习总结-（2）第二章预习">
-                数据结构学习总结-（2）第二章预习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -827,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型"><span class="nav-number">1.</span> <span class="nav-text">¶抽象数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#例如在c-c-语言中的数据类型中是按取值不同分类的数据类型"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象数据类型-abstruct-data-type-adt"><span class="nav-number">1.0.2.</span> <span class="nav-text">¶抽象数据类型（Abstruct Data Type[ADT])</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#个人理解：通过套用上面的模板-解释int-整型数据类型"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">¶个人理解：通过套用上面的模板 解释int（整型数据类型）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人总结："><span class="nav-number">1.0.3.</span> <span class="nav-text">¶个人总结：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单-bf-算法的代码实现及思路"><span class="nav-number">1.</span> <span class="nav-text">¶简单(BF)算法的代码实现及思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法优化🔧："><span class="nav-number">2.</span> <span class="nav-text">¶算法优化🔧：</span></a></li></ol></div>
             
 
           </div>
