@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="（加密文章）">
+<meta name="description" content="¶图的遍历（图的遍历是图的基本运算）  定义：从已给的连通图中的某一个顶点出发，沿着一些边去访问遍历图中所有的顶点，且使每个顶点仅被访问一次 实质：找每个顶点的邻接点的过程   ¶遍历算法  深度优先搜索(DFS)  类似树的先序遍历   广度优先搜索(BFS)  类似树的层次遍历    –（本文完）">
+<meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（6.6）图的遍历">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/20/数据结构学习总结-（6-6）图的遍历/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="（加密文章）">
+<meta property="og:description" content="¶图的遍历（图的遍历是图的基本运算）  定义：从已给的连通图中的某一个顶点出发，沿着一些边去访问遍历图中所有的顶点，且使每个顶点仅被访问一次 实质：找每个顶点的邻接点的过程   ¶遍历算法  深度优先搜索(DFS)  类似树的先序遍历   广度优先搜索(BFS)  类似树的层次遍历    –（本文完）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-20T03:53:51.871Z">
+<meta property="og:updated_time" content="2019-08-22T07:47:14.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（6.6）图的遍历">
-<meta name="twitter:description" content="（加密文章）">
+<meta name="twitter:description" content="¶图的遍历（图的遍历是图的基本运算）  定义：从已给的连通图中的某一个顶点出发，沿着一些边去访问遍历图中所有的顶点，且使每个顶点仅被访问一次 实质：找每个顶点的邻接点的过程   ¶遍历算法  深度优先搜索(DFS)  类似树的先序遍历   广度优先搜索(BFS)  类似树的层次遍历    –（本文完）">
 
 
 
@@ -326,6 +327,39 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/数据结构学习/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -358,20 +392,27 @@
       
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="此文章是加密文章，请输入密码后查看.">
-    <label for="pass">此文章是加密文章，请输入密码后查看.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-U2FsdGVkX19SJoS1nvJ5XTKuyQRI3hHpXTbP2mNejtc=
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h4 id="图的遍历-图的遍历是图的基本运算"><a class="header-anchor" href="#图的遍历-图的遍历是图的基本运算">¶</a>图的遍历（图的遍历是图的基本运算）</h4>
+<ul>
+<li>定义：从已给的连通图中的某一个顶点出发，沿着一些边去访问遍历图中所有的顶点，且使每个顶点仅被访问一次</li>
+<li>实质：找每个顶点的邻接点的过程</li>
+</ul>
+<hr>
+<h4 id="遍历算法"><a class="header-anchor" href="#遍历算法">¶</a>遍历算法</h4>
+<ul>
+<li>深度优先搜索(DFS)
+<ul>
+<li>类似树的先序遍历</li>
+</ul>
+</li>
+<li>广度优先搜索(BFS)
+<ul>
+<li>类似树的层次遍历</li>
+</ul>
+</li>
+</ul>
+<p>–（本文完）</p>
+
       
     </div>
     
@@ -390,7 +431,7 @@ U2FsdGVkX19SJoS1nvJ5XTKuyQRI3hHpXTbP2mNejtc=
   <p><span>本文标题:</span><a href="/2019/08/20/数据结构学习总结-（6-6）图的遍历/">数据结构学习总结-（6.6）图的遍历</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
   <p><span>发布时间:</span>2019年08月20日 - 11:08</p>
-  <p><span>最后更新:</span>2019年08月20日 - 11:08</p>
+  <p><span>最后更新:</span>2019年08月22日 - 15:08</p>
   <p><span>原始链接:</span><a href="/2019/08/20/数据结构学习总结-（6-6）图的遍历/" title="数据结构学习总结-（6.6）图的遍历">https://shuhaohwang.github.io/2019/08/20/数据结构学习总结-（6-6）图的遍历/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/08/20/数据结构学习总结-（6-6）图的遍历/" aria-label="复制成功！"></i></span>
   </p>
@@ -445,6 +486,16 @@ U2FsdGVkX19SJoS1nvJ5XTKuyQRI3hHpXTbP2mNejtc=
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
+          
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+            <a href="/tags/数据结构-学习总结/" rel="tag"><i class="fa fa-tag"></i> 数据结构-学习总结</a>
+          
+        </div>
+      
 
       
       
@@ -478,6 +529,10 @@ U2FsdGVkX19SJoS1nvJ5XTKuyQRI3hHpXTbP2mNejtc=
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/21/数据结构学习总结-（6-7）深度优先搜索-邻接矩阵/" rel="prev" title="数据结构学习总结-（6.7）深度优先搜索(邻接矩阵)">
+                数据结构学习总结-（6.7）深度优先搜索(邻接矩阵) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -534,8 +589,17 @@ U2FsdGVkX19SJoS1nvJ5XTKuyQRI3hHpXTbP2mNejtc=
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -552,7 +616,7 @@ U2FsdGVkX19SJoS1nvJ5XTKuyQRI3hHpXTbP2mNejtc=
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -620,6 +684,22 @@ U2FsdGVkX19SJoS1nvJ5XTKuyQRI3hHpXTbP2mNejtc=
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#图的遍历-图的遍历是图的基本运算"><span class="nav-number">1.</span> <span class="nav-text">¶图的遍历（图的遍历是图的基本运算）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历算法"><span class="nav-number">2.</span> <span class="nav-text">¶遍历算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
