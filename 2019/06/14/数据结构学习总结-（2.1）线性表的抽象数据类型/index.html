@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="线性表 定义： 零个或多个数据元素的有限序列。  特点:  它是一个序列 数据元素之间是有有序的。 数据元素之间是一对一的关系。   有限性      两个数据元素的有限序列称为空表。  常见线性表的操作：  删除 插入 创建 初始化 清空 查找     线性表的抽象数据类型 ADT 线性表(List) Data 线性表数据元素是一个集合{a_1 , a_2 , a_3 , …. , a_n},数">
+<meta name="description" content="¶线性表   定义： 零个或多个数据元素的有限序列。   特点:  它是一个序列  数据元素之间是有有序的。 数据元素之间是一对一的关系。   有限性    两个数据元素的有限序列称为空表。   常见线性表的操作：  删除 插入 创建 初始化 清空 查找     ¶线性表的抽象数据类型  ADT 线性表(List) Data  线性表数据元素是一个集合{a_1 , a_2 , a_3 , … ,">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（2.1）线性表的抽象数据类型">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/14/数据结构学习总结-（2.1）线性表的抽象数据类型/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="线性表 定义： 零个或多个数据元素的有限序列。  特点:  它是一个序列 数据元素之间是有有序的。 数据元素之间是一对一的关系。   有限性      两个数据元素的有限序列称为空表。  常见线性表的操作：  删除 插入 创建 初始化 清空 查找     线性表的抽象数据类型 ADT 线性表(List) Data 线性表数据元素是一个集合{a_1 , a_2 , a_3 , …. , a_n},数">
+<meta property="og:description" content="¶线性表   定义： 零个或多个数据元素的有限序列。   特点:  它是一个序列  数据元素之间是有有序的。 数据元素之间是一对一的关系。   有限性    两个数据元素的有限序列称为空表。   常见线性表的操作：  删除 插入 创建 初始化 清空 查找     ¶线性表的抽象数据类型  ADT 线性表(List) Data  线性表数据元素是一个集合{a_1 , a_2 , a_3 , … ,">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-22T04:05:41.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（2.1）线性表的抽象数据类型">
-<meta name="twitter:description" content="线性表 定义： 零个或多个数据元素的有限序列。  特点:  它是一个序列 数据元素之间是有有序的。 数据元素之间是一对一的关系。   有限性      两个数据元素的有限序列称为空表。  常见线性表的操作：  删除 插入 创建 初始化 清空 查找     线性表的抽象数据类型 ADT 线性表(List) Data 线性表数据元素是一个集合{a_1 , a_2 , a_3 , …. , a_n},数">
+<meta name="twitter:description" content="¶线性表   定义： 零个或多个数据元素的有限序列。   特点:  它是一个序列  数据元素之间是有有序的。 数据元素之间是一对一的关系。   有限性    两个数据元素的有限序列称为空表。   常见线性表的操作：  删除 插入 创建 初始化 清空 查找     ¶线性表的抽象数据类型  ADT 线性表(List) Data  线性表数据元素是一个集合{a_1 , a_2 , a_3 , … ,">
 
 
 
@@ -392,12 +392,16 @@
       
 
       
-        <h4 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h4><ul>
-<li><p>定义： 零个或多个数据元素的有限序列。</p>
-</li>
-<li><p>特点:</p>
+        <h4 id="线性表"><a class="header-anchor" href="#线性表">¶</a>线性表</h4>
 <ul>
-<li><strong>它是一个序列</strong><ul>
+<li>
+<p>定义： 零个或多个数据元素的有限序列。</p>
+</li>
+<li>
+<p>特点:</p>
+<ul>
+<li><strong>它是一个序列</strong>
+<ul>
 <li>数据元素之间是有<font color="red">有序的</font>。</li>
 <li>数据元素之间是<font color="red">一对一</font>的关系。</li>
 </ul>
@@ -406,9 +410,10 @@
 </ul>
 </li>
 </ul>
-<p>  <strong><em>两个数据元素的有限序列称为空表。</em></strong></p>
+<p><strong><em>两个数据元素的有限序列称为空表。</em></strong></p>
 <ul>
-<li><p>常见线性表的操作：</p>
+<li>
+<p>常见线性表的操作：</p>
 <ul>
 <li>删除</li>
 <li>插入</li>
@@ -420,24 +425,29 @@
 </li>
 </ul>
 <hr>
-<h4 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h4><ul>
+<h4 id="线性表的抽象数据类型"><a class="header-anchor" href="#线性表的抽象数据类型">¶</a>线性表的抽象数据类型</h4>
+<ul>
 <li>ADT 线性表(List)</li>
-<li>Data<ul>
-<li>线性表数据元素是一个集合{a_1 , a_2 , a_3 , …. , a_n},数据元素的类型DataType（int , char ,…)。</li>
-<li>除了第一个（a_1）元素外，每个元素有且只有一个直接的前驱元素。<ul>
+<li>Data
+<ul>
+<li>线性表数据元素是一个集合{a_1 , a_2 , a_3 , … , a_n},数据元素的类型DataType（int , char ,…)。</li>
+<li>除了第一个（a_1）元素外，每个元素有且只有一个直接的前驱元素。
+<ul>
 <li>例如 : a_2的前驱元素是a_1。</li>
 </ul>
 </li>
-<li>除了最后一个（a_n）元素外，每一个元素有且只有一个直接的后继元素。<ul>
+<li>除了最后一个（a_n）元素外，每一个元素有且只有一个直接的后继元素。
+<ul>
 <li>例如: a_3是a_2的后继元素。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Operation<ul>
-<li>InitList（*List）                    初始化线性表：创建一个空的线性表List</li>
+<li>Operation
+<ul>
+<li>InitList（*List）					初始化线性表：创建一个空的线性表List</li>
 <li>InsertElement（*List ， index ， e） 在线性表List的index下标处插入元素e</li>
-<li>DeleteElement（<em>List ， index， </em>e) 删除线性表List中的第i个元素，并返回删除元素指针e</li>
+<li>DeleteElement（*List ， index， *e) 删除线性表List中的第i个元素，并返回删除元素指针e</li>
 <li>GetLength（*List）                               获得线性表的长度</li>
 <li>IsEmpty（*List）                                   判断线性表是否为空表</li>
 <li>ClearList（*List）                                  清空线性表</li>
@@ -447,11 +457,12 @@
 <li>endADT</li>
 </ul>
 <hr>
-<h4 id="个人理解："><a href="#个人理解：" class="headerlink" title="个人理解："></a>个人理解：</h4><p>​    在实际上，线性表可以理解为一群人在排队，排队的都是人（数据元素类型相同），然后他们是排成一条线的。首先排队的人肯定是有限的（即：<strong>有限性</strong>）其次他们每一个人是相互连成一条线的，即一个人跟着一个人有顺序（即：<strong>一对一、有序的</strong>）。</p>
-<p>​    再者，这队排队的人，除了第一个人前面没人，最后一个人后面没人外。其中每一个人都是前后都有人的。例如第二个人的前面是第一个人（即：第一个人为第二个人的<strong>前驱元素</strong>），而第三个人是第二个人的后面（即：第三个人为第二个人的<strong>后继元素</strong>）。</p>
-<p>​    这队排队的人是在等待上车的。他们之间可能会有人在中途想上厕所从而离开了队伍（即：<strong>删除</strong>），又或者有人在后面加入进去了（即：<strong>增加</strong>），这时检票员也会一一核对信息对照人员表查找每一个人是否到齐了（即：<strong>查找</strong>），这时上厕所的人回来了因为这队人是有顺序的，所以这位回来的也可以插入原来的位置（即：<strong>插入</strong>）。</p>
+<h4 id="个人理解："><a class="header-anchor" href="#个人理解：">¶</a>个人理解：</h4>
+<p>​	在实际上，线性表可以理解为一群人在排队，排队的都是人（数据元素类型相同），然后他们是排成一条线的。首先排队的人肯定是有限的（即：<strong>有限性</strong>）其次他们每一个人是相互连成一条线的，即一个人跟着一个人有顺序（即：<strong>一对一、有序的</strong>）。</p>
+<p>​	再者，这队排队的人，除了第一个人前面没人，最后一个人后面没人外。其中每一个人都是前后都有人的。例如第二个人的前面是第一个人（即：第一个人为第二个人的<strong>前驱元素</strong>），而第三个人是第二个人的后面（即：第三个人为第二个人的<strong>后继元素</strong>）。</p>
+<p>​	这队排队的人是在等待上车的。他们之间可能会有人在中途想上厕所从而离开了队伍（即：<strong>删除</strong>），又或者有人在后面加入进去了（即：<strong>增加</strong>），这时检票员也会一一核对信息对照人员表查找每一个人是否到齐了（即：<strong>查找</strong>），这时上厕所的人回来了因为这队人是有顺序的，所以这位回来的也可以插入原来的位置（即：<strong>插入</strong>）。</p>
 <hr>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -734,7 +745,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性表"><span class="nav-number">1.</span> <span class="nav-text">线性表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性表的抽象数据类型"><span class="nav-number">2.</span> <span class="nav-text">线性表的抽象数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人理解："><span class="nav-number">3.</span> <span class="nav-text">个人理解：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性表"><span class="nav-number">1.</span> <span class="nav-text">¶线性表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性表的抽象数据类型"><span class="nav-number">2.</span> <span class="nav-text">¶线性表的抽象数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人理解："><span class="nav-number">3.</span> <span class="nav-text">¶个人理解：</span></a></li></ol></div>
             
 
           </div>
@@ -1328,6 +1339,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

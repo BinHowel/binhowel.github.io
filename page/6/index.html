@@ -551,10 +551,13 @@
       
         
           
-          顺序栈的实现与算法思路（以char数据类型为例）
+          ¶顺序栈的实现与算法思路（以char数据类型为例）
+
+
 入栈push(char e)；
 
-思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位
+
+思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -717,15 +720,17 @@
       
         
           
-          初识栈
+          ¶初识栈
+
 定义：栈(stack)是限定仅在表尾插入和删除操作的线性表。
+
 允许插入和删除的一段称为栈顶(top),另一段称为栈底(bottom)。
 不含任何数据元素的栈称为空栈。
 
 
 特点：
-先进后出
-后
+
+先进
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1049,14 +1054,19 @@
       
         
           
-          顺序结构的逆置算法与思路：
+          ¶顺序结构的逆置算法与思路：
+
+
 夹逼法：
+
 
 思路：通过对数组头部和尾部相互对调并向中间靠近。
 
+
 实现：(假设以整型为数据类型实现)
 
-12345678910//length为顺序表总长度。bool Con
+
+12345678910//length为顺序表总长度。bo
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1219,7 +1229,7 @@
       
         
           
-          顺序结构与链式结构的比较：
+          ¶顺序结构与链式结构的比较：
 
 
 
@@ -1232,7 +1242,7 @@
 
 按序号下标读取
 直接读取通过A[index]即可获的数据+++
-要从头开始找，找的下标才能获取数据—-
+要从头开始找，找的下标才能获取数据—
 
 
 内存实验
@@ -1560,9 +1570,9 @@
       
         
           
-          双向链表
-与单向链表的不同之处：
+          ¶双向链表
 
+与单向链表的不同之处：
 
 
 
@@ -1575,7 +1585,6 @@
 
 只知道后继节点，不知道前驱节点。每次查找只能从头开始查找。
 相比单向链表增加了一个前驱指针，使前驱节点很快就能被找到
-
 
 
 
@@ -1743,7 +1752,8 @@
       
         
           
-          体现循环链表的优点之从指定结点开始遍历​    上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个
+          ¶体现循环链表的优点之从指定结点开始遍历
+​	上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个链
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1906,14 +1916,17 @@
       
         
           
-          循环链表
+          ¶循环链表
+
 相较于非循环链表
+
 在非循环链表中，最后一个元素的next指针是空指针，造成浪费。
 每次寻找后继指针的时候都要重新从头开始找。
 
 
 循环链表
-尾指针直接指向表头，使最后一个元素的next指针被
+
+尾指针直接指向表头，使最后一个元素的nex
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2652,6 +2665,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

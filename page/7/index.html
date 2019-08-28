@@ -390,13 +390,12 @@
       
         
           
-          Auto
+          ¶Auto
+
 auto：变量的自动类型推断。
+
 可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（声明时要初始化）
 自动推断发生在编译期间，所以使用auto不会造成程序效降低。
-
-
-
 
 
           ...
@@ -561,11 +560,13 @@ auto：变量的自动类型推断。
       
         
           
-          命名空间的基本概念简介基本概念
+          ¶命名空间的基本概念简介
+¶基本概念
+
 命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。
 
 
-可以把命名空间看成一个作业域，在这个命名空间定义的
+可以把命名空间看成一个作业域，在这个命名空
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -728,15 +729,15 @@ auto：变量的自动类型推断。
       
         
           
-          链表储存结构
+          ¶链表储存结构
+
 链表（LinkedList）
 定义: 每个元素用一个指针（以存储下一个数据的地址）相互串联起来为存储方式的物理存储结构
 对应线性表操作：
+
 前插数据元素
-Insert_Front()
 
-
-
+Insert_Front(
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -899,14 +900,16 @@ Insert_Front()
       
         
           
-          链表基本概念
+          ¶链表基本概念
+
 结点包括数据域和指针域。
 链表是有n个结点链结成，第一个结点的存储位置叫做头指针，最后一个结点的指针为“空”。
 
 
 相较于顺序表存储结构的优点：
+
 不用定义时规定长度。
-存储的元素个数不受
+存储的元素个
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1069,11 +1072,14 @@ Insert_Front()
       
         
           
-          顺序表储存结构
+          ¶顺序表储存结构
+
 顺序表(SqList)
 定义： 顺序表存储结构是一个以连续空间地址存储为方式的物理结构
 实现线性表相应操作：
-SqList（）                    初始化线性表：创建
+
+SqList（）					初始化线性表：创建一个空的线性表List
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1386,14 +1392,17 @@ SqList（）                    初始化线性表：创建
       
         
           
-          顺序表结构
-顺序存储结构的线性表—顺序表
+          ¶顺序表结构
+
+顺序存储结构的线性表–顺序表
 定义：指的是用一段地址连续的存储单元依次存储线性表的数据元素（数组）
 
-顺序表的构成
+¶顺序表的构成
+
+
 需要定义线性表的最大存储空间
 
-define int Max_SIZE 
+#define int Max
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1870,12 +1879,16 @@ define int Max_SIZE
       
         
           
-          线性表
+          ¶线性表
+
+
 定义： 零个或多个数据元素的有限序列。
+
 
 特点:
 
 它是一个序列
+
 数据元素之间是有有序的。
 数据元素之间是一对一的关系。
 
@@ -1884,9 +1897,10 @@ define int Max_SIZE
 
 
 
-  两个数据元素的有限序列称为空表。
+两个数据元素的有限序列称为空表。
 
-常见线性表的
+
+常见
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2625,6 +2639,28 @@ define int Max_SIZE
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

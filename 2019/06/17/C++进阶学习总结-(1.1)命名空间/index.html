@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="命名空间的基本概念简介基本概念 命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数    .">
+<meta name="description" content="¶命名空间的基本概念简介 ¶基本概念  命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-(1.1)命名空间">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/17/C++进阶学习总结-(1.1)命名空间/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="命名空间的基本概念简介基本概念 命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数    .">
+<meta property="og:description" content="¶命名空间的基本概念简介 ¶基本概念  命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/17/C++进阶学习总结-(1.1)命名空间/1.jpg">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/17/C++进阶学习总结-(1.1)命名空间/2.png">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-06-19T16:29:16.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-(1.1)命名空间">
-<meta name="twitter:description" content="命名空间的基本概念简介基本概念 命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数    .">
+<meta name="twitter:description" content="¶命名空间的基本概念简介 ¶基本概念  命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，不可以同名。   可以把命名空间看成一个作业域，在这个命名空间定义的函数，跟你另外一个命名空间里定义的函数，即便同名，也互不影响。 命名空间定义：  1234namespace 命名空间名&amp;#123;    void fb()&amp;#123;&amp;#125;//函数">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/06/17/C++进阶学习总结-(1.1)命名空间/1.jpg">
 
 
@@ -396,7 +396,9 @@
       
 
       
-        <h3 id="命名空间的基本概念简介"><a href="#命名空间的基本概念简介" class="headerlink" title="命名空间的基本概念简介"></a>命名空间的基本概念简介</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ul>
+        <h3 id="命名空间的基本概念简介"><a class="header-anchor" href="#命名空间的基本概念简介">¶</a>命名空间的基本概念简介</h3>
+<h4 id="基本概念"><a class="header-anchor" href="#基本概念">¶</a>基本概念</h4>
+<ul>
 <li>命名空间就是为了防止名字冲突引入的一种机制。系统中可以定义多个命名空间，每个命名空间都有自己的名字，<strong>不可以同名</strong>。</li>
 </ul>
 <ul>
@@ -408,8 +410,10 @@
 <li>命名空间的定义可以不连续，甚至可以写在多个文件中，如果以为没有定义这个命名空间，那么相当于定义命名空间，如果已经定义了，那么就算打开这个命名空间并可以往里面添加新成员的声明；</li>
 </ul>
 <hr>
-<h4 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h4><ul>
-<li><p>假设同一个工程里面有两个project.cpp和project2.cpp文件并分别给两个程序员去编写，在编写过程中张三和李四都定义了同名、返回值相同、参数也相同的void Print()函数，在编译时将会出现：</p>
+<h4 id="情形"><a class="header-anchor" href="#情形">¶</a>情形</h4>
+<ul>
+<li>
+<p>假设同一个工程里面有两个project.cpp和project2.cpp文件并分别给两个程序员去编写，在编写过程中张三和李四都定义了同名、返回值相同、参数也相同的void Print()函数，在编译时将会出现：</p>
 <p><strong>找到一个或多个多重定义的符号</strong></p>
 <p><strong>void_cdecl Print(void)已在project2.obj中定义</strong>的错误</p>
 <img src="/2019/06/17/C++进阶学习总结-(1.1)命名空间/1.jpg">
@@ -419,12 +423,13 @@
 <li>如何去解决这种问题呢？分别去改函数名或许是个好方法，但是如果这样的情况多了起来难免就太麻烦了。这里就可以用<strong>命名空间</strong>来解决具体：</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//project1.cpp</span></span><br><span class="line"><span class="keyword">namespace</span> ZhangSan &#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是张三的Print函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就解决了这种重名的问题。如果要调用张三的这个同名函数就可以用 <strong>命名空间名::实体名（函数名）</strong>的方法调用张三的Print函数 （其中<strong>“ : : “</strong>是<strong>作用域运算符</strong>）。</p>
+<p>这样就解决了这种重名的问题。如果要调用张三的这个同名函数就可以用 <strong>命名空间名::实体名（函数名）<strong>的方法调用张三的Print函数 （其中</strong>&quot; : : “<strong>是</strong>作用域运算符</strong>）。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ZhangSan::Print();<span class="comment">//张三的</span></span><br><span class="line"></span><br><span class="line">	Print();<span class="comment">//李四的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行情况：</p>
 <img src="/2019/06/17/C++进阶学习总结-(1.1)命名空间/2.png">
 <ul>
-<li><p>但是每次调用的时候都要用<strong>命名空间名::实体名（函数名）</strong>的方法岂不是也太麻烦了。</p>
+<li>
+<p>但是每次调用的时候都要用**命名空间名::实体名（函数名）**的方法岂不是也太麻烦了。</p>
 <p>所以这里就要用上<strong>using</strong>关键字了，只要在头文件引入语句下面加入：</p>
 <p><strong>using namespace ZhangSan</strong>就可以了</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"project2.h"</span><span class="comment">//张三命名空间定义所在的头文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> ZhangSan;<span class="comment">//使用的张三的命名空间</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	Print();<span class="comment">//张三的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -432,7 +437,7 @@
 <img src="/2019/06/17/C++进阶学习总结-(1.1)命名空间/3.png">
 </li>
 </ul>
-<p>—(本文完)&lt;原创&gt;</p>
+<p>–(本文完)&lt;原创&gt;</p>
 
       
     </div>
@@ -686,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间的基本概念简介"><span class="nav-number">1.</span> <span class="nav-text">命名空间的基本概念简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#情形"><span class="nav-number">1.2.</span> <span class="nav-text">情形</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间的基本概念简介"><span class="nav-number">1.</span> <span class="nav-text">¶命名空间的基本概念简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">¶基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#情形"><span class="nav-number">1.2.</span> <span class="nav-text">¶情形</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1280,6 +1285,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

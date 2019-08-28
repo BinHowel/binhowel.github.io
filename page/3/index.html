@@ -712,11 +712,15 @@
       
         
           
-          二叉树遍历的衍生运用例图：
-递归求树的深度/高度
+          ¶二叉树遍历的衍生运用
+例图：
+¶递归求树的深度/高度
+
+
 代码实现:
 
-12345678int GetTreeDepth(BiTreeNode* T)&#123;    if(!T)return 0;//递归
+
+12345678int GetTreeDepth(BiTreeNode* T)&#123;    if(!T)return 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -879,14 +883,19 @@
       
         
           
-          广度优先遍历二叉树
+          ¶广度优先遍历二叉树
+
+
 又名：层次遍历
+
 
 正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。
 
+
  
 
-如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让
+
+如上图所示：整体思路是先让根结点进队并输出其数据并
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1210,18 +1219,20 @@
       
         
           
-          二叉树的链式实现创建链表二叉树
+          ¶二叉树的链式实现
+¶创建链表二叉树
+
+
 二叉树的链表实现有两种情况
 
 二叉链表：一个结点带有指向左右子树的指针和一个数据
 
 
 
-三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针
 
 
 
-
+三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1384,13 +1395,16 @@
       
         
           
-          二叉树的抽象数据结构
+          ¶二叉树的抽象数据结构
+
 ADT BinaryTree
-Data    
+Data
+
 D是具有相同特征的数据元素的集合
 
 
 Relative
+
 若D = ∅，则R = ∅；
 若D ≠ ∅，则R = {H}；
 root唯
@@ -1706,14 +1720,22 @@ root唯
       
         
           
-          二叉树的性质性质1：(层级):pencil:
+          ¶二叉树的性质
+¶性质1：(层级)📝
+
 在二叉树的第i层上至多有2i-1个结点。
+
+
 
 即：下层的结点最多是上层结点的2倍
 
 
-性质2：(深度):pencil:
-深度为k的二叉树至多有2k-1个结点
+¶性质2：(深度)📝
+
+深度为k的二叉树至多有2k-1个结点。
+
+
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1865,13 +1887,16 @@ root唯
       
         
           
-          二叉树(Binary Tree)
+          ¶二叉树(Binary Tree)
+
+
 二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。
 
 
 
+
 只有一个称为根的结点
-除根外，其余结点分为不相交的子集T1和T2，
+除根外，其余结点分为不相交的子集T1
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2610,6 +2635,28 @@ root唯
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="前序遍历的非递归实现 思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问  代码：  12345678910111213141516bool pre_Traversal(BiTreeNode* R)&amp;#123;">
+<meta name="description" content="¶前序遍历的非递归实现   思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问   代码：   12345678910111213141516bool pre_Traversal(BiTreeNode* R)&amp;#">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5-10）前序遍历非递归实现">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/01/数据结构学习总结-（5-10）前序遍历非递归实现/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="前序遍历的非递归实现 思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问  代码：  12345678910111213141516bool pre_Traversal(BiTreeNode* R)&amp;#123;">
+<meta property="og:description" content="¶前序遍历的非递归实现   思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问   代码：   12345678910111213141516bool pre_Traversal(BiTreeNode* R)&amp;#">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-15T13:33:14.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5-10）前序遍历非递归实现">
-<meta name="twitter:description" content="前序遍历的非递归实现 思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问  代码：  12345678910111213141516bool pre_Traversal(BiTreeNode* R)&amp;#123;">
+<meta name="twitter:description" content="¶前序遍历的非递归实现   思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问   代码：   12345678910111213141516bool pre_Traversal(BiTreeNode* R)&amp;#">
 
 
 
@@ -392,12 +392,16 @@
       
 
       
-        <h4 id="前序遍历的非递归实现"><a href="#前序遍历的非递归实现" class="headerlink" title="前序遍历的非递归实现"></a>前序遍历的非递归实现</h4><ul>
-<li><p>思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问</p>
-</li>
-<li><p>代码：</p>
+        <h4 id="前序遍历的非递归实现"><a class="header-anchor" href="#前序遍历的非递归实现">¶</a>前序遍历的非递归实现</h4>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pre_Traversal</span><span class="params">(BiTreeNode* R)</span></span>&#123;</span><br><span class="line">    <span class="built_in">stack</span>&lt;BiTreeNode*&gt; s;</span><br><span class="line">    BiTreeNode* T = R;</span><br><span class="line">    s.push(T);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(!s.empty())&#123;</span><br><span class="line">        T = s.top();s.pop();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; T-&gt;data &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(T-&gt;R_Node)s.push(T-&gt;R_Node);</span><br><span class="line">        <span class="keyword">if</span>(T-&gt;L_Node)s.push(T-&gt;L_Node);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>思路：跟中序遍历的差不多，通过栈结构，进行排序访问输出。先从根结点开始，往下进行访问和移动，因为是堆栈所以要注意，在进行左右孩子移动的时候，应该让右孩子先入栈，左孩子后入栈，根据栈结构FIBO(先进后出)的结构特点，所以左孩子会先进行访问</p>
+</li>
+<li>
+<p>代码：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pre_Traversal</span><span class="params">(BiTreeNode* R)</span></span>&#123;</span><br><span class="line">    <span class="built_in">stack</span>&lt;BiTreeNode*&gt; s;</span><br><span class="line">    BiTreeNode* T = R;</span><br><span class="line">    s.push(T);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(!s.empty())&#123;</span><br><span class="line">        T = s.top();s.pop();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; T-&gt;data &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(T-&gt;R_Node)s.push(T-&gt;R_Node);</span><br><span class="line">        <span class="keyword">if</span>(T-&gt;L_Node)s.push(T-&gt;L_Node);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -684,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前序遍历的非递归实现"><span class="nav-number">1.</span> <span class="nav-text">前序遍历的非递归实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前序遍历的非递归实现"><span class="nav-number">1.</span> <span class="nav-text">¶前序遍历的非递归实现</span></a></li></ol></div>
             
 
           </div>
@@ -1278,6 +1282,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="二叉树遍历的衍生运用例图： 递归求树的深度/高度 代码实现:  12345678int GetTreeDepth(BiTreeNode* T)&amp;#123;    if(!T)return 0;//递归出口        int l = GetTreeDepth(T-&amp;gt;L_Node);    int r = GetTreeDepth(T-&amp;gt;R_Node);        return (">
+<meta name="description" content="¶二叉树遍历的衍生运用 例图： ¶递归求树的深度/高度   代码实现:   12345678int GetTreeDepth(BiTreeNode* T)&amp;#123;    if(!T)return 0;//递归出口        int l = GetTreeDepth(T-&amp;gt;L_Node);    int r = GetTreeDepth(T-&amp;gt;R_Node);        re">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.7）二叉树遍历的衍生运用">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="二叉树遍历的衍生运用例图： 递归求树的深度/高度 代码实现:  12345678int GetTreeDepth(BiTreeNode* T)&amp;#123;    if(!T)return 0;//递归出口        int l = GetTreeDepth(T-&amp;gt;L_Node);    int r = GetTreeDepth(T-&amp;gt;R_Node);        return (">
+<meta property="og:description" content="¶二叉树遍历的衍生运用 例图： ¶递归求树的深度/高度   代码实现:   12345678int GetTreeDepth(BiTreeNode* T)&amp;#123;    if(!T)return 0;//递归出口        int l = GetTreeDepth(T-&amp;gt;L_Node);    int r = GetTreeDepth(T-&amp;gt;R_Node);        re">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/2.png">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-07-20T17:14:47.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.7）二叉树遍历的衍生运用">
-<meta name="twitter:description" content="二叉树遍历的衍生运用例图： 递归求树的深度/高度 代码实现:  12345678int GetTreeDepth(BiTreeNode* T)&amp;#123;    if(!T)return 0;//递归出口        int l = GetTreeDepth(T-&amp;gt;L_Node);    int r = GetTreeDepth(T-&amp;gt;R_Node);        return (">
+<meta name="twitter:description" content="¶二叉树遍历的衍生运用 例图： ¶递归求树的深度/高度   代码实现:   12345678int GetTreeDepth(BiTreeNode* T)&amp;#123;    if(!T)return 0;//递归出口        int l = GetTreeDepth(T-&amp;gt;L_Node);    int r = GetTreeDepth(T-&amp;gt;R_Node);        re">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/1.png">
 
 
@@ -396,34 +396,45 @@
       
 
       
-        <h4 id="二叉树遍历的衍生运用"><a href="#二叉树遍历的衍生运用" class="headerlink" title="二叉树遍历的衍生运用"></a>二叉树遍历的衍生运用</h4><p>例图：<img src="/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/1.png"></p>
-<h5 id="递归求树的深度-高度"><a href="#递归求树的深度-高度" class="headerlink" title="递归求树的深度/高度"></a>递归求树的深度/高度</h5><ul>
-<li><p>代码实现:</p>
+        <h4 id="二叉树遍历的衍生运用"><a class="header-anchor" href="#二叉树遍历的衍生运用">¶</a>二叉树遍历的衍生运用</h4>
+<p>例图：<img src="/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/1.png"></p>
+<h5 id="递归求树的深度-高度"><a class="header-anchor" href="#递归求树的深度-高度">¶</a>递归求树的深度/高度</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetTreeDepth</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//递归出口</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> l = GetTreeDepth(T-&gt;L_Node);</span><br><span class="line">    <span class="keyword">int</span> r = GetTreeDepth(T-&gt;R_Node);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (l &gt; r) ? (l + <span class="number">1</span>) : (r + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>代码实现:</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetTreeDepth</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//递归出口</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> l = GetTreeDepth(T-&gt;L_Node);</span><br><span class="line">    <span class="keyword">int</span> r = GetTreeDepth(T-&gt;R_Node);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (l &gt; r) ? (l + <span class="number">1</span>) : (r + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果: <img src="/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/2.png"></p>
+<li>
+<p>实验结果: <img src="/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/2.png"></p>
 </li>
 </ul>
 </li>
-<li><p>实现思路: 根据树的深度的概念—树中结点的最大层次或结点的最大深度，结点的深度又为结点的祖先个数+1，所以可以通过递归，从根结点开始往左右子树进行递归操作，当左右子树某一边的深度大于另一边的时候，返回最大的另一边的深度 + 1即可。</p>
+<li>
+<p>实现思路: 根据树的深度的概念—树中结点的最大层次或结点的最大深度，结点的深度又为结点的祖先个数+1，所以可以通过递归，从根结点开始往左右子树进行递归操作，当左右子树某一边的深度大于另一边的时候，返回最大的另一边的深度 + 1即可。</p>
 </li>
 </ul>
 <hr>
-<h5 id="递归求得树的总结点个数"><a href="#递归求得树的总结点个数" class="headerlink" title="递归求得树的总结点个数"></a>递归求得树的总结点个数</h5><ul>
-<li><p>代码实现：</p>
+<h5 id="递归求得树的总结点个数"><a class="header-anchor" href="#递归求得树的总结点个数">¶</a>递归求得树的总结点个数</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">AllNodeCount</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//递归出口</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> l = AllNodeCount(T-&gt;L_Node);</span><br><span class="line">    <span class="keyword">int</span> r = AllNodeCount(T-&gt;R_Node);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (l + r + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>代码实现：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">AllNodeCount</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//递归出口</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> l = AllNodeCount(T-&gt;L_Node);</span><br><span class="line">    <span class="keyword">int</span> r = AllNodeCount(T-&gt;R_Node);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (l + r + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/3.png"></p>
+<li>
+<p>实验结果：<img src="/2019/07/21/数据结构学习总结-（5-7）二叉树遍历的衍生运用/3.png"></p>
 </li>
 </ul>
 </li>
-<li><p>实现思路：进行递归只要某个结点不为空就返回 1，通过递归进行累加，最终根结点会得到所有子树结点数量累加值。</p>
+<li>
+<p>实现思路：进行递归只要某个结点不为空就返回 1，通过递归进行累加，最终根结点会得到所有子树结点数量累加值。</p>
 </li>
 </ul>
 <hr>
-<p>—（本文未完）</p>
+<p>–（本文未完）</p>
 
       
     </div>
@@ -706,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树遍历的衍生运用"><span class="nav-number">1.</span> <span class="nav-text">二叉树遍历的衍生运用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#递归求树的深度-高度"><span class="nav-number">1.1.</span> <span class="nav-text">递归求树的深度/高度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#递归求得树的总结点个数"><span class="nav-number">1.2.</span> <span class="nav-text">递归求得树的总结点个数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树遍历的衍生运用"><span class="nav-number">1.</span> <span class="nav-text">¶二叉树遍历的衍生运用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#递归求树的深度-高度"><span class="nav-number">1.1.</span> <span class="nav-text">¶递归求树的深度/高度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#递归求得树的总结点个数"><span class="nav-number">1.2.</span> <span class="nav-text">¶递归求得树的总结点个数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1300,6 +1311,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
