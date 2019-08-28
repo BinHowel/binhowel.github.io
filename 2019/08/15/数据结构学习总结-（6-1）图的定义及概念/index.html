@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶图  定义：图G(graph)是一些点和线的集合     图中的点叫作顶点(VerTex) 两个顶点的连线叫作边(Edges) Graph = (V,E)  V：顶点(数据元素)的有穷非空集合 E：边的有穷集合       ¶图的分类   无向图     每一条边都是没有方向的 顶点集合{A,B,C,D} 边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}    有向图">
+<meta name="description" content="图 定义：图G(graph)是一些点和线的集合  图中的点叫作顶点(VerTex) 两个顶点的连线叫作边(Edges) Graph = (V,E) V：顶点(数据元素)的有穷非空集合 E：边的有穷集合       图的分类 无向图   每一条边都是没有方向的 顶点集合{A,B,C,D} 边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}   有向图   每一条边有方向的，也称弧(">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（6-1）图的定义及概念">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶图  定义：图G(graph)是一些点和线的集合     图中的点叫作顶点(VerTex) 两个顶点的连线叫作边(Edges) Graph = (V,E)  V：顶点(数据元素)的有穷非空集合 E：边的有穷集合       ¶图的分类   无向图     每一条边都是没有方向的 顶点集合{A,B,C,D} 边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}    有向图">
+<meta property="og:description" content="图 定义：图G(graph)是一些点和线的集合  图中的点叫作顶点(VerTex) 两个顶点的连线叫作边(Edges) Graph = (V,E) V：顶点(数据元素)的有穷非空集合 E：边的有穷集合       图的分类 无向图   每一条边都是没有方向的 顶点集合{A,B,C,D} 边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}   有向图   每一条边有方向的，也称弧(">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/2.png">
@@ -99,7 +99,7 @@
 <meta property="og:updated_time" content="2019-08-14T18:07:05.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（6-1）图的定义及概念">
-<meta name="twitter:description" content="¶图  定义：图G(graph)是一些点和线的集合     图中的点叫作顶点(VerTex) 两个顶点的连线叫作边(Edges) Graph = (V,E)  V：顶点(数据元素)的有穷非空集合 E：边的有穷集合       ¶图的分类   无向图     每一条边都是没有方向的 顶点集合{A,B,C,D} 边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}    有向图">
+<meta name="twitter:description" content="图 定义：图G(graph)是一些点和线的集合  图中的点叫作顶点(VerTex) 两个顶点的连线叫作边(Edges) Graph = (V,E) V：顶点(数据元素)的有穷非空集合 E：边的有穷集合       图的分类 无向图   每一条边都是没有方向的 顶点集合{A,B,C,D} 边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}   有向图   每一条边有方向的，也称弧(">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/1.png">
 
 
@@ -400,17 +400,12 @@
       
 
       
-        <h4 id="图"><a class="header-anchor" href="#图">¶</a>图</h4>
-<ul>
-<li>定义：图G(graph)是一些点和线的集合
-<ul>
-<li>
-<img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/1.png">
-</li>
+        <h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><ul>
+<li>定义：图G(graph)是一些点和线的集合<ul>
+<li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/1.png"></li>
 <li>图中的点叫作<strong>顶点</strong>(VerTex)</li>
 <li>两个顶点的连线叫作<strong>边</strong>(Edges)</li>
-<li>Graph = (V,E)
-<ul>
+<li>Graph = (V,E)<ul>
 <li>V：顶点(数据元素)的<strong>有穷非空</strong>集合</li>
 <li>E：边的有穷集合</li>
 </ul>
@@ -419,47 +414,32 @@
 </li>
 </ul>
 <hr>
-<h4 id="图的分类"><a class="header-anchor" href="#图的分类">¶</a>图的分类</h4>
+<h4 id="图的分类"><a href="#图的分类" class="headerlink" title="图的分类"></a>图的分类</h4><ul>
+<li><p>无向图</p>
 <ul>
-<li>
-<p>无向图</p>
-<ul>
-<li>
-<img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/2.png">
-</li>
+<li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/2.png"></li>
 <li>每一条边都是没有方向的</li>
 <li>顶点集合{A,B,C,D}</li>
 <li>边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}</li>
 </ul>
 </li>
-<li>
-<p>有向图</p>
+<li><p>有向图</p>
 <ul>
-<li>
-<img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/3.png" title="其中B为弧头(Head),D为弧尾(Tail)">
-</li>
+<li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/3.png" title="其中B为弧头(Head),D为弧尾(Tail)"></li>
 <li>每一条边有方向的，也称弧(arc)</li>
 <li>顶点集合{A,B,C,D}</li>
 <li>边集合{(B,A),(A,D),(B,C),(C,A)}</li>
 </ul>
 </li>
-<li>
-<p>完全图</p>
-<ul>
-<li>
-<img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/4.png">
-</li>
+<li>完全图<ul>
+<li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/4.png"></li>
 <li>任意两个顶点都有一条边相连的图叫作<strong>完全图</strong></li>
 <li>无向完全图：如果有<strong>N个结点</strong>那么它有<strong>N(N-1)/2条边</strong></li>
 <li>有向完全图：如果有<strong>N个结点</strong>那么它有<strong>N(N-1)条边</strong></li>
 </ul>
 </li>
-<li>
-<p>网</p>
-<ul>
-<li>
-<img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/5.png">
-</li>
+<li>网<ul>
+<li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/5.png"></li>
 <li>网是边或弧<strong>带权</strong>的图</li>
 <li>无向网</li>
 <li>有向网</li>
@@ -467,79 +447,63 @@
 </li>
 </ul>
 <hr>
-<h5 id="子图"><a class="header-anchor" href="#子图">¶</a>子图</h5>
-<img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/6.png" title="1和2是3的子图">
+<h5 id="子图"><a href="#子图" class="headerlink" title="子图"></a>子图</h5><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/6.png" title="1和2是3的子图">
 <ul>
 <li>1和2是3的子图</li>
 </ul>
 <hr>
-<h4 id="其他"><a class="header-anchor" href="#其他">¶</a>其他</h4>
-<img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/2.png">
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/2.png">
 <ol>
-<li>如果边(V,U)∈E，则称顶点V和U互为邻接点(Adjacent)
-<ul>
+<li>如果边(V,U)∈E，则称顶点V和U互为邻接点(Adjacent)<ul>
 <li>例：A/B、B/C、C/D…互为邻接点</li>
 </ul>
 </li>
-<li>边(V,U)依附于(incident)顶点V和U(或边与顶点相关联)
-<ul>
+<li>边(V,U)依附于(incident)顶点V和U(或边与顶点相关联)<ul>
 <li>例：边(A,B)依附于顶点A、B上</li>
 </ul>
 </li>
-<li>顶点V的度(Degree)是和V相关联的边的数量，记为TD(V)，对于有向图：有出度和入度
-<ul>
+<li>顶点V的度(Degree)是和V相关联的边的数量，记为TD(V)，对于有向图：有出度和入度<ul>
 <li>例：A的度为3、D的度为2</li>
 <li><strong>握手定理</strong>：边数(E) = 各顶点度数和/2</li>
 </ul>
 </li>
 </ol>
-<h5 id="相关术语解释"><a class="header-anchor" href="#相关术语解释">¶</a>相关术语解释</h5>
-<ul>
-<li>
-<p>路径</p>
+<h5 id="相关术语解释"><a href="#相关术语解释" class="headerlink" title="相关术语解释"></a>相关术语解释</h5><ul>
+<li><p>路径</p>
 <ul>
 <li>若从一个顶点V<sub>i</sub>出发，沿一些边经过一些顶点，再到达顶点V<sub>k</sub>,则称沿途的经过顶点的序列为从V<sub>i</sub>到V<sub>k</sub>的路径</li>
 </ul>
 </li>
-<li>
-<p>路径的长度</p>
+<li><p>路径的长度</p>
 <ul>
 <li>路径上的边或弧的数目</li>
 </ul>
 </li>
-<li>
-<p>回路(环)</p>
-<ul>
+<li>回路(环)<ul>
 <li>起点与终点相同的路径</li>
 </ul>
 </li>
-<li>
-<p>简单路径</p>
-<ul>
+<li>简单路径<ul>
 <li><strong>没有重复</strong>顶点的路径，即不含回路</li>
 </ul>
 </li>
-<li>
-<p>简单回路</p>
-<ul>
+<li>简单回路<ul>
 <li>除起点和终点相同外，<strong>没有</strong>其余<strong>重复</strong>顶点的路径</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="连通图"><a class="header-anchor" href="#连通图">¶</a>连通图</h5>
-<ul>
+<h5 id="连通图"><a href="#连通图" class="headerlink" title="连通图"></a>连通图</h5><ul>
 <li>在<strong>无向图</strong>G中，如果从顶点V到顶点V`<strong>有路径</strong>，则称V和V’是连通的</li>
 <li>如果对于图中的任意两个顶点V<sub>i</sub>和V<sub>k</sub><strong>都是连通</strong>的，则称G是<strong>连通图</strong></li>
 <li>是否连通是对无向图来说的</li>
 </ul>
-<h5 id="强连通图"><a class="header-anchor" href="#强连通图">¶</a>强连通图</h5>
-<ul>
+<h5 id="强连通图"><a href="#强连通图" class="headerlink" title="强连通图"></a>强连通图</h5><ul>
 <li>在<strong>有向图</strong>G中，从顶点u到顶点v有路径，且从顶点v到顶点u也有路径，则称u和v是强连通的</li>
 <li>如果有向图的任意两个顶点u和v都是强连通，则称G是<strong>强连通图</strong></li>
 <li>是否强连通是对于有向图来说的</li>
 </ul>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -744,7 +708,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -766,7 +730,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -822,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#图"><span class="nav-number">1.</span> <span class="nav-text">¶图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图的分类"><span class="nav-number">2.</span> <span class="nav-text">¶图的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#子图"><span class="nav-number">2.1.</span> <span class="nav-text">¶子图</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">¶其他</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#相关术语解释"><span class="nav-number">3.1.</span> <span class="nav-text">¶相关术语解释</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#连通图"><span class="nav-number">3.2.</span> <span class="nav-text">¶连通图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#强连通图"><span class="nav-number">3.3.</span> <span class="nav-text">¶强连通图</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#图"><span class="nav-number">1.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图的分类"><span class="nav-number">2.</span> <span class="nav-text">图的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#子图"><span class="nav-number">2.1.</span> <span class="nav-text">子图</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#相关术语解释"><span class="nav-number">3.1.</span> <span class="nav-text">相关术语解释</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#连通图"><span class="nav-number">3.2.</span> <span class="nav-text">连通图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#强连通图"><span class="nav-number">3.3.</span> <span class="nav-text">强连通图</span></a></li></ol></li></ol></div>
             
 
           </div>

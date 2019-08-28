@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶树 ¶概念及定义   树是一个有层级结构的数据结构   定义：树是有n（n&amp;gt;=0）个结点组成的有限集合  如果n = 0 ，称为空树 如果n &amp;gt; 0, 则：  有一个特点的称之为为根(root)的结点，它只有直接后继，没有直接前驱。 除根以外的其他结点划分为m(m &amp;gt;= 0)个互不相交的有限集合，T0、T1、…、Tm-1，每个集合又是一颗树，称为根的子树。和根有直接关系的结点分">
+<meta name="description" content="树概念及定义 树是一个有层级结构的数据结构 定义：树是有n（n&amp;gt;=0）个结点组成的有限集合  如果n = 0 ，称为空树 如果n &amp;gt; 0, 则： 有一个特点的称之为为根(root)的结点，它只有直接后继，没有直接前驱。 除根以外的其他结点划分为m(m &amp;gt;= 0)个互不相交的有限集合，T0、T1、…、Tm-1，每个集合又是一颗树，称为根的子树。和根有直接关系的结点分别是这些子树的根">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.1）树的定义及概念">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶树 ¶概念及定义   树是一个有层级结构的数据结构   定义：树是有n（n&amp;gt;=0）个结点组成的有限集合  如果n = 0 ，称为空树 如果n &amp;gt; 0, 则：  有一个特点的称之为为根(root)的结点，它只有直接后继，没有直接前驱。 除根以外的其他结点划分为m(m &amp;gt;= 0)个互不相交的有限集合，T0、T1、…、Tm-1，每个集合又是一颗树，称为根的子树。和根有直接关系的结点分">
+<meta property="og:description" content="树概念及定义 树是一个有层级结构的数据结构 定义：树是有n（n&amp;gt;=0）个结点组成的有限集合  如果n = 0 ，称为空树 如果n &amp;gt; 0, 则： 有一个特点的称之为为根(root)的结点，它只有直接后继，没有直接前驱。 除根以外的其他结点划分为m(m &amp;gt;= 0)个互不相交的有限集合，T0、T1、…、Tm-1，每个集合又是一颗树，称为根的子树。和根有直接关系的结点分别是这些子树的根">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/2.png">
@@ -105,7 +105,7 @@
 <meta property="og:updated_time" content="2019-07-19T15:01:53.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.1）树的定义及概念">
-<meta name="twitter:description" content="¶树 ¶概念及定义   树是一个有层级结构的数据结构   定义：树是有n（n&amp;gt;=0）个结点组成的有限集合  如果n = 0 ，称为空树 如果n &amp;gt; 0, 则：  有一个特点的称之为为根(root)的结点，它只有直接后继，没有直接前驱。 除根以外的其他结点划分为m(m &amp;gt;= 0)个互不相交的有限集合，T0、T1、…、Tm-1，每个集合又是一颗树，称为根的子树。和根有直接关系的结点分">
+<meta name="twitter:description" content="树概念及定义 树是一个有层级结构的数据结构 定义：树是有n（n&amp;gt;=0）个结点组成的有限集合  如果n = 0 ，称为空树 如果n &amp;gt; 0, 则： 有一个特点的称之为为根(root)的结点，它只有直接后继，没有直接前驱。 除根以外的其他结点划分为m(m &amp;gt;= 0)个互不相交的有限集合，T0、T1、…、Tm-1，每个集合又是一颗树，称为根的子树。和根有直接关系的结点分别是这些子树的根">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png">
 
 
@@ -406,174 +406,100 @@
       
 
       
-        <h4 id="树"><a class="header-anchor" href="#树">¶</a>树</h4>
-<h5 id="概念及定义"><a class="header-anchor" href="#概念及定义">¶</a>概念及定义</h5>
-<ul>
-<li>
-<p>树是一个有层级结构的数据结构</p>
-</li>
-<li>
-<p>定义：树是有n（n&gt;=0）个结点组成的有限集合</p>
+        <h4 id="树"><a href="#树" class="headerlink" title="树"></a>树</h4><h5 id="概念及定义"><a href="#概念及定义" class="headerlink" title="概念及定义"></a>概念及定义</h5><ul>
+<li>树是一个有层级结构的数据结构</li>
+<li><p>定义：树是有n（n&gt;=0）个结点组成的有限集合</p>
 <ul>
 <li>如果n = 0 ，称为空树</li>
-<li>如果n &gt; 0, 则：
-<ul>
+<li>如果n &gt; 0, 则：<ul>
 <li>有一个特点的称之为为根(root)的结点，它只有直接后继，没有直接前驱。</li>
 <li>除根以外的其他结点划分为m(m &gt;= 0)个互不相交的有限集合，T0、T1、…、Tm-1，每个集合又是一颗树，称为根的子树。和根有直接关系的结点分别是这些子树的根。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>特点：每个结点有零个或多个子结点；没有父结点的结点称为根结点；每一个非根结点有且只有一个父结点；除了根结点外，每个子结点可以分为多个不相交的子树。</p>
-</li>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png">
+<li>特点：每个结点有零个或多个子结点；没有父结点的结点称为根结点；每一个非根结点有且只有一个父结点；除了根结点外，每个子结点可以分为多个不相交的子树。</li>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png">
 </li>
 </ul>
-<h5 id="树结构与线性结构"><a class="header-anchor" href="#树结构与线性结构">¶</a>树结构与线性结构</h5>
-<ul>
-<li>
-<p>线性结构：一对一</p>
+<h5 id="树结构与线性结构"><a href="#树结构与线性结构" class="headerlink" title="树结构与线性结构"></a>树结构与线性结构</h5><ul>
+<li><p>线性结构：一对一</p>
 </li>
-<li>
-<p>树结构：一对多</p>
+<li><p>树结构：一对多</p>
 </li>
-<li>
-<table>
-<thead>
-<tr>
-<th>线性结构</th>
-<th>树结构</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>第一个元素(无前驱)</td>
-<td>根结点(无前驱)</td>
-</tr>
-<tr>
-<td>最后一个元素(无后继)</td>
-<td>多个叶子结点(无后继)</td>
-</tr>
-<tr>
-<td>其他数据元素(一个前驱、一个后继)</td>
-<td>树中的其他结点(一个前驱、多个后继)</td>
-</tr>
-</tbody>
-</table>
+<li><p>| 线性结构                         | 树结构                             |<br>| ———————————————— | ————————————————— |<br>| 第一个元素(无前驱)               | 根结点(无前驱)                     |<br>| 最后一个元素(无后继)             | 多个叶子结点(无后继)               |<br>| 其他数据元素(一个前驱、一个后继) | 树中的其他结点(一个前驱、多个后继) |</p>
 </li>
 </ul>
 <hr>
-<h4 id="树结构的一些术语"><a class="header-anchor" href="#树结构的一些术语">¶</a>树结构的一些术语</h4>
-<ul>
-<li><strong>根</strong>：唯一没有双亲的结点，其他结点都有唯一的双亲
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/2.png">
-</li>
+<h4 id="树结构的一些术语"><a href="#树结构的一些术语" class="headerlink" title="树结构的一些术语"></a>树结构的一些术语</h4><ul>
+<li><strong>根</strong>：唯一没有双亲的结点，其他结点都有唯一的双亲<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/2.png"></li>
 </ul>
 </li>
-<li><strong>结点的度</strong>：一个结点含有的子树的个数称为该结点的度
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/3.png">
-</li>
+<li><strong>结点的度</strong>：一个结点含有的子树的个数称为该结点的度<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/3.png"></li>
 </ul>
 </li>
-<li><strong>树的度</strong>：树结构中，最大的结点的度称为树的度
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/3.png" title="树的度为3">
-</li>
+<li><strong>树的度</strong>：树结构中，最大的结点的度称为树的度<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/3.png" title="树的度为3"></li>
 </ul>
 </li>
-<li><strong>分支结点</strong>：度数不为0的结点
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png" title="分支结点为D、E、J、F、G、A">
-</li>
+<li><strong>分支结点</strong>：度数不为0的结点<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png" title="分支结点为D、E、J、F、G、A"></li>
 </ul>
 </li>
-<li><strong>叶结点</strong>：度数为0的结点
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png" title="叶结点为B、C、H、I、P、Q、K、L、M、N">
-</li>
+<li><strong>叶结点</strong>：度数为0的结点<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png" title="叶结点为B、C、H、I、P、Q、K、L、M、N"></li>
 </ul>
 </li>
-<li><strong>孩子结点/子结点</strong>：某个<u>结点</u>的子树的根
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png" title="孩子结点为 J、F、G、E、D">
-</li>
+<li><strong>孩子结点/子结点</strong>：某个<u>结点</u>的子树的根<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/1.png" title="孩子结点为 J、F、G、E、D"></li>
 </ul>
 </li>
 <li><strong>双亲结点/父节点</strong>：若一个结点含有子结点，则这个结点称为其子结点的父结点</li>
 <li><strong>兄弟结点</strong>：同一个双亲结点的孩子结点之间互为兄弟结点</li>
 <li><strong>结点的祖先</strong>：从根到该节点所经分支上的所有节点</li>
 <li><strong>子孙</strong>：以某节点为根的子树中任一节点都称为该节点的子孙</li>
-<li><strong>森林</strong>：多个数的集合
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/4.png">
-</li>
+<li><strong>森林</strong>：多个数的集合<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/4.png"></li>
 </ul>
 </li>
 <li><strong>子树森林</strong>：一个结点的所有子树构成的森林</li>
-<li><strong>结点的深度</strong>：结点的祖先个数+1
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/5.png">
-</li>
+<li><strong>结点的深度</strong>：结点的祖先个数+1<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/5.png"></li>
 </ul>
 </li>
 <li><strong>结点的高度</strong>：从结点到其子树叶结点经过的最大边数+1，叶结点的高度为1</li>
-<li><strong>结点的层次</strong>：从根开始定义起，根为第1层，根的子节点为第2层，以此类推
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/7.png">
-</li>
+<li><strong>结点的层次</strong>：从根开始定义起，根为第1层，根的子节点为第2层，以此类推<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/7.png"></li>
 </ul>
 </li>
-<li><strong>树的高度</strong>：高度最大的结点的高度
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/6.png">
-</li>
+<li><strong>树的高度</strong>：高度最大的结点的高度<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/6.png"></li>
 </ul>
 </li>
 <li><strong>树的深度</strong>：树中结点的最大层次或结点的最大深度</li>
 <li><strong>堂兄弟结点</strong>：双亲在同一层的节点互为堂兄弟</li>
 </ul>
 <ul>
-<li><strong>有序树</strong>：每个结点的子树有次序之分
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/8.png">
-</li>
+<li><strong>有序树</strong>：每个结点的子树有次序之分<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/8.png"></li>
 </ul>
 </li>
-<li><strong>无序树</strong>：每个结点的子树没有次序之分
-<ul>
-<li>
-<img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/9.png">
+<li><strong>无序树</strong>：每个结点的子树没有次序之分<ul>
+<li><img src="/2019/07/16/数据结构学习总结-（5-1）树的定义及概念/9.png">
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="树的类型"><a class="header-anchor" href="#树的类型">¶</a>树的类型</h4>
-<h5 id="树的抽象数据类型"><a class="header-anchor" href="#树的抽象数据类型">¶</a>树的抽象数据类型</h5>
-<ul>
+<h4 id="树的类型"><a href="#树的类型" class="headerlink" title="树的类型"></a>树的类型</h4><h5 id="树的抽象数据类型"><a href="#树的抽象数据类型" class="headerlink" title="树的抽象数据类型"></a>树的抽象数据类型</h5><ul>
 <li>ADT Tree</li>
-<li>DATA
-<ul>
+<li>DATA<ul>
 <li>父子关系</li>
 </ul>
 </li>
-<li>Operator
-<ul>
+<li>Operator<ul>
 <li>Tree()     //初始化</li>
 <li>Tree(definition) //从输入definition中创建树</li>
 <li>Tree(const Tree &amp; T) //复制树</li>
@@ -581,15 +507,15 @@
 <li>int depth()     //获得树的高度</li>
 <li>int size()     //获得树的结点个数</li>
 <li>Node parent(Node p)   //获得结点p的双亲</li>
-<li>Node[] children§  //返回结点P的所有孩子</li>
+<li>Node[] children(p)  //返回结点P的所有孩子</li>
 <li>Node[] silbings(parent , p) //返回结点p的所有兄弟</li>
 <li>Node find()    //查找结点</li>
-<li>…</li>
+<li>……</li>
 </ul>
 </li>
 <li>endADT</li>
 </ul>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -765,7 +691,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -787,7 +713,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -843,7 +769,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#树"><span class="nav-number">1.</span> <span class="nav-text">¶树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念及定义"><span class="nav-number">1.1.</span> <span class="nav-text">¶概念及定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#树结构与线性结构"><span class="nav-number">1.2.</span> <span class="nav-text">¶树结构与线性结构</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树结构的一些术语"><span class="nav-number">2.</span> <span class="nav-text">¶树结构的一些术语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树的类型"><span class="nav-number">3.</span> <span class="nav-text">¶树的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#树的抽象数据类型"><span class="nav-number">3.1.</span> <span class="nav-text">¶树的抽象数据类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#树"><span class="nav-number">1.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念及定义"><span class="nav-number">1.1.</span> <span class="nav-text">概念及定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#树结构与线性结构"><span class="nav-number">1.2.</span> <span class="nav-text">树结构与线性结构</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树结构的一些术语"><span class="nav-number">2.</span> <span class="nav-text">树结构的一些术语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#树的类型"><span class="nav-number">3.</span> <span class="nav-text">树的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#树的抽象数据类型"><span class="nav-number">3.1.</span> <span class="nav-text">树的抽象数据类型</span></a></li></ol></li></ol></div>
             
 
           </div>
