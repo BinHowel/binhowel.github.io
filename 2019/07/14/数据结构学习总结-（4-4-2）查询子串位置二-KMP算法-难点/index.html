@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="¶简单(BF)算法的缺陷  简单算法的实现📝：就让子串与主串进行一个个判断。  例如 “acdcda”中找“cda”那么有：①c先与主串中的‘a’比较不匹配 主串后移、②c与主串中的‘c‘匹配，子串后移让d与主串中的‘b’比较。不匹配主串后移、③c与主串中的‘d’比较，匹配子串后移、④a与主串中的‘c’比较，不匹配,主串后移、⑤c与主串中的‘d’不匹配，主串后移、⑥c与子串中的‘c’匹配,子串后">
+<meta name="description" content="简单(BF)算法的缺陷 简单算法的实现:pencil:：就让子串与主串进行一个个判断。 例如 “acdcda”中找“cda”那么有：①c先与主串中的‘a’比较不匹配 主串后移、②c与主串中的‘c‘匹配，子串后移让d与主串中的‘b’比较。不匹配主串后移、③c与主串中的‘d’比较，匹配子串后移、④a与主串中的‘c’比较，不匹配,主串后移、⑤c与主串中的‘d’不匹配，主串后移、⑥c与子串中的‘c’匹配,">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（4.4.2）查询子串位置二-KMP算法[难点]">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/14/数据结构学习总结-（4-4-2）查询子串位置二-KMP算法-难点/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶简单(BF)算法的缺陷  简单算法的实现📝：就让子串与主串进行一个个判断。  例如 “acdcda”中找“cda”那么有：①c先与主串中的‘a’比较不匹配 主串后移、②c与主串中的‘c‘匹配，子串后移让d与主串中的‘b’比较。不匹配主串后移、③c与主串中的‘d’比较，匹配子串后移、④a与主串中的‘c’比较，不匹配,主串后移、⑤c与主串中的‘d’不匹配，主串后移、⑥c与子串中的‘c’匹配,子串后">
+<meta property="og:description" content="简单(BF)算法的缺陷 简单算法的实现:pencil:：就让子串与主串进行一个个判断。 例如 “acdcda”中找“cda”那么有：①c先与主串中的‘a’比较不匹配 主串后移、②c与主串中的‘c‘匹配，子串后移让d与主串中的‘b’比较。不匹配主串后移、③c与主串中的‘d’比较，匹配子串后移、④a与主串中的‘c’比较，不匹配,主串后移、⑤c与主串中的‘d’不匹配，主串后移、⑥c与子串中的‘c’匹配,">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-14T02:46:24.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（4.4.2）查询子串位置二-KMP算法[难点]">
-<meta name="twitter:description" content="¶简单(BF)算法的缺陷  简单算法的实现📝：就让子串与主串进行一个个判断。  例如 “acdcda”中找“cda”那么有：①c先与主串中的‘a’比较不匹配 主串后移、②c与主串中的‘c‘匹配，子串后移让d与主串中的‘b’比较。不匹配主串后移、③c与主串中的‘d’比较，匹配子串后移、④a与主串中的‘c’比较，不匹配,主串后移、⑤c与主串中的‘d’不匹配，主串后移、⑥c与子串中的‘c’匹配,子串后">
+<meta name="twitter:description" content="简单(BF)算法的缺陷 简单算法的实现:pencil:：就让子串与主串进行一个个判断。 例如 “acdcda”中找“cda”那么有：①c先与主串中的‘a’比较不匹配 主串后移、②c与主串中的‘c‘匹配，子串后移让d与主串中的‘b’比较。不匹配主串后移、③c与主串中的‘d’比较，匹配子串后移、④a与主串中的‘c’比较，不匹配,主串后移、⑤c与主串中的‘d’不匹配，主串后移、⑥c与子串中的‘c’匹配,">
 
 
 
@@ -392,21 +392,18 @@
       
 
       
-        <h4 id="简单-bf-算法的缺陷"><a class="header-anchor" href="#简单-bf-算法的缺陷">¶</a>简单(BF)算法的缺陷</h4>
-<ul>
-<li><strong>简单算法的实现</strong>📝：就让子串与主串进行<u>一个个</u>判断。
-<ul>
+        <h4 id="简单-BF-算法的缺陷"><a href="#简单-BF-算法的缺陷" class="headerlink" title="简单(BF)算法的缺陷"></a>简单(BF)算法的缺陷</h4><ul>
+<li><strong>简单算法的实现</strong>:pencil:：就让子串与主串进行<u>一个个</u>判断。<ul>
 <li>例如 <code>“acdcda”</code>中找<code>“cda”</code>那么有：①c先与主串中的<code>‘a’</code>比较不匹配 主串后移、②c与主串中的<code>‘c‘</code>匹配，子串后移让d与主串中的<code>‘b’</code>比较。不匹配主串后移、③c与主串中的<code>‘d’</code>比较，匹配子串后移、④a与主串中的<code>‘c’</code>比较，不匹配,主串后移、⑤c与主串中的<code>‘d’</code>不匹配，主串后移、⑥c与子串中的<code>‘c’</code>匹配,子串后移，d与主串的下一个<code>‘d’</code>匹配，子串再后移，a与主串中的下一个<code>‘a’</code>匹配。找到，返回主串中第二个<code>‘c’</code>的位置。</li>
 </ul>
 </li>
-<li><strong>发现问题​</strong>❗️：从上面可以看出，在③开始子串与已经比较过的主串字符又重新比较一次，从而大大的浪费了效率。</li>
+<li><strong>发现问题​</strong>:exclamation:：从上面可以看出，在③开始子串与已经比较过的主串字符又重新比较一次，从而大大的浪费了效率。</li>
 </ul>
 <hr>
-<h4 id="kmp算法"><a class="header-anchor" href="#kmp算法">¶</a>KMP算法</h4>
-<ul>
+<h4 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h4><ul>
 <li>正如上面所说的，简单算法，因为在最差的情况下，会进行大量的无意义的比较匹配。而KMP算法的发明者们便想：能否更加比较不匹配所给出的信息，跳过无意义的比较呢？这就是KMP算法的核心。</li>
 </ul>
-<p>–（本文未完）&lt;原创&gt;</p>
+<p>—（本文未完）&lt;原创&gt;</p>
 
       
     </div>
@@ -611,7 +608,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -689,7 +686,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单-bf-算法的缺陷"><span class="nav-number">1.</span> <span class="nav-text">¶简单(BF)算法的缺陷</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kmp算法"><span class="nav-number">2.</span> <span class="nav-text">¶KMP算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单-BF-算法的缺陷"><span class="nav-number">1.</span> <span class="nav-text">简单(BF)算法的缺陷</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KMP算法"><span class="nav-number">2.</span> <span class="nav-text">KMP算法</span></a></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结,">
+  <meta name="keywords" content="学习总结,其他,">
 
 
 
@@ -81,22 +81,18 @@
 
 
 
-<meta name="description" content="二叉树的性质性质1：(层级):pencil: 在二叉树的第i层上至多有2i-1个结点。  即：下层的结点最多是上层结点的2倍   性质2：(深度):pencil: 深度为k的二叉树至多有2k-1个结点。     性质3:pencil:： 对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1  | 符号          | 解释                      |">
-<meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
+<meta name="description" content="条件概率与乘法公式 条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)   乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     全概率公式与贝叶斯公式 全概率公式：   P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) P(A) 要发生的事件的概率  P(Bi)为A发生的前提事件的概率">
+<meta name="keywords" content="学习总结,其他">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构学习总结-（5.3）二叉树的性质及推导">
-<meta property="og:url" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/index.html">
+<meta property="og:title" content="概率论与数理统计（二）">
+<meta property="og:url" content="https://shuhaohwang.github.io/2019/08/29/概率论与数理统计（二）/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="二叉树的性质性质1：(层级):pencil: 在二叉树的第i层上至多有2i-1个结点。  即：下层的结点最多是上层结点的2倍   性质2：(深度):pencil: 深度为k的二叉树至多有2k-1个结点。     性质3:pencil:： 对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1  | 符号          | 解释                      |">
+<meta property="og:description" content="条件概率与乘法公式 条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)   乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     全概率公式与贝叶斯公式 全概率公式：   P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) P(A) 要发生的事件的概率  P(Bi)为A发生的前提事件的概率">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/1.png">
-<meta property="og:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/2.png">
-<meta property="og:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/3.png">
-<meta property="og:updated_time" content="2019-07-17T03:50:47.752Z">
+<meta property="og:updated_time" content="2019-08-29T15:33:01.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构学习总结-（5.3）二叉树的性质及推导">
-<meta name="twitter:description" content="二叉树的性质性质1：(层级):pencil: 在二叉树的第i层上至多有2i-1个结点。  即：下层的结点最多是上层结点的2倍   性质2：(深度):pencil: 深度为k的二叉树至多有2k-1个结点。     性质3:pencil:： 对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1  | 符号          | 解释                      |">
-<meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/1.png">
+<meta name="twitter:title" content="概率论与数理统计（二）">
+<meta name="twitter:description" content="条件概率与乘法公式 条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)   乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     全概率公式与贝叶斯公式 全概率公式：   P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) P(A) 要发生的事件的概率  P(Bi)为A发生的前提事件的概率">
 
 
 
@@ -126,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/">
+  <link rel="canonical" href="https://shuhaohwang.github.io/2019/08/29/概率论与数理统计（二）/">
 
 
 
 
 
-  <title>数据结构学习总结-（5.3）二叉树的性质及推导 | 双子星Binaryؼ</title>
+  <title>概率论与数理统计（二） | 双子星Binaryؼ</title>
   
 
 
@@ -291,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/08/29/概率论与数理统计（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ShuHaoHwang">
@@ -308,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（5.3）二叉树的性质及推导</h1>
+          <h1 class="post-title" itemprop="name headline">概率论与数理统计（二）</h1>
         
 
         <div class="post-meta">
@@ -320,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T11:03:38+08:00">
-                2019-07-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-29T23:09:59+08:00">
+                2019-08-29
               </time>
             
 
@@ -330,28 +326,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码学习/" itemprop="url" rel="index">
-                    <span itemprop="name">代码学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -385,48 +359,40 @@
       
 
       
-        <h4 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h4><h5 id="性质1：-层级-pencil"><a href="#性质1：-层级-pencil" class="headerlink" title="性质1：(层级):pencil:"></a>性质1：(层级):pencil:</h5><ul>
-<li>在二叉树的第<code>i</code>层上<u>至多</u>有2<sup>i-1</sup>个结点。</li>
-<li><img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/1.png"></li>
-<li>即：下层的结点最多是上层结点的2倍</li>
+        <h4 id="条件概率与乘法公式"><a href="#条件概率与乘法公式" class="headerlink" title="条件概率与乘法公式"></a>条件概率与乘法公式</h4><ul>
+<li><p>条件概率：</p>
+<ul>
+<li>P(B|A) = P(AB) / P(A)</li>
+<li>P(A|B) = P(AB) / P(B)</li>
+</ul>
+</li>
+<li><p>乘法公式</p>
+<ul>
+<li>P(AB) = P(A) - P(B|A) = P(B) - P(A|B)</li>
+</ul>
+</li>
 </ul>
 <hr>
-<h5 id="性质2：-深度-pencil"><a href="#性质2：-深度-pencil" class="headerlink" title="性质2：(深度):pencil:"></a>性质2：(深度):pencil:</h5><ul>
-<li>深度为k的二叉树<u>至多</u>有2<sup>k</sup>-1个结点。</li>
-<li><img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/2.png">
-</li>
-</ul>
-<hr>
-<h5 id="性质3-pencil-："><a href="#性质3-pencil-：" class="headerlink" title="性质3:pencil:："></a>性质3:pencil:：</h5><ul>
-<li><p>对于任何一颗二叉树，若2度的结点数有n<sub>2</sub>个，则叶子结点n<sub>0</sub>的个数比为n<sub>2</sub>+1</p>
-</li>
-<li><p>| 符号          | 解释                      |<br>| ——————- | ————————————- |<br>| n<sub>0</sub> | 度数为0的结点数(叶结点数) |<br>| n             | 总结点数                  |<br>| n<sub>1</sub> | 度数为1的结点数           |<br>| n<sub>2</sub> | 度数为2的结点数           |<br>| B             | 分枝数                    |</p>
-</li>
-</ul>
+<h4 id="全概率公式与贝叶斯公式"><a href="#全概率公式与贝叶斯公式" class="headerlink" title="全概率公式与贝叶斯公式"></a>全概率公式与贝叶斯公式</h4><ul>
+<li><p>全概率公式：</p>
 <ul>
-<li><p><strong>n<sub>0</sub> = n<sub>2</sub>+1</strong></p>
+<li><script type="math/tex; mode=display">
+P(A) = \sum_{i=1}^nP(B_i)P(A|B_i)</script></li>
+<li><p>P(A) 要发生的事件的概率</p>
 </li>
-<li><p><strong>其他公式</strong>:mag_right:：</p>
+<li><p>P(B<sub>i</sub>)为A发生的前提事件的概率</p>
+</li>
+<li><p>P(A|B<sub>i</sub>)为B<sub>i</sub>事件已经发生后的前提下，A事件发生的概率</p>
+</li>
+</ul>
+</li>
+<li><p>贝叶斯公式：（逆概率公式）</p>
 <ul>
-<li>分枝数(B)：<ul>
-<li>B = n<sub>1</sub>+2n<sub>2</sub> </li>
-<li>B = n - 1(n为总结点数)B</li>
+<li><script type="math/tex; mode=display">
+P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}</script></li>
 </ul>
 </li>
 </ul>
-</li>
-<li><img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/3.png">
-</li>
-<li><p><strong>推导过程（n<sub>0</sub> = n<sub>2</sub>+1）:scroll:</strong>：</p>
-<ul>
-<li>因为 B = n -1① 且 n = n<sub>0</sub> + n<sub>1</sub> + n<sub>2</sub>②</li>
-<li>所以B = n<sub>0</sub> + n<sub>1</sub> + n<sub>2</sub> - 1 ③所以 n<sub>0</sub> = B -  n<sub>1</sub> -  n<sub>2</sub> + 1④</li>
-<li>又因为B = n<sub>1</sub>+2n<sub>2</sub>  代入④ n<sub>0</sub> = n<sub>1</sub> + 2n<sub>2</sub> -  n<sub>1</sub> -  n<sub>2</sub> + 1</li>
-<li>得n<sub>0</sub> = n<sub>2</sub>+1</li>
-</ul>
-</li>
-</ul>
-<p>—（本文完）</p>
 
       
     </div>
@@ -443,12 +409,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/">数据结构学习总结-（5.3）二叉树的性质及推导</a></p>
+  <p><span>本文标题:</span><a href="/2019/08/29/概率论与数理统计（二）/">概率论与数理统计（二）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
-  <p><span>发布时间:</span>2019年07月17日 - 11:07</p>
-  <p><span>最后更新:</span>2019年07月17日 - 11:07</p>
-  <p><span>原始链接:</span><a href="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/" title="数据结构学习总结-（5.3）二叉树的性质及推导">https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年08月29日 - 23:08</p>
+  <p><span>最后更新:</span>2019年08月29日 - 23:08</p>
+  <p><span>原始链接:</span><a href="/2019/08/29/概率论与数理统计（二）/" title="概率论与数理统计（二）">https://shuhaohwang.github.io/2019/08/29/概率论与数理统计（二）/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/08/29/概率论与数理统计（二）/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>博主提示:</span><i class="fa fa-creative-commons"></i> 如果您想转载本文请保留原文链接及作者哦( • ̀ω•́ )✧。</p>  
 </div>
@@ -505,9 +471,7 @@
           
             <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
           
-            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
-          
-            <a href="/tags/数据结构-学习总结/" rel="tag"><i class="fa fa-tag"></i> 数据结构-学习总结</a>
+            <a href="/tags/其他/" rel="tag"><i class="fa fa-tag"></i> 其他</a>
           
         </div>
       
@@ -535,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/17/数据结构学习总结-（5-2）二叉树/" rel="next" title="数据结构学习总结-（5.2）二叉树">
-                <i class="fa fa-chevron-left"></i> 数据结构学习总结-（5.2）二叉树
+              <a href="/2019/08/28/概率论与数理统计（一）/" rel="next" title="概率论与数理统计（一）">
+                <i class="fa fa-chevron-left"></i> 概率论与数理统计（一）
               </a>
             
           </div>
@@ -544,10 +508,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/" rel="prev" title="C++进阶学习总结-（2.3）拷贝构造函数、继承与访问等级、函数遮蔽">
-                C++进阶学习总结-（2.3）拷贝构造函数、继承与访问等级、函数遮蔽 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -709,7 +669,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">1.</span> <span class="nav-text">二叉树的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#性质1：-层级-pencil"><span class="nav-number">1.1.</span> <span class="nav-text">性质1：(层级):pencil:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性质2：-深度-pencil"><span class="nav-number">1.2.</span> <span class="nav-text">性质2：(深度):pencil:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性质3-pencil-："><span class="nav-number">1.3.</span> <span class="nav-text">性质3:pencil:：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#条件概率与乘法公式"><span class="nav-number">1.</span> <span class="nav-text">条件概率与乘法公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全概率公式与贝叶斯公式"><span class="nav-number">2.</span> <span class="nav-text">全概率公式与贝叶斯公式</span></a></li></ol></div>
             
 
           </div>
