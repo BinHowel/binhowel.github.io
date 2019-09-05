@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="(字符)串类型定义及概念串的一些概念 以(&amp;quot;Hello world&amp;quot;)为例 主串：即整个字符串被称为主串。 str = “Hello World”；str就是主串   子串：在主串中的一小段。(顺序相同) &amp;quot;llo&amp;quot;是主串“Hello World”的字串、“eH”不是该主串的字串(顺序错了)   位置：某个字符、或字符段的第一个字符位于主串的位置下标。 例如">
+<meta name="description" content="¶(字符)串类型定义及概念 ¶串的一些概念  以(&amp;quot;Hello world&amp;quot;)为例 主串：即整个字符串被称为主串。  str = “Hello World”；str就是主串   子串：在主串中的一小段。(顺序相同)  &amp;quot;llo&amp;quot;是主串“Hello World”的字串、“eH”不是该主串的字串(顺序错了)   位置：某个字符、或字符段的第一个字符位于主串的位置">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-(4.1)字符串">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/10/数据结构学习总结-4-1-字符串/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="(字符)串类型定义及概念串的一些概念 以(&amp;quot;Hello world&amp;quot;)为例 主串：即整个字符串被称为主串。 str = “Hello World”；str就是主串   子串：在主串中的一小段。(顺序相同) &amp;quot;llo&amp;quot;是主串“Hello World”的字串、“eH”不是该主串的字串(顺序错了)   位置：某个字符、或字符段的第一个字符位于主串的位置下标。 例如">
+<meta property="og:description" content="¶(字符)串类型定义及概念 ¶串的一些概念  以(&amp;quot;Hello world&amp;quot;)为例 主串：即整个字符串被称为主串。  str = “Hello World”；str就是主串   子串：在主串中的一小段。(顺序相同)  &amp;quot;llo&amp;quot;是主串“Hello World”的字串、“eH”不是该主串的字串(顺序错了)   位置：某个字符、或字符段的第一个字符位于主串的位置">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-10T14:31:36.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-(4.1)字符串">
-<meta name="twitter:description" content="(字符)串类型定义及概念串的一些概念 以(&amp;quot;Hello world&amp;quot;)为例 主串：即整个字符串被称为主串。 str = “Hello World”；str就是主串   子串：在主串中的一小段。(顺序相同) &amp;quot;llo&amp;quot;是主串“Hello World”的字串、“eH”不是该主串的字串(顺序错了)   位置：某个字符、或字符段的第一个字符位于主串的位置下标。 例如">
+<meta name="twitter:description" content="¶(字符)串类型定义及概念 ¶串的一些概念  以(&amp;quot;Hello world&amp;quot;)为例 主串：即整个字符串被称为主串。  str = “Hello World”；str就是主串   子串：在主串中的一小段。(顺序相同)  &amp;quot;llo&amp;quot;是主串“Hello World”的字串、“eH”不是该主串的字串(顺序错了)   位置：某个字符、或字符段的第一个字符位于主串的位置">
 
 
 
@@ -392,52 +392,62 @@
       
 
       
-        <h4 id="字符-串类型定义及概念"><a href="#字符-串类型定义及概念" class="headerlink" title="(字符)串类型定义及概念"></a>(字符)串类型定义及概念</h4><h5 id="串的一些概念"><a href="#串的一些概念" class="headerlink" title="串的一些概念"></a>串的一些概念</h5><ul>
+        <h4 id="字符-串类型定义及概念"><a class="header-anchor" href="#字符-串类型定义及概念">¶</a>(字符)串类型定义及概念</h4>
+<h5 id="串的一些概念"><a class="header-anchor" href="#串的一些概念">¶</a>串的一些概念</h5>
+<ul>
 <li>以<code>(&quot;Hello world&quot;)</code>为例</li>
-<li><strong>主串</strong>：即整个字符串被称为主串。<ul>
+<li><strong>主串</strong>：即整个字符串被称为主串。
+<ul>
 <li><code>str = “Hello World”；</code>str就是主串</li>
 </ul>
 </li>
-<li><strong>子串</strong>：在主串中的一小段。(顺序相同)<ul>
+<li><strong>子串</strong>：在主串中的一小段。(顺序相同)
+<ul>
 <li><code>&quot;llo&quot;</code>是主串<code>“Hello World”</code>的字串、<code>“eH”</code>不是该主串的字串(顺序错了)</li>
 </ul>
 </li>
-<li><strong>位置</strong>：某个字符、或字符段的第一个字符位于主串的位置下标。<ul>
+<li><strong>位置</strong>：某个字符、或字符段的第一个字符位于主串的位置下标。
+<ul>
 <li>例如字串<code>“llo”</code>在主串<code>&quot;Hello World&quot;</code>的位置为3</li>
 </ul>
 </li>
-<li><strong>串相等</strong>：当两个字符串之间，完全相同(长度相同，每个字符相同且位置相同)称为两个串相等<ul>
+<li><strong>串相等</strong>：当两个字符串之间，完全相同(长度相同，每个字符相同且位置相同)称为两个串相等
+<ul>
 <li><code>”hello world“</code>与<code>“Hello World”</code>不相等(字符不相等)</li>
 </ul>
 </li>
-<li><strong>空串</strong>：串长度为为0的字符串被称为空串。<ul>
-<li><strong>注意：</strong>空串与空格串不一样，空格串中的空格也算一个字符长度</li>
+<li><strong>空串</strong>：串长度为为0的字符串被称为空串。
+<ul>
+<li>**注意：**空串与空格串不一样，空格串中的空格也算一个字符长度</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="串的抽象数据类型"><a href="#串的抽象数据类型" class="headerlink" title="串的抽象数据类型"></a>串的抽象数据类型</h5><ul>
-<li>ADT String<ul>
+<h5 id="串的抽象数据类型"><a class="header-anchor" href="#串的抽象数据类型">¶</a>串的抽象数据类型</h5>
+<ul>
+<li>ADT String
+<ul>
 <li>Data：字符序列，以c/c++为例，<code>char*</code>类型数据，字符序列</li>
 </ul>
 </li>
-<li>Operation：<ul>
-<li><code>bool init(T,char*)</code>         //初始化一个字符串</li>
-<li><code>int find(S ,T)</code>                //查找字符串中是否存在字串</li>
-<li><code>String strcat(T , S)</code>        //拼接字符串</li>
-<li><code>String subStr(S,pos,size)</code>        //将s中的pos位置开始size长度的字串获取</li>
-<li><code>bool inserStr(s,pos,T)</code>            //将T插入到s的pos位置</li>
-<li><code>bool deleteStr(S,pos,size)</code>        //将S的pos位置开始的size长度的字串删除</li>
-<li><code>bool copy(T,S)</code>                    //将S拷贝给T</li>
-<li><code>int size()</code>            //获得字符串长度</li>
-<li><code>void clear()</code>            //清空字符串</li>
-<li>…….</li>
+<li>Operation：
+<ul>
+<li><code>bool init(T,char*)</code> 		//初始化一个字符串</li>
+<li><code>int find(S ,T)</code>   		 	//查找字符串中是否存在字串</li>
+<li><code>String strcat(T , S)</code>		//拼接字符串</li>
+<li><code>String subStr(S,pos,size)</code>		//将s中的pos位置开始size长度的字串获取</li>
+<li><code>bool inserStr(s,pos,T)</code>			//将T插入到s的pos位置</li>
+<li><code>bool deleteStr(S,pos,size)</code>		//将S的pos位置开始的size长度的字串删除</li>
+<li><code>bool copy(T,S)</code>					//将S拷贝给T</li>
+<li><code>int size()</code>			//获得字符串长度</li>
+<li><code>void clear()</code>			//清空字符串</li>
+<li>…</li>
 </ul>
 </li>
 <li>endADT</li>
 </ul>
 <hr>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -642,7 +652,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">77</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -734,7 +744,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符-串类型定义及概念"><span class="nav-number">1.</span> <span class="nav-text">(字符)串类型定义及概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#串的一些概念"><span class="nav-number">1.1.</span> <span class="nav-text">串的一些概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#串的抽象数据类型"><span class="nav-number">1.2.</span> <span class="nav-text">串的抽象数据类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符-串类型定义及概念"><span class="nav-number">1.</span> <span class="nav-text">¶(字符)串类型定义及概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#串的一些概念"><span class="nav-number">1.1.</span> <span class="nav-text">¶串的一些概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#串的抽象数据类型"><span class="nav-number">1.2.</span> <span class="nav-text">¶串的抽象数据类型</span></a></li></ol></li></ol></div>
             
 
           </div>
