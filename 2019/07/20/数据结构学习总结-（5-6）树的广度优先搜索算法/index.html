@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶广度优先遍历二叉树   又名：层次遍历   正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。       如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程   具体代码：   123456789101112void Traversal(BiTreeNode* R)&amp;#123;    queu">
+<meta name="description" content="广度优先遍历二叉树 又名：层次遍历  正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。     如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程  具体代码：  123456789101112void Traversal(BiTreeNode* R)&amp;#123;    queue&amp;lt;BiT">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.6）树的广度优先遍历算法">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶广度优先遍历二叉树   又名：层次遍历   正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。       如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程   具体代码：   123456789101112void Traversal(BiTreeNode* R)&amp;#123;    queu">
+<meta property="og:description" content="广度优先遍历二叉树 又名：层次遍历  正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。     如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程  具体代码：  123456789101112void Traversal(BiTreeNode* R)&amp;#123;    queue&amp;lt;BiT">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/1.gif">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/2.gif">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-07-20T08:15:54.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.6）树的广度优先遍历算法">
-<meta name="twitter:description" content="¶广度优先遍历二叉树   又名：层次遍历   正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。       如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程   具体代码：   123456789101112void Traversal(BiTreeNode* R)&amp;#123;    queu">
+<meta name="twitter:description" content="广度优先遍历二叉树 又名：层次遍历  正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。     如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程  具体代码：  123456789101112void Traversal(BiTreeNode* R)&amp;#123;    queue&amp;lt;BiT">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/1.gif">
 
 
@@ -396,28 +396,22 @@
       
 
       
-        <h4 id="广度优先遍历二叉树"><a class="header-anchor" href="#广度优先遍历二叉树">¶</a>广度优先遍历二叉树</h4>
+        <h4 id="广度优先遍历二叉树"><a href="#广度优先遍历二叉树" class="headerlink" title="广度优先遍历二叉树"></a>广度优先遍历二叉树</h4><ul>
+<li><p>又名：层次遍历</p>
+</li>
+<li><p>正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。</p>
+</li>
+<li><img src="/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/1.gif"> <img src="/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/2.gif">
+</li>
+<li><p>如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程</p>
+</li>
+<li><p>具体代码：</p>
 <ul>
-<li>
-<p>又名：层次遍历</p>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Traversal</span><span class="params">(BiTreeNode* R)</span></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;BiTreeNode*&gt; Q;</span><br><span class="line">    Q.push(R);</span><br><span class="line">    <span class="keyword">while</span>(!Q.empty())&#123;</span><br><span class="line">        BiTreeNode* T = Q.front();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; T-&gt;data &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        Q.pop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (T-&gt;L_Node)Q.push(T-&gt;L_Node);</span><br><span class="line">		<span class="keyword">if</span> (T-&gt;R_Node)Q.push(T-&gt;R_Node);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>正如名字所描述，该遍历二叉树的方式是以层进行的，期间运用的队列的知识，通过先进先出的原理。</p>
+<li><p>实验结果: <img src="/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/3.png"></p>
 </li>
-<li>
-<img src="/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/1.gif"> <img src="/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/2.gif">
-</li>
-<li>
-<p>如上图所示：整体思路是先让根结点进队并输出其数据并出队，然后让其左子树再进队，右子树再进队，通过循环重复上述过程</p>
-</li>
-<li>
-<p>具体代码：</p>
-</li>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Traversal</span><span class="params">(BiTreeNode* R)</span></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;BiTreeNode*&gt; Q;</span><br><span class="line">    Q.push(R);</span><br><span class="line">    <span class="keyword">while</span>(!Q.empty())&#123;</span><br><span class="line">        BiTreeNode* T = Q.front();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; T-&gt;data &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        Q.pop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (T-&gt;L_Node)Q.push(T-&gt;L_Node);</span><br><span class="line">		<span class="keyword">if</span> (T-&gt;R_Node)Q.push(T-&gt;R_Node);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>实验结果: <img src="/2019/07/20/数据结构学习总结-（5-6）树的广度优先搜索算法/3.png"></p>
+</ul>
 </li>
 </ul>
 
@@ -624,7 +618,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -716,7 +710,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#广度优先遍历二叉树"><span class="nav-number">1.</span> <span class="nav-text">¶广度优先遍历二叉树</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#广度优先遍历二叉树"><span class="nav-number">1.</span> <span class="nav-text">广度优先遍历二叉树</span></a></li></ol></div>
             
 
           </div>
