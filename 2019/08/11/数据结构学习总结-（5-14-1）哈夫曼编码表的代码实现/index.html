@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="哈夫曼编码表 根据构建的哈夫曼树，左分支标记为0有分支标记为1 通过二维数组保存编码表   代码实现 1234567891011121314151617181920char code[256][128] //存储哈夫曼编码表void Codeing(haffmanNode* node,char* temparray,int index)&amp;#123;    /*处理空结点的情况+递归出口*/">
+<meta name="description" content="¶哈夫曼编码表  根据构建的哈夫曼树，左分支标记为0有分支标记为1 通过二维数组保存编码表   ¶代码实现   1234567891011121314151617181920char code[256][128] //存储哈夫曼编码表void Codeing(haffmanNode* node,char* temparray,int index)&amp;#123;    /*处理空结点的情况+递归出口*">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.14.1）哈夫曼编码表的代码实现">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="哈夫曼编码表 根据构建的哈夫曼树，左分支标记为0有分支标记为1 通过二维数组保存编码表   代码实现 1234567891011121314151617181920char code[256][128] //存储哈夫曼编码表void Codeing(haffmanNode* node,char* temparray,int index)&amp;#123;    /*处理空结点的情况+递归出口*/">
+<meta property="og:description" content="¶哈夫曼编码表  根据构建的哈夫曼树，左分支标记为0有分支标记为1 通过二维数组保存编码表   ¶代码实现   1234567891011121314151617181920char code[256][128] //存储哈夫曼编码表void Codeing(haffmanNode* node,char* temparray,int index)&amp;#123;    /*处理空结点的情况+递归出口*">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/2.png">
 <meta property="og:updated_time" content="2019-08-11T16:38:48.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.14.1）哈夫曼编码表的代码实现">
-<meta name="twitter:description" content="哈夫曼编码表 根据构建的哈夫曼树，左分支标记为0有分支标记为1 通过二维数组保存编码表   代码实现 1234567891011121314151617181920char code[256][128] //存储哈夫曼编码表void Codeing(haffmanNode* node,char* temparray,int index)&amp;#123;    /*处理空结点的情况+递归出口*/">
+<meta name="twitter:description" content="¶哈夫曼编码表  根据构建的哈夫曼树，左分支标记为0有分支标记为1 通过二维数组保存编码表   ¶代码实现   1234567891011121314151617181920char code[256][128] //存储哈夫曼编码表void Codeing(haffmanNode* node,char* temparray,int index)&amp;#123;    /*处理空结点的情况+递归出口*">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/1.png">
 
 
@@ -395,73 +395,87 @@
       
 
       
-        <h4 id="哈夫曼编码表"><a href="#哈夫曼编码表" class="headerlink" title="哈夫曼编码表"></a>哈夫曼编码表</h4><ol>
+        <h4 id="哈夫曼编码表"><a class="header-anchor" href="#哈夫曼编码表">¶</a>哈夫曼编码表</h4>
+<ol>
 <li>根据构建的哈夫曼树，左分支标记为0有分支标记为1</li>
 <li>通过二维数组保存编码表</li>
 </ol>
 <hr>
-<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> code[<span class="number">256</span>][<span class="number">128</span>] <span class="comment">//存储哈夫曼编码表</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Codeing</span><span class="params">(haffmanNode* node,<span class="keyword">char</span>* temparray,<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">    <span class="comment">/*处理空结点的情况+递归出口*/</span></span><br><span class="line">    <span class="keyword">if</span>(!node)<span class="keyword">return</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*当到达叶结点的时候*/</span></span><br><span class="line">    <span class="keyword">if</span>(!node-&gt;R_Node || !node-&gt;L_Node)&#123;</span><br><span class="line">        temparray[index] = <span class="string">'\0'</span>;</span><br><span class="line">        </span><br><span class="line">        strcpy_s(code[node-&gt;data<span class="number">-0</span>],<span class="number">128</span>,temparray);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*递归获取编码表*/</span></span><br><span class="line">    temparray[index] = <span class="string">'0'</span>;</span><br><span class="line">    Codeing(node-&gt;L_Node,temparray,index++);</span><br><span class="line">    temparray[index] = <span class="string">'1'</span>;</span><br><span class="line">    Codeing(node-&gt;R_Node,temparray,index++);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="代码实现"><a class="header-anchor" href="#代码实现">¶</a>代码实现</h5>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> code[<span class="number">256</span>][<span class="number">128</span>] <span class="comment">//存储哈夫曼编码表</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Codeing</span><span class="params">(haffmanNode* node,<span class="keyword">char</span>* temparray,<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">    <span class="comment">/*处理空结点的情况+递归出口*/</span></span><br><span class="line">    <span class="keyword">if</span>(!node)<span class="keyword">return</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*当到达叶结点的时候*/</span></span><br><span class="line">    <span class="keyword">if</span>(!node-&gt;R_Node || !node-&gt;L_Node)&#123;</span><br><span class="line">        temparray[index] = <span class="string">'\0'</span>;</span><br><span class="line">        </span><br><span class="line">        strcpy_s(code[node-&gt;data<span class="number">-0</span>],<span class="number">128</span>,temparray);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*递归获取编码表*/</span></span><br><span class="line">    temparray[index] = <span class="string">'0'</span>;</span><br><span class="line">    Codeing(node-&gt;L_Node,temparray,index++);</span><br><span class="line">    temparray[index] = <span class="string">'1'</span>;</span><br><span class="line">    Codeing(node-&gt;R_Node,temparray,index++);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="技术小结："><a href="#技术小结：" class="headerlink" title="技术小结："></a>技术小结：</h5><ul>
+<h5 id="技术小结："><a class="header-anchor" href="#技术小结：">¶</a>技术小结：</h5>
+<ul>
 <li>temparray数组用来临时存储字符对应的哈夫曼编码，存储格式为字符串</li>
 <li>这里采用二维数组来存储哈夫曼编码表，第一维下标为字符对于的ASCII码，所储存的为对应的编码</li>
 <li>当到达叶结点的时候，在该位置下标的temparry设置为结束符，意味着一个字符串(字符编码)的存储完毕</li>
 </ul>
 <hr>
-<h4 id="编码过程解析"><a href="#编码过程解析" class="headerlink" title="编码过程解析"></a>编码过程解析</h4><img src="/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/1.png">
+<h4 id="编码过程解析"><a class="header-anchor" href="#编码过程解析">¶</a>编码过程解析</h4>
+<img src="/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/1.png">
 <ul>
-<li>第一步：<code>Codeing(haffmanNode* node,char* temparray,int index)</code><ul>
+<li>第一步：<code>Codeing(haffmanNode* node,char* temparray,int index)</code>
+<ul>
 <li>根据哈夫曼树构建完毕的node数组</li>
 <li>定义<code>char* temparray[128]；</code>index = 0；</li>
 <li>parent4 拥有左右孩子且不空、temparray[0]  = 0</li>
 </ul>
 </li>
-<li>第二步: <code>Codeing(node(parent4)-&gt;L_Node,temparray,index++);</code><ul>
+<li>第二步: <code>Codeing(node(parent4)-&gt;L_Node,temparray,index++);</code>
+<ul>
 <li>index = 1</li>
 <li>B无左右孩子执行<code>if(!node-&gt;R_Node || !node-&gt;L_Node)</code>，temparry[1] = ‘\0’</li>
 <li>code[66(B)] = “0”</li>
 <li>return结束此处递归</li>
 </ul>
 </li>
-<li>第三步： <code>Codeing(node(parent4)-&gt;R_Node,temparray,index++);</code><ul>
+<li>第三步： <code>Codeing(node(parent4)-&gt;R_Node,temparray,index++);</code>
+<ul>
 <li>index = 1、temparray[0] = 1</li>
 <li>parent3 拥有左右孩子且不空执行左递归、temparry[1] = 0</li>
 </ul>
 </li>
-<li>第四步：<code>Codeing(node(parent3)-&gt;L_Node,temparray,index++);</code><ul>
-<li>index = 2 </li>
+<li>第四步：<code>Codeing(node(parent3)-&gt;L_Node,temparray,index++);</code>
+<ul>
+<li>index = 2</li>
 <li>D结点没有左右孩子执行<code>if(!node-&gt;R_Node || !node-&gt;L_Node)</code>、temparray[2] = ‘\0’</li>
 <li>code[68(D)] = “10”</li>
 <li>return结束此处递归</li>
 </ul>
 </li>
-<li>第五步：<code>Codeing(node(parent3)-&gt;R_Node,temparray,index++)；</code><ul>
+<li>第五步：<code>Codeing(node(parent3)-&gt;R_Node,temparray,index++)；</code>
+<ul>
 <li>temparry[1] = 1,index = 2</li>
 <li>parent2拥有左右孩子且不空指向左递归、temparry[2] = 0</li>
 </ul>
 </li>
-<li>第六步：<code>Codeing(node(parent2)-&gt;L_Node,temparray,index++)；</code><ul>
+<li>第六步：<code>Codeing(node(parent2)-&gt;L_Node,temparray,index++)；</code>
+<ul>
 <li>index = 3</li>
 <li>parent1拥有左右孩子且不空指向左递归、temparry[3] = 0</li>
 </ul>
 </li>
-<li>第七步：<code>Codeing(node(parent1)-&gt;L_Node,temparray,index++)；</code><ul>
+<li>第七步：<code>Codeing(node(parent1)-&gt;L_Node,temparray,index++)；</code>
+<ul>
 <li>index = 4</li>
 <li>C结点没有左右孩子执行<code>if(!node-&gt;R_Node || !node-&gt;L_Node)</code>、temparray[4] = ‘\0’</li>
-<li>code[67(C)] = “1100”</li>
+<li>code[67©] = “1100”</li>
 <li>return结束此处递归</li>
 </ul>
 </li>
-<li>第八步：<code>Codeing(node(parent1)-&gt;R_Node,temparray,index++)；</code><ul>
+<li>第八步：<code>Codeing(node(parent1)-&gt;R_Node,temparray,index++)；</code>
+<ul>
 <li>temparry[3] = 1，index = 4</li>
 <li>E结点没有左右孩子执行<code>if(!node-&gt;R_Node || !node-&gt;L_Node)</code>、temparray[4] = ‘\0’</li>
 <li>code[69(E)] = “1101”</li>
 <li>return结束此处递归</li>
 </ul>
 </li>
-<li>第九步：<code>Codeing(node(parent2)-&gt;R_Node,temparray,index++)；</code><ul>
+<li>第九步：<code>Codeing(node(parent2)-&gt;R_Node,temparray,index++)；</code>
+<ul>
 <li>temparry[2] = 1、index = 3</li>
 <li>A结点没有左右孩子执行<code>if(!node-&gt;R_Node || !node-&gt;L_Node)</code>、temparray[3] = ‘\0’</li>
 <li>code[65(A)] = “111”</li>
@@ -470,13 +484,47 @@
 </ul>
 <hr>
 <ul>
-<li><img src="/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/2.png"></li>
-<li>| code[下标] | 储存元素（编码） |<br>| :————: | :———————: |<br>|  65（A）   |       111        |<br>|  66（B）   |        0         |<br>|  67（C）   |       1100       |<br>|  68（D）   |        10        |<br>|  69（E）   |       1101       |</li>
+<li>
+<img src="/2019/08/11/数据结构学习总结-（5-14-1）哈夫曼编码表的代码实现/2.png">
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">code[下标]</th>
+<th style="text-align:center">储存元素（编码）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">65（A）</td>
+<td style="text-align:center">111</td>
+</tr>
+<tr>
+<td style="text-align:center">66（B）</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">67（C）</td>
+<td style="text-align:center">1100</td>
+</tr>
+<tr>
+<td style="text-align:center">68（D）</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">69（E）</td>
+<td style="text-align:center">1101</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
-<h5 id="解析过程错误小结："><a href="#解析过程错误小结：" class="headerlink" title="解析过程错误小结："></a>解析过程错误小结：</h5><ul>
+<h5 id="解析过程错误小结："><a class="header-anchor" href="#解析过程错误小结：">¶</a>解析过程错误小结：</h5>
+<ul>
 <li>函数递归时传参是形参，即index在递归时自加了。结束该分支后返回上一个函数时index值还是递归自加前的值</li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -681,7 +729,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">81</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -773,7 +821,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼编码表"><span class="nav-number">1.</span> <span class="nav-text">哈夫曼编码表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代码实现"><span class="nav-number">1.1.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#技术小结："><span class="nav-number">1.2.</span> <span class="nav-text">技术小结：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编码过程解析"><span class="nav-number">2.</span> <span class="nav-text">编码过程解析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解析过程错误小结："><span class="nav-number">2.1.</span> <span class="nav-text">解析过程错误小结：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼编码表"><span class="nav-number">1.</span> <span class="nav-text">¶哈夫曼编码表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代码实现"><span class="nav-number">1.1.</span> <span class="nav-text">¶代码实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#技术小结："><span class="nav-number">1.2.</span> <span class="nav-text">¶技术小结：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编码过程解析"><span class="nav-number">2.</span> <span class="nav-text">¶编码过程解析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解析过程错误小结："><span class="nav-number">2.1.</span> <span class="nav-text">¶解析过程错误小结：</span></a></li></ol></li></ol></div>
             
 
           </div>
