@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="¶体现循环链表的优点之从指定结点开始遍历 ​	上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个链表，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高了">
+<meta name="description" content="体现循环链表的优点之从指定结点开始遍历​    上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个链表，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（2.6.1）附加：循环链表的优点之从指定结点开始遍历">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/19/数据结构学习总结-（2-6-1）附加：循环链表的优点之从指定结点开始遍历/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶体现循环链表的优点之从指定结点开始遍历 ​	上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个链表，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高了">
+<meta property="og:description" content="体现循环链表的优点之从指定结点开始遍历​    上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个链表，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/19/数据结构学习总结-（2-6-1）附加：循环链表的优点之从指定结点开始遍历/1.png">
 <meta property="og:updated_time" content="2019-06-22T04:06:21.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（2.6.1）附加：循环链表的优点之从指定结点开始遍历">
-<meta name="twitter:description" content="¶体现循环链表的优点之从指定结点开始遍历 ​	上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个链表，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高了">
+<meta name="twitter:description" content="体现循环链表的优点之从指定结点开始遍历​    上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表可以从指定的结点开始遍历整个链表，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/06/19/数据结构学习总结-（2-6-1）附加：循环链表的优点之从指定结点开始遍历/1.png">
 
 
@@ -394,8 +394,7 @@
       
 
       
-        <h4 id="体现循环链表的优点之从指定结点开始遍历"><a class="header-anchor" href="#体现循环链表的优点之从指定结点开始遍历">¶</a>体现循环链表的优点之从指定结点开始遍历</h4>
-<p>​	上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表<strong>可以从指定的结点开始遍历整个链表</strong>，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高了效率。</p>
+        <h4 id="体现循环链表的优点之从指定结点开始遍历"><a href="#体现循环链表的优点之从指定结点开始遍历" class="headerlink" title="体现循环链表的优点之从指定结点开始遍历"></a>体现循环链表的优点之从指定结点开始遍历</h4><p>​    上一篇总结文章介绍了循环链表的基本概念和个人理解，但我觉得能很好区分非循环链表和循环链表初了链表的合并，还有一个就是循环链表<strong>可以从指定的结点开始遍历整个链表</strong>，这是非循环链表所做不到的。非循环链表每次遍历只能从头一个个开始遍历每一个元素，而循环链表就不同了，因为它的尾部是与头部相连的，这样就可以实现从某一个结点开始就可以遍历到链表每一个结点上，大大提高了效率。</p>
 <ul>
 <li>这里通过遍历函数来体现这一特性。</li>
 </ul>
@@ -413,10 +412,9 @@
 </ul>
 <img src="/2019/06/19/数据结构学习总结-（2-6-1）附加：循环链表的优点之从指定结点开始遍历/1.png">
 <hr>
-<h5 id="小结："><a class="header-anchor" href="#小结：">¶</a>小结：</h5>
-<p>​	这里只是单单用遍历体现了循环链表的这个特点。</p>
-<p>​	其实不单单在遍历操作上，这个更可以在查找操作上体现出这个优点，例如：在指定结点开始寻找其后的某个值、删除操作也可以运用上。</p>
-<p>–（本文完）&lt;原创&gt;</p>
+<h5 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h5><p>​    这里只是单单用遍历体现了循环链表的这个特点。</p>
+<p>​    其实不单单在遍历操作上，这个更可以在查找操作上体现出这个优点，例如：在指定结点开始寻找其后的某个值、删除操作也可以运用上。</p>
+<p>—（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -691,7 +689,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="www.ideal-20.cn" title="（Roommate）理想二旬不止" target="_blank">（Roommate）理想二旬不止</a>
+                    <a href="http://www.ideal-20.cn/" title="（Roommate）理想二旬不止" target="_blank">（Roommate）理想二旬不止</a>
                   </li>
                 
               </ul>
@@ -713,7 +711,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#体现循环链表的优点之从指定结点开始遍历"><span class="nav-number">1.</span> <span class="nav-text">¶体现循环链表的优点之从指定结点开始遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小结："><span class="nav-number">1.1.</span> <span class="nav-text">¶小结：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#体现循环链表的优点之从指定结点开始遍历"><span class="nav-number">1.</span> <span class="nav-text">体现循环链表的优点之从指定结点开始遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小结："><span class="nav-number">1.1.</span> <span class="nav-text">小结：</span></a></li></ol></li></ol></div>
             
 
           </div>

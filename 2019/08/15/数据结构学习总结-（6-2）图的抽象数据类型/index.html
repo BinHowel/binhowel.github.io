@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="¶图的抽象数据类型  ADT Graph Data     V是具有相同特性的数据元素的集合名称为顶点集 Relation  R = {VR} VR = {&amp;lt;V,W&amp;gt;|V,W∈V且P(V,W) &amp;lt;V,W&amp;gt;表示从V，W的弧，P(v,w)定义了弧的&amp;lt;v,w&amp;gt;的意义}   Operation  createGraph(&amp;amp;G,V,VR)  初始条件：V是图的顶点">
+<meta name="description" content="图的抽象数据类型 ADT Graph Data     V是具有相同特性的数据元素的集合名称为顶点集 Relation R = {VR} VR = {|V,W∈V且P(V,W) 表示从V，W的弧，P(v,w)定义了弧的的意义}   Operation createGraph(&amp;amp;G,V,VR) 初始条件：V是图的顶点集，VR是图中边/弧的集合 操作结果：按V和VR的定义构造图G   DFST">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（6.2）图的抽象数据类型">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-2）图的抽象数据类型/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶图的抽象数据类型  ADT Graph Data     V是具有相同特性的数据元素的集合名称为顶点集 Relation  R = {VR} VR = {&amp;lt;V,W&amp;gt;|V,W∈V且P(V,W) &amp;lt;V,W&amp;gt;表示从V，W的弧，P(v,w)定义了弧的&amp;lt;v,w&amp;gt;的意义}   Operation  createGraph(&amp;amp;G,V,VR)  初始条件：V是图的顶点">
+<meta property="og:description" content="图的抽象数据类型 ADT Graph Data     V是具有相同特性的数据元素的集合名称为顶点集 Relation R = {VR} VR = {|V,W∈V且P(V,W) 表示从V，W的弧，P(v,w)定义了弧的的意义}   Operation createGraph(&amp;amp;G,V,VR) 初始条件：V是图的顶点集，VR是图中边/弧的集合 操作结果：按V和VR的定义构造图G   DFST">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-15T13:25:09.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（6.2）图的抽象数据类型">
-<meta name="twitter:description" content="¶图的抽象数据类型  ADT Graph Data     V是具有相同特性的数据元素的集合名称为顶点集 Relation  R = {VR} VR = {&amp;lt;V,W&amp;gt;|V,W∈V且P(V,W) &amp;lt;V,W&amp;gt;表示从V，W的弧，P(v,w)定义了弧的&amp;lt;v,w&amp;gt;的意义}   Operation  createGraph(&amp;amp;G,V,VR)  初始条件：V是图的顶点">
+<meta name="twitter:description" content="图的抽象数据类型 ADT Graph Data     V是具有相同特性的数据元素的集合名称为顶点集 Relation R = {VR} VR = {|V,W∈V且P(V,W) 表示从V，W的弧，P(v,w)定义了弧的的意义}   Operation createGraph(&amp;amp;G,V,VR) 初始条件：V是图的顶点集，VR是图中边/弧的集合 操作结果：按V和VR的定义构造图G   DFST">
 
 
 
@@ -392,32 +392,26 @@
       
 
       
-        <h4 id="图的抽象数据类型"><a class="header-anchor" href="#图的抽象数据类型">¶</a>图的抽象数据类型</h4>
-<ul>
+        <h4 id="图的抽象数据类型"><a href="#图的抽象数据类型" class="headerlink" title="图的抽象数据类型"></a>图的抽象数据类型</h4><ul>
 <li>ADT Graph</li>
 <li>Data     V是具有相同特性的数据元素的集合名称为顶点集</li>
-<li>Relation
-<ul>
+<li>Relation<ul>
 <li>R = {VR}</li>
-<li>VR = {&lt;V,W&gt;|V,W∈V且P(V,W) &lt;V,W&gt;表示从V，W的弧，P(v,w)定义了弧的&lt;v,w&gt;的意义}</li>
+<li>VR = {<v,w>|V,W∈V且P(V,W) <v,w>表示从V，W的弧，P(v,w)定义了弧的<v,w>的意义}</v,w></v,w></v,w></li>
 </ul>
 </li>
-<li>Operation
-<ul>
-<li>createGraph(&amp;G,V,VR)
-<ul>
+<li>Operation<ul>
+<li>createGraph(&amp;G,V,VR)<ul>
 <li>初始条件：V是图的顶点集，VR是图中边/弧的集合</li>
 <li>操作结果：按V和VR的定义构造图G</li>
 </ul>
 </li>
-<li>DFSTraverse(G)
-<ul>
+<li>DFSTraverse(G)<ul>
 <li>初始条件：图G存在</li>
 <li>操作结果：对图进行<strong>深度优先遍历</strong>，在遍历过程中对每个顶点访问一次</li>
 </ul>
 </li>
-<li>BFSTraverse(G)
-<ul>
+<li>BFSTraverse(G)<ul>
 <li>初始条件：图G存在</li>
 <li>操作结果：对图进行<strong>广度优先遍历</strong>，在遍历过程中对每个顶点访问一次</li>
 </ul>
@@ -426,15 +420,14 @@
 </li>
 </ul>
 <hr>
-<h4 id="图的数据存储结构"><a class="header-anchor" href="#图的数据存储结构">¶</a>图的数据存储结构</h4>
-<ul>
+<h4 id="图的数据存储结构"><a href="#图的数据存储结构" class="headerlink" title="图的数据存储结构"></a>图的数据存储结构</h4><ul>
 <li>边表</li>
 <li>数组表示法(邻接矩阵)</li>
 <li>邻接表</li>
 <li>十字链表(有向图)</li>
 <li>多重邻接表(无向图)</li>
 </ul>
-<p>– (本文完)</p>
+<p>— (本文完)</p>
 
       
     </div>
@@ -709,7 +702,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="www.ideal-20.cn" title="（Roommate）理想二旬不止" target="_blank">（Roommate）理想二旬不止</a>
+                    <a href="http://www.ideal-20.cn/" title="（Roommate）理想二旬不止" target="_blank">（Roommate）理想二旬不止</a>
                   </li>
                 
               </ul>
@@ -731,7 +724,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#图的抽象数据类型"><span class="nav-number">1.</span> <span class="nav-text">¶图的抽象数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图的数据存储结构"><span class="nav-number">2.</span> <span class="nav-text">¶图的数据存储结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#图的抽象数据类型"><span class="nav-number">1.</span> <span class="nav-text">图的抽象数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图的数据存储结构"><span class="nav-number">2.</span> <span class="nav-text">图的数据存储结构</span></a></li></ol></div>
             
 
           </div>
