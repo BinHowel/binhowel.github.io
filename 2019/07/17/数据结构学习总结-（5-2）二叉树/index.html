@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶二叉树(Binary Tree)   二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。     只有一个称为根的结点 除根外，其余结点分为不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树       二叉树与树：      二叉树 树     至多只有两个子树 没有限制子树的个数上限   子树有左右之分，其次序不能颠倒(">
+<meta name="description" content="二叉树(Binary Tree) 二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。    只有一个称为根的结点 除根外，其余结点分为不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树     二叉树与树：  | 二叉树                                 | 树">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.2）二叉树">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-2）二叉树/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶二叉树(Binary Tree)   二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。     只有一个称为根的结点 除根外，其余结点分为不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树       二叉树与树：      二叉树 树     至多只有两个子树 没有限制子树的个数上限   子树有左右之分，其次序不能颠倒(">
+<meta property="og:description" content="二叉树(Binary Tree) 二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。    只有一个称为根的结点 除根外，其余结点分为不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树     二叉树与树：  | 二叉树                                 | 树">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-2）二叉树/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-2）二叉树/2.png">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-07-17T03:01:21.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.2）二叉树">
-<meta name="twitter:description" content="¶二叉树(Binary Tree)   二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。     只有一个称为根的结点 除根外，其余结点分为不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树       二叉树与树：      二叉树 树     至多只有两个子树 没有限制子树的个数上限   子树有左右之分，其次序不能颠倒(">
+<meta name="twitter:description" content="二叉树(Binary Tree) 二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。    只有一个称为根的结点 除根外，其余结点分为不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树     二叉树与树：  | 二叉树                                 | 树">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-2）二叉树/1.png">
 
 
@@ -385,52 +385,24 @@
       
 
       
-        <h4 id="二叉树-binary-tree"><a class="header-anchor" href="#二叉树-binary-tree">¶</a>二叉树(Binary Tree)</h4>
-<ul>
-<li>
-<p>二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。</p>
+        <h4 id="二叉树-Binary-Tree"><a href="#二叉树-Binary-Tree" class="headerlink" title="二叉树(Binary Tree)"></a>二叉树(Binary Tree)</h4><ul>
+<li><p>二叉树是一个连通的无环图，并且每一个顶点的度不大于3。有根二叉树还要满足根结点的度不大于2。</p>
 </li>
-<li>
-<img src="/2019/07/17/数据结构学习总结-（5-2）二叉树/1.png">
+<li><img src="/2019/07/17/数据结构学习总结-（5-2）二叉树/1.png">
 <ul>
 <li>只有一个称为根的结点</li>
 <li>除根外，其余结点分为不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树</li>
-<li>
-<img src="/2019/07/17/数据结构学习总结-（5-2）二叉树/2.png">
+<li><img src="/2019/07/17/数据结构学习总结-（5-2）二叉树/2.png">
 </li>
 </ul>
 </li>
-<li>
-<p><strong>二叉树与树</strong>：</p>
+<li><p><strong>二叉树与树</strong>：</p>
 </li>
-<li>
-<table>
-<thead>
-<tr>
-<th>二叉树</th>
-<th>树</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>至多只有两个子树</td>
-<td>没有限制子树的个数上限</td>
-</tr>
-<tr>
-<td>子树有左右之分，其次序不能颠倒(有序树)</td>
-<td>子树可有序也可以无序</td>
-</tr>
-<tr>
-<td>具有递归性质</td>
-<td>具有递归性质</td>
-</tr>
-</tbody>
-</table>
+<li><p>| 二叉树                                 | 树                     |<br>| ——————————————————— | ——————————— |<br>| 至多只有两个子树                       | 没有限制子树的个数上限 |<br>| 子树有左右之分，其次序不能颠倒(有序树) | 子树可有序也可以无序   |<br>| 具有递归性质                           | 具有递归性质           |</p>
 </li>
 </ul>
 <hr>
-<h4 id="二叉树的五中基本形态"><a class="header-anchor" href="#二叉树的五中基本形态">¶</a>二叉树的五中基本形态</h4>
-<ul>
+<h4 id="二叉树的五中基本形态"><a href="#二叉树的五中基本形态" class="headerlink" title="二叉树的五中基本形态"></a>二叉树的五中基本形态</h4><ul>
 <li>空树</li>
 <li>只有一个根结点的二叉树</li>
 <li>只有左子树</li>
@@ -439,13 +411,12 @@
 </ul>
 <img src="/2019/07/17/数据结构学习总结-（5-2）二叉树/3.png">
 <hr>
-<h4 id="二叉树的优点"><a class="header-anchor" href="#二叉树的优点">¶</a>二叉树的优点</h4>
-<ul>
+<h4 id="二叉树的优点"><a href="#二叉树的优点" class="headerlink" title="二叉树的优点"></a>二叉树的优点</h4><ul>
 <li>普通树相比二叉树代码很难实现</li>
 <li>二叉树结构简单，规律性强</li>
 <li>所有树都可以转为唯一对应的二叉树</li>
 </ul>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -742,7 +713,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树-binary-tree"><span class="nav-number">1.</span> <span class="nav-text">¶二叉树(Binary Tree)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的五中基本形态"><span class="nav-number">2.</span> <span class="nav-text">¶二叉树的五中基本形态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的优点"><span class="nav-number">3.</span> <span class="nav-text">¶二叉树的优点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树-Binary-Tree"><span class="nav-number">1.</span> <span class="nav-text">二叉树(Binary Tree)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的五中基本形态"><span class="nav-number">2.</span> <span class="nav-text">二叉树的五中基本形态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的优点"><span class="nav-number">3.</span> <span class="nav-text">二叉树的优点</span></a></li></ol></div>
             
 
           </div>
