@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="实现字符串中的简单操作一strlen() 作用：返回字符串的长度  实现思路：因为在c/c++中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c++中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符串相">
+<meta name="description" content="¶实现字符串中的简单操作一 ¶strlen()   作用：返回字符串的长度   实现思路：因为在c/c中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结,错误记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（4.2）实现字符串strlen和strcpy">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="实现字符串中的简单操作一strlen() 作用：返回字符串的长度  实现思路：因为在c/c++中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c++中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符串相">
+<meta property="og:description" content="¶实现字符串中的简单操作一 ¶strlen()   作用：返回字符串的长度   实现思路：因为在c/c中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/2.png">
@@ -96,7 +96,7 @@
 <meta property="og:updated_time" content="2019-07-10T14:33:53.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（4.2）实现字符串strlen和strcpy">
-<meta name="twitter:description" content="实现字符串中的简单操作一strlen() 作用：返回字符串的长度  实现思路：因为在c/c++中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c++中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符串相">
+<meta name="twitter:description" content="¶实现字符串中的简单操作一 ¶strlen()   作用：返回字符串的长度   实现思路：因为在c/c中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/1.png">
 
 
@@ -397,49 +397,66 @@
       
 
       
-        <h4 id="实现字符串中的简单操作一"><a href="#实现字符串中的简单操作一" class="headerlink" title="实现字符串中的简单操作一"></a>实现字符串中的简单操作一</h4><h5 id="strlen"><a href="#strlen" class="headerlink" title="strlen()"></a>strlen()</h5><ul>
-<li><p>作用：返回字符串的长度</p>
-</li>
-<li><p>实现思路：因为在c/c++中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c++中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符串相减，即可得到字符串的长度。</p>
-</li>
-<li><p>具体实现:</p>
+        <h4 id="实现字符串中的简单操作一"><a class="header-anchor" href="#实现字符串中的简单操作一">¶</a>实现字符串中的简单操作一</h4>
+<h5 id="strlen"><a class="header-anchor" href="#strlen">¶</a>strlen()</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* temp = str;</span><br><span class="line">    <span class="keyword">while</span>(*temp != <span class="string">'\0'</span>)&#123;temp++;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> temp - str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>作用：返回字符串的长度</p>
 </li>
-<li><p>实验结果: <img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/1.png"></p>
+<li>
+<p>实现思路：因为在c/c<ins>中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c</ins>中可以利用指针和地址来求得字符串的长度，首先定义一个临时指针然后用待求字符串长度的字符串对其进行赋值，再用循环对这个临时指针进行自加移动，当判断在某个地址中的数据为‘\0’结束符的时候，再让其与原来的字符串相减，即可得到字符串的长度。</p>
+</li>
+<li>
+<p>具体实现:</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* temp = str;</span><br><span class="line">    <span class="keyword">while</span>(*temp != <span class="string">'\0'</span>)&#123;temp++;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> temp - str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实验结果: <img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/1.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h5><ul>
-<li><p>作用：进行字符串复制操作</p>
-</li>
-<li><p>实现思路：因为这个函数本身是实现复制操作，所以可以用原字符串对目标字符串进行逐一赋值即可实现。用一个临时指针存储目标字符串，然后用原字符串对这个临时指针进行逐一修改赋值，然后返回目标字符串即可。</p>
-</li>
-<li><p>具体实现:</p>
+<h5 id="strcpy"><a class="header-anchor" href="#strcpy">¶</a>strcpy()</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* p,<span class="keyword">const</span> <span class="keyword">char</span>* s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span>* temp = p;</span><br><span class="line">    <span class="keyword">while</span>((*temp++ = *s++) != <span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> p</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>作用：进行字符串复制操作</p>
 </li>
-<li><p>实验结果:<img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/2.png"></p>
+<li>
+<p>实现思路：因为这个函数本身是实现复制操作，所以可以用原字符串对目标字符串进行逐一赋值即可实现。用一个临时指针存储目标字符串，然后用原字符串对这个临时指针进行逐一修改赋值，然后返回目标字符串即可。</p>
+</li>
+<li>
+<p>具体实现:</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* p,<span class="keyword">const</span> <span class="keyword">char</span>* s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span>* temp = p;</span><br><span class="line">    <span class="keyword">while</span>((*temp++ = *s++) != <span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> p</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实验结果:<img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/2.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="错误记录："><a href="#错误记录：" class="headerlink" title="错误记录："></a>错误记录：</h4><p>在编写<code>strcpy()</code>时，忘记了<code>char*p</code>是一个指针，结果直接运用循环对其进行自加移动赋值修改，然后再返回该指针。</p>
+<h4 id="错误记录："><a class="header-anchor" href="#错误记录：">¶</a>错误记录：</h4>
+<p>在编写<code>strcpy()</code>时，忘记了<code>char*p</code>是一个指针，结果直接运用循环对其进行自加移动赋值修改，然后再返回该指针。</p>
 <ul>
-<li><p>错误代码:</p>
+<li>
+<p>错误代码:</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* p , <span class="keyword">const</span> <span class="keyword">char</span>* s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>((*p++ = *s++) != <span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* p , <span class="keyword">const</span> <span class="keyword">char</span>* s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>((*p++ = *s++) != <span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果: <img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/3.png"> <img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/4.png"></p>
+<li>
+<p>实验结果: <img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/3.png"> <img src="/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/4.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <p><strong>错误总结</strong>:上述错误代码中，因为p是一个指针，在循环的时候虽然是进行了逐一修改赋值，但指针也随之移动了，所以结果s不再是指向该字符串的首字符地址，而是指向了未知的末尾地址，从而造成指针p变成野指针。返回的结果也就想当然的是乱码了。</p>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -738,7 +755,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现字符串中的简单操作一"><span class="nav-number">1.</span> <span class="nav-text">实现字符串中的简单操作一</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#strlen"><span class="nav-number">1.1.</span> <span class="nav-text">strlen()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#strcpy"><span class="nav-number">1.2.</span> <span class="nav-text">strcpy()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误记录："><span class="nav-number">2.</span> <span class="nav-text">错误记录：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现字符串中的简单操作一"><span class="nav-number">1.</span> <span class="nav-text">¶实现字符串中的简单操作一</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#strlen"><span class="nav-number">1.1.</span> <span class="nav-text">¶strlen()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#strcpy"><span class="nav-number">1.2.</span> <span class="nav-text">¶strcpy()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误记录："><span class="nav-number">2.</span> <span class="nav-text">¶错误记录：</span></a></li></ol></div>
             
 
           </div>
