@@ -555,7 +555,10 @@
 
       
         
-          讲述在C++类中static函数/变量的特点、类函数const后缀的运用、mutable关键字（加密文章）
+          
+          static关键字
+静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/#more" rel="contents">
@@ -1051,7 +1054,12 @@ str = “Hello World”；str就是主串
 
       
         
-          讲述C++的类中构造函数及默认参数、隐式转换、explicit、参数列表的基本用法和概念（加密文章）
+          
+          C++中的构造函数定义
+在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。
+
+1234567891011121314151617class stu
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/#more" rel="contents">
@@ -1376,7 +1384,9 @@ str = “Hello World”；str就是主串
 
       
         
-          讲述C++中 static_cast、dynamic_cast、const_cast、reinterpret_cast的概念和用法（加密文章）
+          
+          C语言风格的类型转换12345678/*隐式转换*/int a = 100;double b = 2.3;cout &lt;&lt; a+b &lt;&lt;endl;//结果转换成double型/*
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/04/C++进阶学习总结-(1.7)数据类型转换/#more" rel="contents">

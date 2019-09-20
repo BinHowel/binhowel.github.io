@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="讲述C++基本库中的vector容器的基本概念和用法（加密文章）">
+<meta name="description" content="vector的基本介绍及概念 标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义： vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     定义及初始化vector对象 例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector对象，里面">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（1.5）vector容器详解">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/25/C-进阶学习总结-（1-5）vector容器详解/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="讲述C++基本库中的vector容器的基本概念和用法（加密文章）">
+<meta property="og:description" content="vector的基本介绍及概念 标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义： vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     定义及初始化vector对象 例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector对象，里面">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-25T12:17:11.053Z">
+<meta property="og:updated_time" content="2019-09-20T07:57:14.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（1.5）vector容器详解">
-<meta name="twitter:description" content="讲述C++基本库中的vector容器的基本概念和用法（加密文章）">
+<meta name="twitter:description" content="vector的基本介绍及概念 标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义： vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     定义及初始化vector对象 例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector对象，里面">
 
 
 
@@ -392,20 +392,119 @@
       
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="此文章是加密文章，请输入密码后查看.">
-    <label for="pass">此文章是加密文章，请输入密码后查看.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h4 id="vector的基本介绍及概念"><a href="#vector的基本介绍及概念" class="headerlink" title="vector的基本介绍及概念"></a>vector的基本介绍及概念</h4><ul>
+<li>标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。</li>
+<li>代码定义：<ul>
+<li><code>vector&lt;typename&gt; name</code>;</li>
+<li>在vector之后加一对&lt;&gt;,其&lt;&gt;内部填数据类型</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="定义及初始化vector对象"><a href="#定义及初始化vector对象" class="headerlink" title="定义及初始化vector对象"></a>定义及初始化vector对象</h4><ul>
+<li>例：<code>vector&lt;int&gt; arrays;</code>创建一个int型的空的vector对象，里面没有包含任何元素。</li>
+<li>初始化：<ul>
+<li>往空vector容器添加元素：<ul>
+<li><code>arrays.push_back(100);</code>往arrays容器中加入一个100。</li>
+</ul>
+</li>
+<li>元素拷贝的初始方式<ul>
+<li><code>vector&lt;int&gt;arrays2(arrays)</code>;把arrays直接拷贝进arrays2。</li>
+<li><code>vector&lt;int&gt;arrays3 = arrays;</code>同上。</li>
+</ul>
+</li>
+<li>用列表初始化(C++11标准后才有的新特性)<ul>
+<li><code>vector&lt;int&gt;arrays4 = {12,32,45,67};</code></li>
+</ul>
+</li>
+<li>创建指定数量的元素<ul>
+<li><code>vector&lt;int&gt; arrays5(15,-200);</code>创建15个int类型的元素，每个元素都是-200。(不给初值就给默认初始值为0)</li>
+<li><code>vector&lt;string&gt; arrays6(5,&quot;hello&quot;);</code>同上。</li>
+</ul>
+</li>
+<li>多种初始化方式<ul>
+<li><code>vector&lt;int&gt; arrays7{10};</code>初始化，给一个元素，该元素数据是10.</li>
+<li>vector<string> arrays8{“hello”};同上。</string></li>
+<li>vector<string> arrays8{10};分配10个string类型的数据都为“”(空串)。<ul>
+<li>因为10是整型，string类型不匹配所以分配10个元素空间作处理。</li>
+</ul>
+</string></li>
+<li><font color="red">注意：</font>要想正常的通过{}进行初始化，那么{}里边的值的类型，必须跟vector类型相同。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="vector对象的操作"><a href="#vector对象的操作" class="headerlink" title="vector对象的操作"></a>vector对象的操作</h4><ul>
+<li><p>最常用的是不清楚具体元素数量，通过vector动态增加/简述，故一般使用前先创建一个空容器。<code>vector&lt;int&gt; arrays</code></p>
+</li>
+<li><p>具体操作：</p>
+<ul>
+<li><p>判断容器是否为空(bool)</p>
+<ul>
+<li><code>arrays.empty()</code></li>
+</ul>
+</li>
+<li><p>在容器末尾添加一个元素</p>
+<ul>
+<li><code>arrays.push_back(int num)</code></li>
+</ul>
+</li>
+<li><p>返回容器总长度(元素个数)</p>
+<ul>
+<li><code>arrays.size()</code></li>
+</ul>
+</li>
+<li><p>清空容器</p>
+<ul>
+<li><code>arrays.clear()</code></li>
+</ul>
+</li>
+<li><p>可以类似数组一样的用法(下标从0开始)</p>
+<ul>
+<li><code>arrays[n]</code></li>
+</ul>
+</li>
+<li><p>赋值</p>
+<ul>
+<li><p><code>vector&lt;int&gt; arrays2; arrays2 = arrays;</code></p>
+<ul>
+<li><p>注意：这里是类似普通数据类型的赋值一样，不是拷贝！</p>
+</li>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays2; </span><br><span class="line">arrays2 = arrays;<span class="comment">//此时array2里的 元素 及 元素个数 跟arrays一样。</span></span><br><span class="line">array2 = &#123;<span class="number">12</span>,<span class="number">34</span>,<span class="number">55</span>,<span class="number">67</span>&#125;<span class="comment">//此时array2长度变为4，元素分别是12,34,55,67</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>相等</p>
+<ul>
+<li>两个vector相等，首先元素要相同，对应位置的元素相同。</li>
+</ul>
+</li>
+<li><p>for循环遍历</p>
+<ul>
+<li><code>for(auto &amp; v: arrays){}</code></li>
+<li><code>for(vector&lt;int&gt; v: arrays){}</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="for遍历一些注意点："><a href="#for遍历一些注意点：" class="headerlink" title="for遍历一些注意点："></a>for遍历一些注意点：</h4><ul>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> v:arrays)&#123;<span class="comment">//千万不要这样使用！！！</span></span><br><span class="line">    arrays.push_back(<span class="number">88</span>);<span class="comment">//在遍历的时候再往里面插入新元素，会导致arrays结构混乱</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原因：因为遍历的时候会记录arrays最后一个值的地址，如果插入新的值，会照成地址紊乱，输出乱值。</p>
+</li>
+<li><p><strong>结论：</strong>千万不要在for遍历语句或类似操作中，改变遍历源的数值（删除/增加都不可以），调试找bug的时候会非常难发现。</p>
+</li>
+</ul>
+<p>—（本文完）&lt;原创&gt;</p>
+
       
     </div>
     
@@ -424,7 +523,7 @@ U2FsdGVkX1+wknQ8M6QFpOfa4Ifwov2VctZ7sszN6C4BPWcrjUjR1dTePwi3TRIPElX8iHdK+dh5Yph4
   <p><span>本文标题:</span><a href="/2019/06/25/C-进阶学习总结-（1-5）vector容器详解/">C++进阶学习总结-（1.5）vector容器详解</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
   <p><span>发布时间:</span>2019年06月25日 - 19:06</p>
-  <p><span>最后更新:</span>2019年06月25日 - 20:06</p>
+  <p><span>最后更新:</span>2019年09月20日 - 15:09</p>
   <p><span>原始链接:</span><a href="/2019/06/25/C-进阶学习总结-（1-5）vector容器详解/" title="C++进阶学习总结-（1.5）vector容器详解">https://shuhaohwang.github.io/2019/06/25/C-进阶学习总结-（1-5）vector容器详解/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/06/25/C-进阶学习总结-（1-5）vector容器详解/" aria-label="复制成功！"></i></span>
   </p>
@@ -582,8 +681,17 @@ U2FsdGVkX1+wknQ8M6QFpOfa4Ifwov2VctZ7sszN6C4BPWcrjUjR1dTePwi3TRIPElX8iHdK+dh5Yph4
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -682,6 +790,22 @@ U2FsdGVkX1+wknQ8M6QFpOfa4Ifwov2VctZ7sszN6C4BPWcrjUjR1dTePwi3TRIPElX8iHdK+dh5Yph4
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vector的基本介绍及概念"><span class="nav-number">1.</span> <span class="nav-text">vector的基本介绍及概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义及初始化vector对象"><span class="nav-number">2.</span> <span class="nav-text">定义及初始化vector对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector对象的操作"><span class="nav-number">3.</span> <span class="nav-text">vector对象的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for遍历一些注意点："><span class="nav-number">4.</span> <span class="nav-text">for遍历一些注意点：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
