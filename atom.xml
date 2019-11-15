@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://shuhaohwang.github.io/"/>
-  <updated>2019-11-09T01:26:37.264Z</updated>
+  <updated>2019-11-14T15:49:30.000Z</updated>
   <id>https://shuhaohwang.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案</title>
+    <link href="https://shuhaohwang.github.io/2019/11/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-%EF%BC%887-3%EF%BC%89%E5%93%88%E5%B8%8C%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%86%B2%E7%AA%81%E9%80%9A%E5%B8%B8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/</id>
+    <published>2019-11-14T13:33:03.000Z</published>
+    <updated>2019-11-14T15:49:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="冲突的解决方案"><a href="#冲突的解决方案" class="headerlink" title="冲突的解决方案"></a>冲突的解决方案</h4><p>冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。</p><ul><li>开放地址法</li><li>再哈希法</li><li>封闭地址法</li></ul><hr><h5 id="开放地址法"><a href="#开放地址法" class="headerlink" title="开放地址法"></a>开放地址法</h5><p>一个Key具有多个候选哈希地址。</p><ul><li><p>开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上</p></li><li><p>实现：</p><ul><li>线性探测再散列</li><li>二次探测再散列</li><li>伪随机探测再散列</li></ul></li></ul><h6 id="线性探测再散列"><a href="#线性探测再散列" class="headerlink" title="线性探测再散列"></a>线性探测再散列</h6><ul><li><p>原地址H<sub>0</sub>发生了冲突</p><ul><li>则第i次冲突的探测地址</li><li>H<sub>i</sub> = (H<sub>o</sub>+ i)%m</li></ul></li><li><p>例如</p><ul><li>一个关键字映射地址为3</li><li>另一个关键字通过哈希函数也映射为3</li><li>那么第二个关键字则会检索4号地址空不空，如果空那么就存储进去，反之继续往检索</li></ul><img src="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/1.gif"><p><br></p></li></ul><ul><li><p>线性探索法容易产生堆积：</p><ul><li>冲突的关键字只好向后寻找可用的空单元</li><li>结果又占据了其他关键字的位置</li><li>使得冲突更加严重、查找次数增加</li></ul><p>因为如果当前地址产生了冲突，尝试下一个地址，这样容易造成“连续的一大串”地址冲突，使得查找次数增加</p></li><li><p><strong>改进</strong>：使用二次探测再散列</p></li></ul><ul><li><p>如果当前地址冲突，“下一个”的地址不是紧挨着，而是离远一些，而且冲突次数越多，离得越远</p><p><br></p><p><br></p></li></ul><h6 id="二次探测再散列"><a href="#二次探测再散列" class="headerlink" title="二次探测再散列"></a>二次探测再散列</h6><ul><li>原地址H<sub>0</sub>发生了冲突<ul><li>i 为冲突的次数</li><li>m 为哈希表大小</li><li>H<sub>i</sub> = (H<sub>o</sub>+ i<sup>2</sup>) % m</li></ul></li></ul><hr><h4 id="再哈希法"><a href="#再哈希法" class="headerlink" title="再哈希法"></a>再哈希法</h4><p>若原地址H<sub>0</sub> = Hash<sub>0</sub>(key)冲突，则下一个地址换另外一个哈希函数进行 即：H<sub>i</sub> = Hash<sub>i</sub>(key)。</p><hr><h4 id="封闭地址法"><a href="#封闭地址法" class="headerlink" title="封闭地址法"></a>封闭地址法</h4><p>即便映射在哈希表上的地址发生了冲突也想办法在该地址内进行存储。<br>常用的有：</p><ul><li>链表法</li></ul><h5 id="链表法"><a href="#链表法" class="headerlink" title="链表法"></a>链表法</h5><ul><li>映射到同一个地址到数据存放在链表中</li><li><img src="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/2.png"></li></ul><hr><h4 id="附加：判断冲突可能性判断（载荷因子）"><a href="#附加：判断冲突可能性判断（载荷因子）" class="headerlink" title="附加：判断冲突可能性判断（载荷因子）"></a>附加：判断冲突可能性判断（载荷因子）</h4><ul><li>载荷因子 = 填入表中的元素个数/散列表的长度<ul><li>载荷因子小，说明哈希表表内空位较多</li><li>载荷因子大，说明哈希表内空位少</li></ul></li><li>综上：载荷因子大说明冲突的可能性大，反正可能性小</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;冲突的解决方案&quot;&gt;&lt;a href=&quot;#冲突的解决方案&quot; class=&quot;headerlink&quot; title=&quot;冲突的解决方案&quot;&gt;&lt;/a&gt;冲突的解决方案&lt;/h4&gt;&lt;p&gt;冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。&lt;/p&gt;
+&lt;ul&gt;
+
+      
+    
+    </summary>
+    
+      <category term="代码学习" scheme="https://shuhaohwang.github.io/categories/%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="数据结构学习" scheme="https://shuhaohwang.github.io/categories/%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习总结" scheme="https://shuhaohwang.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="数据结构" scheme="https://shuhaohwang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="数据结构-学习总结" scheme="https://shuhaohwang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>数据结构学习总结-（7.2）哈希表与哈希函数</title>
@@ -612,39 +645,6 @@
       <category term="学习总结" scheme="https://shuhaohwang.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
       <category term="C++学习总结" scheme="https://shuhaohwang.github.io/tags/C-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构学习总结-（6-1）图的定义及概念</title>
-    <link href="https://shuhaohwang.github.io/2019/08/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-%EF%BC%886-1%EF%BC%89%E5%9B%BE%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E6%A6%82%E5%BF%B5/"/>
-    <id>https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/</id>
-    <published>2019-08-14T16:44:55.000Z</published>
-    <updated>2019-08-14T18:07:05.380Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><ul><li>定义：图G(graph)是一些点和线的集合<ul><li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/1.png"></li><li>图中的点叫作<strong>顶点</strong>(VerTex)</li><li>两个顶点的连线叫作<strong>边</strong>(Edges)</li><li>Graph = (V,E)<ul><li>V：顶点(数据元素)的<strong>有穷非空</strong>集合</li><li>E：边的有穷集合</li></ul></li></ul></li></ul><hr><h4 id="图的分类"><a href="#图的分类" class="headerlink" title="图的分类"></a>图的分类</h4><ul><li><p>无向图</p><ul><li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/2.png"></li><li>每一条边都是没有方向的</li><li>顶点集合{A,B,C,D}</li><li>边集合{(A,B),(A,D),(C,D),(C,B),(A,C)}</li></ul></li><li><p>有向图</p><ul><li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/3.png" title="其中B为弧头(Head),D为弧尾(Tail)"></li><li>每一条边有方向的，也称弧(arc)</li><li>顶点集合{A,B,C,D}</li><li>边集合{(B,A),(A,D),(B,C),(C,A)}</li></ul></li><li>完全图<ul><li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/4.png"></li><li>任意两个顶点都有一条边相连的图叫作<strong>完全图</strong></li><li>无向完全图：如果有<strong>N个结点</strong>那么它有<strong>N(N-1)/2条边</strong></li><li>有向完全图：如果有<strong>N个结点</strong>那么它有<strong>N(N-1)条边</strong></li></ul></li><li>网<ul><li><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/5.png"></li><li>网是边或弧<strong>带权</strong>的图</li><li>无向网</li><li>有向网</li></ul></li></ul><hr><h5 id="子图"><a href="#子图" class="headerlink" title="子图"></a>子图</h5><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/6.png" title="1和2是3的子图"><ul><li>1和2是3的子图</li></ul><hr><h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><img src="/2019/08/15/数据结构学习总结-（6-1）图的定义及概念/2.png"><ol><li>如果边(V,U)∈E，则称顶点V和U互为邻接点(Adjacent)<ul><li>例：A/B、B/C、C/D…互为邻接点</li></ul></li><li>边(V,U)依附于(incident)顶点V和U(或边与顶点相关联)<ul><li>例：边(A,B)依附于顶点A、B上</li></ul></li><li>顶点V的度(Degree)是和V相关联的边的数量，记为TD(V)，对于有向图：有出度和入度<ul><li>例：A的度为3、D的度为2</li><li><strong>握手定理</strong>：边数(E) = 各顶点度数和/2</li></ul></li></ol><h5 id="相关术语解释"><a href="#相关术语解释" class="headerlink" title="相关术语解释"></a>相关术语解释</h5><ul><li><p>路径</p><ul><li>若从一个顶点V<sub>i</sub>出发，沿一些边经过一些顶点，再到达顶点V<sub>k</sub>,则称沿途的经过顶点的序列为从V<sub>i</sub>到V<sub>k</sub>的路径</li></ul></li><li><p>路径的长度</p><ul><li>路径上的边或弧的数目</li></ul></li><li>回路(环)<ul><li>起点与终点相同的路径</li></ul></li><li>简单路径<ul><li><strong>没有重复</strong>顶点的路径，即不含回路</li></ul></li><li>简单回路<ul><li>除起点和终点相同外，<strong>没有</strong>其余<strong>重复</strong>顶点的路径</li></ul></li></ul><hr><h5 id="连通图"><a href="#连通图" class="headerlink" title="连通图"></a>连通图</h5><ul><li>在<strong>无向图</strong>G中，如果从顶点V到顶点V`<strong>有路径</strong>，则称V和V’是连通的</li><li>如果对于图中的任意两个顶点V<sub>i</sub>和V<sub>k</sub><strong>都是连通</strong>的，则称G是<strong>连通图</strong></li><li>是否连通是对无向图来说的</li></ul><h5 id="强连通图"><a href="#强连通图" class="headerlink" title="强连通图"></a>强连通图</h5><ul><li>在<strong>有向图</strong>G中，从顶点u到顶点v有路径，且从顶点v到顶点u也有路径，则称u和v是强连通的</li><li>如果有向图的任意两个顶点u和v都是强连通，则称G是<strong>强连通图</strong></li><li>是否强连通是对于有向图来说的</li></ul><p>—（本文完）</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;定义：图G(graph)是一些点和线的集合&lt;ul&gt;
-&lt;li&gt;&lt;img src=&quot;/2019/08/15/数据结构学习总结-（6-1）图的
-      
-    
-    </summary>
-    
-      <category term="代码学习" scheme="https://shuhaohwang.github.io/categories/%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="数据结构学习" scheme="https://shuhaohwang.github.io/categories/%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="学习总结" scheme="https://shuhaohwang.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="数据结构" scheme="https://shuhaohwang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-      <category term="数据结构-学习总结" scheme="https://shuhaohwang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

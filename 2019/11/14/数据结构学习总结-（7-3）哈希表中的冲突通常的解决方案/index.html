@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结,">
 
 
 
@@ -81,16 +81,21 @@
 
 
 
-<meta name="description" content="(,,･∀･)ﾉ゛hello,欢迎来到Mr.House个人博客,博主是一个努力练习画画的准程序员哦 QWQ!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="双子星Binaryؼ">
-<meta property="og:url" content="https://shuhaohwang.github.io/tags/C/index.html">
+<meta name="description" content="冲突的解决方案冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   开放地址法一个Key具有多个候选哈希地址。  开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上  实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    线性探测再散列 原地址H0发生了冲突  则第i次冲突的探测地址 Hi = (Ho+">
+<meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案">
+<meta property="og:url" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="(,,･∀･)ﾉ゛hello,欢迎来到Mr.House个人博客,博主是一个努力练习画画的准程序员哦 QWQ!">
+<meta property="og:description" content="冲突的解决方案冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   开放地址法一个Key具有多个候选哈希地址。  开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上  实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    线性探测再散列 原地址H0发生了冲突  则第i次冲突的探测地址 Hi = (Ho+">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/1.gif">
+<meta property="og:image" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/2.png">
+<meta property="og:updated_time" content="2019-11-14T15:49:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="双子星Binaryؼ">
-<meta name="twitter:description" content="(,,･∀･)ﾉ゛hello,欢迎来到Mr.House个人博客,博主是一个努力练习画画的准程序员哦 QWQ!">
+<meta name="twitter:title" content="数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案">
+<meta name="twitter:description" content="冲突的解决方案冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   开放地址法一个Key具有多个候选哈希地址。  开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上  实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    线性探测再散列 原地址H0发生了冲突  则第i次冲突的探测地址 Hi = (Ho+">
+<meta name="twitter:image" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/1.gif">
 
 
 
@@ -120,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://shuhaohwang.github.io/tags/C/">
+  <link rel="canonical" href="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/">
 
 
 
 
 
-  <title>标签: C++ | 双子星Binaryؼ</title>
+  <title>数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案 | 双子星Binaryؼ</title>
   
 
 
@@ -145,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,290 +276,345 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>C++<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShuHaoHwang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="双子星Binaryؼ">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/09/19/C-进阶学习总结-3-3-typename的使用场合及使用范例/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-(3.3)typename的使用场合及使用范例、函数指针参数化</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-19T21:19:55+08:00" content="2019-09-19">
-          09-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-14T21:33:03+08:00">
+                2019-11-14
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/数据结构学习/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o">本文总阅读量</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/18/C-进阶学习总结-3-2-类模板/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-(3.2)类模板</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-18T23:29:16+08:00" content="2019-09-18">
-          09-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/17/C-进阶学习总结-（3-1）模板、函数模板/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-（3.1）模板、函数模板</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-17T22:54:58+08:00" content="2019-09-17">
-          09-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-(2.11)类型转换构造函数、运算符、类成员指针</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-11T00:39:32+08:00" content="2019-09-11">
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/06/C-进阶学习总结-（2-10）构造函数继承、多继承、虚继承/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-（2.10）构造函数继承、多继承、虚继承</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-06T00:21:49+08:00" content="2019-09-06">
-          09-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/02/C-进阶学习总结-（2-9）移动构造函数、移动运算符/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-（2.9）移动构造函数、移动运算符</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-02T07:00:24+08:00" content="2019-09-02">
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/17/C-进阶学习总结-2-8-临时对象处理和程序优化探讨/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-(2.8)临时对象处理和程序优化探讨</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-17T21:00:49+08:00" content="2019-08-17">
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-（2.7）左值和右值、左右值引用、std::move()函数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-15T02:10:46+08:00" content="2019-08-15">
-          08-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-（2.6）RTTI运行时类型检测</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-22T22:18:08+08:00" content="2019-07-22">
-          07-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/" itemprop="url">
-              
-                <span itemprop="name">C++进阶学习总结-(2.5)友元函数、友元类</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-21T14:12:49+08:00" content="2019-07-21">
-          07-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h4 id="冲突的解决方案"><a href="#冲突的解决方案" class="headerlink" title="冲突的解决方案"></a>冲突的解决方案</h4><p>冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。</p>
+<ul>
+<li>开放地址法</li>
+<li>再哈希法</li>
+<li>封闭地址法</li>
+</ul>
+<hr>
+<h5 id="开放地址法"><a href="#开放地址法" class="headerlink" title="开放地址法"></a>开放地址法</h5><p>一个Key具有多个候选哈希地址。</p>
+<ul>
+<li><p>开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上</p>
+</li>
+<li><p>实现：</p>
+<ul>
+<li>线性探测再散列</li>
+<li>二次探测再散列</li>
+<li>伪随机探测再散列</li>
+</ul>
+</li>
+</ul>
+<h6 id="线性探测再散列"><a href="#线性探测再散列" class="headerlink" title="线性探测再散列"></a>线性探测再散列</h6><ul>
+<li><p>原地址H<sub>0</sub>发生了冲突</p>
+<ul>
+<li>则第i次冲突的探测地址</li>
+<li>H<sub>i</sub> = (H<sub>o</sub>+ i)%m</li>
+</ul>
+</li>
+<li><p>例如</p>
+<ul>
+<li>一个关键字映射地址为3</li>
+<li>另一个关键字通过哈希函数也映射为3</li>
+<li>那么第二个关键字则会检索4号地址空不空，如果空那么就存储进去，反之继续往检索</li>
+</ul>
+<img src="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/1.gif">
+<p><br></p>
+</li>
+</ul>
+<ul>
+<li><p>线性探索法容易产生堆积：</p>
+<ul>
+<li>冲突的关键字只好向后寻找可用的空单元</li>
+<li>结果又占据了其他关键字的位置</li>
+<li>使得冲突更加严重、查找次数增加</li>
+</ul>
+<p>因为如果当前地址产生了冲突，尝试下一个地址，这样容易造成“连续的一大串”地址冲突，使得查找次数增加</p>
+</li>
+<li><p><strong>改进</strong>：使用二次探测再散列</p>
+</li>
+</ul>
+<ul>
+<li><p>如果当前地址冲突，“下一个”的地址不是紧挨着，而是离远一些，而且冲突次数越多，离得越远</p>
+<p><br></p>
+<p><br></p>
+</li>
+</ul>
+<h6 id="二次探测再散列"><a href="#二次探测再散列" class="headerlink" title="二次探测再散列"></a>二次探测再散列</h6><ul>
+<li>原地址H<sub>0</sub>发生了冲突<ul>
+<li>i 为冲突的次数</li>
+<li>m 为哈希表大小</li>
+<li>H<sub>i</sub> = (H<sub>o</sub>+ i<sup>2</sup>) % m</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="再哈希法"><a href="#再哈希法" class="headerlink" title="再哈希法"></a>再哈希法</h4><p>若原地址H<sub>0</sub> = Hash<sub>0</sub>(key)冲突，则下一个地址换另外一个哈希函数进行 即：H<sub>i</sub> = Hash<sub>i</sub>(key)。</p>
+<hr>
+<h4 id="封闭地址法"><a href="#封闭地址法" class="headerlink" title="封闭地址法"></a>封闭地址法</h4><p>即便映射在哈希表上的地址发生了冲突也想办法在该地址内进行存储。<br>常用的有：</p>
+<ul>
+<li>链表法</li>
+</ul>
+<h5 id="链表法"><a href="#链表法" class="headerlink" title="链表法"></a>链表法</h5><ul>
+<li>映射到同一个地址到数据存放在链表中</li>
+<li><img src="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/2.png">
+</li>
+</ul>
+<hr>
+<h4 id="附加：判断冲突可能性判断（载荷因子）"><a href="#附加：判断冲突可能性判断（载荷因子）" class="headerlink" title="附加：判断冲突可能性判断（载荷因子）"></a>附加：判断冲突可能性判断（载荷因子）</h4><ul>
+<li>载荷因子 = 填入表中的元素个数/散列表的长度<ul>
+<li>载荷因子小，说明哈希表表内空位较多</li>
+<li>载荷因子大，说明哈希表内空位少</li>
+</ul>
+</li>
+<li>综上：载荷因子大说明冲突的可能性大，反正可能性小</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+	  <div>
+     
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/">数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
+  <p><span>发布时间:</span>2019年11月14日 - 21:11</p>
+  <p><span>最后更新:</span>2019年11月14日 - 23:11</p>
+  <p><span>原始链接:</span><a href="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/" title="数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案">https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>博主提示:</span><i class="fa fa-creative-commons"></i> 如果您想转载本文请保留原文链接及作者哦( • ̀ω•́ )✧。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+	  </div>
+	
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果文章对你有帮助你可以点击下方分享按钮进行分享也可以打赏博主一袋零食哦！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="ShuHaoHwang 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
+          
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
+            <a href="/tags/数据结构-学习总结/" rel="tag"><i class="fa fa-tag"></i> 数据结构-学习总结</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/" rel="next" title="数据结构学习总结-（7.2）哈希表与哈希函数">
+                <i class="fa fa-chevron-left"></i> 数据结构学习总结-（7.2）哈希表与哈希函数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/tags/C/page/2/">2</a><a class="page-number" href="/tags/C/page/3/">3</a><a class="extend next" rel="next" href="/tags/C/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -562,6 +622,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDY4OS8yMTIxNQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -582,8 +651,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -682,6 +760,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#冲突的解决方案"><span class="nav-number">1.</span> <span class="nav-text">冲突的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#开放地址法"><span class="nav-number">1.1.</span> <span class="nav-text">开放地址法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#线性探测再散列"><span class="nav-number">1.1.1.</span> <span class="nav-text">线性探测再散列</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二次探测再散列"><span class="nav-number">1.1.2.</span> <span class="nav-text">二次探测再散列</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再哈希法"><span class="nav-number">2.</span> <span class="nav-text">再哈希法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封闭地址法"><span class="nav-number">3.</span> <span class="nav-text">封闭地址法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#链表法"><span class="nav-number">3.1.</span> <span class="nav-text">链表法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附加：判断冲突可能性判断（载荷因子）"><span class="nav-number">4.</span> <span class="nav-text">附加：判断冲突可能性判断（载荷因子）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -856,6 +950,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -884,6 +982,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
