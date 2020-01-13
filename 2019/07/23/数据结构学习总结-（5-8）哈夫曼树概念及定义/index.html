@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="哈夫曼树概念给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。 相关术语及概念解释 路径和路径长度：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。    树的路径长度：就是树根到每一个结点的路径长度之和    带权路径长度：从根结点到该结点之间的路径长度与权的乘积    树的带权路径长度：就是树">
+<meta name="description" content="¶哈夫曼树概念 给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。 ¶相关术语及概念解释  路径和路径长度：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。       树的路径长度：就是树根到每一个结点的路径长度之和       带权路径长度：从根结点到该结点之间的路径长度与权的乘积">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.8）哈夫曼树概念及定义">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="哈夫曼树概念给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。 相关术语及概念解释 路径和路径长度：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。    树的路径长度：就是树根到每一个结点的路径长度之和    带权路径长度：从根结点到该结点之间的路径长度与权的乘积    树的带权路径长度：就是树">
+<meta property="og:description" content="¶哈夫曼树概念 给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。 ¶相关术语及概念解释  路径和路径长度：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。       树的路径长度：就是树根到每一个结点的路径长度之和       带权路径长度：从根结点到该结点之间的路径长度与权的乘积">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/1.png">
@@ -103,7 +103,7 @@
 <meta property="og:updated_time" content="2019-07-23T19:16:00.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.8）哈夫曼树概念及定义">
-<meta name="twitter:description" content="哈夫曼树概念给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。 相关术语及概念解释 路径和路径长度：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。    树的路径长度：就是树根到每一个结点的路径长度之和    带权路径长度：从根结点到该结点之间的路径长度与权的乘积    树的带权路径长度：就是树">
+<meta name="twitter:description" content="¶哈夫曼树概念 给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。 ¶相关术语及概念解释  路径和路径长度：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。       树的路径长度：就是树根到每一个结点的路径长度之和       带权路径长度：从根结点到该结点之间的路径长度与权的乘积">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/1.png">
 
 
@@ -404,99 +404,239 @@
       
 
       
-        <h4 id="哈夫曼树概念"><a href="#哈夫曼树概念" class="headerlink" title="哈夫曼树概念"></a>哈夫曼树概念</h4><p>给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。</p>
-<h5 id="相关术语及概念解释"><a href="#相关术语及概念解释" class="headerlink" title="相关术语及概念解释"></a>相关术语及概念解释</h5><ul>
-<li><u>路径和路径长度</u>：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。<ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/1.png" title="A到B的路径长度为1，A到F和A到D的路径长度为2"></li>
+        <h4 id="哈夫曼树概念"><a class="header-anchor" href="#哈夫曼树概念">¶</a>哈夫曼树概念</h4>
+<p>给定n个权作为n个结点，构造一颗二叉树，若树的带权路径长度(WPL)最短，就称其为哈夫曼树也称其为最优二叉树。</p>
+<h5 id="相关术语及概念解释"><a class="header-anchor" href="#相关术语及概念解释">¶</a>相关术语及概念解释</h5>
+<ul>
+<li><u>路径和路径长度</u>：从树中一个结点到另一个结点之间的分支构成两个结点之间的路径，路径上的分支数量称为路径长度。
+<ul>
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/1.png" title="A到B的路径长度为1，A到F和A到D的路径长度为2">
+</li>
 </ul>
 </li>
-<li><u>树的路径长度：</u>就是树根到<font color="red">每一个结点</font>的路径长度之和<ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/1.png" title="该树的路径长度为 1+1+2+2+2 = 8"></li>
+<li><u>树的路径长度：</u>就是树根到<font color="red">每一个结点</font>的路径长度之和
+<ul>
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/1.png" title="该树的路径长度为 1+1+2+2+2 = 8">
+</li>
 </ul>
 </li>
-<li><u>带权路径长度：</u>从根结点到该结点之间的路径长度与权的乘积<ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/2.png" title="0号点到3号点的带权路径长度为`1*83 + 2*11 = 105`"></li>
+<li><u>带权路径长度：</u>从根结点到该结点之间的路径长度与权的乘积
+<ul>
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/2.png" title="0号点到3号点的带权路径长度为`1*83 + 2*11 = 105`">
+</li>
 </ul>
 </li>
-<li><u>树的带权路径长度：</u>就是树的每一个结点路径长度乘以权值之和<ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/2.png" title="树的带权路径长度为`1*83 + 2*11 + 2*9 + 1*27 = 150`"></li>
+<li><u>树的带权路径长度：</u>就是树的每一个结点路径长度乘以权值之和
+<ul>
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/2.png" title="树的带权路径长度为`1*83 + 2*11 + 2*9 + 1*27 = 150`">
+</li>
 </ul>
 </li>
 <li>其中树的带权路径长度(WPL)若为最小，那么就称这个数为哈夫曼树</li>
 </ul>
 <hr>
-<h4 id="哈夫曼树的应用"><a href="#哈夫曼树的应用" class="headerlink" title="哈夫曼树的应用"></a>哈夫曼树的应用</h4><ul>
-<li><p>场景设置</p>
-</li>
-<li><p>假设要对一个班级里的50位同学进行评分，其中人员分数分配如下</p>
-</li>
-<li><p>|       | 优秀  | 良好     | 中等     | 及格     | 不及格 |<br>| ——- | ——- | ———— | ———— | ———— | ——— |<br>| 分值a | a&gt;=90 | 80&lt;=a&lt;90 | 70&lt;=a&lt;80 | 60&lt;=a&lt;70 | a&lt;60   |<br>| 人数  | 8     | 21       | 12       | 7        | 2      |</p>
-</li>
-<li><p>并把他们用下面的二叉树进行统计分类</p>
+<h4 id="哈夫曼树的应用"><a class="header-anchor" href="#哈夫曼树的应用">¶</a>哈夫曼树的应用</h4>
 <ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/3.png"></li>
+<li>
+<p>场景设置</p>
+</li>
+<li>
+<p>假设要对一个班级里的50位同学进行评分，其中人员分数分配如下</p>
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优秀</th>
+<th>良好</th>
+<th>中等</th>
+<th>及格</th>
+<th>不及格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分值a</td>
+<td>a&gt;=90</td>
+<td>80&lt;=a&lt;90</td>
+<td>70&lt;=a&lt;80</td>
+<td>60&lt;=a&lt;70</td>
+<td>a&lt;60</td>
+</tr>
+<tr>
+<td>人数</td>
+<td>8</td>
+<td>21</td>
+<td>12</td>
+<td>7</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>并把他们用下面的二叉树进行统计分类</p>
+<ul>
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/3.png">
+</li>
 <li>会发现 要想把所有人进行统计完毕一共需要判断 <code>2*1 + 2*7 + 3*12 + 4*21 + 4*8 = 168次</code>。</li>
 </ul>
 </li>
-<li><p>如果把上面的树进行变换变为如下的二叉树</p>
+<li>
+<p>如果把上面的树进行变换变为如下的二叉树</p>
 <ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/4.png"></li>
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/4.png">
+</li>
 <li>一共需要判断<code>3*2 + 7*3 + 12*2 + 21*2 + 2*8 = 109</code>次相比前面的二叉树发现判断的次数变少了，说明用第二种二叉树进行判断分类效率更高。</li>
 </ul>
 </li>
-<li><p>从上面可以发现，判断次数的计算类似于树的带权距离计算。所以只要保证其树的带权距离最短那么效率就会越高。</p>
+<li>
+<p>从上面可以发现，判断次数的计算类似于树的带权距离计算。所以只要保证其树的带权距离最短那么效率就会越高。</p>
 </li>
 </ul>
 <hr>
-<h4 id="哈夫曼树的生成"><a href="#哈夫曼树的生成" class="headerlink" title="哈夫曼树的生成"></a>哈夫曼树的生成</h4><p>就以上面的的例子创建哈夫曼树</p>
+<h4 id="哈夫曼树的生成"><a class="header-anchor" href="#哈夫曼树的生成">¶</a>哈夫曼树的生成</h4>
+<p>就以上面的的例子创建哈夫曼树</p>
 <ul>
-<li><p>第一步：对人数进行排序(也就是对权值进行排序)从大到小的顺序分别是</p>
+<li>
+<p>第一步：对人数进行排序(也就是对权值进行排序)从大到小的顺序分别是</p>
 <ul>
-<li>| 良好 | 中等 | 优秀 | 及格 | 不及格 |<br>| —— | —— | —— | —— | ——— |<br>| 21   | 12   | 8    | 7    | 2      |</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>良好</th>
+<th>中等</th>
+<th>优秀</th>
+<th>及格</th>
+<th>不及格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>12</td>
+<td>8</td>
+<td>7</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
-<li><p>第二步：取最小的两个作为左右结点(习惯性左节点小于右节点)并让其和称为其根结点</p>
+<li>
+<p>第二步：取最小的两个作为左右结点(习惯性左节点小于右节点)并让其和称为其根结点</p>
 <ul>
 <li>即：<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/5.png"></li>
 </ul>
 </li>
-<li><p>第三步：将其和加入原来的从大到小排列的顺序中替代最小的两个，重新排序</p>
+<li>
+<p>第三步：将其和加入原来的从大到小排列的顺序中替代最小的两个，重新排序</p>
 <ul>
-<li>| 良好 | 中等 | 及格/不及格 | 优秀 |<br>| —— | —— | —————- | —— |<br>| 21   | 12   | 9           | 8    |</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>良好</th>
+<th>中等</th>
+<th>及格/不及格</th>
+<th>优秀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>12</td>
+<td>9</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
-<li><p>第四步：取最小的两个重复第二步操作</p>
+<li>
+<p>第四步：取最小的两个重复第二步操作</p>
 <ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/6.png">
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/6.png">
 </li>
 </ul>
 </li>
-<li><p>第五步：把左右子树的和代替原来的优秀和及格/不及格，重新排序</p>
+<li>
+<p>第五步：把左右子树的和代替原来的优秀和及格/不及格，重新排序</p>
 <ul>
-<li>| 良好 | 优秀、及格/不及格 | 中等 |<br>| —— | ————————- | —— |<br>| 21   | 17                | 12   |</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>良好</th>
+<th>优秀、及格/不及格</th>
+<th>中等</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>17</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
-<li><p>第六步，重复第四步操作</p>
+<li>
+<p>第六步，重复第四步操作</p>
 <ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/7.png">
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/7.png">
 </li>
 </ul>
 </li>
-<li><p>第七步：继续替换并重新排序</p>
+<li>
+<p>第七步：继续替换并重新排序</p>
 <ul>
-<li>| 良好 | 优秀、及格/不及格、中等 |<br>| —— | ———————————- |<br>| 21   | 29                      |</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>良好</th>
+<th>优秀、及格/不及格、中等</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>29</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
-<li><p>第八步：重复第四步 完成哈夫曼树</p>
+<li>
+<p>第八步：重复第四步 完成哈夫曼树</p>
 <ul>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/8.png"></li>
-<li><img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/9.png">
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/8.png">
+</li>
+<li>
+<img src="/2019/07/23/数据结构学习总结-（5-8）哈夫曼树概念及定义/9.png">
 </li>
 </ul>
 </li>
 </ul>
 <p>根据上图可知：要完全判断分类，需要判断<code>21*1 + 12*2 + 8*3 + 2*4 + 7*4 = 105</code>次比一开始109更有效率，这就哈夫曼树也称最优二叉树的创建。</p>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -701,7 +841,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -712,7 +852,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -723,7 +863,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -793,7 +933,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树概念"><span class="nav-number">1.</span> <span class="nav-text">哈夫曼树概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#相关术语及概念解释"><span class="nav-number">1.1.</span> <span class="nav-text">相关术语及概念解释</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树的应用"><span class="nav-number">2.</span> <span class="nav-text">哈夫曼树的应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树的生成"><span class="nav-number">3.</span> <span class="nav-text">哈夫曼树的生成</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树概念"><span class="nav-number">1.</span> <span class="nav-text">¶哈夫曼树概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#相关术语及概念解释"><span class="nav-number">1.1.</span> <span class="nav-text">¶相关术语及概念解释</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树的应用"><span class="nav-number">2.</span> <span class="nav-text">¶哈夫曼树的应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树的生成"><span class="nav-number">3.</span> <span class="nav-text">¶哈夫曼树的生成</span></a></li></ol></div>
             
 
           </div>
@@ -813,7 +953,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

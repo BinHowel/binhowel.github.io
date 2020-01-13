@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="函数 函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。 例如：int func(int a,int)   函数定义只能有一个，函数声明可以有多个。  其余概念： 函数声明是可以只有形参类型，没有形参名。  函数组织：  函数声明在头文件中。 函数定义单独在一个cpp文件中。(内联函数除外) 注意:在头文件定义函数时容易出现函数重复定义的报错。   函数新特性：  以往的函数是">
+<meta name="description" content="¶函数  函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。  例如：int func(int a,int)   函数定义只能有一个，函数声明可以有多个。  ¶其余概念：   函数声明是可以只有形参类型，没有形参名。   函数组织：  函数声明在头文件中。 函数定义单独在一个cpp文件中。(内联函数除外) 注意:在头文件定义函数时容易出现函数重复定义的报错。    函数新特性：">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（1.4）函数新特性、const关键字精解">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/23/C-进阶学习总结-（1-4）函数新特性、const关键字精解/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="函数 函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。 例如：int func(int a,int)   函数定义只能有一个，函数声明可以有多个。  其余概念： 函数声明是可以只有形参类型，没有形参名。  函数组织：  函数声明在头文件中。 函数定义单独在一个cpp文件中。(内联函数除外) 注意:在头文件定义函数时容易出现函数重复定义的报错。   函数新特性：  以往的函数是">
+<meta property="og:description" content="¶函数  函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。  例如：int func(int a,int)   函数定义只能有一个，函数声明可以有多个。  ¶其余概念：   函数声明是可以只有形参类型，没有形参名。   函数组织：  函数声明在头文件中。 函数定义单独在一个cpp文件中。(内联函数除外) 注意:在头文件定义函数时容易出现函数重复定义的报错。    函数新特性：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-09-20T07:57:07.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（1.4）函数新特性、const关键字精解">
-<meta name="twitter:description" content="函数 函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。 例如：int func(int a,int)   函数定义只能有一个，函数声明可以有多个。  其余概念： 函数声明是可以只有形参类型，没有形参名。  函数组织：  函数声明在头文件中。 函数定义单独在一个cpp文件中。(内联函数除外) 注意:在头文件定义函数时容易出现函数重复定义的报错。   函数新特性：  以往的函数是">
+<meta name="twitter:description" content="¶函数  函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。  例如：int func(int a,int)   函数定义只能有一个，函数声明可以有多个。  ¶其余概念：   函数声明是可以只有形参类型，没有形参名。   函数组织：  函数声明在头文件中。 函数定义单独在一个cpp文件中。(内联函数除外) 注意:在头文件定义函数时容易出现函数重复定义的报错。    函数新特性：">
 
 
 
@@ -392,116 +392,152 @@
       
 
       
-        <h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><ol>
-<li>函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。<ul>
+        <h4 id="函数"><a class="header-anchor" href="#函数">¶</a>函数</h4>
+<ol>
+<li>函数定义中，形参如果不会使用，则可以不给形参变量名，只给数据类型。
+<ul>
 <li>例如：<code>int func(int a,int)</code></li>
 </ul>
 </li>
 <li><strong>函数定义只能有一个，函数声明可以有多个。</strong></li>
 </ol>
-<h5 id="其余概念："><a href="#其余概念：" class="headerlink" title="其余概念："></a>其余概念：</h5><ol>
-<li><p>函数声明是可以只有形参类型，没有形参名。</p>
+<h5 id="其余概念："><a class="header-anchor" href="#其余概念：">¶</a>其余概念：</h5>
+<ol>
+<li>
+<p>函数声明是可以只有形参类型，没有形参名。</p>
 </li>
-<li><p>函数组织：</p>
+<li>
+<p>函数组织：</p>
 <ul>
 <li>函数声明在头文件中。</li>
 <li>函数定义单独在一个cpp文件中。(内联函数除外)</li>
 <li><strong><font color="red">注意</font></strong>:在头文件定义函数时容易出现函数重复定义的报错。</li>
 </ul>
 </li>
-<li><p><strong>函数新特性：</strong></p>
+<li>
+<p><strong>函数新特性：</strong></p>
 <ul>
-<li>以往的函数是</li>
-</ul>
+<li>
+<p>以往的函数是</p>
 </li>
-</ol>
-<pre><code> [^前置返回类型]: 把函数返回类型放在函数之前，这种写法，叫前置返回类型。
-</code></pre><ul>
-<li><p>``</p>
+<li>
+<p>``</p>
+</li>
+</ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;<span class="comment">//前置返回类型</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+</ol>
 <ul>
-<li><p>新版的可以由后置返回类型即：返回值写在函数后边</p>
+<li>
+<p>新版的可以由后置返回类型即：返回值写在函数后边</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">auto func(int a)-&gt;int&#123;//后置返回类型</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">auto func(int a)-&gt;int&#123;//后置返回类型</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><em>前面放auto,表示函数返回类型放在参数列表之后，而放在参数列表之后的返回类型是通过-&gt;开始的。</em></p>
+<li>
+<p><em>前面放auto,表示函数返回类型放在参数列表之后，而放在参数列表之后的返回类型是通过-&gt;开始的。</em></p>
 </li>
 </ul>
 <hr>
-<h4 id="内联函数-inline关键字"><a href="#内联函数-inline关键字" class="headerlink" title="内联函数(inline关键字)"></a>内联函数(inline关键字)</h4><ul>
+<h4 id="内联函数-inline关键字"><a class="header-anchor" href="#内联函数-inline关键字">¶</a>内联函数(inline关键字)</h4>
+<ul>
 <li>在函数前加inline使其变为内联函数。例：<code>inline void func()</code></li>
 <li>只在定义前面加关键字inline。</li>
 </ul>
 <ul>
-<li>内联函数干了什么？<ul>
+<li>内联函数干了什么？
+<ul>
 <li>使编译器在编译时能够识别内联函数里的内容并尝试把其与被调用的地方进行<strong>替换</strong>，此举节省了函数调用带来的消耗，从而可以提供程序运行效率。</li>
 </ul>
 </li>
-<li>使用场合：<ul>
+<li>使用场合：
+<ul>
 <li>当<strong>函数体很小</strong>，但<strong>调用很频繁</strong>的这种函数，应使用内联函数以提高效率。</li>
 <li>与其他函数定义不同的是：<strong>内联函数的定义</strong>应该放在<strong>头文件</strong>。</li>
 </ul>
 </li>
-<li>使用不当：<ul>
+<li>使用不当：
+<ul>
 <li>不应该把太长的代码块的函数变为内联函数。</li>
 <li>不用把有循环，函数递归的函数变为内联函数。</li>
 <li>这些容易时代码膨胀,且如果在内联函数运行的时间比调用函数更慢，内联函数就没有意义了。</li>
 </ul>
 </li>
 </ul>
-<h5 id="为什么要把内联函数定义在头文件："><a href="#为什么要把内联函数定义在头文件：" class="headerlink" title="为什么要把内联函数定义在头文件："></a>为什么要把内联函数定义在头文件：</h5><p>内联函数是为了告诉编译器标识的函数可以再调用时进行替换，只有这样做编译器才会把函数体里面的内容直接替换到调用的地方，如果你在函数声明的前面加inline编译器就不能直接获得函数体里面的内容，所以内联函数因在函数定义前加关键字inline。</p>
+<h5 id="为什么要把内联函数定义在头文件："><a class="header-anchor" href="#为什么要把内联函数定义在头文件：">¶</a>为什么要把内联函数定义在头文件：</h5>
+<p>内联函数是为了告诉编译器标识的函数可以再调用时进行替换，只有这样做编译器才会把函数体里面的内容直接替换到调用的地方，如果你在函数声明的前面加inline编译器就不能直接获得函数体里面的内容，所以内联函数因在函数定义前加关键字inline。</p>
 <p>正因为这样才建议把内联函数定义在头文件中，在每个调用该inline函数的文件中包含该头文件。这种方法保证了每个inline函数只有一个定义，且程序员无需复制代码，并且不可能在程序的生命周期中引起无意的不匹配的事情。</p>
 <hr>
-<h4 id="函数杂合用法总结："><a href="#函数杂合用法总结：" class="headerlink" title="函数杂合用法总结："></a>函数杂合用法总结：</h4><h5 id="void函数："><a href="#void函数：" class="headerlink" title="void函数："></a>void函数：</h5><ul>
-<li><p>函数返回类型为void，表示函数不返回任何类型。但是可以调用一个返回值类型为void，让其成为另一个返回值为void的函数的返回值。</p>
+<h4 id="函数杂合用法总结："><a class="header-anchor" href="#函数杂合用法总结：">¶</a>函数杂合用法总结：</h4>
+<h5 id="void函数："><a class="header-anchor" href="#void函数：">¶</a>void函数：</h5>
+<ul>
+<li>
+<p>函数返回类型为void，表示函数不返回任何类型。但是可以调用一个返回值类型为void，让其成为另一个返回值为void的函数的返回值。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"hello"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> func1();<span class="comment">//返回一个另一个返回值为void的函数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="函数返回指针："><a href="#函数返回指针：" class="headerlink" title="函数返回指针："></a>函数返回指针：</h5><ul>
-<li><p>这是一个<strong>及其错误且危险</strong>的写法，即通过函数返回函数里面一个临时变量的地址。函数中的变量的生命期只限于函数内部，当函数结束时临时变量直接被系统回收，但这种情况，把已回收的临时变量的地址在外面继续被使用。即使用了野指针里面的值，用了不是属于自己的地址里的数据（使程序崩溃）。</p>
-</li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">myfunc</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">9</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* p = myfunc();</span><br><span class="line">    *p = <span class="number">6</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"hello"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> func1();<span class="comment">//返回一个另一个返回值为void的函数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="函数返回引用："><a href="#函数返回引用：" class="headerlink" title="函数返回引用："></a>函数返回引用：</h5><ul>
-<li><p>同上。如果在函数外头用一个引用来获取这个函数的返回值，就会造成把系统已回收的内存进行使用这是很危险的。但如果你是用一个非引用变量来接收其返回值，只是单单获取它的值而不是得到它的地址。所以这样做是安全的</p>
+<h5 id="函数返回指针："><a class="header-anchor" href="#函数返回指针：">¶</a>函数返回指针：</h5>
+<ul>
+<li>
+<p>这是一个<strong>及其错误且危险</strong>的写法，即通过函数返回函数里面一个临时变量的地址。函数中的变量的生命期只限于函数内部，当函数结束时临时变量直接被系统回收，但这种情况，把已回收的临时变量的地址在外面继续被使用。即使用了野指针里面的值，用了不是属于自己的地址里的数据（使程序崩溃）。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>&amp; <span class="title">myfunc</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">9</span>;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>&amp; p = myfunc();</span><br><span class="line">    p = <span class="number">6</span>;<span class="comment">//错误用法造成t和p的地址是相同的，即：&amp;p = &amp;t 。修改了被回收的地址中的值。</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> k = myfunc();</span><br><span class="line">    k = <span class="number">3</span>;<span class="comment">//安全，因为k只接收到值，即&amp;k != &amp;t</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">myfunc</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">9</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* p = myfunc();</span><br><span class="line">    *p = <span class="number">6</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="函数返回引用："><a class="header-anchor" href="#函数返回引用：">¶</a>函数返回引用：</h5>
+<ul>
+<li>
+<p>同上。如果在函数外头用一个引用来获取这个函数的返回值，就会造成把系统已回收的内存进行使用这是很危险的。但如果你是用一个非引用变量来接收其返回值，只是单单获取它的值而不是得到它的地址。所以这样做是安全的</p>
+</li>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>&amp; <span class="title">myfunc</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">9</span>;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>&amp; p = myfunc();</span><br><span class="line">    p = <span class="number">6</span>;<span class="comment">//错误用法造成t和p的地址是相同的，即：&amp;p = &amp;t 。修改了被回收的地址中的值。</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> k = myfunc();</span><br><span class="line">    k = <span class="number">3</span>;<span class="comment">//安全，因为k只接收到值，即&amp;k != &amp;t</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
-<h4 id="const关键字："><a href="#const关键字：" class="headerlink" title="const关键字："></a>const关键字：</h4><ul>
+<h4 id="const关键字："><a class="header-anchor" href="#const关键字：">¶</a>const关键字：</h4>
+<ul>
 <li><code>const char*</code>、<code>char const *</code>、<code>char* const</code>的区别</li>
 </ul>
-<h5 id="const-char-："><a href="#const-char-：" class="headerlink" title="const char*："></a><code>const char*</code>：</h5><ul>
-<li><p>这样定义是对指针指向的地址定义为常量。即指针可以发生变化，但不能修改指针指向的值。</p>
+<h5 id="const-char-："><a class="header-anchor" href="#const-char-：">¶</a><code>const char*</code>：</h5>
+<ul>
+<li>
+<p>这样定义是对指针指向的地址定义为常量。即指针可以发生变化，但不能修改指针指向的值。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  	<span class="keyword">char</span> str[]&#123; <span class="string">"hello"</span> &#125;;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">char</span>* a = str;</span><br><span class="line">	a++;<span class="comment">//允许，指针地址值可以发生变化</span></span><br><span class="line">	*a = <span class="string">'f'</span>;<span class="comment">//报错，不能修改内容</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*不仅仅是char，其余类型都是如此*/</span></span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">4</span>;</span><br><span class="line">	<span class="keyword">int</span> <span class="keyword">const</span> * p = &amp;b;</span><br><span class="line">	p++;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  	<span class="keyword">char</span> str[]&#123; <span class="string">"hello"</span> &#125;;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">char</span>* a = str;</span><br><span class="line">	a++;<span class="comment">//允许，指针地址值可以发生变化</span></span><br><span class="line">	*a = <span class="string">'f'</span>;<span class="comment">//报错，不能修改内容</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*不仅仅是char，其余类型都是如此*/</span></span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">4</span>;</span><br><span class="line">	<span class="keyword">int</span> <span class="keyword">const</span> * p = &amp;b;</span><br><span class="line">	p++;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="char-const"><a href="#char-const" class="headerlink" title="char const*:"></a><code>char const*</code>:</h5><ul>
+<h5 id="char-const"><a class="header-anchor" href="#char-const">¶</a><code>char const*</code>:</h5>
+<ul>
 <li>等价于<code>const char*</code></li>
 </ul>
-<h5 id="char-const-1"><a href="#char-const-1" class="headerlink" title="char*const"></a><code>char*const</code></h5><ul>
-<li><p>与上面相反，这样定义的是指针常量，即指针不能进行移动，但可以修改指针所指向的数值。</p>
+<h5 id="char-const-v2"><a class="header-anchor" href="#char-const-v2">¶</a><code>char*const</code></h5>
+<ul>
+<li>
+<p>与上面相反，这样定义的是指针常量，即指针不能进行移动，但可以修改指针所指向的数值。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">int</span> * <span class="keyword">const</span> b = &amp;a;</span><br><span class="line">    b++;<span class="comment">//报错，不能修改指针指向的地址</span></span><br><span class="line">    *b = <span class="number">9</span>；<span class="comment">//允许，可以修改指针地址的内容。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">int</span> * <span class="keyword">const</span> b = &amp;a;</span><br><span class="line">    b++;<span class="comment">//报错，不能修改指针指向的地址</span></span><br><span class="line">    *b = <span class="number">9</span>；<span class="comment">//允许，可以修改指针地址的内容。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="扩展：const-char-const"><a href="#扩展：const-char-const" class="headerlink" title="扩展：const char* const"></a>扩展：<code>const char* const</code></h5><ul>
+<h5 id="扩展：const-char-const"><a class="header-anchor" href="#扩展：const-char-const">¶</a>扩展：<code>const char* const</code></h5>
+<ul>
 <li>这个是<code>const char*</code> 与<code>char* const</code>的结合，即：不能修改指针指向的地址里面的内容，也不能改变指针的指向。</li>
 </ul>
-<h5 id="const-char-amp"><a href="#const-char-amp" class="headerlink" title="const char&amp;"></a><code>const char&amp;</code></h5><ul>
-<li><p>这样定义使这个引用只能绑在一个变量上，而不能再次切换绑定对象，且不能修改其内容值。</p>
+<h5 id="const-char"><a class="header-anchor" href="#const-char">¶</a><code>const char&amp;</code></h5>
+<ul>
+<li>
+<p>这样定义使这个引用只能绑在一个变量上，而不能再次切换绑定对象，且不能修改其内容值。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">6</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span>&amp; b = a;</span><br><span class="line">	b = c;<span class="comment">//报错，不能改变绑定对象</span></span><br><span class="line">    b = <span class="number">2</span>;<span class="comment">//报错，不能修改其内容</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">6</span>;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span>&amp; b = a;</span><br><span class="line">	b = c;<span class="comment">//报错，不能改变绑定对象</span></span><br><span class="line">    b = <span class="number">2</span>;<span class="comment">//报错，不能修改其内容</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -706,7 +742,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -717,7 +753,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -728,7 +764,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -798,7 +834,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#其余概念："><span class="nav-number">1.1.</span> <span class="nav-text">其余概念：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内联函数-inline关键字"><span class="nav-number">2.</span> <span class="nav-text">内联函数(inline关键字)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么要把内联函数定义在头文件："><span class="nav-number">2.1.</span> <span class="nav-text">为什么要把内联函数定义在头文件：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数杂合用法总结："><span class="nav-number">3.</span> <span class="nav-text">函数杂合用法总结：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#void函数："><span class="nav-number">3.1.</span> <span class="nav-text">void函数：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数返回指针："><span class="nav-number">3.2.</span> <span class="nav-text">函数返回指针：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数返回引用："><span class="nav-number">3.3.</span> <span class="nav-text">函数返回引用：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const关键字："><span class="nav-number">4.</span> <span class="nav-text">const关键字：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#const-char-："><span class="nav-number">4.1.</span> <span class="nav-text">const char*：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#char-const"><span class="nav-number">4.2.</span> <span class="nav-text">char const*:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#char-const-1"><span class="nav-number">4.3.</span> <span class="nav-text">char*const</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#扩展：const-char-const"><span class="nav-number">4.4.</span> <span class="nav-text">扩展：const char* const</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#const-char-amp"><span class="nav-number">4.5.</span> <span class="nav-text">const char&amp;</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">¶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#其余概念："><span class="nav-number">1.1.</span> <span class="nav-text">¶其余概念：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内联函数-inline关键字"><span class="nav-number">2.</span> <span class="nav-text">¶内联函数(inline关键字)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么要把内联函数定义在头文件："><span class="nav-number">2.1.</span> <span class="nav-text">¶为什么要把内联函数定义在头文件：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数杂合用法总结："><span class="nav-number">3.</span> <span class="nav-text">¶函数杂合用法总结：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#void函数："><span class="nav-number">3.1.</span> <span class="nav-text">¶void函数：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数返回指针："><span class="nav-number">3.2.</span> <span class="nav-text">¶函数返回指针：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数返回引用："><span class="nav-number">3.3.</span> <span class="nav-text">¶函数返回引用：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const关键字："><span class="nav-number">4.</span> <span class="nav-text">¶const关键字：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#const-char-："><span class="nav-number">4.1.</span> <span class="nav-text">¶const char*：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#char-const"><span class="nav-number">4.2.</span> <span class="nav-text">¶char const*:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#char-const-v2"><span class="nav-number">4.3.</span> <span class="nav-text">¶char*const</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#扩展：const-char-const"><span class="nav-number">4.4.</span> <span class="nav-text">¶扩展：const char* const</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#const-char"><span class="nav-number">4.5.</span> <span class="nav-text">¶const char&amp;</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -818,7 +854,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

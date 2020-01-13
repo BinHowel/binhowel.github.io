@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="条件概率与乘法公式 条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)   乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     全概率公式与贝叶斯公式 全概率公式：   P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) P(A) 要发生的事件的概率  P(Bi)为A发生的前提事件的概率">
+<meta name="description" content="¶条件概率与乘法公式   条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)    乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     ¶全概率公式与贝叶斯公式   全概率公式：   $$ P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) $$   P(A) 要发生的事件的概率   P(">
 <meta name="keywords" content="学习总结,其他">
 <meta property="og:type" content="article">
 <meta property="og:title" content="概率论与数理统计（二）">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/29/概率论与数理统计（二）/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="条件概率与乘法公式 条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)   乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     全概率公式与贝叶斯公式 全概率公式：   P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) P(A) 要发生的事件的概率  P(Bi)为A发生的前提事件的概率">
+<meta property="og:description" content="¶条件概率与乘法公式   条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)    乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     ¶全概率公式与贝叶斯公式   全概率公式：   $$ P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) $$   P(A) 要发生的事件的概率   P(">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-29T15:33:01.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率论与数理统计（二）">
-<meta name="twitter:description" content="条件概率与乘法公式 条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)   乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     全概率公式与贝叶斯公式 全概率公式：   P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) P(A) 要发生的事件的概率  P(Bi)为A发生的前提事件的概率">
+<meta name="twitter:description" content="¶条件概率与乘法公式   条件概率：  P(B|A) = P(AB) / P(A) P(A|B) = P(AB) / P(B)    乘法公式  P(AB) = P(A) - P(B|A) = P(B) - P(A|B)     ¶全概率公式与贝叶斯公式   全概率公式：   $$ P(A) = \sum_{i=1}^nP(B_i)P(A|B_i) $$   P(A) 要发生的事件的概率   P(">
 
 
 
@@ -359,37 +359,50 @@
       
 
       
-        <h4 id="条件概率与乘法公式"><a href="#条件概率与乘法公式" class="headerlink" title="条件概率与乘法公式"></a>条件概率与乘法公式</h4><ul>
-<li><p>条件概率：</p>
+        <h4 id="条件概率与乘法公式"><a class="header-anchor" href="#条件概率与乘法公式">¶</a>条件概率与乘法公式</h4>
+<ul>
+<li>
+<p>条件概率：</p>
 <ul>
 <li>P(B|A) = P(AB) / P(A)</li>
 <li>P(A|B) = P(AB) / P(B)</li>
 </ul>
 </li>
-<li><p>乘法公式</p>
+<li>
+<p>乘法公式</p>
 <ul>
 <li>P(AB) = P(A) - P(B|A) = P(B) - P(A|B)</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="全概率公式与贝叶斯公式"><a href="#全概率公式与贝叶斯公式" class="headerlink" title="全概率公式与贝叶斯公式"></a>全概率公式与贝叶斯公式</h4><ul>
-<li><p>全概率公式：</p>
+<h4 id="全概率公式与贝叶斯公式"><a class="header-anchor" href="#全概率公式与贝叶斯公式">¶</a>全概率公式与贝叶斯公式</h4>
 <ul>
-<li><script type="math/tex; mode=display">
-P(A) = \sum_{i=1}^nP(B_i)P(A|B_i)</script></li>
-<li><p>P(A) 要发生的事件的概率</p>
+<li>
+<p>全概率公式：</p>
+<ul>
+<li>
+<p>$$<br>
+P(A) = \sum_{i=1}^nP(B_i)P(A|B_i)<br>
+$$</p>
 </li>
-<li><p>P(B<sub>i</sub>)为A发生的前提事件的概率</p>
+<li>
+<p>P(A) 要发生的事件的概率</p>
 </li>
-<li><p>P(A|B<sub>i</sub>)为B<sub>i</sub>事件已经发生后的前提下，A事件发生的概率</p>
+<li>
+<p>P(B<sub>i</sub>)为A发生的前提事件的概率</p>
+</li>
+<li>
+<p>P(A|B<sub>i</sub>)为B<sub>i</sub>事件已经发生后的前提下，A事件发生的概率</p>
 </li>
 </ul>
 </li>
-<li><p>贝叶斯公式：（逆概率公式）</p>
+<li>
+<p>贝叶斯公式：（逆概率公式）</p>
 <ul>
-<li><script type="math/tex; mode=display">
-P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}</script></li>
+<li>$$<br>
+P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}<br>
+$$</li>
 </ul>
 </li>
 </ul>
@@ -595,7 +608,7 @@ P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}</script></li>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -606,7 +619,7 @@ P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}</script></li>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -617,7 +630,7 @@ P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}</script></li>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -687,7 +700,7 @@ P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}</script></li>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#条件概率与乘法公式"><span class="nav-number">1.</span> <span class="nav-text">条件概率与乘法公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全概率公式与贝叶斯公式"><span class="nav-number">2.</span> <span class="nav-text">全概率公式与贝叶斯公式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#条件概率与乘法公式"><span class="nav-number">1.</span> <span class="nav-text">¶条件概率与乘法公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全概率公式与贝叶斯公式"><span class="nav-number">2.</span> <span class="nav-text">¶全概率公式与贝叶斯公式</span></a></li></ol></div>
             
 
           </div>
@@ -707,7 +720,7 @@ P(B_i|A) = \frac {P(B_i)P(A|B_i)}{P(A)}</script></li>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

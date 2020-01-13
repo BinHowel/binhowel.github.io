@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="类模板模板参数类型使类能够根据给定的实际类型，来对类内的一些参数类型进行变化 编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用&amp;lt;&amp;gt;来提供实际类型  格式： template&amp;lt;typename T&amp;gt;class 类名 template&amp;lt;typename T，B&amp;gt;class 类名 template&amp;lt;typename T，int a&amp;gt;">
+<meta name="description" content="¶类模板 ¶模板参数类型 使类能够根据给定的实际类型，来对类内的一些参数类型进行变化 编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用&amp;lt;&amp;gt;来提供实际类型  格式：  template&amp;lt;typename T&amp;gt;class 类名 template&amp;lt;typename T，B&amp;gt;class 类名 template&amp;lt;typename T，int">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-(3.2)类模板">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/09/18/C-进阶学习总结-3-2-类模板/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="类模板模板参数类型使类能够根据给定的实际类型，来对类内的一些参数类型进行变化 编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用&amp;lt;&amp;gt;来提供实际类型  格式： template&amp;lt;typename T&amp;gt;class 类名 template&amp;lt;typename T，B&amp;gt;class 类名 template&amp;lt;typename T，int a&amp;gt;">
+<meta property="og:description" content="¶类模板 ¶模板参数类型 使类能够根据给定的实际类型，来对类内的一些参数类型进行变化 编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用&amp;lt;&amp;gt;来提供实际类型  格式：  template&amp;lt;typename T&amp;gt;class 类名 template&amp;lt;typename T，B&amp;gt;class 类名 template&amp;lt;typename T，int">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/09/18/C-进阶学习总结-3-2-类模板/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/09/18/C-进阶学习总结-3-2-类模板/2.png">
 <meta property="og:updated_time" content="2019-09-20T07:58:58.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-(3.2)类模板">
-<meta name="twitter:description" content="类模板模板参数类型使类能够根据给定的实际类型，来对类内的一些参数类型进行变化 编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用&amp;lt;&amp;gt;来提供实际类型  格式： template&amp;lt;typename T&amp;gt;class 类名 template&amp;lt;typename T，B&amp;gt;class 类名 template&amp;lt;typename T，int a&amp;gt;">
+<meta name="twitter:description" content="¶类模板 ¶模板参数类型 使类能够根据给定的实际类型，来对类内的一些参数类型进行变化 编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用&amp;lt;&amp;gt;来提供实际类型  格式：  template&amp;lt;typename T&amp;gt;class 类名 template&amp;lt;typename T，B&amp;gt;class 类名 template&amp;lt;typename T，int">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/09/18/C-进阶学习总结-3-2-类模板/1.png">
 
 
@@ -395,16 +395,20 @@
       
 
       
-        <h4 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h4><h5 id="模板参数类型"><a href="#模板参数类型" class="headerlink" title="模板参数类型"></a>模板参数类型</h5><p>使类能够根据给定的实际类型，来对类内的一些参数类型进行变化</p>
+        <h4 id="类模板"><a class="header-anchor" href="#类模板">¶</a>类模板</h4>
+<h5 id="模板参数类型"><a class="header-anchor" href="#模板参数类型">¶</a>模板参数类型</h5>
+<p>使类能够根据给定的实际类型，来对类内的一些参数类型进行变化</p>
 <p>编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用<code>&lt;&gt;</code>来提供实际类型</p>
 <ul>
-<li>格式：<ul>
+<li>格式：
+<ul>
 <li><code>template&lt;typename T&gt;class 类名</code></li>
 <li><code>template&lt;typename T，B&gt;class 类名</code></li>
 <li><code>template&lt;typename T，int a&gt;class 类名</code></li>
 </ul>
 </li>
-<li>注意：<ul>
+<li>注意：
+<ul>
 <li>类模板成员函数，可以写在类模板定义中。(即：不在类外定义类成员函数）其中这种<strong>成员函数会隐式声明为<code>inline</code>内联函数</strong></li>
 <li>类模板被实例化对象后，类内的对应的实例都会有自己版本的成员函数</li>
 <li>在实例化类模板对象的时候，要在类模板名后加&lt;&gt;并给定实际类型</li>
@@ -416,33 +420,39 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="class"><span class="keyword">class</span> <span class="title">Sqlist</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">  T* data;<span class="comment">//使用模板参数</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*类内定义的函数会隐式声明为inline函数*/</span></span><br><span class="line">    <span class="comment">/*inline*/</span> <span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"这是该类的func函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*外部定义，在外部要加&lt;&gt;*/</span></span><br><span class="line">    <span class="function">T <span class="title">func2</span><span class="params">(T a,T b)</span></span>;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*要类模板名要添加模板参数列表*/</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; T Sqlist&lt;T&gt;::func2(T a,T b)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"这是该类的func2函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">/*在实例化类模板对象时，要用&lt;&gt;来提供实际类型*/</span></span><br><span class="line">    Sqlist&lt;<span class="keyword">int</span>&gt; sq1;</span><br><span class="line">    sq1.func();</span><br><span class="line">    </span><br><span class="line">    Sqlist&lt;<span class="keyword">double</span>&gt; sq2;</span><br><span class="line">    sq2.func2(<span class="number">12.3</span>,<span class="number">14.2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>实验结果：<img src="/2019/09/18/C-进阶学习总结-3-2-类模板/1.png"></p>
 <hr>
-<h5 id="非模板类型"><a href="#非模板类型" class="headerlink" title="非模板类型"></a>非模板类型</h5><p>在定义模板类的时候模板参数不提供模板参数，而是给定实际参数</p>
+<h5 id="非模板类型"><a class="header-anchor" href="#非模板类型">¶</a>非模板类型</h5>
+<p>在定义模板类的时候模板参数不提供模板参数，而是给定实际参数</p>
 <ul>
-<li><p>格式：</p>
+<li>
+<p>格式：</p>
 <ul>
 <li><code>template&lt;int a&gt;class 类名</code></li>
 <li><code>template&lt;typename T，int a&gt;class 类名</code></li>
 </ul>
 </li>
-<li><p>范例：</p>
+<li>
+<p>范例：</p>
 </li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">int</span> size = <span class="number">10</span>&gt;class Sqlist&#123;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">  	T data[size];</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span></span>; </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*要在类模板后的&lt;&gt;把所有的类模板参数列出来，即便存在默认值*/</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">int</span> size&gt; <span class="keyword">void</span> Sqlist&lt;T,size&gt;::func()&#123;</span><br><span class="line">     <span class="built_in">cout</span> &lt;&lt; <span class="string">"这是该类的func函数 其中size: "</span> &lt;&lt; size &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">/*存在默认参数可以不给size的值*/</span></span><br><span class="line">    Sqlist&lt;<span class="keyword">int</span>&gt; sq1;</span><br><span class="line">    sq1.func();</span><br><span class="line">    Sqlist&lt;<span class="keyword">double</span>,<span class="number">100</span>&gt; sq2;</span><br><span class="line">    sq2.func();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>实验结果：<img src="/2019/09/18/C-进阶学习总结-3-2-类模板/2.png"></p>
 <ul>
-<li><strong>注意：</strong><ul>
-<li>浮点数不能作为非类型模板参数<ul>
+<li><strong>注意：</strong>
+<ul>
+<li>浮点数不能作为非类型模板参数
+<ul>
 <li><code>template&lt;typename T,double a&gt; class B //报错，double和float都不能做非类型模板参数</code></li>
 </ul>
 </li>
-<li>类类型不能做非类型模板参数<ul>
+<li>类类型不能做非类型模板参数
+<ul>
 <li><code>class A{};template&lt;typename T,A a&gt; class B //报错：类类型不能做非类型模板参数</code></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -647,7 +657,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -658,7 +668,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -669,7 +679,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -739,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#类模板"><span class="nav-number">1.</span> <span class="nav-text">类模板</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#模板参数类型"><span class="nav-number">1.1.</span> <span class="nav-text">模板参数类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非模板类型"><span class="nav-number">1.2.</span> <span class="nav-text">非模板类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#类模板"><span class="nav-number">1.</span> <span class="nav-text">¶类模板</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#模板参数类型"><span class="nav-number">1.1.</span> <span class="nav-text">¶模板参数类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非模板类型"><span class="nav-number">1.2.</span> <span class="nav-text">¶非模板类型</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -759,7 +769,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

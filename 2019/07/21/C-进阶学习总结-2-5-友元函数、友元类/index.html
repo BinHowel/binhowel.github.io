@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="友元函数何为友元，众所周知一个类中private里的内容是不允许除本类的其他地方进行访问的，protected类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。  12345678910class A &amp;#123;private:	int data;	&amp;#125;;void fun1(A&amp;amp; t) &amp;#123;	t.dat">
+<meta name="description" content="¶友元函数 何为友元，众所周知一个类中private里的内容是不允许除本类的其他地方进行访问的，protected类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。   12345678910class A &amp;#123;private:	int data;	&amp;#125;;void fun1(A&amp;amp; t) &amp;#123;	t.">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-(2.5)友元函数、友元类">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="友元函数何为友元，众所周知一个类中private里的内容是不允许除本类的其他地方进行访问的，protected类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。  12345678910class A &amp;#123;private:	int data;	&amp;#125;;void fun1(A&amp;amp; t) &amp;#123;	t.dat">
+<meta property="og:description" content="¶友元函数 何为友元，众所周知一个类中private里的内容是不允许除本类的其他地方进行访问的，protected类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。   12345678910class A &amp;#123;private:	int data;	&amp;#125;;void fun1(A&amp;amp; t) &amp;#123;	t.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/2.png">
@@ -98,7 +98,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:58:38.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-(2.5)友元函数、友元类">
-<meta name="twitter:description" content="友元函数何为友元，众所周知一个类中private里的内容是不允许除本类的其他地方进行访问的，protected类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。  12345678910class A &amp;#123;private:	int data;	&amp;#125;;void fun1(A&amp;amp; t) &amp;#123;	t.dat">
+<meta name="twitter:description" content="¶友元函数 何为友元，众所周知一个类中private里的内容是不允许除本类的其他地方进行访问的，protected类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。   12345678910class A &amp;#123;private:	int data;	&amp;#125;;void fun1(A&amp;amp; t) &amp;#123;	t.">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/1.png">
 
 
@@ -399,39 +399,51 @@
       
 
       
-        <h4 id="友元函数"><a href="#友元函数" class="headerlink" title="友元函数"></a>友元函数</h4><p>何为友元，众所周知一个类中<code>private</code>里的内容是不允许除本类的其他地方进行访问的，<code>protected</code>类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。</p>
+        <h4 id="友元函数"><a class="header-anchor" href="#友元函数">¶</a>友元函数</h4>
+<p>何为友元，众所周知一个类中<code>private</code>里的内容是不允许除本类的其他地方进行访问的，<code>protected</code>类的数据也只能由其子类去访问，而友元函数的特点就是，对一个类中的private和protected都可以进行调用和访问。</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span> </span>&#123;</span><br><span class="line">	t.data = <span class="number">10</span>;<span class="comment">//报错，不能访问private成员</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span> </span>&#123;</span><br><span class="line">	t.data = <span class="number">10</span>;<span class="comment">//报错，不能访问private成员</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果:<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/1.png"></p>
+<li>
+<p>实验结果:<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/1.png"></p>
 </li>
 </ul>
 <p>从上面可以发现，在正常的情况下，外面的函数是不可以访问私有成员的，但如果是友元函数便可以访问</p>
 <ul>
-<li><p>友元函数<u>声明</u>：</p>
+<li>
+<p>友元函数<u>声明</u>：</p>
 <ul>
 <li>在<strong>类中</strong>： <code>friend 返回值类型 函数名(参数)；</code></li>
 </ul>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span></span>;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span> </span>&#123;</span><br><span class="line">	t.data = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"类A中的私有成员data的值为 "</span> &lt;&lt; t.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	A a;</span><br><span class="line">	fun1(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span></span>;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span> </span>&#123;</span><br><span class="line">	t.data = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"类A中的私有成员data的值为 "</span> &lt;&lt; t.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	A a;</span><br><span class="line">	fun1(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果:<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/2.png"></p>
-</li>
-</ul>
-<hr>
-<h4 id="友元类"><a href="#友元类" class="headerlink" title="友元类"></a>友元类</h4><p>正如友元函数一样，友元类是可以访问朋友类中的所有成员和函数</p>
-<ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span></span>;</span><br><span class="line">    <span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span>;</span><span class="comment">//把类C定义为A的友元类</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span> </span>&#123;</span><br><span class="line">	t.data = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"类A中的私有成员data的值为 "</span> &lt;&lt; t.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">GetClassA_data</span><span class="params">(A a)</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; a.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;<span class="comment">//可访问A的所有成员</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实验结果:<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/3.png"></p>
+<li>
+<p>实验结果:<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/2.png"></p>
 </li>
 </ul>
 <hr>
-<h5 id="友元成员函数"><a href="#友元成员函数" class="headerlink" title="友元成员函数"></a>友元成员函数</h5><p>定义友元类，则可以对其所有成员进行访问，在某些时候是不安全且没有必要的，所有就引入了友元成员函数，只允许<strong>外类</strong>访问其的若干个<strong>公有的</strong>成员函数。</p>
+<h4 id="友元类"><a class="header-anchor" href="#友元类">¶</a>友元类</h4>
+<p>正如友元函数一样，友元类是可以访问朋友类中的所有成员和函数</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">GetClassA_data</span><span class="params">(A a)</span></span>;<span class="comment">//将要调用A中的私有成员，所以要设置为友元函数</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetClassA_data</span><span class="params">(<span class="keyword">int</span> x, A&amp; a)</span></span>;<span class="comment">//没有设置为友元函数不能调用类A中私有成员</span></span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">friend</span> <span class="keyword">void</span> C::GetClassA_data(A a);<span class="comment">//把C中的GetClassA_data函数设置为友元函数，使其											能调用私有成员</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> C::GetClassA_data(A a) &#123;<span class="comment">//C中的成员函数，因为是类A的友元函数可以调用其私有成员</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; a.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> C::SetClassA_data(<span class="keyword">int</span> x, A&amp; a) &#123;</span><br><span class="line">	<span class="comment">//a.data = x;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	A a;</span><br><span class="line">	C c;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"A中的私有数据data的值为： "</span>; c.GetClassA_data(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span></span>;</span><br><span class="line">    <span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span>;</span><span class="comment">//把类C定义为A的友元类</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(A&amp; t)</span> </span>&#123;</span><br><span class="line">	t.data = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"类A中的私有成员data的值为 "</span> &lt;&lt; t.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">GetClassA_data</span><span class="params">(A a)</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; a.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;<span class="comment">//可访问A的所有成员</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/4.png"></p>
+<li>
+<p>实验结果:<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/3.png"></p>
+</li>
+</ul>
+<hr>
+<h5 id="友元成员函数"><a class="header-anchor" href="#友元成员函数">¶</a>友元成员函数</h5>
+<p>定义友元类，则可以对其所有成员进行访问，在某些时候是不安全且没有必要的，所有就引入了友元成员函数，只允许<strong>外类</strong>访问其的若干个<strong>公有的</strong>成员函数。</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">GetClassA_data</span><span class="params">(A a)</span></span>;<span class="comment">//将要调用A中的私有成员，所以要设置为友元函数</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">SetClassA_data</span><span class="params">(<span class="keyword">int</span> x, A&amp; a)</span></span>;<span class="comment">//没有设置为友元函数不能调用类A中私有成员</span></span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> data = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">friend</span> <span class="keyword">void</span> C::GetClassA_data(A a);<span class="comment">//把C中的GetClassA_data函数设置为友元函数，使其											能调用私有成员</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> C::GetClassA_data(A a) &#123;<span class="comment">//C中的成员函数，因为是类A的友元函数可以调用其私有成员</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; a.data &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> C::SetClassA_data(<span class="keyword">int</span> x, A&amp; a) &#123;</span><br><span class="line">	<span class="comment">//a.data = x;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	A a;</span><br><span class="line">	C c;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"A中的私有数据data的值为： "</span>; c.GetClassA_data(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实验结果：<img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/4.png"></p>
 </li>
 </ul>
 <p>但如果没有把成员函数设置为友元函数，则一样不能调用其私有成员。</p>
@@ -439,20 +451,26 @@
 <p>其次，如果某类中的成员函数是另一个类的友元成员函数，那么该函数一定要是<strong>公有的</strong>(因为另一个类才能访问该函数并把该函数设置为本类的友元函数)</p>
 <img src="/2019/07/21/C-进阶学习总结-2-5-友元函数、友元类/6.png">
 <hr>
-<h5 id="总结及友元的注意事项："><a href="#总结及友元的注意事项：" class="headerlink" title="总结及友元的注意事项："></a>总结及友元的注意事项：</h5><ul>
-<li>注意事项：<ul>
-<li>友元函数是<strong>单向</strong>的<ul>
+<h5 id="总结及友元的注意事项："><a class="header-anchor" href="#总结及友元的注意事项：">¶</a>总结及友元的注意事项：</h5>
+<ul>
+<li>注意事项：
+<ul>
+<li>友元函数是<strong>单向</strong>的
+<ul>
 <li>A是B的友元，所以可以调用B中的所有成员数据，但B不能调用A中的所有数据。</li>
 </ul>
 </li>
-<li>友元函数<strong>没有传递性</strong><ul>
+<li>友元函数<strong>没有传递性</strong>
+<ul>
 <li>A是B的友元，B是C的友元，不代表A是C的友元</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>总结：<ul>
-<li>友元函数的优缺点很明显：<ul>
+<li>总结：
+<ul>
+<li>友元函数的优缺点很明显：
+<ul>
 <li>优点：只要定义了非本类的函数为友元函数，那么该函数可以调用该类所有成员数据、成员函数</li>
 <li>缺点：破坏了封装性，降低了类的可靠性和可维护性。</li>
 </ul>
@@ -664,7 +682,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -675,7 +693,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -686,7 +704,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -756,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#友元函数"><span class="nav-number">1.</span> <span class="nav-text">友元函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#友元类"><span class="nav-number">2.</span> <span class="nav-text">友元类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#友元成员函数"><span class="nav-number">2.1.</span> <span class="nav-text">友元成员函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结及友元的注意事项："><span class="nav-number">2.2.</span> <span class="nav-text">总结及友元的注意事项：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#友元函数"><span class="nav-number">1.</span> <span class="nav-text">¶友元函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#友元类"><span class="nav-number">2.</span> <span class="nav-text">¶友元类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#友元成员函数"><span class="nav-number">2.1.</span> <span class="nav-text">¶友元成员函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结及友元的注意事项："><span class="nav-number">2.2.</span> <span class="nav-text">¶总结及友元的注意事项：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -776,7 +794,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

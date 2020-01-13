@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="C++中的构造函数定义 在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。  1234567891011121314151617class student&amp;#123;    int id;    string name;    public:    student();    student(int i,string n);&amp;#125;;stu">
+<meta name="description" content="¶C++中的构造函数定义   在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。   1234567891011121314151617class student&amp;#123;    int id;    string name;    public:    student();    student(int i,string n);&amp;#125;">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（2.1）类与构造函数">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="C++中的构造函数定义 在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。  1234567891011121314151617class student&amp;#123;    int id;    string name;    public:    student();    student(int i,string n);&amp;#125;;stu">
+<meta property="og:description" content="¶C++中的构造函数定义   在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。   1234567891011121314151617class student&amp;#123;    int id;    string name;    public:    student();    student(int i,string n);&amp;#125;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/2.png">
@@ -100,7 +100,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:57:29.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（2.1）类与构造函数">
-<meta name="twitter:description" content="C++中的构造函数定义 在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。  1234567891011121314151617class student&amp;#123;    int id;    string name;    public:    student();    student(int i,string n);&amp;#125;;stu">
+<meta name="twitter:description" content="¶C++中的构造函数定义   在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。   1234567891011121314151617class student&amp;#123;    int id;    string name;    public:    student();    student(int i,string n);&amp;#125;">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/1.png">
 
 
@@ -401,124 +401,170 @@
       
 
       
-        <h4 id="C-中的构造函数定义"><a href="#C-中的构造函数定义" class="headerlink" title="C++中的构造函数定义"></a>C++中的构造函数定义</h4><ul>
-<li><p>在类中构造函数是在类对象创建时自动调用的，且<u>不能主动</u>调用构造函数，给类充当对其成员变量继续初始化的职能。</p>
-</li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student();</span><br><span class="line">    student(<span class="keyword">int</span> i,<span class="built_in">string</span> n);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">student::student()&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"无参构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">student::student(<span class="keyword">int</span> i,<span class="built_in">string</span> n)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    name = n;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"带参构造函数 "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>构造函数的特点就是<u>函数名没有返回值</u>，<u>函数名与类名相同</u>，当没有定义构造函数的时候，系统会默认调用默认构造函数(函数体为空)。</p>
-</li>
-<li><p>在创建对象时如果是在<strong>栈区</strong>的定义方法如下：</p>
+        <h4 id="c-中的构造函数定义"><a class="header-anchor" href="#c-中的构造函数定义">¶</a>C++中的构造函数定义</h4>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">student <span class="title">person1</span><span class="params">(<span class="number">1000</span>, <span class="string">"xiaoming"</span>)</span></span>;<span class="comment">//最常用</span></span><br><span class="line">student person2;<span class="comment">//调用无参构造方法</span></span><br><span class="line">student person3&#123;<span class="number">1021</span>,<span class="string">"zhangsan"</span>&#125;;<span class="comment">//用大括号与小括号一样</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*其余的定义方法(类堆区定义)*/</span></span><br><span class="line">student person4 = student(<span class="number">123</span>, <span class="string">"lisi"</span>);</span><br><span class="line">student person5 = student();</span><br></pre></td></tr></table></figure>
+<li>
+<p>在类中构造函数是在类对象创建时自动调用的，且<u>不能主动</u>调用构造函数，给类充当对其成员变量继续初始化的职能。</p>
 </li>
-<li><p>在创建对象的时候回调用相对应的有参或者无参的构造函数。</p>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student();</span><br><span class="line">    student(<span class="keyword">int</span> i,<span class="built_in">string</span> n);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">student::student()&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"无参构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">student::student(<span class="keyword">int</span> i,<span class="built_in">string</span> n)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    name = n;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"带参构造函数 "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果:<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/1.png"></p>
+<li>
+<p>构造函数的特点就是<u>函数名没有返回值</u>，<u>函数名与类名相同</u>，当没有定义构造函数的时候，系统会默认调用默认构造函数(函数体为空)。</p>
+</li>
+<li>
+<p>在创建对象时如果是在<strong>栈区</strong>的定义方法如下：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">student <span class="title">person1</span><span class="params">(<span class="number">1000</span>, <span class="string">"xiaoming"</span>)</span></span>;<span class="comment">//最常用</span></span><br><span class="line">student person2;<span class="comment">//调用无参构造方法</span></span><br><span class="line">student person3&#123;<span class="number">1021</span>,<span class="string">"zhangsan"</span>&#125;;<span class="comment">//用大括号与小括号一样</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*其余的定义方法(类堆区定义)*/</span></span><br><span class="line">student person4 = student(<span class="number">123</span>, <span class="string">"lisi"</span>);</span><br><span class="line">student person5 = student();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在创建对象的时候回调用相对应的有参或者无参的构造函数。</p>
+</li>
+<li>
+<p>实验结果:<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/1.png"></p>
 </li>
 </ul>
 </li>
-<li><p>在创建对象时如果是在<strong>堆区</strong>的定义方法如下:</p>
+<li>
+<p>在创建对象时如果是在<strong>堆区</strong>的定义方法如下:</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">student* person1 = <span class="keyword">new</span> student(<span class="number">100</span>,<span class="string">"xiaoming"</span>);</span><br><span class="line">student* person2 = <span class="keyword">new</span> student();</span><br><span class="line"><span class="comment">//student* person3 = new student;效果与person2的一样</span></span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">student* person1 = <span class="keyword">new</span> student(<span class="number">100</span>,<span class="string">"xiaoming"</span>);</span><br><span class="line">student* person2 = <span class="keyword">new</span> student();</span><br><span class="line"><span class="comment">//student* person3 = new student;效果与person2的一样</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>堆区创建对象时应用指针来接收。</p>
+<li>
+<p>堆区创建对象时应用指针来接收。</p>
 </li>
-<li><p>实验结果: <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/2.png"></p>
+<li>
+<p>实验结果: <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/2.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="函数中的默认参数"><a href="#函数中的默认参数" class="headerlink" title="函数中的默认参数"></a>函数中的默认参数</h4><ul>
-<li><p>默认参数在函数声明时就添加上。</p>
+<h4 id="函数中的默认参数"><a class="header-anchor" href="#函数中的默认参数">¶</a>函数中的默认参数</h4>
+<ul>
+<li>
+<p>默认参数在函数声明时就添加上。</p>
 </li>
-<li><p>给定默认参数的形参往右的形参都需要给与默认参数</p>
+<li>
+<p>给定默认参数的形参往右的形参都需要给与默认参数</p>
 <ul>
 <li><code>void fun (int a , int b = 12, int c)</code><strong>错误</strong></li>
 <li><code>void fun (int a , int b = 12 , int c = 10)</code><strong>正确</strong></li>
 </ul>
 </li>
-<li><p>含有默认参数的函数重构时需要注意参数识别混乱的问题</p>
+<li>
+<p>含有默认参数的函数重构时需要注意参数识别混乱的问题</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b+c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*下方两个函数，在使用时会混乱*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c = <span class="number">12</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b+c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b+c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*下方两个函数，在使用时会混乱*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c = <span class="number">12</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b+c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>如上所示，第二个函数和第三个函数在使用时会混乱，因为你给定两个参数给函数<code>fun1(1,2)</code>时，不能识别你是要使用只有两个参数的函数(第三个函数),还是有默认值、三个参数的函数(第二个函数)。</p>
+<li>
+<p>如上所示，第二个函数和第三个函数在使用时会混乱，因为你给定两个参数给函数<code>fun1(1,2)</code>时，不能识别你是要使用只有两个参数的函数(第三个函数),还是有默认值、三个参数的函数(第二个函数)。</p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="类的隐式转换及explicit"><a href="#类的隐式转换及explicit" class="headerlink" title="类的隐式转换及explicit"></a>类的隐式转换及explicit</h4><h5 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h5><ul>
-<li><p>当类创建一个对象的时候若此类中有一个构造函数只含有一个参数，那么在对象创建的时候会发生隐式转换。隐式装换说白了就是没有显示表现类型转换，而是直接隐藏着进行类型转换。例如：</p>
+<h4 id="类的隐式转换及explicit"><a class="header-anchor" href="#类的隐式转换及explicit">¶</a>类的隐式转换及explicit</h4>
+<h5 id="隐式转换"><a class="header-anchor" href="#隐式转换">¶</a>隐式转换</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student(<span class="keyword">int</span> i);</span><br><span class="line">&#125;;</span><br><span class="line">student::student(<span class="keyword">int</span> i)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"调用了student::student(int i)这个构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"id: "</span> &lt;&lt; id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student person = <span class="number">100</span>;<span class="comment">//在没有重载运算符=的情况下，100被“赋值”给了student类的对象person</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实验结果: <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/3.png"></p>
-</li>
-<li><p>如上所示，本应该整型的100(int)在没有对其强制转换的情况下居然赋值给了一个student类对象，实质上这里发生了隐式转换，因为student类中含有一个只有一个参数的构造函数，当一个数字对其student类对象进行赋值的时候先调用了这个一个参数的构造函数，即先把整数转换成一个student对象再进行对象拷贝操作。</p>
-</li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student person;</span><br><span class="line"><span class="keyword">int</span> a = <span class="number">100</span>;</span><br><span class="line">person = a;</span><br><span class="line"><span class="comment">/*实质上发生了如下的操作*/</span></span><br><span class="line">person = student(a);<span class="comment">//把整型转换成对象再对其进行对象拷贝。</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>更奇妙的是，如果你以一个括号进行如上赋值，括号内的<strong>最后一个值</strong>将会隐式转换并调用student的单参构造函数。</p>
+<li>
+<p>当类创建一个对象的时候若此类中有一个构造函数只含有一个参数，那么在对象创建的时候会发生隐式转换。隐式装换说白了就是没有显示表现类型转换，而是直接隐藏着进行类型转换。例如：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student();</span><br><span class="line">    student(<span class="keyword">int</span> i);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*无参构造函数*/</span></span><br><span class="line">student::student() &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"无参构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*带一个参数构造函数*/</span></span><br><span class="line">student::student(<span class="keyword">int</span> i)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"调用了student::student(int i)这个构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"id: "</span> &lt;&lt; id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student person;</span><br><span class="line">    person = (<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">400</span>);<span class="comment">//这样操作也会产生隐式转换的问题</span></span><br><span class="line">    <span class="comment">//括号内最后一个数字(400)会进行隐式装换</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student(<span class="keyword">int</span> i);</span><br><span class="line">&#125;;</span><br><span class="line">student::student(<span class="keyword">int</span> i)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"调用了student::student(int i)这个构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"id: "</span> &lt;&lt; id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student person = <span class="number">100</span>;<span class="comment">//在没有重载运算符=的情况下，100被“赋值”给了student类的对象person</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果:<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/4.png"></p>
+<li>
+<p>实验结果: <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/3.png"></p>
+</li>
+<li>
+<p>如上所示，本应该整型的100(int)在没有对其强制转换的情况下居然赋值给了一个student类对象，实质上这里发生了隐式转换，因为student类中含有一个只有一个参数的构造函数，当一个数字对其student类对象进行赋值的时候先调用了这个一个参数的构造函数，即先把整数转换成一个student对象再进行对象拷贝操作。</p>
+</li>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student person;</span><br><span class="line"><span class="keyword">int</span> a = <span class="number">100</span>;</span><br><span class="line">person = a;</span><br><span class="line"><span class="comment">/*实质上发生了如下的操作*/</span></span><br><span class="line">person = student(a);<span class="comment">//把整型转换成对象再对其进行对象拷贝。</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-</ul>
-<h5 id="explicit关键字"><a href="#explicit关键字" class="headerlink" title="explicit关键字"></a>explicit关键字</h5><ul>
-<li><p>为了解决上面的隐式转换的问题，可以在类中单参的构造函数声明前加<code>explicit</code>让其成为显示的构造函数。</p>
+<li>
+<p>更奇妙的是，如果你以一个括号进行如上赋值，括号内的<strong>最后一个值</strong>将会隐式转换并调用student的单参构造函数。</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student();</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">student</span><span class="params">(<span class="keyword">int</span> i)</span></span>;<span class="comment">//让隐藏的单参构造函数显现。</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*无参构造函数*/</span></span><br><span class="line">student::student() &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"无参构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*带一个参数构造函数*/</span></span><br><span class="line">student::student(<span class="keyword">int</span> i)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"调用了student::student(int i)这个构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"id: "</span> &lt;&lt; id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student person = <span class="number">100</span>;<span class="comment">//报错，无法找到匹配的构造函数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student();</span><br><span class="line">    student(<span class="keyword">int</span> i);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*无参构造函数*/</span></span><br><span class="line">student::student() &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"无参构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*带一个参数构造函数*/</span></span><br><span class="line">student::student(<span class="keyword">int</span> i)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"调用了student::student(int i)这个构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"id: "</span> &lt;&lt; id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student person;</span><br><span class="line">    person = (<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">400</span>);<span class="comment">//这样操作也会产生隐式转换的问题</span></span><br><span class="line">    <span class="comment">//括号内最后一个数字(400)会进行隐式装换</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验效果：<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/5.png"> <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/6.png"></p>
+<li>
+<p>实验结果:<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/4.png"></p>
 </li>
 </ul>
 </li>
-<li><p><font color="red"><strong>注意</strong></font>:只有单参构造函数的存在下才有如上所说的隐式转换的问题，所以<code>explicit</code>关键字只能作用于单参构造函数的声明上，在多参数构造函数声明加此关键字没有作用。</p>
+</ul>
+<h5 id="explicit关键字"><a class="header-anchor" href="#explicit关键字">¶</a>explicit关键字</h5>
+<ul>
+<li>
+<p>为了解决上面的隐式转换的问题，可以在类中单参的构造函数声明前加<code>explicit</code>让其成为显示的构造函数。</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    student();</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">student</span><span class="params">(<span class="keyword">int</span> i)</span></span>;<span class="comment">//让隐藏的单参构造函数显现。</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*无参构造函数*/</span></span><br><span class="line">student::student() &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"无参构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*带一个参数构造函数*/</span></span><br><span class="line">student::student(<span class="keyword">int</span> i)&#123;</span><br><span class="line">    id = i;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"调用了student::student(int i)这个构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"id: "</span> &lt;&lt; id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student person = <span class="number">100</span>;<span class="comment">//报错，无法找到匹配的构造函数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>对于单参构造函数一般都需要加<code>explicit</code>关键字，除非某些极少例子允许隐式转换。</p>
+<li>
+<p>实验效果：<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/5.png"> <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/6.png"></p>
 </li>
-<li><p>对应的如果要使其函数隐式调用可以加<code>implicit</code></p>
+</ul>
+</li>
+<li>
+<p><font color="red"><strong>注意</strong></font>:只有单参构造函数的存在下才有如上所说的隐式转换的问题，所以<code>explicit</code>关键字只能作用于单参构造函数的声明上，在多参数构造函数声明加此关键字没有作用。</p>
+</li>
+<li>
+<p>对于单参构造函数一般都需要加<code>explicit</code>关键字，除非某些极少例子允许隐式转换。</p>
+</li>
+<li>
+<p>对应的如果要使其函数隐式调用可以加<code>implicit</code></p>
 </li>
 </ul>
 <hr>
-<h4 id="构造函数的初始化列表"><a href="#构造函数的初始化列表" class="headerlink" title="构造函数的初始化列表"></a>构造函数的初始化列表</h4><ul>
-<li><p>先看下面一个例子</p>
+<h4 id="构造函数的初始化列表"><a class="header-anchor" href="#构造函数的初始化列表">¶</a>构造函数的初始化列表</h4>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">number</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">number::number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3):a(n1),b(n2),c(n3)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在构造函数定义后以一个冒号开头，后接成员变量+括号，括号里加要对成员变量初始化的原值，就被称为构造函数的初始化列表。</p>
-</li>
-</ul>
-</li>
-<li><p>构造函数的初始化列表有以下特点</p>
+<li>
+<p>先看下面一个例子</p>
 <ul>
-<li><p>初始化列表中，成员变量的赋值是根据你定义成员变量的先后进行的。即可以不按顺序。例如：</p>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">number</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">number::number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3):a(n1),b(n2),c(n3)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在构造函数定义后以一个冒号开头，后接成员变量+括号，括号里加要对成员变量初始化的原值，就被称为构造函数的初始化列表。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>构造函数的初始化列表有以下特点</p>
 <ul>
-<li><p>上方先定义a,在定义b，其次是c，那么在初始化列表中对其进行初始化的时候，是先对a进行初始化其次是b，然后是c。</p>
+<li>
+<p>初始化列表中，成员变量的赋值是根据你定义成员变量的先后进行的。即可以不按顺序。例如：</p>
+<ul>
+<li>
+<p>上方先定义a,在定义b，其次是c，那么在初始化列表中对其进行初始化的时候，是先对a进行初始化其次是b，然后是c。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">number</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a ;</span><br><span class="line">    <span class="keyword">int</span> b ;</span><br><span class="line">    <span class="keyword">int</span> c ;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">number::number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3):a(b),b(c),c(n3)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; b &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">number <span class="title">n</span><span class="params">(<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">number</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a ;</span><br><span class="line">    <span class="keyword">int</span> b ;</span><br><span class="line">    <span class="keyword">int</span> c ;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">number::number(<span class="keyword">int</span> n1,<span class="keyword">int</span> n2,<span class="keyword">int</span> n3):a(b),b(c),c(n3)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; b &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">number <span class="title">n</span><span class="params">(<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/7.png"> <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/8.png"></p>
+<li>
+<p>实验结果：<img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/7.png"> <img src="/2019/07/08/C-进阶学习总结-（2-1）类与构造函数/8.png"></p>
 </li>
-<li><p>解释: 首先因为a先定义，所以先对a进行初始化，但此时b为-858993460，所以a被赋值为-858993460，其次是b，因为此时c也为-858993460，所以b也被赋值成-858993460，最后到c，成被传进的300赋值，所以现在c才为300，而前面对a,b赋值时c都还不是300。</p>
+<li>
+<p>解释: 首先因为a先定义，所以先对a进行初始化，但此时b为-858993460，所以a被赋值为-858993460，其次是b，因为此时c也为-858993460，所以b也被赋值成-858993460，最后到c，成被传进的300赋值，所以现在c才为300，而前面对a,b赋值时c都还不是300。</p>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h5 id="为什么要用构造函数初始化列表来对成员变量进行赋值？"><a href="#为什么要用构造函数初始化列表来对成员变量进行赋值？" class="headerlink" title="为什么要用构造函数初始化列表来对成员变量进行赋值？"></a>为什么要用构造函数初始化列表来对成员变量进行赋值？</h5><ol>
+<h5 id="为什么要用构造函数初始化列表来对成员变量进行赋值？"><a class="header-anchor" href="#为什么要用构造函数初始化列表来对成员变量进行赋值？">¶</a>为什么要用构造函数初始化列表来对成员变量进行赋值？</h5>
+<ol>
 <li>如果是在构造函数中对成员变量赋值，那么这时程序干了两件事，首先对成员变量初始化，其次对其进行赋值操作。所以如果用初始化列表进行初始化，可以免除一步，从而提高程序效率。</li>
-<li><del>高大上，帅，显得程序员专业。</del></li>
+<li><s>高大上，帅，显得程序员专业。</s></li>
 </ol>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -723,7 +769,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -734,7 +780,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -745,7 +791,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -815,7 +861,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-中的构造函数定义"><span class="nav-number">1.</span> <span class="nav-text">C++中的构造函数定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数中的默认参数"><span class="nav-number">2.</span> <span class="nav-text">函数中的默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类的隐式转换及explicit"><span class="nav-number">3.</span> <span class="nav-text">类的隐式转换及explicit</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式转换"><span class="nav-number">3.1.</span> <span class="nav-text">隐式转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#explicit关键字"><span class="nav-number">3.2.</span> <span class="nav-text">explicit关键字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数的初始化列表"><span class="nav-number">4.</span> <span class="nav-text">构造函数的初始化列表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么要用构造函数初始化列表来对成员变量进行赋值？"><span class="nav-number">4.1.</span> <span class="nav-text">为什么要用构造函数初始化列表来对成员变量进行赋值？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#c-中的构造函数定义"><span class="nav-number">1.</span> <span class="nav-text">¶C++中的构造函数定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数中的默认参数"><span class="nav-number">2.</span> <span class="nav-text">¶函数中的默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类的隐式转换及explicit"><span class="nav-number">3.</span> <span class="nav-text">¶类的隐式转换及explicit</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#隐式转换"><span class="nav-number">3.1.</span> <span class="nav-text">¶隐式转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#explicit关键字"><span class="nav-number">3.2.</span> <span class="nav-text">¶explicit关键字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数的初始化列表"><span class="nav-number">4.</span> <span class="nav-text">¶构造函数的初始化列表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么要用构造函数初始化列表来对成员变量进行赋值？"><span class="nav-number">4.1.</span> <span class="nav-text">¶为什么要用构造函数初始化列表来对成员变量进行赋值？</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -835,7 +881,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

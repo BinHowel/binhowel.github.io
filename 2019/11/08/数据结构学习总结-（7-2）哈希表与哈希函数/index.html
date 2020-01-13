@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="哈希表当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。    通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过">
+<meta name="description" content="¶哈希表 当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。 通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过哈">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（7.2）哈希表与哈希函数">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="哈希表当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。    通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过">
+<meta property="og:description" content="¶哈希表 当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。 通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过哈">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/2.png">
@@ -98,7 +98,7 @@
 <meta property="og:updated_time" content="2019-11-09T01:26:37.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（7.2）哈希表与哈希函数">
-<meta name="twitter:description" content="哈希表当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。    通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过">
+<meta name="twitter:description" content="¶哈希表 当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。 通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过哈">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/1.png">
 
 
@@ -399,130 +399,168 @@
       
 
       
-        <h4 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h4><p>当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。<br>    通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过哈希函数进行处理就可以直接得到对应下标，通过下标直接操作该数据，相比普通数组进行查找时省去了大量无意义的比较操作。</p>
+        <h4 id="哈希表"><a class="header-anchor" href="#哈希表">¶</a>哈希表</h4>
+<p>当我们对一个数组进行操作时，如果要进行查找某个元素，一般时用循环一个个元素与要查找的关键字进行比较。这样往往要消耗大量的时间，而哈希表则解决了这个问题：哈希表时通过对要查找的关键字进行操作从而得到数组内该元素相对应位置的一种数据结构。<br>
+通俗地讲，哈希表要储存数据时，一般会先对数据通过_哈希函数_进行处理，得到一个下标，并把该数据存储在对应下标的位置，当要查找该数据的时候，则对关键字通过哈希函数进行处理就可以直接得到对应下标，通过下标直接操作该数据，相比普通数组进行查找时省去了大量无意义的比较操作。</p>
 <img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/1.png">
 <hr>
-<h5 id="哈希表的特点及抽象数据结构"><a href="#哈希表的特点及抽象数据结构" class="headerlink" title="哈希表的特点及抽象数据结构"></a>哈希表的特点及抽象数据结构</h5><ul>
+<h5 id="哈希表的特点及抽象数据结构"><a class="header-anchor" href="#哈希表的特点及抽象数据结构">¶</a>哈希表的特点及抽象数据结构</h5>
+<ul>
 <li>根据关键字（键）key存取数据元素的数据结构。</li>
 <li>哈希函数将关键字映射到存储位置的索引</li>
 <li>查找，插入，删除的时间复杂度时O(1)。比BST数等其他效率高（最坏的情况O（n））</li>
 </ul>
 <img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/2.png">
-<h6 id="哈希表的冲突（Collision）"><a href="#哈希表的冲突（Collision）" class="headerlink" title="哈希表的冲突（Collision）"></a>哈希表的冲突（Collision）</h6><p>上面说到，关键字说通过一个哈希函数进行处理后得到对应的存储地址，在对大量数据进行处理时，通过哈希函数难免会出现生成的下标为同一个的情况，此时就发生了哈希表的<strong>冲突</strong></p>
+<h6 id="哈希表的冲突-collision"><a class="header-anchor" href="#哈希表的冲突-collision">¶</a>哈希表的冲突（Collision）</h6>
+<p>上面说到，关键字说通过一个哈希函数进行处理后得到对应的存储地址，在对大量数据进行处理时，通过哈希函数难免会出现生成的下标为同一个的情况，此时就发生了哈希表的<strong>冲突</strong></p>
 <ul>
 <li>散列函数时一个<strong>压缩映像函数</strong>关键字集合比哈希表地址集合大得多。因此有可能经过哈希函数的计算，把不同的关键字映射到同一个哈希地址上，这些关键字互为<strong>同义词</strong></li>
 </ul>
 <img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/3.png">
 <hr>
-<p><strong>总结：</strong>综上如果要设计一个_好的哈希表首先要解决以下两个问题_</p>
+<p>**总结：**综上如果要设计一个_好的哈希表首先要解决以下两个问题_</p>
 <ul>
 <li>对于给定一个关键字集合选择一个计算简单且地址发布比较均匀的哈希函数，避免或尽量减少冲突</li>
 <li>研究解决冲突的方案</li>
 </ul>
 <hr>
-<h6 id="哈希表的抽象数据结构"><a href="#哈希表的抽象数据结构" class="headerlink" title="哈希表的抽象数据结构"></a>哈希表的抽象数据结构</h6><ul>
-<li><p>ADT HashTable</p>
+<h6 id="哈希表的抽象数据结构"><a class="header-anchor" href="#哈希表的抽象数据结构">¶</a>哈希表的抽象数据结构</h6>
+<ul>
+<li>
+<p>ADT HashTable</p>
 <ul>
 <li>bool get()</li>
 <li>void put()</li>
-<li><p>void remove()</p>
+<li>void remove()</li>
+</ul>
 <p>根据“<strong>键（key）</strong>”存取“<strong>值（Value）</strong>”</p>
 </li>
 </ul>
-</li>
-</ul>
 <hr>
-<h4 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h4><h5 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h5><ul>
+<h4 id="哈希函数"><a class="header-anchor" href="#哈希函数">¶</a>哈希函数</h4>
+<h5 id="特点："><a class="header-anchor" href="#特点：">¶</a>特点：</h5>
+<ul>
 <li>哈希函数计算出来的地址应该能<strong>均匀分布</strong>在整个地址空间中</li>
 <li>如果关键字总是更容易映射到某个或某些地址上，称作<u>堆积</u></li>
 </ul>
-<h5 id="哈希函数的一些实现方式及各方法的优缺点"><a href="#哈希函数的一些实现方式及各方法的优缺点" class="headerlink" title="哈希函数的一些实现方式及各方法的优缺点"></a>哈希函数的一些实现方式及各方法的优缺点</h5><h6 id="直接定址法"><a href="#直接定址法" class="headerlink" title="直接定址法"></a><strong>直接定址法</strong></h6><ul>
-<li><p>哈希函数取关键字的某个线性函数</p>
+<h5 id="哈希函数的一些实现方式及各方法的优缺点"><a class="header-anchor" href="#哈希函数的一些实现方式及各方法的优缺点">¶</a>哈希函数的一些实现方式及各方法的优缺点</h5>
+<h6 id="直接定址法"><a class="header-anchor" href="#直接定址法">¶</a><strong>直接定址法</strong></h6>
+<ul>
+<li>
+<p>哈希函数取关键字的某个线性函数</p>
 <ul>
 <li><code>Hash(key) = a * key + b</code></li>
 </ul>
 </li>
-<li><p>一一映射，不会出现冲突</p>
+<li>
+<p>一一映射，不会出现冲突</p>
 </li>
-<li><p><strong>缺点</strong>：要求哈希地址空间的大小与关键字集合的大小相同</p>
+<li>
+<p><strong>缺点</strong>：要求哈希地址空间的大小与关键字集合的大小相同</p>
 </li>
 </ul>
-<p><br><br><br></p>
-<h6 id="余数法-最常见，最简单"><a href="#余数法-最常见，最简单" class="headerlink" title="余数法(最常见，最简单)"></a><strong>余数法</strong>(最常见，最简单)</h6><ul>
-<li>设哈希表中允许地址数为m<ul>
+<br>
+<br>
+<h6 id="余数法-最常见-最简单"><a class="header-anchor" href="#余数法-最常见-最简单">¶</a><strong>余数法</strong>(最常见，最简单)</h6>
+<ul>
+<li>设哈希表中允许地址数为m
+<ul>
 <li><code>Hash(key) = key % p</code></li>
 </ul>
 </li>
-<li>其中p要满足<ul>
+<li>其中p要满足
+<ul>
 <li>p &lt;= m,尽量接近m</li>
 <li>最好取质数</li>
 <li>最好不要接近2的幂</li>
 </ul>
 </li>
-<li><strong>范例</strong><ul>
+<li><strong>范例</strong>
+<ul>
 <li>有一个关键字key = 962148</li>
 <li>哈希表大小m = 25</li>
 <li>取质数p = 23</li>
 <li>哈希函数：<code>Hash(key) = key % p</code></li>
-<li>则哈希地址为：<ul>
+<li>则哈希地址为：
+<ul>
 <li><code>Hash(962148) = 962148% 23 = 12</code></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p><br><br><br></p>
-<h6 id="数值抽取发-数字分析法"><a href="#数值抽取发-数字分析法" class="headerlink" title="数值抽取发(数字分析法)"></a><strong>数值抽取发</strong>(数字分析法)</h6><ul>
+<br>
+<br>
+<h6 id="数值抽取发-数字分析法"><a class="header-anchor" href="#数值抽取发-数字分析法">¶</a><strong>数值抽取发</strong>(数字分析法)</h6>
+<ul>
 <li>将关键字的某几位数字取出作为地址</li>
-<li><strong>例如</strong><ul>
+<li><strong>例如</strong>
+<ul>
 <li>关键字为6位，哈希表地址为3位</li>
 <li>可取出关键字的第1、2、5位，组成哈希地址</li>
 <li><code>136782 -》138</code></li>
 </ul>
 </li>
-<li><strong>缺点</strong>：数值抽取法仅适用于事先明确知道表中关键字每一位数值的分布情况，它完全依赖于关键字集合。如果换一个关键字集合，选择哪几位要重新决定<ul>
+<li><strong>缺点</strong>：数值抽取法仅适用于事先明确知道表中关键字每一位数值的分布情况，它完全依赖于关键字集合。如果换一个关键字集合，选择哪几位要重新决定
+<ul>
 <li>比如：如果关键字是电话号码、学号、则前几位就不太适合，因为规律性太强</li>
 </ul>
 </li>
 </ul>
-<p><br><br><br></p>
-<h6 id="平方取中法"><a href="#平方取中法" class="headerlink" title="平方取中法"></a><strong>平方取中法</strong></h6><ul>
+<br>
+<br>
+<h6 id="平方取中法"><a class="header-anchor" href="#平方取中法">¶</a><strong>平方取中法</strong></h6>
+<ul>
 <li>将关键字的前几位取出，做平方</li>
 <li>再取出平方结果的中间几位作为地址</li>
-<li><strong>例如</strong><ul>
+<li><strong>例如</strong>
+<ul>
 <li><u>325</u>483 =》325^2 = <u>1056</u>25 =》056</li>
 <li>此方法在词典处理中使用十分广泛</li>
 </ul>
 </li>
 </ul>
-<p><br><br><br></p>
-<h6 id="折叠法"><a href="#折叠法" class="headerlink" title="折叠法"></a><strong>折叠法</strong></h6><ul>
+<br>
+<br>
+<h6 id="折叠法"><a class="header-anchor" href="#折叠法">¶</a><strong>折叠法</strong></h6>
+<ul>
 <li>将关键字拆成位数相等的多段，将这几段叠加起来，相加结果作为哈希地址</li>
-<li><strong>移动折叠法</strong>：各段最后一位对齐相加<ul>
+<li><strong>移动折叠法</strong>：各段最后一位对齐相加
+<ul>
 <li>比如关键字：123 456 789 12</li>
 <li>哈希地址要求为3位数</li>
-<li><img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/4.png"></li>
+<li>
+<img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/4.png">
+</li>
 </ul>
 </li>
-<li><strong>边界折叠法</strong>：各部分沿各方部分的边界来回折叠，然后对齐相加，将相加的结构当做哈希地址<ul>
+<li><strong>边界折叠法</strong>：各部分沿各方部分的边界来回折叠，然后对齐相加，将相加的结构当做哈希地址
+<ul>
 <li>比如：关键字 = 123 456 789 12</li>
-<li><img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/5.png">
+<li>
+<img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/5.png">
 </li>
 </ul>
 </li>
 </ul>
-<p><br><br><br></p>
-<h6 id="旋转法"><a href="#旋转法" class="headerlink" title="旋转法"></a>旋转法</h6><ul>
+<br>
+<br>
+<h6 id="旋转法"><a class="header-anchor" href="#旋转法">¶</a>旋转法</h6>
+<ul>
 <li>将关键字中的数字旋转位置</li>
 <li>比如：关键字 = 12345678</li>
 <li>把个位数移到最左：81234567</li>
 <li>此法通常和其他方法结合使用</li>
-<li><img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/6.png">
+<li>
+<img src="/2019/11/08/数据结构学习总结-（7-2）哈希表与哈希函数/6.png">
 </li>
 </ul>
-<p><br><br><br></p>
-<h6 id="伪随机数法"><a href="#伪随机数法" class="headerlink" title="伪随机数法"></a>伪随机数法</h6><ul>
-<li>利用伪随机数算法生成哈希地址<ul>
+<br>
+<br>
+<h6 id="伪随机数法"><a class="header-anchor" href="#伪随机数法">¶</a>伪随机数法</h6>
+<ul>
+<li>利用伪随机数算法生成哈希地址
+<ul>
 <li><code>Hash(key) = random(key)</code></li>
 </ul>
 </li>
@@ -531,15 +569,17 @@
 <p><strong>总结：</strong></p>
 <ul>
 <li>应该根据实际情况选择：效率要求，关键字长度，哈希表长度，关键字分布等</li>
-<li>有些时候可以多种方法结合使用<ul>
-<li>比如：余数法+伪随机数法<ul>
+<li>有些时候可以多种方法结合使用
+<ul>
+<li>比如：余数法+伪随机数法
+<ul>
 <li><code>Hash(key) = random(key) % 12</code></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -744,7 +784,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -755,7 +795,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -766,7 +806,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -836,7 +876,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希表"><span class="nav-number">1.</span> <span class="nav-text">哈希表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#哈希表的特点及抽象数据结构"><span class="nav-number">1.1.</span> <span class="nav-text">哈希表的特点及抽象数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#哈希表的冲突（Collision）"><span class="nav-number">1.1.1.</span> <span class="nav-text">哈希表的冲突（Collision）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#哈希表的抽象数据结构"><span class="nav-number">1.1.2.</span> <span class="nav-text">哈希表的抽象数据结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希函数"><span class="nav-number">2.</span> <span class="nav-text">哈希函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#特点："><span class="nav-number">2.1.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哈希函数的一些实现方式及各方法的优缺点"><span class="nav-number">2.2.</span> <span class="nav-text">哈希函数的一些实现方式及各方法的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#直接定址法"><span class="nav-number">2.2.1.</span> <span class="nav-text">直接定址法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#余数法-最常见，最简单"><span class="nav-number">2.2.2.</span> <span class="nav-text">余数法(最常见，最简单)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数值抽取发-数字分析法"><span class="nav-number">2.2.3.</span> <span class="nav-text">数值抽取发(数字分析法)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#平方取中法"><span class="nav-number">2.2.4.</span> <span class="nav-text">平方取中法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#折叠法"><span class="nav-number">2.2.5.</span> <span class="nav-text">折叠法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#旋转法"><span class="nav-number">2.2.6.</span> <span class="nav-text">旋转法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#伪随机数法"><span class="nav-number">2.2.7.</span> <span class="nav-text">伪随机数法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希表"><span class="nav-number">1.</span> <span class="nav-text">¶哈希表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#哈希表的特点及抽象数据结构"><span class="nav-number">1.1.</span> <span class="nav-text">¶哈希表的特点及抽象数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#哈希表的冲突-collision"><span class="nav-number">1.1.1.</span> <span class="nav-text">¶哈希表的冲突（Collision）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#哈希表的抽象数据结构"><span class="nav-number">1.1.2.</span> <span class="nav-text">¶哈希表的抽象数据结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希函数"><span class="nav-number">2.</span> <span class="nav-text">¶哈希函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#特点："><span class="nav-number">2.1.</span> <span class="nav-text">¶特点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哈希函数的一些实现方式及各方法的优缺点"><span class="nav-number">2.2.</span> <span class="nav-text">¶哈希函数的一些实现方式及各方法的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#直接定址法"><span class="nav-number">2.2.1.</span> <span class="nav-text">¶直接定址法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#余数法-最常见-最简单"><span class="nav-number">2.2.2.</span> <span class="nav-text">¶余数法(最常见，最简单)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数值抽取发-数字分析法"><span class="nav-number">2.2.3.</span> <span class="nav-text">¶数值抽取发(数字分析法)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#平方取中法"><span class="nav-number">2.2.4.</span> <span class="nav-text">¶平方取中法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#折叠法"><span class="nav-number">2.2.5.</span> <span class="nav-text">¶折叠法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#旋转法"><span class="nav-number">2.2.6.</span> <span class="nav-text">¶旋转法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#伪随机数法"><span class="nav-number">2.2.7.</span> <span class="nav-text">¶伪随机数法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -856,7 +896,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
