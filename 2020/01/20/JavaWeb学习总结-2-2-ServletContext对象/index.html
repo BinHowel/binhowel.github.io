@@ -92,7 +92,8 @@
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/2.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/3.png">
-<meta property="og:updated_time" content="2020-01-20T04:18:18.951Z">
+<meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/4.png">
+<meta property="og:updated_time" content="2020-01-20T12:24:10.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(2.2)ServletContext对象">
 <meta name="twitter:description" content="servletContextServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。 它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，所以">
@@ -423,6 +424,8 @@
 <h5 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h5><p>以该上述的演示为例子，如果先进行访问Showservlet 会发现其获得的值是null，原因是它没有提前进行存值，再访问Setservlet 页面进行通过<code>setAttribute()</code>方法进行存值后其ServletContext对象才有对应值。</p>
 <img src="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/3.png" title="重启项目，并且直接访问Showservlet 页面可以发现，并没有获得值">
 <p>其次：只要服务器、该项目还在运行此值就将一直存在，除非通过重启</p>
+<h5 id="例如：不同的浏览器进行访问"><a href="#例如：不同的浏览器进行访问" class="headerlink" title="例如：不同的浏览器进行访问"></a>例如：不同的浏览器进行访问</h5><img src="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/4.png" title="当使用谷歌浏览器往ServletContext对象中存值 然后通过谷歌和IE浏览器分别打开Showservlet 进行查看">
+<p>可以看出ServletContext对象，无论是换一个浏览器进行访问它都存在且仅有一个，它是对于服务器来说，只要服务器、该项目还在运行此值就将一直存在，除非通过重启</p>
 <p>—（本文完）</p>
 
       
@@ -443,7 +446,7 @@
   <p><span>本文标题:</span><a href="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/">JavaWeb学习总结(2.2)ServletContext对象</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ShuHaoHwang 的个人博客">ShuHaoHwang</a></p>
   <p><span>发布时间:</span>2020年01月20日 - 10:01</p>
-  <p><span>最后更新:</span>2020年01月20日 - 12:01</p>
+  <p><span>最后更新:</span>2020年01月20日 - 20:01</p>
   <p><span>原始链接:</span><a href="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/" title="JavaWeb学习总结(2.2)ServletContext对象">https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/" aria-label="复制成功！"></i></span>
   </p>
@@ -542,6 +545,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2020/01/20/JavaWeb学习总结-2-3-Session/" rel="prev" title="JavaWeb学习总结(2.3)Session">
+                JavaWeb学习总结(2.3)Session <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -624,7 +631,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">98</span>
+                  <span class="site-state-item-count">99</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -716,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#servletContext"><span class="nav-number">1.</span> <span class="nav-text">servletContext</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用演示"><span class="nav-number">2.</span> <span class="nav-text">使用演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点："><span class="nav-number">2.1.</span> <span class="nav-text">注意点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#特殊情况"><span class="nav-number">2.2.</span> <span class="nav-text">特殊情况</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#servletContext"><span class="nav-number">1.</span> <span class="nav-text">servletContext</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用演示"><span class="nav-number">2.</span> <span class="nav-text">使用演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点："><span class="nav-number">2.1.</span> <span class="nav-text">注意点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#特殊情况"><span class="nav-number">2.2.</span> <span class="nav-text">特殊情况</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#例如：不同的浏览器进行访问"><span class="nav-number">2.3.</span> <span class="nav-text">例如：不同的浏览器进行访问</span></a></li></ol></li></ol></div>
             
 
           </div>
