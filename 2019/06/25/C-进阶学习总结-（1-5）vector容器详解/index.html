@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="¶vector的基本介绍及概念  标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义：  vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     ¶定义及初始化vector对象  例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector">
+<meta name="description" content="vector的基本介绍及概念 标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义： vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     定义及初始化vector对象 例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector对象，里面">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（1.5）vector容器详解">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/25/C-进阶学习总结-（1-5）vector容器详解/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶vector的基本介绍及概念  标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义：  vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     ¶定义及初始化vector对象  例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector">
+<meta property="og:description" content="vector的基本介绍及概念 标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义： vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     定义及初始化vector对象 例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector对象，里面">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-09-20T07:57:14.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（1.5）vector容器详解">
-<meta name="twitter:description" content="¶vector的基本介绍及概念  标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义：  vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     ¶定义及初始化vector对象  例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector">
+<meta name="twitter:description" content="vector的基本介绍及概念 标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。 代码定义： vector&amp;lt;typename&amp;gt; name; 在vector之后加一对&amp;lt;&amp;gt;,其&amp;lt;&amp;gt;内部填数据类型     定义及初始化vector对象 例：vector&amp;lt;int&amp;gt; arrays;创建一个int型的空的vector对象，里面">
 
 
 
@@ -392,50 +392,40 @@
       
 
       
-        <h4 id="vector的基本介绍及概念"><a class="header-anchor" href="#vector的基本介绍及概念">¶</a>vector的基本介绍及概念</h4>
-<ul>
+        <h4 id="vector的基本介绍及概念"><a href="#vector的基本介绍及概念" class="headerlink" title="vector的基本介绍及概念"></a>vector的基本介绍及概念</h4><ul>
 <li>标准库中的一个集合或者动态数组，可以存放若干个对象。它能把其他对象装起来，也称为容器。</li>
-<li>代码定义：
-<ul>
+<li>代码定义：<ul>
 <li><code>vector&lt;typename&gt; name</code>;</li>
 <li>在vector之后加一对&lt;&gt;,其&lt;&gt;内部填数据类型</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="定义及初始化vector对象"><a class="header-anchor" href="#定义及初始化vector对象">¶</a>定义及初始化vector对象</h4>
-<ul>
+<h4 id="定义及初始化vector对象"><a href="#定义及初始化vector对象" class="headerlink" title="定义及初始化vector对象"></a>定义及初始化vector对象</h4><ul>
 <li>例：<code>vector&lt;int&gt; arrays;</code>创建一个int型的空的vector对象，里面没有包含任何元素。</li>
-<li>初始化：
-<ul>
-<li>往空vector容器添加元素：
-<ul>
+<li>初始化：<ul>
+<li>往空vector容器添加元素：<ul>
 <li><code>arrays.push_back(100);</code>往arrays容器中加入一个100。</li>
 </ul>
 </li>
-<li>元素拷贝的初始方式
-<ul>
+<li>元素拷贝的初始方式<ul>
 <li><code>vector&lt;int&gt;arrays2(arrays)</code>;把arrays直接拷贝进arrays2。</li>
 <li><code>vector&lt;int&gt;arrays3 = arrays;</code>同上。</li>
 </ul>
 </li>
-<li>用列表初始化(C++11标准后才有的新特性)
-<ul>
+<li>用列表初始化(C++11标准后才有的新特性)<ul>
 <li><code>vector&lt;int&gt;arrays4 = {12,32,45,67};</code></li>
 </ul>
 </li>
-<li>创建指定数量的元素
-<ul>
+<li>创建指定数量的元素<ul>
 <li><code>vector&lt;int&gt; arrays5(15,-200);</code>创建15个int类型的元素，每个元素都是-200。(不给初值就给默认初始值为0)</li>
 <li><code>vector&lt;string&gt; arrays6(5,&quot;hello&quot;);</code>同上。</li>
 </ul>
 </li>
-<li>多种初始化方式
-<ul>
+<li>多种初始化方式<ul>
 <li><code>vector&lt;int&gt; arrays7{10};</code>初始化，给一个元素，该元素数据是10.</li>
 <li>vector<string> arrays8{“hello”};同上。</string></li>
-<li>vector<string> arrays8{10};分配10个string类型的数据都为“”(空串)。
-<ul>
+<li>vector<string> arrays8{10};分配10个string类型的数据都为“”(空串)。<ul>
 <li>因为10是整型，string类型不匹配所以分配10个元素空间作处理。</li>
 </ul>
 </string></li>
@@ -446,55 +436,43 @@
 </li>
 </ul>
 <hr>
-<h4 id="vector对象的操作"><a class="header-anchor" href="#vector对象的操作">¶</a>vector对象的操作</h4>
-<ul>
-<li>
-<p>最常用的是不清楚具体元素数量，通过vector动态增加/简述，故一般使用前先创建一个空容器。<code>vector&lt;int&gt; arrays</code></p>
+<h4 id="vector对象的操作"><a href="#vector对象的操作" class="headerlink" title="vector对象的操作"></a>vector对象的操作</h4><ul>
+<li><p>最常用的是不清楚具体元素数量，通过vector动态增加/简述，故一般使用前先创建一个空容器。<code>vector&lt;int&gt; arrays</code></p>
 </li>
-<li>
-<p>具体操作：</p>
+<li><p>具体操作：</p>
 <ul>
-<li>
-<p>判断容器是否为空(bool)</p>
+<li><p>判断容器是否为空(bool)</p>
 <ul>
 <li><code>arrays.empty()</code></li>
 </ul>
 </li>
-<li>
-<p>在容器末尾添加一个元素</p>
+<li><p>在容器末尾添加一个元素</p>
 <ul>
 <li><code>arrays.push_back(int num)</code></li>
 </ul>
 </li>
-<li>
-<p>返回容器总长度(元素个数)</p>
+<li><p>返回容器总长度(元素个数)</p>
 <ul>
 <li><code>arrays.size()</code></li>
 </ul>
 </li>
-<li>
-<p>清空容器</p>
+<li><p>清空容器</p>
 <ul>
 <li><code>arrays.clear()</code></li>
 </ul>
 </li>
-<li>
-<p>可以类似数组一样的用法(下标从0开始)</p>
+<li><p>可以类似数组一样的用法(下标从0开始)</p>
 <ul>
 <li><code>arrays[n]</code></li>
 </ul>
 </li>
-<li>
-<p>赋值</p>
+<li><p>赋值</p>
 <ul>
-<li>
-<p><code>vector&lt;int&gt; arrays2; arrays2 = arrays;</code></p>
+<li><p><code>vector&lt;int&gt; arrays2; arrays2 = arrays;</code></p>
 <ul>
-<li>
-<p>注意：这里是类似普通数据类型的赋值一样，不是拷贝！</p>
+<li><p>注意：这里是类似普通数据类型的赋值一样，不是拷贝！</p>
 </li>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays2; </span><br><span class="line">arrays2 = arrays;<span class="comment">//此时array2里的 元素 及 元素个数 跟arrays一样。</span></span><br><span class="line">array2 = &#123;<span class="number">12</span>,<span class="number">34</span>,<span class="number">55</span>,<span class="number">67</span>&#125;<span class="comment">//此时array2长度变为4，元素分别是12,34,55,67</span></span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays2; </span><br><span class="line">arrays2 = arrays;<span class="comment">//此时array2里的 元素 及 元素个数 跟arrays一样。</span></span><br><span class="line">array2 = &#123;<span class="number">12</span>,<span class="number">34</span>,<span class="number">55</span>,<span class="number">67</span>&#125;<span class="comment">//此时array2长度变为4，元素分别是12,34,55,67</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -504,14 +482,12 @@
 </li>
 </ul>
 <ul>
-<li>
-<p>相等</p>
+<li><p>相等</p>
 <ul>
 <li>两个vector相等，首先元素要相同，对应位置的元素相同。</li>
 </ul>
 </li>
-<li>
-<p>for循环遍历</p>
+<li><p>for循环遍历</p>
 <ul>
 <li><code>for(auto &amp; v: arrays){}</code></li>
 <li><code>for(vector&lt;int&gt; v: arrays){}</code></li>
@@ -519,19 +495,15 @@
 </li>
 </ul>
 <hr>
-<h4 id="for遍历一些注意点："><a class="header-anchor" href="#for遍历一些注意点：">¶</a>for遍历一些注意点：</h4>
-<ul>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> v:arrays)&#123;<span class="comment">//千万不要这样使用！！！</span></span><br><span class="line">    arrays.push_back(<span class="number">88</span>);<span class="comment">//在遍历的时候再往里面插入新元素，会导致arrays结构混乱</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="for遍历一些注意点："><a href="#for遍历一些注意点：" class="headerlink" title="for遍历一些注意点："></a>for遍历一些注意点：</h4><ul>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> v:arrays)&#123;<span class="comment">//千万不要这样使用！！！</span></span><br><span class="line">    arrays.push_back(<span class="number">88</span>);<span class="comment">//在遍历的时候再往里面插入新元素，会导致arrays结构混乱</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; v &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>原因：因为遍历的时候会记录arrays最后一个值的地址，如果插入新的值，会照成地址紊乱，输出乱值。</p>
+<li><p>原因：因为遍历的时候会记录arrays最后一个值的地址，如果插入新的值，会照成地址紊乱，输出乱值。</p>
 </li>
-<li>
-<p>**结论：**千万不要在for遍历语句或类似操作中，改变遍历源的数值（删除/增加都不可以），调试找bug的时候会非常难发现。</p>
+<li><p><strong>结论：</strong>千万不要在for遍历语句或类似操作中，改变遍历源的数值（删除/增加都不可以），调试找bug的时候会非常难发现。</p>
 </li>
 </ul>
-<p>–（本文完）&lt;原创&gt;</p>
+<p>—（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -736,7 +708,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">98</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -828,7 +800,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vector的基本介绍及概念"><span class="nav-number">1.</span> <span class="nav-text">¶vector的基本介绍及概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义及初始化vector对象"><span class="nav-number">2.</span> <span class="nav-text">¶定义及初始化vector对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector对象的操作"><span class="nav-number">3.</span> <span class="nav-text">¶vector对象的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for遍历一些注意点："><span class="nav-number">4.</span> <span class="nav-text">¶for遍历一些注意点：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vector的基本介绍及概念"><span class="nav-number">1.</span> <span class="nav-text">vector的基本介绍及概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义及初始化vector对象"><span class="nav-number">2.</span> <span class="nav-text">定义及初始化vector对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector对象的操作"><span class="nav-number">3.</span> <span class="nav-text">vector对象的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for遍历一些注意点："><span class="nav-number">4.</span> <span class="nav-text">for遍历一些注意点：</span></a></li></ol></div>
             
 
           </div>
