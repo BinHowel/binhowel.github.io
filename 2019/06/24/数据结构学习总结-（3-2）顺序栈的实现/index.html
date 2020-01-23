@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="顺序栈的实现与算法思路（以char数据类型为例） 入栈push(char e)；  思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。  具体实现： 1234567bool SqStack::push(char e) &amp;#123;	 if ((top - data) == capacity)//容量满了就">
+<meta name="description" content="¶顺序栈的实现与算法思路（以char数据类型为例）   入栈push(char e)；   思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。   具体实现： 1234567bool SqStack::push(char e) &amp;#123;	 if ((top - data) == capacity)//">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（3.2）顺序栈的实现">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/24/数据结构学习总结-（3-2）顺序栈的实现/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="顺序栈的实现与算法思路（以char数据类型为例） 入栈push(char e)；  思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。  具体实现： 1234567bool SqStack::push(char e) &amp;#123;	 if ((top - data) == capacity)//容量满了就">
+<meta property="og:description" content="¶顺序栈的实现与算法思路（以char数据类型为例）   入栈push(char e)；   思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。   具体实现： 1234567bool SqStack::push(char e) &amp;#123;	 if ((top - data) == capacity)//">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-03T17:15:20.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（3.2）顺序栈的实现">
-<meta name="twitter:description" content="顺序栈的实现与算法思路（以char数据类型为例） 入栈push(char e)；  思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。  具体实现： 1234567bool SqStack::push(char e) &amp;#123;	 if ((top - data) == capacity)//容量满了就">
+<meta name="twitter:description" content="¶顺序栈的实现与算法思路（以char数据类型为例）   入栈push(char e)；   思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。   具体实现： 1234567bool SqStack::push(char e) &amp;#123;	 if ((top - data) == capacity)//">
 
 
 
@@ -392,47 +392,62 @@
       
 
       
-        <h4 id="顺序栈的实现与算法思路（以char数据类型为例）"><a href="#顺序栈的实现与算法思路（以char数据类型为例）" class="headerlink" title="顺序栈的实现与算法思路（以char数据类型为例）"></a>顺序栈的实现与算法思路（以char数据类型为例）</h4><ul>
-<li><p>入栈push(char e)；</p>
+        <h4 id="顺序栈的实现与算法思路-以char数据类型为例"><a class="header-anchor" href="#顺序栈的实现与算法思路-以char数据类型为例">¶</a>顺序栈的实现与算法思路（以char数据类型为例）</h4>
+<ul>
+<li>
+<p>入栈push(char e)；</p>
 </li>
-<li><p>思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。</p>
+<li>
+<p>思路：在栈未满的情况下，直接对top(栈顶)指针指向的地址内容进行赋值，修改完毕后，直接top++移动栈顶至下一个位置。如果栈满则调用扩容操作。</p>
 </li>
-<li><p>具体实现：</p>
+<li>
+<p>具体实现：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> SqStack::push(<span class="keyword">char</span> e) &#123;</span><br><span class="line">	 <span class="keyword">if</span> ((top - data) == capacity)<span class="comment">//容量满了就进行扩容</span></span><br><span class="line">		 <span class="built_in">realloc</span>();</span><br><span class="line"></span><br><span class="line">	 *top = e; top++;<span class="comment">//直接修改并移动top指针</span></span><br><span class="line">	 <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>出栈pop();</p>
+<li>
+<p>出栈pop();</p>
 </li>
-<li><p>思路：在没有空栈的情况下，直接让top自减一。</p>
+<li>
+<p>思路：在没有空栈的情况下，直接让top自减一。</p>
 </li>
-<li><p>具体实现：</p>
+<li>
+<p>具体实现：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> SqStack::pop() &#123;</span><br><span class="line">	 <span class="keyword">if</span> (top == data)<span class="comment">//判断是否空栈。</span></span><br><span class="line">		 <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">	 top--;</span><br><span class="line">	 <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h4 id="顺序栈的实现情况"><a href="#顺序栈的实现情况" class="headerlink" title="顺序栈的实现情况"></a>顺序栈的实现情况</h4><ul>
-<li><del>出栈</del>(完成)<ul>
+<h4 id="顺序栈的实现情况"><a class="header-anchor" href="#顺序栈的实现情况">¶</a>顺序栈的实现情况</h4>
+<ul>
+<li><s>出栈</s>(完成)
+<ul>
 <li>push(char e)</li>
 </ul>
 </li>
-<li><del>入栈</del>(完成)<ul>
+<li><s>入栈</s>(完成)
+<ul>
 <li>pop()</li>
 </ul>
 </li>
-<li><del>扩容</del>(完成)<ul>
+<li><s>扩容</s>(完成)
+<ul>
 <li>realloc()</li>
 </ul>
 </li>
-<li><del>遍历</del>(完成)<ul>
+<li><s>遍历</s>(完成)
+<ul>
 <li>Traverse(void(*fb)(char&amp; e))</li>
 </ul>
 </li>
-<li><del>获得栈顶数据</del>(完成)<ul>
+<li><s>获得栈顶数据</s>(完成)
+<ul>
 <li>GetTop()</li>
 </ul>
 </li>
-<li><del>是否为空栈</del>(完成)<ul>
+<li><s>是否为空栈</s>(完成)
+<ul>
 <li>IsStackEmpty()</li>
 </ul>
 </li>
-<li><del>获得栈总容量</del>(完成)<ul>
+<li><s>获得栈总容量</s>(完成)
+<ul>
 <li>GetCapacity()</li>
 </ul>
 </li>
@@ -446,7 +461,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Sqstack.cpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"Sqstack.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*构造函数*/</span></span><br><span class="line">SqStack::SqStack(<span class="keyword">int</span> c) &#123;</span><br><span class="line">	capacity = c;<span class="comment">//默认给一个初值</span></span><br><span class="line">	data = <span class="keyword">new</span> <span class="keyword">char</span>[capacity];</span><br><span class="line">	top = data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*扩容*/</span></span><br><span class="line"><span class="keyword">bool</span> SqStack::<span class="built_in">realloc</span>() &#123;</span><br><span class="line">	<span class="keyword">char</span>* n_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">2</span> * capacity];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; capacity; i++) &#123;</span><br><span class="line">		n_data[i] = data[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">delete</span>[]data;</span><br><span class="line">	data = n_data;</span><br><span class="line">	top = data + capacity;<span class="comment">//这里要注意top也有重新赋值新的地址</span></span><br><span class="line"></span><br><span class="line">	capacity *= <span class="number">2</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"扩容成功！！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*入栈操作*/</span></span><br><span class="line"><span class="keyword">bool</span> SqStack::push(<span class="keyword">char</span> e) &#123;</span><br><span class="line">	 <span class="keyword">if</span> ((top - data) == capacity)</span><br><span class="line">		 <span class="built_in">realloc</span>();</span><br><span class="line"></span><br><span class="line">	 *top = e; top++;</span><br><span class="line">	 <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*出栈操作*/</span></span><br><span class="line"><span class="keyword">bool</span> SqStack::pop() &#123;</span><br><span class="line">	 <span class="keyword">if</span> (top == data)</span><br><span class="line">		 <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	 top--;</span><br><span class="line">	 <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*遍历*/</span></span><br><span class="line"><span class="keyword">void</span> SqStack::Traverse(<span class="keyword">void</span>(*fb)(<span class="keyword">char</span>&amp; e)) &#123;</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; top - data; i++)</span><br><span class="line">	 &#123;</span><br><span class="line">		 fb(data[i]);</span><br><span class="line">	 &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*获得栈顶元素*/</span></span><br><span class="line"><span class="keyword">char</span> SqStack::GetTop() &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span>*(top - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*判断是否空栈*/</span></span><br><span class="line"><span class="keyword">bool</span> SqStack::IsStackEmpty() &#123;</span><br><span class="line">	<span class="keyword">if</span> (top == data)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*获得容量*/</span></span><br><span class="line"><span class="keyword">int</span> SqStack::GetCapacity() &#123;</span><br><span class="line">	<span class="keyword">return</span> capacity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*打印*/</span></span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">Print</span><span class="params">(<span class="keyword">char</span>&amp; e)</span> </span>&#123;</span><br><span class="line">	 <span class="built_in">cout</span> &lt;&lt; e &lt;&lt; <span class="string">" "</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.cpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"Sqstack.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	SqStack <span class="built_in">stack</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈一个数据a"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push(<span class="string">'a'</span>); <span class="built_in">stack</span>.Traverse(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈一个数据b"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push(<span class="string">'b'</span>); <span class="built_in">stack</span>.Traverse(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈一个数据c"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push(<span class="string">'c'</span>); <span class="built_in">stack</span>.Traverse(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈一个数据d"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push(<span class="string">'d'</span>); <span class="built_in">stack</span>.Traverse(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈一个数据e"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push(<span class="string">'e'</span>); <span class="built_in">stack</span>.Traverse(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"入栈一个数据f"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.push(<span class="string">'f'</span>); <span class="built_in">stack</span>.Traverse(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"出栈一个数据"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">stack</span>.pop(); <span class="built_in">stack</span>.Traverse(Print); <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -651,7 +666,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -743,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序栈的实现与算法思路（以char数据类型为例）"><span class="nav-number">1.</span> <span class="nav-text">顺序栈的实现与算法思路（以char数据类型为例）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序栈的实现情况"><span class="nav-number">2.</span> <span class="nav-text">顺序栈的实现情况</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序栈的实现与算法思路-以char数据类型为例"><span class="nav-number">1.</span> <span class="nav-text">¶顺序栈的实现与算法思路（以char数据类型为例）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序栈的实现情况"><span class="nav-number">2.</span> <span class="nav-text">¶顺序栈的实现情况</span></a></li></ol></div>
             
 
           </div>

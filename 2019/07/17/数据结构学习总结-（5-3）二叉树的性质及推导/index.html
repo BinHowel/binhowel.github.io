@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="二叉树的性质性质1：(层级):pencil: 在二叉树的第i层上至多有2i-1个结点。  即：下层的结点最多是上层结点的2倍   性质2：(深度):pencil: 深度为k的二叉树至多有2k-1个结点。     性质3:pencil:： 对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1  | 符号          | 解释                      |">
+<meta name="description" content="¶二叉树的性质 ¶性质1：(层级)📝  在二叉树的第i层上至多有2i-1个结点。    即：下层的结点最多是上层结点的2倍   ¶性质2：(深度)📝  深度为k的二叉树至多有2k-1个结点。      ¶性质3📝：   对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1      符号 解释     n0 度数为0的结点数(叶结点数)   n 总结点数   n1 度">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.3）二叉树的性质及推导">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="二叉树的性质性质1：(层级):pencil: 在二叉树的第i层上至多有2i-1个结点。  即：下层的结点最多是上层结点的2倍   性质2：(深度):pencil: 深度为k的二叉树至多有2k-1个结点。     性质3:pencil:： 对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1  | 符号          | 解释                      |">
+<meta property="og:description" content="¶二叉树的性质 ¶性质1：(层级)📝  在二叉树的第i层上至多有2i-1个结点。    即：下层的结点最多是上层结点的2倍   ¶性质2：(深度)📝  深度为k的二叉树至多有2k-1个结点。      ¶性质3📝：   对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1      符号 解释     n0 度数为0的结点数(叶结点数)   n 总结点数   n1 度">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/2.png">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-07-17T03:50:47.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.3）二叉树的性质及推导">
-<meta name="twitter:description" content="二叉树的性质性质1：(层级):pencil: 在二叉树的第i层上至多有2i-1个结点。  即：下层的结点最多是上层结点的2倍   性质2：(深度):pencil: 深度为k的二叉树至多有2k-1个结点。     性质3:pencil:： 对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1  | 符号          | 解释                      |">
+<meta name="twitter:description" content="¶二叉树的性质 ¶性质1：(层级)📝  在二叉树的第i层上至多有2i-1个结点。    即：下层的结点最多是上层结点的2倍   ¶性质2：(深度)📝  深度为k的二叉树至多有2k-1个结点。      ¶性质3📝：   对于任何一颗二叉树，若2度的结点数有n2个，则叶子结点n0的个数比为n2+1      符号 解释     n0 度数为0的结点数(叶结点数)   n 总结点数   n1 度">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/1.png">
 
 
@@ -385,39 +385,82 @@
       
 
       
-        <h4 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h4><h5 id="性质1：-层级-pencil"><a href="#性质1：-层级-pencil" class="headerlink" title="性质1：(层级):pencil:"></a>性质1：(层级):pencil:</h5><ul>
+        <h4 id="二叉树的性质"><a class="header-anchor" href="#二叉树的性质">¶</a>二叉树的性质</h4>
+<h5 id="性质1：-层级-📝"><a class="header-anchor" href="#性质1：-层级-📝">¶</a>性质1：(层级)📝</h5>
+<ul>
 <li>在二叉树的第<code>i</code>层上<u>至多</u>有2<sup>i-1</sup>个结点。</li>
-<li><img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/1.png"></li>
+<li>
+<img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/1.png">
+</li>
 <li>即：下层的结点最多是上层结点的2倍</li>
 </ul>
 <hr>
-<h5 id="性质2：-深度-pencil"><a href="#性质2：-深度-pencil" class="headerlink" title="性质2：(深度):pencil:"></a>性质2：(深度):pencil:</h5><ul>
+<h5 id="性质2：-深度-📝"><a class="header-anchor" href="#性质2：-深度-📝">¶</a>性质2：(深度)📝</h5>
+<ul>
 <li>深度为k的二叉树<u>至多</u>有2<sup>k</sup>-1个结点。</li>
-<li><img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/2.png">
+<li>
+<img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/2.png">
 </li>
 </ul>
 <hr>
-<h5 id="性质3-pencil-："><a href="#性质3-pencil-：" class="headerlink" title="性质3:pencil:："></a>性质3:pencil:：</h5><ul>
-<li><p>对于任何一颗二叉树，若2度的结点数有n<sub>2</sub>个，则叶子结点n<sub>0</sub>的个数比为n<sub>2</sub>+1</p>
+<h5 id="性质3📝："><a class="header-anchor" href="#性质3📝：">¶</a>性质3📝：</h5>
+<ul>
+<li>
+<p>对于任何一颗二叉树，若2度的结点数有n<sub>2</sub>个，则叶子结点n<sub>0</sub>的个数比为n<sub>2</sub>+1</p>
 </li>
-<li><p>| 符号          | 解释                      |<br>| ——————- | ————————————- |<br>| n<sub>0</sub> | 度数为0的结点数(叶结点数) |<br>| n             | 总结点数                  |<br>| n<sub>1</sub> | 度数为1的结点数           |<br>| n<sub>2</sub> | 度数为2的结点数           |<br>| B             | 分枝数                    |</p>
+<li>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n<sub>0</sub></td>
+<td>度数为0的结点数(叶结点数)</td>
+</tr>
+<tr>
+<td>n</td>
+<td>总结点数</td>
+</tr>
+<tr>
+<td>n<sub>1</sub></td>
+<td>度数为1的结点数</td>
+</tr>
+<tr>
+<td>n<sub>2</sub></td>
+<td>度数为2的结点数</td>
+</tr>
+<tr>
+<td>B</td>
+<td>分枝数</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 <ul>
-<li><p><strong>n<sub>0</sub> = n<sub>2</sub>+1</strong></p>
+<li>
+<p><strong>n<sub>0</sub> = n<sub>2</sub>+1</strong></p>
 </li>
-<li><p><strong>其他公式</strong>:mag_right:：</p>
+<li>
+<p><strong>其他公式</strong>🔎：</p>
 <ul>
-<li>分枝数(B)：<ul>
-<li>B = n<sub>1</sub>+2n<sub>2</sub> </li>
+<li>分枝数(B)：
+<ul>
+<li>B = n<sub>1</sub>+2n<sub>2</sub></li>
 <li>B = n - 1(n为总结点数)B</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/3.png">
+<li>
+<img src="/2019/07/17/数据结构学习总结-（5-3）二叉树的性质及推导/3.png">
 </li>
-<li><p><strong>推导过程（n<sub>0</sub> = n<sub>2</sub>+1）:scroll:</strong>：</p>
+<li>
+<p><strong>推导过程（n<sub>0</sub> = n<sub>2</sub>+1）📜</strong>：</p>
 <ul>
 <li>因为 B = n -1① 且 n = n<sub>0</sub> + n<sub>1</sub> + n<sub>2</sub>②</li>
 <li>所以B = n<sub>0</sub> + n<sub>1</sub> + n<sub>2</sub> - 1 ③所以 n<sub>0</sub> = B -  n<sub>1</sub> -  n<sub>2</sub> + 1④</li>
@@ -426,7 +469,7 @@
 </ul>
 </li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -631,7 +674,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -723,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">1.</span> <span class="nav-text">二叉树的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#性质1：-层级-pencil"><span class="nav-number">1.1.</span> <span class="nav-text">性质1：(层级):pencil:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性质2：-深度-pencil"><span class="nav-number">1.2.</span> <span class="nav-text">性质2：(深度):pencil:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性质3-pencil-："><span class="nav-number">1.3.</span> <span class="nav-text">性质3:pencil:：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的性质"><span class="nav-number">1.</span> <span class="nav-text">¶二叉树的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#性质1：-层级-📝"><span class="nav-number">1.1.</span> <span class="nav-text">¶性质1：(层级)📝</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性质2：-深度-📝"><span class="nav-number">1.2.</span> <span class="nav-text">¶性质2：(深度)📝</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性质3📝："><span class="nav-number">1.3.</span> <span class="nav-text">¶性质3📝：</span></a></li></ol></li></ol></div>
             
 
           </div>

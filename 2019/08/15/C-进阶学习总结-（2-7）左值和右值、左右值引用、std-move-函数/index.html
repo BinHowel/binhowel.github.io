@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="左值和右值 左值：可以在等号左边的值，通常叫左值 特点：拥有地址，可以被修改和赋值   右值：不能在等号左边的值，通常为右值 特点：临时数据，没有地址，不能够修改和赋值    通俗点讲：左值就是地址值，而右值则是一个单纯的数据 12345int a;int b;b = 1;//此时b是一个地址值，是一个左值，也就是此时这个b代表内存地址，而1只是单纯的数据，为右值a = b;//此时的a是一个左值">
+<meta name="description" content="¶左值和右值  左值：可以在等号左边的值，通常叫左值  特点：拥有地址，可以被修改和赋值   右值：不能在等号左边的值，通常为右值  特点：临时数据，没有地址，不能够修改和赋值    通俗点讲：左值就是地址值，而右值则是一个单纯的数据 12345int a;int b;b = 1;//此时b是一个地址值，是一个左值，也就是此时这个b代表内存地址，而1只是单纯的数据，为右值a = b;//此时的a是">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（2.7）左值和右值、左右值引用、std::move()函数">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="左值和右值 左值：可以在等号左边的值，通常叫左值 特点：拥有地址，可以被修改和赋值   右值：不能在等号左边的值，通常为右值 特点：临时数据，没有地址，不能够修改和赋值    通俗点讲：左值就是地址值，而右值则是一个单纯的数据 12345int a;int b;b = 1;//此时b是一个地址值，是一个左值，也就是此时这个b代表内存地址，而1只是单纯的数据，为右值a = b;//此时的a是一个左值">
+<meta property="og:description" content="¶左值和右值  左值：可以在等号左边的值，通常叫左值  特点：拥有地址，可以被修改和赋值   右值：不能在等号左边的值，通常为右值  特点：临时数据，没有地址，不能够修改和赋值    通俗点讲：左值就是地址值，而右值则是一个单纯的数据 12345int a;int b;b = 1;//此时b是一个地址值，是一个左值，也就是此时这个b代表内存地址，而1只是单纯的数据，为右值a = b;//此时的a是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/2.png">
@@ -99,7 +99,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:58:07.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（2.7）左值和右值、左右值引用、std::move()函数">
-<meta name="twitter:description" content="左值和右值 左值：可以在等号左边的值，通常叫左值 特点：拥有地址，可以被修改和赋值   右值：不能在等号左边的值，通常为右值 特点：临时数据，没有地址，不能够修改和赋值    通俗点讲：左值就是地址值，而右值则是一个单纯的数据 12345int a;int b;b = 1;//此时b是一个地址值，是一个左值，也就是此时这个b代表内存地址，而1只是单纯的数据，为右值a = b;//此时的a是一个左值">
+<meta name="twitter:description" content="¶左值和右值  左值：可以在等号左边的值，通常叫左值  特点：拥有地址，可以被修改和赋值   右值：不能在等号左边的值，通常为右值  特点：临时数据，没有地址，不能够修改和赋值    通俗点讲：左值就是地址值，而右值则是一个单纯的数据 12345int a;int b;b = 1;//此时b是一个地址值，是一个左值，也就是此时这个b代表内存地址，而1只是单纯的数据，为右值a = b;//此时的a是">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/1.png">
 
 
@@ -400,12 +400,15 @@
       
 
       
-        <h4 id="左值和右值"><a href="#左值和右值" class="headerlink" title="左值和右值"></a>左值和右值</h4><ul>
-<li>左值：可以在等号左边的值，通常叫左值<ul>
+        <h4 id="左值和右值"><a class="header-anchor" href="#左值和右值">¶</a>左值和右值</h4>
+<ul>
+<li>左值：可以在等号左边的值，通常叫左值
+<ul>
 <li>特点：拥有地址，可以被修改和赋值</li>
 </ul>
 </li>
-<li>右值：不能在等号左边的值，通常为右值<ul>
+<li>右值：不能在等号左边的值，通常为右值
+<ul>
 <li>特点：临时数据，没有地址，不能够修改和赋值</li>
 </ul>
 </li>
@@ -413,58 +416,74 @@
 <p>通俗点讲：左值就是地址值，而右值则是一个单纯的数据</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="keyword">int</span> b;</span><br><span class="line"></span><br><span class="line">b = <span class="number">1</span>;<span class="comment">//此时b是一个地址值，是一个左值，也就是此时这个b代表内存地址，而1只是单纯的数据，为右值</span></span><br><span class="line">a = b;<span class="comment">//此时的a是一个左值，而此时的b计算机认为它是一个数据，而不是b这个变量的地址值，故此时b为右值</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h4 id="左值引用和右值引用"><a href="#左值引用和右值引用" class="headerlink" title="左值引用和右值引用"></a>左值引用和右值引用</h4><ul>
-<li><p>左值引用：</p>
+<h4 id="左值引用和右值引用"><a class="header-anchor" href="#左值引用和右值引用">¶</a>左值引用和右值引用</h4>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span>&amp; <span class="keyword">a_t</span> = a; </span><br><span class="line"><span class="keyword">int</span>&amp; <span class="keyword">a_t</span> = <span class="number">1</span>;<span class="comment">//报错：左值引用不能绑定给右值</span></span><br></pre></td></tr></table></figure>
+<li>
+<p>左值引用：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span>&amp; <span class="keyword">a_t</span> = a; </span><br><span class="line"><span class="keyword">int</span>&amp; <span class="keyword">a_t</span> = <span class="number">1</span>;<span class="comment">//报错：左值引用不能绑定给右值</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>右值引用：</p>
+<li>
+<p>右值引用：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>；</span><br><span class="line"><span class="keyword">int</span>&amp;&amp; <span class="keyword">a_t</span> = <span class="number">1</span><span class="comment">//右值引用可以绑定给右值</span></span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>；</span><br><span class="line"><span class="keyword">int</span>&amp;&amp; <span class="keyword">a_t</span> = <span class="number">1</span><span class="comment">//右值引用可以绑定给右值</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>实质上：右值引用又是一个左值 </p>
+<li>
+<p>实质上：右值引用又是一个左值</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span>&amp; b = a;</span><br><span class="line"><span class="keyword">int</span>&amp;&amp; <span class="keyword">b_t</span> = b;<span class="comment">//允许</span></span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span>&amp; b = a;</span><br><span class="line"><span class="keyword">int</span>&amp;&amp; <span class="keyword">b_t</span> = b;<span class="comment">//允许</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="前置运算符和后置运算符"><a href="#前置运算符和后置运算符" class="headerlink" title="前置运算符和后置运算符"></a>前置运算符和后置运算符</h5><ul>
-<li>前置运算符(++i)是左值表达式<ul>
+<h5 id="前置运算符和后置运算符"><a class="header-anchor" href="#前置运算符和后置运算符">¶</a>前置运算符和后置运算符</h5>
+<ul>
+<li>前置运算符(++i)是左值表达式
+<ul>
 <li>++i 实质上，<strong>先直接</strong>给变量 i+1，然后返回 i 本身。</li>
 <li><code>(++i) = 100;</code>//允许，因为++i 是左值表达式，结果 i 的值为100</li>
-<li>—i 同理</li>
+<li>–i 同理</li>
 </ul>
 </li>
-<li>后置运算符(i++)是右值表达式<ul>
+<li>后置运算符(i++)是右值表达式
+<ul>
 <li>i++ 实质上，先把 i 赋值给一个临时变量 t ，然后再让i + 1，<strong>最后返回临时变量 t</strong></li>
 <li><code>(i++) = 100</code>//报错</li>
-<li>i— 同理</li>
+<li>i-- 同理</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="右值引用的作用"><a href="#右值引用的作用" class="headerlink" title="右值引用的作用"></a>右值引用的作用</h4><p>假设，有两个变量a和b，其中a要拷贝给b，那么正常情况下，b也要先创建内存空间，然后再把a的内容赋值给b。但在C++11后新引入了 &amp;&amp; 运算符，即：右值引用，在实现上述赋值操作时，由于b没有创建空间，而a却有自己的内存空间，那么可以用右值引用直接获得a空间的地址和数据，直接给b，而不是要b再创建空间去接收a的内容。</p>
+<h4 id="右值引用的作用"><a class="header-anchor" href="#右值引用的作用">¶</a>右值引用的作用</h4>
+<p>假设，有两个变量a和b，其中a要拷贝给b，那么正常情况下，b也要先创建内存空间，然后再把a的内容赋值给b。但在C++11后新引入了 &amp;&amp; 运算符，即：右值引用，在实现上述赋值操作时，由于b没有创建空间，而a却有自己的内存空间，那么可以用右值引用直接获得a空间的地址和数据，直接给b，而不是要b再创建空间去接收a的内容。</p>
 <ul>
 <li>提高程序运行效率，把拷贝对象变成移动对象来提高程序运行效率</li>
 </ul>
 <hr>
-<h4 id="std-move函数"><a href="#std-move函数" class="headerlink" title="std::move函数"></a>std::move函数</h4><ul>
-<li><p>作用：把左值引用强转成右值，使右值引用可以绑定左值</p>
+<h4 id="std-move函数"><a class="header-anchor" href="#std-move函数">¶</a>std::move函数</h4>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span>&amp;&amp; r_a = <span class="built_in">std</span>::move(a);</span><br></pre></td></tr></table></figure>
+<li>
+<p>作用：把左值引用强转成右值，使右值引用可以绑定左值</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span>&amp;&amp; r_a = <span class="built_in">std</span>::move(a);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/1.png">
+<li>
+<img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/1.png">
 </li>
 </ul>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str1 = <span class="string">"ShuHao"</span>;</span><br><span class="line"><span class="built_in">string</span> str2 = <span class="built_in">std</span>::move(str1);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt;<span class="string">"str1的值为: "</span>&lt;&lt; str1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"str2的值为: "</span> &lt;&lt; str2 &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="示例："><a class="header-anchor" href="#示例：">¶</a>示例：</h5>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str1 = <span class="string">"ShuHao"</span>;</span><br><span class="line"><span class="built_in">string</span> str2 = <span class="built_in">std</span>::move(str1);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt;<span class="string">"str1的值为: "</span>&lt;&lt; str1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"str2的值为: "</span> &lt;&lt; str2 &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
 <p>实验结果：<img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/2.png"></p>
 <p>可以发现，str1经过move的处理变成了空字符串，其实在实质上，是因为string这个类中通过赋值运算符调用了，移动拷贝函数，即：str2先创建了自己的内存空间，然后把str1的内容先给str2，再把str1，的内容清空。</p>
 <img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/3.png"><img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/4.png">
@@ -472,7 +491,7 @@
 <p>但如果使用右值引用：<img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/5.png"></p>
 <img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/6.png"><img src="/2019/08/15/C-进阶学习总结-（2-7）左值和右值、左右值引用、std-move-函数/7.png">
 <p>可以发现：str1和str2是同一块内存地址，说明str2在执行赋值的时候没有创建新的空间，而是直接引用str1原有的空间，从而免除了str2创建新空间的步骤，提高了程序运行效率</p>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -677,7 +696,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -769,7 +788,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#左值和右值"><span class="nav-number">1.</span> <span class="nav-text">左值和右值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#左值引用和右值引用"><span class="nav-number">2.</span> <span class="nav-text">左值引用和右值引用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#前置运算符和后置运算符"><span class="nav-number">2.1.</span> <span class="nav-text">前置运算符和后置运算符</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#右值引用的作用"><span class="nav-number">3.</span> <span class="nav-text">右值引用的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#std-move函数"><span class="nav-number">4.</span> <span class="nav-text">std::move函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#示例："><span class="nav-number">4.1.</span> <span class="nav-text">示例：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#左值和右值"><span class="nav-number">1.</span> <span class="nav-text">¶左值和右值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#左值引用和右值引用"><span class="nav-number">2.</span> <span class="nav-text">¶左值引用和右值引用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#前置运算符和后置运算符"><span class="nav-number">2.1.</span> <span class="nav-text">¶前置运算符和后置运算符</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#右值引用的作用"><span class="nav-number">3.</span> <span class="nav-text">¶右值引用的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#std-move函数"><span class="nav-number">4.</span> <span class="nav-text">¶std::move函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#示例："><span class="nav-number">4.1.</span> <span class="nav-text">¶示例：</span></a></li></ol></li></ol></div>
             
 
           </div>

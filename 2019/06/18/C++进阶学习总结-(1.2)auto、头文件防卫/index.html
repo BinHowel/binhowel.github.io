@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="Auto auto：变量的自动类型推断。 可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（声明时要初始化） 自动推断发生在编译期间，所以使用auto不会造成程序效降低。     头文件防卫式声明 语法：  123456#ifndef _文件名_H#define _文件名_H内容#endif 为什么要用到头文件防卫式声明？ 目的：为了防止头文件中多重、重复定义内容。   情景假">
+<meta name="description" content="¶Auto  auto：变量的自动类型推断。  可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（声明时要初始化） 自动推断发生在编译期间，所以使用auto不会造成程序效降低。     ¶头文件防卫式声明  语法：  123456#ifndef _文件名_H#define _文件名_H内容#endif ¶为什么要用到头文件防卫式声明？  目的：为了防止头文件中多重、重复定义内容">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-(1.2)auto、头文件防卫">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/18/C++进阶学习总结-(1.2)auto、头文件防卫/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="Auto auto：变量的自动类型推断。 可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（声明时要初始化） 自动推断发生在编译期间，所以使用auto不会造成程序效降低。     头文件防卫式声明 语法：  123456#ifndef _文件名_H#define _文件名_H内容#endif 为什么要用到头文件防卫式声明？ 目的：为了防止头文件中多重、重复定义内容。   情景假">
+<meta property="og:description" content="¶Auto  auto：变量的自动类型推断。  可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（声明时要初始化） 自动推断发生在编译期间，所以使用auto不会造成程序效降低。     ¶头文件防卫式声明  语法：  123456#ifndef _文件名_H#define _文件名_H内容#endif ¶为什么要用到头文件防卫式声明？  目的：为了防止头文件中多重、重复定义内容">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/18/C++进阶学习总结-(1.2)auto、头文件防卫/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/18/C++进阶学习总结-(1.2)auto、头文件防卫/2.png">
 <meta property="og:updated_time" content="2019-06-19T16:29:26.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-(1.2)auto、头文件防卫">
-<meta name="twitter:description" content="Auto auto：变量的自动类型推断。 可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（声明时要初始化） 自动推断发生在编译期间，所以使用auto不会造成程序效降低。     头文件防卫式声明 语法：  123456#ifndef _文件名_H#define _文件名_H内容#endif 为什么要用到头文件防卫式声明？ 目的：为了防止头文件中多重、重复定义内容。   情景假">
+<meta name="twitter:description" content="¶Auto  auto：变量的自动类型推断。  可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（声明时要初始化） 自动推断发生在编译期间，所以使用auto不会造成程序效降低。     ¶头文件防卫式声明  语法：  123456#ifndef _文件名_H#define _文件名_H内容#endif ¶为什么要用到头文件防卫式声明？  目的：为了防止头文件中多重、重复定义内容">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/06/18/C++进阶学习总结-(1.2)auto、头文件防卫/1.png">
 
 
@@ -395,25 +395,31 @@
       
 
       
-        <h4 id="Auto"><a href="#Auto" class="headerlink" title="Auto"></a>Auto</h4><ul>
-<li>auto：变量的自动类型推断。<ul>
+        <h4 id="auto"><a class="header-anchor" href="#auto">¶</a>Auto</h4>
+<ul>
+<li>auto：变量的自动类型推断。
+<ul>
 <li>可以在声明变量的时候根据变量初始值的类型自动为此变量选择匹配的类型。（<strong>声明时要初始化</strong>）</li>
 <li>自动推断发生在编译期间，所以使用auto不会造成程序效降低。</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="头文件防卫式声明"><a href="#头文件防卫式声明" class="headerlink" title="头文件防卫式声明"></a>头文件防卫式声明</h4><ul>
+<h4 id="头文件防卫式声明"><a class="header-anchor" href="#头文件防卫式声明">¶</a>头文件防卫式声明</h4>
+<ul>
 <li>语法：</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _文件名_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _文件名_H</span></span><br><span class="line"></span><br><span class="line">内容</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-<h5 id="为什么要用到头文件防卫式声明？"><a href="#为什么要用到头文件防卫式声明？" class="headerlink" title="为什么要用到头文件防卫式声明？"></a>为什么要用到头文件防卫式声明？</h5><ul>
+<h5 id="为什么要用到头文件防卫式声明？"><a class="header-anchor" href="#为什么要用到头文件防卫式声明？">¶</a>为什么要用到头文件防卫式声明？</h5>
+<ul>
 <li>目的：为了防止头文件中多重、重复定义内容。</li>
 </ul>
 <ul>
-<li><p>情景假设：</p>
+<li>
+<p>情景假设：</p>
 </li>
-<li><p>假设一个工程里面有两个个头文件.h文件。里面都有自己的内容</p>
+<li>
+<p>假设一个工程里面有两个个头文件.h文件。里面都有自己的内容</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//head1.h</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> number1 = <span class="number">8</span>；</span><br></pre></td></tr></table></figure>
 <hr>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//head2.h</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> number2 = <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
@@ -424,7 +430,8 @@
 </li>
 </ul>
 <ul>
-<li><p>假设在head2.h也include了head1.h，且在main.cpp里面也分别include了head1.h和head2.h再进行编译就会出现：</p>
+<li>
+<p>假设在head2.h也include了head1.h，且在main.cpp里面也分别include了head1.h和head2.h再进行编译就会出现：</p>
 <img src="/2019/06/18/C++进阶学习总结-(1.2)auto、头文件防卫/2.png">
 </li>
 </ul>
@@ -432,18 +439,17 @@
 <li><strong>错误原因</strong>：出现了number1重复定义的错误，为啥呢？因为在执行main.cpp文件编译的时候已经对head1.h里面的内容进行了编译定义，但到了head2.h的文件的时候又include了head1.h<strong>意味着又重复定义了一次head1.h里面的内容</strong>从而造成head1.h里的number1重复定义的错误。</li>
 </ul>
 <ul>
-<li><strong>如何解决？——对头文件进行防卫式定义</strong></li>
-<li><p>即对head1.h文件编辑</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//head1.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _HEAD1_H<span class="comment">//如果head1.h没有被定义那么就执行下面的内容</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _HEAD1_H<span class="comment">//定义head1.h</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> number1 = <span class="number">8</span>；</span><br><span class="line"></span><br><span class="line">#endif<span class="comment">//结束如果</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><strong>如何解决？----对头文件进行防卫式定义</strong></li>
+<li>即对head1.h文件编辑</li>
+</ul>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//head1.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _HEAD1_H<span class="comment">//如果head1.h没有被定义那么就执行下面的内容</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _HEAD1_H<span class="comment">//定义head1.h</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> number1 = <span class="number">8</span>；</span><br><span class="line"></span><br><span class="line">#endif<span class="comment">//结束如果</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>当main.cpp执行编译操作的时候head1.h是没有定义的。所以#ifndef下面的内容将被执行即先定义head1.h文件。但到了include&quot;head2.h&quot;的时候发现head2.h里面也有include“head1.h”但此时head1.h已经被定义了，故#ifndef不成立下面的内容就没有被执行了，从而<strong>避免了头文件重复定义的情况</strong>。</li>
 </ul>
 <ul>
-<li>当main.cpp执行编译操作的时候head1.h是没有定义的。所以#ifndef下面的内容将被执行即先定义head1.h文件。但到了include”head2.h”的时候发现head2.h里面也有include“head1.h”但此时head1.h已经被定义了，故#ifndef不成立下面的内容就没有被执行了，从而<strong>避免了头文件重复定义的情况</strong>。</li>
+<li><strong>结论</strong>：所以以后定义头文件的时候都可以进行防卫式定义然后就可以~~<strong>随便include定义的头文件了</strong>~~避免这些错误了。</li>
 </ul>
-<ul>
-<li><strong>结论</strong>：所以以后定义头文件的时候都可以进行防卫式定义然后就可以<del><strong>随便include定义的头文件了</strong></del>避免这些错误了。</li>
-</ul>
-<p>—(本文完)&lt;原创&gt;</p>
+<p>–(本文完)&lt;原创&gt;</p>
 
       
     </div>
@@ -619,7 +625,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -711,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Auto"><span class="nav-number">1.</span> <span class="nav-text">Auto</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#头文件防卫式声明"><span class="nav-number">2.</span> <span class="nav-text">头文件防卫式声明</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么要用到头文件防卫式声明？"><span class="nav-number">2.1.</span> <span class="nav-text">为什么要用到头文件防卫式声明？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#auto"><span class="nav-number">1.</span> <span class="nav-text">¶Auto</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#头文件防卫式声明"><span class="nav-number">2.</span> <span class="nav-text">¶头文件防卫式声明</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么要用到头文件防卫式声明？"><span class="nav-number">2.1.</span> <span class="nav-text">¶为什么要用到头文件防卫式声明？</span></a></li></ol></li></ol></div>
             
 
           </div>

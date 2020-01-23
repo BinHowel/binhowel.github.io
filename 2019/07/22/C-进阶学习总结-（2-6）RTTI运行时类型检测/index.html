@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="RTTI是什么RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。  C++中RTTI提供了两个操作符 dynamic_cast typeid   RTTI使用的必要条件:基类一定要包含虚函数，因为在没有虚函数的时候，类就不会创建虚函数表，导致在运行时检查的时候会获取静态的类型。即只会获得">
+<meta name="description" content="¶RTTI是什么 RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。  C++中RTTI提供了两个操作符  dynamic_cast typeid   RTTI使用的必要条件:基类一定要包含虚函数，因为在没有虚函数的时候，类就不会创建虚函数表，导致在运行时检查的时候会获取静态的类型。即只">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（2.6）RTTI运行时类型检测">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="RTTI是什么RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。  C++中RTTI提供了两个操作符 dynamic_cast typeid   RTTI使用的必要条件:基类一定要包含虚函数，因为在没有虚函数的时候，类就不会创建虚函数表，导致在运行时检查的时候会获取静态的类型。即只会获得">
+<meta property="og:description" content="¶RTTI是什么 RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。  C++中RTTI提供了两个操作符  dynamic_cast typeid   RTTI使用的必要条件:基类一定要包含虚函数，因为在没有虚函数的时候，类就不会创建虚函数表，导致在运行时检查的时候会获取静态的类型。即只">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/2.png">
@@ -100,7 +100,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:58:00.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（2.6）RTTI运行时类型检测">
-<meta name="twitter:description" content="RTTI是什么RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。  C++中RTTI提供了两个操作符 dynamic_cast typeid   RTTI使用的必要条件:基类一定要包含虚函数，因为在没有虚函数的时候，类就不会创建虚函数表，导致在运行时检查的时候会获取静态的类型。即只会获得">
+<meta name="twitter:description" content="¶RTTI是什么 RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。  C++中RTTI提供了两个操作符  dynamic_cast typeid   RTTI使用的必要条件:基类一定要包含虚函数，因为在没有虚函数的时候，类就不会创建虚函数表，导致在运行时检查的时候会获取静态的类型。即只">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/1.png">
 
 
@@ -401,9 +401,11 @@
       
 
       
-        <h4 id="RTTI是什么"><a href="#RTTI是什么" class="headerlink" title="RTTI是什么"></a>RTTI是什么</h4><p>RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。</p>
+        <h4 id="rtti是什么"><a class="header-anchor" href="#rtti是什么">¶</a>RTTI是什么</h4>
+<p>RTTI(Run Time Type Identification)运行时类型识别，它能使程序在运行时推断出基类指针或引用实际指向的内存地址是基类还是某个派生类。</p>
 <ul>
-<li>C++中RTTI提供了两个操作符<ul>
+<li>C++中RTTI提供了两个操作符
+<ul>
 <li><code>dynamic_cast</code></li>
 <li><code>typeid</code></li>
 </ul>
@@ -411,18 +413,24 @@
 <li>RTTI使用的必要条件:<strong><u>基类</u>一定要包含虚函数</strong>，因为在没有虚函数的时候，类就不会创建虚函数表，导致在运行时检查的时候会获取静态的类型。即<u>只会获得</u><strong>指针定义的类型而不是它指向的实际类型。</strong></li>
 </ul>
 <hr>
-<h4 id="dynamic-cast运算符"><a href="#dynamic-cast运算符" class="headerlink" title="dynamic_cast运算符"></a>dynamic_cast运算符</h4><ul>
-<li>作用：能将基类的指针或者引用<strong>安全地<u>转换</u></strong>为<strong>派生类的指针或引用</strong>。</li>
+<h4 id="dynamic-cast运算符"><a class="header-anchor" href="#dynamic-cast运算符">¶</a>dynamic_cast运算符</h4>
+<ul>
+<li>作用：能将基类的指针或者引用<strong>安全地<u>转换</u><strong>为</strong>派生类的指针或引用</strong>。</li>
 <li>代码定义：<code>dynamic_cast&lt;目标类型&gt;(目标数据)</code></li>
 </ul>
-<h5 id="指针转换"><a href="#指针转换" class="headerlink" title="指针转换"></a>指针转换</h5><ul>
-<li><p>如果转换<strong>成功</strong>：结果会返回一个<u>正确的指针</u></p>
+<h5 id="指针转换"><a class="header-anchor" href="#指针转换">¶</a>指针转换</h5>
+<ul>
+<li>
+<p>如果转换<strong>成功</strong>：结果会返回一个<u>正确的指针</u></p>
 </li>
-<li><p>如果转换<strong>失败</strong>：会返回一个<u>空指针</u></p>
+<li>
+<p>如果转换<strong>失败</strong>：会返回一个<u>空指针</u></p>
 <ul>
-<li><p>代码演示：</p>
+<li>
+<p>代码演示：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"人们在工作"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">teacher</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"老师在讲课"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"学生在学习"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    student* s1 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    student* s2 = <span class="keyword">dynamic_cast</span>&lt;student* &gt;(p2);<span class="comment">//把基类指针安全的转换为子类指针</span></span><br><span class="line">    s2-&gt;work();</span><br><span class="line">    </span><br><span class="line">    teacher* t1 = <span class="keyword">dynamic_cast</span>&lt;teacher*&gt;(p2);<span class="comment">//转化失败返回的是空指针</span></span><br><span class="line">	<span class="keyword">if</span> (t1 == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"t1是空指针"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"人们在工作"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">teacher</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"老师在讲课"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"学生在学习"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    student* s1 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    student* s2 = <span class="keyword">dynamic_cast</span>&lt;student* &gt;(p2);<span class="comment">//把基类指针安全的转换为子类指针</span></span><br><span class="line">    s2-&gt;work();</span><br><span class="line">    </span><br><span class="line">    teacher* t1 = <span class="keyword">dynamic_cast</span>&lt;teacher*&gt;(p2);<span class="comment">//转化失败返回的是空指针</span></span><br><span class="line">	<span class="keyword">if</span> (t1 == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"t1是空指针"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -430,27 +438,34 @@
 </li>
 </ul>
 <ul>
-<li><p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/1.png"></p>
+<li>
+<p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/1.png"></p>
 </li>
-<li><p><strong>结论</strong>：从实例可以发现，<code>dynamic_cast</code>的使条件是基类含有虚函数的，且如果转换失败那么会获得一个空指针，转换成功会获得正确的指针。</p>
+<li>
+<p><strong>结论</strong>：从实例可以发现，<code>dynamic_cast</code>的使条件是基类含有虚函数的，且如果转换失败那么会获得一个空指针，转换成功会获得正确的指针。</p>
+</li>
+<li>
+<p>如果基类中不含有虚函数那么会出错</p>
+<ul>
+<li>
+<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/2.png">
 </li>
 </ul>
-<ul>
-<li><p>如果基类中不含有虚函数那么会出错</p>
-<ul>
-<li><img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/2.png">
 </li>
 </ul>
-</li>
-</ul>
-<h5 id="引用转换"><a href="#引用转换" class="headerlink" title="引用转换"></a>引用转换</h5><ul>
-<li><p>注意：与指针不同的是如果引用用<code>dynamic_cast</code>进行转换并且转换失败会抛出一个<code>std::bad_cast</code>异常(因为不存在空引用所以会抛出异常)可以用try catch语句进行捕获。</p>
+<h5 id="引用转换"><a class="header-anchor" href="#引用转换">¶</a>引用转换</h5>
 <ul>
-<li><p>代码演示：</p>
+<li>
+<p>注意：与指针不同的是如果引用用<code>dynamic_cast</code>进行转换并且转换失败会抛出一个<code>std::bad_cast</code>异常(因为不存在空引用所以会抛出异常)可以用try catch语句进行捕获。</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    person&amp; p3 = *p1;</span><br><span class="line">    </span><br><span class="line">    teacher&amp; t2 = <span class="keyword">dynamic_cast</span>&lt;teacher&amp;&gt;(p3);</span><br><span class="line">    t2.work();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        student&amp; s3 = <span class="keyword">dynamic_cast</span>&lt;student&amp;&gt;(p3);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"没出异常！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;<span class="keyword">catch</span>(<span class="built_in">std</span>::bad_cast)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"出异常了！！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>代码演示：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    person&amp; p3 = *p1;</span><br><span class="line">    </span><br><span class="line">    teacher&amp; t2 = <span class="keyword">dynamic_cast</span>&lt;teacher&amp;&gt;(p3);</span><br><span class="line">    t2.work();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        student&amp; s3 = <span class="keyword">dynamic_cast</span>&lt;student&amp;&gt;(p3);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"没出异常！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;<span class="keyword">catch</span>(<span class="built_in">std</span>::bad_cast)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"出异常了！！"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/3.png"></p>
+<li>
+<p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/3.png"></p>
 </li>
 </ul>
 </li>
@@ -458,53 +473,70 @@
 </li>
 </ul>
 <hr>
-<h4 id="typeid运算符"><a href="#typeid运算符" class="headerlink" title="typeid运算符"></a>typeid运算符</h4><ul>
-<li><p>作用：<u><strong>返回</strong></u>指针或者引用所指向对象地址的<strong>实际类型</strong>，<u>实际上该函数会返回一个type_info类对象</u>。</p>
-</li>
-<li><p>代码定义：<code>typeid(表达式)</code></p>
+<h4 id="typeid运算符"><a class="header-anchor" href="#typeid运算符">¶</a>typeid运算符</h4>
 <ul>
-<li><p>代码演示:</p>
+<li>
+<p>作用：<u><strong>返回</strong></u>指针或者引用所指向对象地址的<strong>实际类型</strong>，<u>实际上该函数会返回一个type_info类对象</u>。</p>
+</li>
+<li>
+<p>代码定义：<code>typeid(表达式)</code></p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"人们在工作"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">teacher</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"老师在讲课"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"学生在学习"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(p1).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(p2).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/4.png"></p>
-</li>
-<li><p><strong>发现问题</strong>:咦？为什么返回的是<code>class person*</code>？，答案很明显：因为p1和p2的实际类型就是<code>person*</code>如果:</p>
+<li>
+<p>代码演示:</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(*p1).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(*p2).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"人们在工作"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">teacher</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"老师在讲课"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>:</span><span class="keyword">public</span> person&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">work</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"学生在学习"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(p1).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(p2).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/5.png"></p>
+<li>
+<p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/4.png"></p>
 </li>
-<li><p>因为<code>*p1</code>和<code>*p2</code>的实际类型才是teacher和student</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>从上面可以发现：<code>typeid</code>主要目的是为了比较两个指针是否指向同一种类型的对象</p>
-</li>
-<li><p>例如：</p>
+<li>
+<p><strong>发现问题</strong>:咦？为什么返回的是<code>class person*</code>？，答案很明显：因为p1和p2的实际类型就是<code>person*</code>如果:</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeid</span>(p1) == <span class="keyword">typeid</span>(p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"p1和p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">typeid</span>(*p1) == <span class="keyword">typeid</span>(*p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型不相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(*p1).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(*p2).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果: <img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/6.png"></p>
+</ul>
+</li>
+<li>
+<p>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/5.png"></p>
+</li>
+<li>
+<p>因为<code>*p1</code>和<code>*p2</code>的实际类型才是teacher和student</p>
+</li>
+</ul>
+</li>
+<li>
+<p>从上面可以发现：<code>typeid</code>主要目的是为了比较两个指针是否指向同一种类型的对象</p>
+</li>
+<li>
+<p>例如：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeid</span>(p1) == <span class="keyword">typeid</span>(p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"p1和p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">typeid</span>(*p1) == <span class="keyword">typeid</span>(*p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型不相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实验结果: <img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/6.png"></p>
 </li>
 </ul>
 </li>
 </ul>
-<h5 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h5><h6 id="typeid的实质"><a href="#typeid的实质" class="headerlink" title="typeid的实质"></a>typeid的实质</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(<span class="string">"ShuHao"</span>).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(<span class="number">100</span>).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(<span class="number">12.345</span>).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="补充："><a class="header-anchor" href="#补充：">¶</a>补充：</h5>
+<h6 id="typeid的实质"><a class="header-anchor" href="#typeid的实质">¶</a>typeid的实质</h6>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(<span class="string">"ShuHao"</span>).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(<span class="number">100</span>).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">typeid</span>(<span class="number">12.345</span>).name() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>实验结果: <img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/7.png"></li>
 </ul>
-<h6 id="没有虚函数的情况："><a href="#没有虚函数的情况：" class="headerlink" title="没有虚函数的情况："></a>没有虚函数的情况：</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeid</span>(p1) == <span class="keyword">typeid</span>(p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"p1和p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">typeid</span>(*p1) == <span class="keyword">typeid</span>(*p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型不相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="没有虚函数的情况："><a class="header-anchor" href="#没有虚函数的情况：">¶</a>没有虚函数的情况：</h6>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person* p1 = <span class="keyword">new</span> teacher;</span><br><span class="line">    person* p2 = <span class="keyword">new</span> student;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeid</span>(p1) == <span class="keyword">typeid</span>(p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"p1和p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">typeid</span>(*p1) == <span class="keyword">typeid</span>(*p2))&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="built_in">cout</span> &lt;&lt; <span class="string">"*p1和*p2类型不相同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>实验结果:<img src="/2019/07/22/C-进阶学习总结-（2-6）RTTI运行时类型检测/8.png"></li>
 <li>可以发现 <code>*p1</code>和<code>*p2</code>此时在没有虚函数的情况下类型也相同了。原因很明显：因为没有虚函数表，会默认认为是定义时的类型也就是<code>person*</code></li>
 <li><strong>结论</strong>：要使RTTI机制能正常的使用，基类<strong>一定要含有虚函数</strong>。</li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -709,7 +741,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -801,7 +833,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#RTTI是什么"><span class="nav-number">1.</span> <span class="nav-text">RTTI是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dynamic-cast运算符"><span class="nav-number">2.</span> <span class="nav-text">dynamic_cast运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指针转换"><span class="nav-number">2.1.</span> <span class="nav-text">指针转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引用转换"><span class="nav-number">2.2.</span> <span class="nav-text">引用转换</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typeid运算符"><span class="nav-number">3.</span> <span class="nav-text">typeid运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#补充："><span class="nav-number">3.1.</span> <span class="nav-text">补充：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#typeid的实质"><span class="nav-number">3.1.1.</span> <span class="nav-text">typeid的实质</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#没有虚函数的情况："><span class="nav-number">3.1.2.</span> <span class="nav-text">没有虚函数的情况：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#rtti是什么"><span class="nav-number">1.</span> <span class="nav-text">¶RTTI是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dynamic-cast运算符"><span class="nav-number">2.</span> <span class="nav-text">¶dynamic_cast运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指针转换"><span class="nav-number">2.1.</span> <span class="nav-text">¶指针转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引用转换"><span class="nav-number">2.2.</span> <span class="nav-text">¶引用转换</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typeid运算符"><span class="nav-number">3.</span> <span class="nav-text">¶typeid运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#补充："><span class="nav-number">3.1.</span> <span class="nav-text">¶补充：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#typeid的实质"><span class="nav-number">3.1.1.</span> <span class="nav-text">¶typeid的实质</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#没有虚函数的情况："><span class="nav-number">3.1.2.</span> <span class="nav-text">¶没有虚函数的情况：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

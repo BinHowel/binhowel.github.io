@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="For循环新特性： 可以使用for语句进行遍历数组（c++11新特性）  123456789101112131415#include&amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;    int nums[] = &amp;#123;1,2,5,6,8,21&amp;#125;;    int nums2[]&amp;#123;33,1,75,45&amp;#125;;//">
+<meta name="description" content="¶For循环新特性：   可以使用for语句进行遍历数组（c++11新特性）   123456789101112131415#include&amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;    int nums[] = &amp;#123;1,2,5,6,8,21&amp;#125;;    int nums2[]&amp;#123;33,1,75,45&amp;#125">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（1.3）范围for语句、动态分配、nullptr">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/21/C++进阶学习总结-（1-3）范围for语句，动态分配/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="For循环新特性： 可以使用for语句进行遍历数组（c++11新特性）  123456789101112131415#include&amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;    int nums[] = &amp;#123;1,2,5,6,8,21&amp;#125;;    int nums2[]&amp;#123;33,1,75,45&amp;#125;;//">
+<meta property="og:description" content="¶For循环新特性：   可以使用for语句进行遍历数组（c++11新特性）   123456789101112131415#include&amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;    int nums[] = &amp;#123;1,2,5,6,8,21&amp;#125;;    int nums2[]&amp;#123;33,1,75,45&amp;#125">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/21/C++进阶学习总结-（1-3）范围for语句，动态分配/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/21/C++进阶学习总结-（1-3）范围for语句，动态分配/2.png">
@@ -98,7 +98,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:56:46.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（1.3）范围for语句、动态分配、nullptr">
-<meta name="twitter:description" content="For循环新特性： 可以使用for语句进行遍历数组（c++11新特性）  123456789101112131415#include&amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;    int nums[] = &amp;#123;1,2,5,6,8,21&amp;#125;;    int nums2[]&amp;#123;33,1,75,45&amp;#125;;//">
+<meta name="twitter:description" content="¶For循环新特性：   可以使用for语句进行遍历数组（c++11新特性）   123456789101112131415#include&amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;    int nums[] = &amp;#123;1,2,5,6,8,21&amp;#125;;    int nums2[]&amp;#123;33,1,75,45&amp;#125">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/06/21/C++进阶学习总结-（1-3）范围for语句，动态分配/1.png">
 
 
@@ -399,55 +399,101 @@
       
 
       
-        <h4 id="For循环新特性："><a href="#For循环新特性：" class="headerlink" title="For循环新特性："></a>For循环新特性：</h4><ul>
-<li><p>可以使用for语句进行遍历数组（c++11新特性）</p>
+        <h4 id="for循环新特性："><a class="header-anchor" href="#for循环新特性：">¶</a>For循环新特性：</h4>
+<ul>
+<li>
+<p>可以使用for语句进行遍历数组（c++11新特性）</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> nums[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">21</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> nums2[]&#123;<span class="number">33</span>,<span class="number">1</span>,<span class="number">75</span>,<span class="number">45</span>&#125;;<span class="comment">//数组的新定义方法。</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> x:nums)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//auto自动判断数组类型。</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> x:nums2)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> nums[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">21</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> nums2[]&#123;<span class="number">33</span>,<span class="number">1</span>,<span class="number">75</span>,<span class="number">45</span>&#125;;<span class="comment">//数组的新定义方法。</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> x:nums)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//auto自动判断数组类型。</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> x:nums2)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>运行效果： <img src="/2019/06/21/C++进阶学习总结-（1-3）范围for语句，动态分配/1.png"></p>
+<li>
+<p>运行效果： <img src="/2019/06/21/C++进阶学习总结-（1-3）范围for语句，动态分配/1.png"></p>
 </li>
 </ul>
-<h5 id="优化："><a href="#优化：" class="headerlink" title="优化："></a>优化：</h5><ul>
-<li><p>很显然通过这个for循环遍历数组是用过把数组内的每一个元素复制进x里面进行输出的。这里的复制操作将消耗一部分的效率。为提高程序运行效率这里可以采用<strong>引用</strong>来进行遍历。</p>
+<h5 id="优化："><a class="header-anchor" href="#优化：">¶</a>优化：</h5>
+<ul>
+<li>
+<p>很显然通过这个for循环遍历数组是用过把数组内的每一个元素复制进x里面进行输出的。这里的复制操作将消耗一部分的效率。为提高程序运行效率这里可以采用<strong>引用</strong>来进行遍历。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span>&amp;x : nums)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span>&amp;x : nums)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
-<h4 id="动态分配内存基本概念："><a href="#动态分配内存基本概念：" class="headerlink" title="动态分配内存基本概念："></a>动态分配内存基本概念：</h4><ol>
-<li><p>简述c语言与c++语言的内存分配不同：</p>
+<h4 id="动态分配内存基本概念："><a class="header-anchor" href="#动态分配内存基本概念：">¶</a>动态分配内存基本概念：</h4>
+<ol>
+<li>
+<p>简述c语言与c++语言的内存分配不同：</p>
 <ul>
-<li>| C语言                          | C++语言                                     |<br>| ——————————————— | —————————————————————- |<br>| 程序区、静态存储区、动态存储区 | 堆、栈、全局/静态区、常量存储区、程序代码区 |</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>C语言</th>
+<th>C++语言</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>程序区、静态存储区、动态存储区</td>
+<td>堆、栈、全局/静态区、常量存储区、程序代码区</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
-<li><p>其中C++语言：</p>
+<li>
+<p>其中C++语言：</p>
 <ul>
-<li><p>栈：一般函数内的局部变量都会存在这。例如 int a = 4 此时这个a就是存储在栈区的（由编译器自动完成分配和释放，<strong>速度快</strong>，<strong>有限</strong>）。</p>
+<li>
+<p>栈：一般函数内的局部变量都会存在这。例如 int a = 4 此时这个a就是存储在栈区的（由编译器自动完成分配和释放，<strong>速度快</strong>，<strong>有限</strong>）。</p>
 </li>
-<li><p>堆：由程序员自己分配和释放。用new/malloc分配，delete/free释放。忘记释放后，<strong>当程序结束后才会被系统收回</strong>。</p>
+<li>
+<p>堆：由程序员自己分配和释放。用new/malloc分配，delete/free释放。忘记释放后，<strong>当程序结束后才会被系统收回</strong>。</p>
 </li>
-<li><p>全局/静态存储区：存储全局变量和static变量，程序结束后被回收。</p>
+<li>
+<p>全局/静态存储区：存储全局变量和static变量，程序结束后被回收。</p>
 </li>
-<li><p>常量存储区： const定义的和一些字符串。</p>
+<li>
+<p>常量存储区： const定义的和一些字符串。</p>
 </li>
-<li><p>程序代码区</p>
+<li>
+<p>程序代码区</p>
 <p>堆和栈的不同用途和区别</p>
 </li>
 </ul>
-<p>| 栈                                       | 堆                                                           |<br>| ———————————————————— | —————————————————————————————— |<br>| <strong>空间有限</strong>，分配速度快，程序员控制不了 | 只要不超出时间拥有的物理内存，也在操作系统运行你嫩功能分配最大内存大小之内，都可以分配。分配速度慢，好处是灵活。随时分配随时释放。 |</p>
-<p><br></p>
+<table>
+<thead>
+<tr>
+<th>栈</th>
+<th>堆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>空间有限</strong>，分配速度快，程序员控制不了</td>
+<td>只要不超出时间拥有的物理内存，也在操作系统运行你嫩功能分配最大内存大小之内，都可以分配。分配速度慢，好处是灵活。随时分配随时释放。</td>
+</tr>
+</tbody>
+</table>
+<br>
 </li>
-<li><p>malloc和free</p>
+<li>
+<p>malloc和free</p>
 <ul>
 <li>这两个是c语言中对内存动态处理的<strong>函数</strong>（c++中的new和delete是关键字）</li>
-<li><code>void *malloc(int Numbytes)</code>:<ul>
+<li><code>void *malloc(int Numbytes)</code>:
+<ul>
 <li>Numbytes:要分配的字节数。分配成功返回被分配内存的指针，分配失败则返回NULL；</li>
 </ul>
 </li>
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* p  = <span class="built_in">malloc</span>()</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p><code>void free (void *FirstByte)</code>:</p>
+<li>
+<p><code>void free (void *FirstByte)</code>:</p>
 <ul>
 <li>将之前malloc分配的内存空间还给程序。</li>
 </ul>
@@ -457,7 +503,8 @@
 <hr>
 </li>
 </ol>
-<h6 id="补充：字符串拷贝函数"><a href="#补充：字符串拷贝函数" class="headerlink" title="补充：字符串拷贝函数"></a>补充：字符串拷贝函数</h6><ul>
+<h6 id="补充：字符串拷贝函数"><a class="header-anchor" href="#补充：字符串拷贝函数">¶</a>补充：字符串拷贝函数</h6>
+<ul>
 <li><code>strcpy(char*p,char*s)</code>与<code>strcpy_s(char*p,int size,char*s)</code></li>
 <li>strcpy()函数不安全：当指针s的字符串的长度大于指针p分配的内存时仍然继续往里进行拷贝字符串且不报错，使程序变的不再稳定。</li>
 <li>strcpy_s()函数给定了一个size来限定指针s的长度，如果实际指针s的字符串长度大于size那么程序就会弹窗报错。</li>
@@ -477,22 +524,27 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span>* p = <span class="literal">NULL</span>;</span><br><span class="line">	p = (<span class="keyword">char</span>*) <span class="built_in">malloc</span>(<span class="number">20</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line">	strcpy_s(p, <span class="number">20</span>,<span class="string">"Hello ShuHaoHwang"</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; p &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>正常运行</strong>：<img src="/2019/06/21/C++进阶学习总结-（1-3）范围for语句，动态分配/4.png"></p>
 <hr>
-<h5 id="new和delete"><a href="#new和delete" class="headerlink" title="new和delete"></a>new和delete</h5><ul>
+<h5 id="new和delete"><a class="header-anchor" href="#new和delete">¶</a>new和delete</h5>
+<ul>
 <li>new/delete和malloc/free一样干了同样的事——分配和释放空间，同时new，delete还干了更多事情。</li>
 <li><strong>new与delete配对使用。malloc与free配对使用</strong>。</li>
 <li><strong>不要重复释放指针</strong>。</li>
 </ul>
 <ul>
-<li>new的一般使用格式：<ul>
-<li>指针变量名 = new 类型;<ul>
+<li>new的一般使用格式：
+<ul>
+<li>指针变量名 = new 类型;
+<ul>
 <li><code>int* p = new int;</code></li>
 </ul>
 </li>
-<li>指针类型名 = new 类型(初始值)；<ul>
+<li>指针类型名 = new 类型(初始值)；
+<ul>
 <li><code>int* p= new int(2);</code>//给初始值</li>
 </ul>
 </li>
-<li>指针类型名 = new 类型[内存单元个数] (数组);<ul>
+<li>指针类型名 = new 类型[内存单元个数] (数组);
+<ul>
 <li><code>int* p = new int[10];</code></li>
 </ul>
 </li>
@@ -500,7 +552,7 @@
 </li>
 </ul>
 <p><u><font color="red"><strong>注意:</strong></font>当用指针分配一个数组的时候用 <strong>delete[] 指针名</strong></u></p>
-<h5 id="mallo-free与new-delete的区别："><a href="#mallo-free与new-delete的区别：" class="headerlink" title="mallo/free与new/delete的区别："></a>mallo/free与new/delete的区别：</h5><div class="table-container">
+<h5 id="mallo-free与new-delete的区别："><a class="header-anchor" href="#mallo-free与new-delete的区别：">¶</a>mallo/free与new/delete的区别：</h5>
 <table>
 <thead>
 <tr>
@@ -515,9 +567,9 @@
 </tr>
 </tbody>
 </table>
-</div>
 <hr>
-<h4 id="nullptr："><a href="#nullptr：" class="headerlink" title="nullptr："></a>nullptr：</h4><ul>
+<h4 id="nullptr："><a class="header-anchor" href="#nullptr：">¶</a>nullptr：</h4>
+<ul>
 <li>nullptr是意为<strong>空<u>指针</u></strong>。先看一段代码：</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>* a = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span>* b = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span>* c = <span class="literal">nullptr</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"0 == NULL?   "</span> &lt;&lt; (a == b) &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">		&lt;&lt; <span class="string">"0 == nullptr?   "</span> &lt;&lt; (a == c) &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">		&lt;&lt; <span class="string">"NULL == nullptr?    "</span> &lt;&lt; (b == c) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -536,8 +588,9 @@
 <li>实际用法：在重载函数时nullptr会被识别成指针从而调用指针类型的重载</li>
 </ul>
 <hr>
-<h5 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h5><p>对于指针的初始化，以往用到和指针有关的NULL的场合，能用nullptr的大家全部用nullptr取代NULL。</p>
-<p>—（本文完）&lt;原创&gt;</p>
+<h5 id="结论："><a class="header-anchor" href="#结论：">¶</a>结论：</h5>
+<p>对于指针的初始化，以往用到和指针有关的NULL的场合，能用nullptr的大家全部用nullptr取代NULL。</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -713,7 +766,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -805,7 +858,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#For循环新特性："><span class="nav-number">1.</span> <span class="nav-text">For循环新特性：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优化："><span class="nav-number">1.1.</span> <span class="nav-text">优化：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态分配内存基本概念："><span class="nav-number">2.</span> <span class="nav-text">动态分配内存基本概念：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#补充：字符串拷贝函数"><span class="nav-number">2.0.1.</span> <span class="nav-text">补充：字符串拷贝函数</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#new和delete"><span class="nav-number">2.1.</span> <span class="nav-text">new和delete</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mallo-free与new-delete的区别："><span class="nav-number">2.2.</span> <span class="nav-text">mallo/free与new/delete的区别：</span></a></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#nullptr："><span class="nav-number">3.</span> <span class="nav-text">nullptr：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#结论："><span class="nav-number">3.1.</span> <span class="nav-text">结论：</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#for循环新特性："><span class="nav-number">1.</span> <span class="nav-text">¶For循环新特性：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优化："><span class="nav-number">1.1.</span> <span class="nav-text">¶优化：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态分配内存基本概念："><span class="nav-number">2.</span> <span class="nav-text">¶动态分配内存基本概念：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#补充：字符串拷贝函数"><span class="nav-number">2.0.1.</span> <span class="nav-text">¶补充：字符串拷贝函数</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#new和delete"><span class="nav-number">2.1.</span> <span class="nav-text">¶new和delete</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mallo-free与new-delete的区别："><span class="nav-number">2.2.</span> <span class="nav-text">¶mallo/free与new/delete的区别：</span></a></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#nullptr："><span class="nav-number">3.</span> <span class="nav-text">¶nullptr：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#结论："><span class="nav-number">3.1.</span> <span class="nav-text">¶结论：</span></a></li></ol></li></div>
             
 
           </div>

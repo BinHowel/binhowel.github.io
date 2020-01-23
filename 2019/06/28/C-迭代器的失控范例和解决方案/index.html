@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="迭代器失控范例情形一： 很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对vector容器进行push_back()操作、对vector容器进行插入操作、删除操作。都会使end()函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。  例如：  1234567891011vector&amp;lt;int&amp;gt; ar">
+<meta name="description" content="¶迭代器失控范例 ¶情形一：   很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对vector容器进行push_back()操作、对vector容器进行插入操作、删除操作。都会使end()函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。   例如：   1234567891011vector&amp;lt;int">
 <meta name="keywords" content="C++,技术类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++迭代器的失控范例和解决方案">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/28/C-迭代器的失控范例和解决方案/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="迭代器失控范例情形一： 很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对vector容器进行push_back()操作、对vector容器进行插入操作、删除操作。都会使end()函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。  例如：  1234567891011vector&amp;lt;int&amp;gt; ar">
+<meta property="og:description" content="¶迭代器失控范例 ¶情形一：   很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对vector容器进行push_back()操作、对vector容器进行插入操作、删除操作。都会使end()函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。   例如：   1234567891011vector&amp;lt;int">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/28/C-迭代器的失控范例和解决方案/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/28/C-迭代器的失控范例和解决方案/2.png">
@@ -98,7 +98,7 @@
 <meta property="og:updated_time" content="2019-06-28T10:41:17.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++迭代器的失控范例和解决方案">
-<meta name="twitter:description" content="迭代器失控范例情形一： 很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对vector容器进行push_back()操作、对vector容器进行插入操作、删除操作。都会使end()函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。  例如：  1234567891011vector&amp;lt;int&amp;gt; ar">
+<meta name="twitter:description" content="¶迭代器失控范例 ¶情形一：   很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对vector容器进行push_back()操作、对vector容器进行插入操作、删除操作。都会使end()函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。   例如：   1234567891011vector&amp;lt;int">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/06/28/C-迭代器的失控范例和解决方案/1.png">
 
 
@@ -388,78 +388,105 @@
       
 
       
-        <h4 id="迭代器失控范例"><a href="#迭代器失控范例" class="headerlink" title="迭代器失控范例"></a>迭代器失控范例</h4><h5 id="情形一："><a href="#情形一：" class="headerlink" title="情形一："></a>情形一：</h5><ul>
-<li><p>很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对<code>vector</code>容器进行<code>push_back()</code>操作、对<code>vector</code>容器进行插入操作、删除操作。都会使<code>end()</code>函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。</p>
-</li>
-<li><p>例如：</p>
+        <h4 id="迭代器失控范例"><a class="header-anchor" href="#迭代器失控范例">¶</a>迭代器失控范例</h4>
+<h5 id="情形一："><a class="header-anchor" href="#情形一：">¶</a>情形一：</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//或者下面这种情况</span></span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.insert(<span class="number">1</span>,<span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>很多在使用迭代器类型进行遍历容器的操作进行对容器容量的变化都会导致迭代器的失控，即输出错误的值。例如：要对<code>vector</code>容器进行<code>push_back()</code>操作、对<code>vector</code>容器进行插入操作、删除操作。都会使<code>end()</code>函数返回的迭代器类型位置错乱，导致出现可能会修改未被使用内存的风险，从而使程序崩溃。</p>
 </li>
-<li><p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/1.png"></p>
+<li>
+<p>例如：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//或者下面这种情况</span></span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.insert(<span class="number">1</span>,<span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/1.png"></p>
 </li>
 </ul>
 </li>
-<li><p>在一般情况下，如果只是要对容器进行添加一个元素，可以使用下面的方法。</p>
+<li>
+<p>在一般情况下，如果只是要对容器进行添加一个元素，可以使用下面的方法。</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">break</span>;<span class="comment">//添加元素后直接跳出</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//再进行一次迭代器遍历</span></span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">break</span>;<span class="comment">//添加元素后直接跳出</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//再进行一次迭代器遍历</span></span><br><span class="line"><span class="keyword">for</span>(iter;iter!=arrays.end();iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/2.png"></p>
+<li>
+<p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/2.png"></p>
 </li>
 </ul>
 </li>
-<li><p>如果真的在实际项目中要进行在迭代器遍历容器的时候对容器多次进行增添内容，可以使用下面的方法。</p>
+<li>
+<p>如果真的在实际项目中要进行在迭代器遍历容器的时候对容器多次进行增添内容，可以使用下面的方法。</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span><span class="comment">//用来控制插入次数（循环次数）</span></span><br><span class="line">    <span class="keyword">while</span>(iter != arrays.end())&#123;</span><br><span class="line">        iter = arrays.insert(iter,<span class="number">100</span>);</span><br><span class="line">        <span class="keyword">if</span>(i &gt; <span class="number">5</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        </span><br><span class="line">        iter++;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span><span class="comment">//用来控制插入次数（循环次数）</span></span><br><span class="line">    <span class="keyword">while</span>(iter != arrays.end())&#123;</span><br><span class="line">        iter = arrays.insert(iter,<span class="number">100</span>);</span><br><span class="line">        <span class="keyword">if</span>(i &gt; <span class="number">5</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        </span><br><span class="line">        iter++;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/3.png"></p>
+<li>
+<p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/3.png"></p>
 </li>
-<li><p><strong>实现思路:</strong>因为<code>arrays.insert()</code>的返回值是一个迭代器类型，所以在循环中不断刷新循环的起始位置(因为是前插，所以<code>end()</code>的值没有发生变化)。多次更新迭代器的起始<code>begin()</code>的值，从而使迭代器类型的指向不会失控。</p>
+<li>
+<p>**实现思路:**因为<code>arrays.insert()</code>的返回值是一个迭代器类型，所以在循环中不断刷新循环的起始位置(因为是前插，所以<code>end()</code>的值没有发生变化)。多次更新迭代器的起始<code>begin()</code>的值，从而使迭代器类型的指向不会失控。</p>
 </li>
 </ul>
 </li>
-<li><p>同样的如果使用<code>push_back()</code>:</p>
+<li>
+<p>同样的如果使用<code>push_back()</code>:</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span><span class="comment">//用来控制插入次数（循环次数）</span></span><br><span class="line">    <span class="keyword">while</span>(iter != arrays.end())&#123;</span><br><span class="line">        </span><br><span class="line">        arrays.push_back(<span class="number">100</span>);<span class="comment">//不断更新iter的值起始</span></span><br><span class="line">        iter = arrays.begin()</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">if</span>(i &gt; <span class="number">5</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        </span><br><span class="line">        iter++;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span><span class="comment">//用来控制插入次数（循环次数）</span></span><br><span class="line">    <span class="keyword">while</span>(iter != arrays.end())&#123;</span><br><span class="line">        </span><br><span class="line">        arrays.push_back(<span class="number">100</span>);<span class="comment">//不断更新iter的值起始</span></span><br><span class="line">        iter = arrays.begin()</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">if</span>(i &gt; <span class="number">5</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        </span><br><span class="line">        iter++;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/4.png"></p>
+<li>
+<p>实验结果：<img src="/2019/06/28/C-迭代器的失控范例和解决方案/4.png"></p>
 </li>
 </ul>
 </li>
-<li><p><strong>总体：</strong>即每对容器的容量进行变化一次便刷新迭代器的值。使其成为新的迭代器进行操作，就可以避免容器的失控。<strong><em>弊端</em></strong>：麻烦，代码较繁杂。</p>
+<li>
+<p>**总体：**即每对容器的容量进行变化一次便刷新迭代器的值。使其成为新的迭代器进行操作，就可以避免容器的失控。<strong><em>弊端</em></strong>：麻烦，代码较繁杂。</p>
 </li>
 </ul>
 <hr>
-<h5 id="情形二："><a href="#情形二：" class="headerlink" title="情形二："></a>情形二：</h5><ul>
-<li>如果在某个时候要对容器进行清空操作，多数下使用容器自带的<code>clear()</code>函数即可。但在某些特殊情况下，要对<code>vector</code>容器的某些元素进行删除，就得使用容器自带的`</li>
-</ul>
-<p>  `函数。但是这样做就是对容器容量进行修改操作，会使迭代器指向失控。</p>
+<h5 id="情形二："><a class="header-anchor" href="#情形二：">¶</a>情形二：</h5>
 <ul>
-<li><p>例如：</p>
+<li>
+<p>如果在某个时候要对容器进行清空操作，多数下使用容器自带的<code>clear()</code>函数即可。但在某些特殊情况下，要对<code>vector</code>容器的某些元素进行删除，就得使用容器自带的`</p>
+<p>`函数。但是这样做就是对容器容量进行修改操作，会使迭代器指向失控。</p>
+</li>
+<li>
+<p>例如：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    arrays.erase(iter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    arrays.erase(iter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>使用结果<img src="/2019/06/28/C-迭代器的失控范例和解决方案/5.png"></p>
+<li>
+<p>使用结果<img src="/2019/06/28/C-迭代器的失控范例和解决方案/5.png"></p>
 </li>
 </ul>
 </li>
-<li><p>如果真的要进行这样的操作可以这样做：</p>
+<li>
+<p>如果真的要进行这样的操作可以这样做：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(iter != arrays.end())&#123;</span><br><span class="line">    iter = arrays.erase(iter);<span class="comment">//直接让erase函数来更新迭代器指向的位置</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for版</span></span><br><span class="line"><span class="keyword">for</span>(iter; iter != arrays.end(); )&#123;</span><br><span class="line">    iter = arrays.erase(iter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(iter != arrays.end())&#123;</span><br><span class="line">    iter = arrays.erase(iter);<span class="comment">//直接让erase函数来更新迭代器指向的位置</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for版</span></span><br><span class="line"><span class="keyword">for</span>(iter; iter != arrays.end(); )&#123;</span><br><span class="line">    iter = arrays.erase(iter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果： <img src="/2019/06/28/C-迭代器的失控范例和解决方案/6.png"></p>
+<li>
+<p>实验结果： <img src="/2019/06/28/C-迭代器的失控范例和解决方案/6.png"></p>
 </li>
-<li><p><strong>实现思路：</strong>因为<code>erase()</code>函数是清除该位置的数据，并返回下一个元素的位置，所以可以通过它来对迭代器进行更新，从而不会时迭代器指向失控。</p>
+<li>
+<p>**实现思路：**因为<code>erase()</code>函数是清除该位置的数据，并返回下一个元素的位置，所以可以通过它来对迭代器进行更新，从而不会时迭代器指向失控。</p>
 </li>
 </ul>
 </li>
-<li><p><strong>此情形更好的实现版本</strong></p>
+<li>
+<p><strong>此情形更好的实现版本</strong></p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(!arrays.empty())&#123;<span class="comment">//如果不为空就继续</span></span><br><span class="line">    <span class="keyword">auto</span> iter = arrays.begin();<span class="comment">//每开始一轮循环就更新迭代器的指向。</span></span><br><span class="line">    arrays.erase(iter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays&#123;<span class="number">12</span>,<span class="number">35</span>,<span class="number">56</span>,<span class="number">78</span>&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(!arrays.empty())&#123;<span class="comment">//如果不为空就继续</span></span><br><span class="line">    <span class="keyword">auto</span> iter = arrays.begin();<span class="comment">//每开始一轮循环就更新迭代器的指向。</span></span><br><span class="line">    arrays.erase(iter);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -662,7 +689,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -754,7 +781,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器失控范例"><span class="nav-number">1.</span> <span class="nav-text">迭代器失控范例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#情形一："><span class="nav-number">1.1.</span> <span class="nav-text">情形一：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#情形二："><span class="nav-number">1.2.</span> <span class="nav-text">情形二：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器失控范例"><span class="nav-number">1.</span> <span class="nav-text">¶迭代器失控范例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#情形一："><span class="nav-number">1.1.</span> <span class="nav-text">¶情形一：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#情形二："><span class="nav-number">1.2.</span> <span class="nav-text">¶情形二：</span></a></li></ol></li></ol></div>
             
 
           </div>

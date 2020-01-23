@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="static关键字 静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值，即便在某个函数段的生命期结束。  静态变量在普通函数 123456789101112int fun1(int a)&amp;#123;    static int b = 10;//静态变量，再重新进入函数">
+<meta name="description" content="¶static关键字  静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值，即便在某个函数段的生命期结束。  ¶静态变量在普通函数   123456789101112int fun1(int a)&amp;#123;    static int b = 10;//静态变量，再重">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（2.2）类中的static函数&#x2F;成员变量、类函数const后缀、mutable">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="static关键字 静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值，即便在某个函数段的生命期结束。  静态变量在普通函数 123456789101112int fun1(int a)&amp;#123;    static int b = 10;//静态变量，再重新进入函数">
+<meta property="og:description" content="¶static关键字  静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值，即便在某个函数段的生命期结束。  ¶静态变量在普通函数   123456789101112int fun1(int a)&amp;#123;    static int b = 10;//静态变量，再重">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/2.png">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:57:38.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（2.2）类中的static函数&#x2F;成员变量、类函数const后缀、mutable">
-<meta name="twitter:description" content="static关键字 静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值，即便在某个函数段的生命期结束。  静态变量在普通函数 123456789101112int fun1(int a)&amp;#123;    static int b = 10;//静态变量，再重新进入函数">
+<meta name="twitter:description" content="¶static关键字  静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值，即便在某个函数段的生命期结束。  ¶静态变量在普通函数   123456789101112int fun1(int a)&amp;#123;    static int b = 10;//静态变量，再重">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/1.png">
 
 
@@ -396,22 +396,30 @@
       
 
       
-        <h4 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h4><ul>
+        <h4 id="static关键字"><a class="header-anchor" href="#static关键字">¶</a>static关键字</h4>
+<ul>
 <li>静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值，即便在某个函数段的生命期结束。</li>
 </ul>
-<h5 id="静态变量在普通函数"><a href="#静态变量在普通函数" class="headerlink" title="静态变量在普通函数"></a>静态变量在普通函数</h5><ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> b = <span class="number">10</span>;<span class="comment">//静态变量，再重新进入函数体的时候会按照上次进入函数体的状态。</span></span><br><span class="line">    <span class="comment">//即：静态变量只会初始化一次(默认初始化为0)。</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"此时b的值为: "</span> &lt;&lt; b &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    b+=a;</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; fun1(<span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; fun1(<span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="静态变量在普通函数"><a class="header-anchor" href="#静态变量在普通函数">¶</a>静态变量在普通函数</h5>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> b = <span class="number">10</span>;<span class="comment">//静态变量，再重新进入函数体的时候会按照上次进入函数体的状态。</span></span><br><span class="line">    <span class="comment">//即：静态变量只会初始化一次(默认初始化为0)。</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"此时b的值为: "</span> &lt;&lt; b &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    b+=a;</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; fun1(<span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; fun1(<span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/1.png"></p>
+<li>
+<p>实验结果：<img src="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/1.png"></p>
 </li>
-<li><p>从上面的实验结果可以看出，<u>静态变量在普通函数中只会初始化一次</u>，假若没有给初始值，将<u>默认初始化为0</u>，因为静态变量是存储在静态常量区，所以即便过了在<code>fun1</code>函数的生命期，仍没有被回收，下次再次调用该函数时，<u>静态变量会保存上次调用时的数据</u>。</p>
+<li>
+<p>从上面的实验结果可以看出，<u>静态变量在普通函数中只会初始化一次</u>，假若没有给初始值，将<u>默认初始化为0</u>，因为静态变量是存储在静态常量区，所以即便过了在<code>fun1</code>函数的生命期，仍没有被回收，下次再次调用该函数时，<u>静态变量会保存上次调用时的数据</u>。</p>
 </li>
 </ul>
 <hr>
-<h5 id="类中的静态变量"><a href="#类中的静态变量" class="headerlink" title="类中的静态变量"></a>类中的静态变量</h5><ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//student.h</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>：</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> num;<span class="comment">//声明</span></span><br><span class="line">   ....</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//student.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> student::num = <span class="number">10</span>;<span class="comment">//定义(定义时不需要再加static关键字)</span></span><br></pre></td></tr></table></figure>
+<h5 id="类中的静态变量"><a class="header-anchor" href="#类中的静态变量">¶</a>类中的静态变量</h5>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//student.h</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>：</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> num;<span class="comment">//声明</span></span><br><span class="line">   ....</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//student.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> student::num = <span class="number">10</span>;<span class="comment">//定义(定义时不需要再加static关键字)</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>类中的静态变量的特点：</p>
+<li>
+<p>类中的静态变量的特点：</p>
 <ul>
 <li>它不是某个对象所拥有的，而是整个类拥有的，即每一个对象都<u>共享</u>该静态变量</li>
 <li>在类中，静态变量只是声明因为还没有分配空间</li>
@@ -420,55 +428,74 @@
 <li>在定义时要用<code>::</code>(域运算符)标识是某个类中的变量，不然会当成普通变量定义</li>
 </ul>
 </li>
-<li><p>静态变量的体现：</p>
+<li>
+<p>静态变量的体现：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">student person1;</span><br><span class="line">person1.num = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"这是person1的num： "</span>&lt;&lt; person1.num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">student person2;</span><br><span class="line">person2.num = <span class="number">12</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"这是person2的num： "</span>&lt;&lt; person2.num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"此时person1的num： "</span> &lt;&lt; person1.num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"用类名来调用的num: "</span> &lt;&lt; student::num &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">student person1;</span><br><span class="line">person1.num = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"这是person1的num： "</span>&lt;&lt; person1.num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">student person2;</span><br><span class="line">person2.num = <span class="number">12</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"这是person2的num： "</span>&lt;&lt; person2.num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"此时person1的num： "</span> &lt;&lt; person1.num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"用类名来调用的num: "</span> &lt;&lt; student::num &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果: <img src="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/2.png" title="可以看出num被所有对象共享数据"></p>
+<li>
+<p>实验结果: <img src="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/2.png" title="可以看出num被所有对象共享数据"></p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="static成员函数"><a href="#static成员函数" class="headerlink" title="static成员函数"></a>static成员函数</h5><ul>
-<li><p>更静态变量一样，是属于类的，即调用时可以不用依靠对象来调用，直接<code>类名::函数名</code>来调用。</p>
+<h5 id="static成员函数"><a class="header-anchor" href="#static成员函数">¶</a>static成员函数</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//student.h</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>：</span><br><span class="line">        <span class="built_in">string</span>  name;</span><br><span class="line">    	<span class="keyword">static</span> <span class="keyword">int</span> num;<span class="comment">//声明</span></span><br><span class="line">  		<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setnum</span><span class="params">(<span class="keyword">int</span> a)</span></span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//student.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> student::num = <span class="number">10</span>;<span class="comment">//定义(定义时不需要再加static关键字)</span></span><br><span class="line"><span class="keyword">void</span> student::setnum(<span class="keyword">int</span> a)&#123;</span><br><span class="line">    num = a;<span class="comment">//修改静态变量</span></span><br><span class="line">    </span><br><span class="line">    name = <span class="string">"xiaoming"</span><span class="comment">//错误，因为name是属于对象的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>更静态变量一样，是属于类的，即调用时可以不用依靠对象来调用，直接<code>类名::函数名</code>来调用。</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//student.h</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>：</span><br><span class="line">        <span class="built_in">string</span>  name;</span><br><span class="line">    	<span class="keyword">static</span> <span class="keyword">int</span> num;<span class="comment">//声明</span></span><br><span class="line">  		<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setnum</span><span class="params">(<span class="keyword">int</span> a)</span></span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//student.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> student::num = <span class="number">10</span>;<span class="comment">//定义(定义时不需要再加static关键字)</span></span><br><span class="line"><span class="keyword">void</span> student::setnum(<span class="keyword">int</span> a)&#123;</span><br><span class="line">    num = a;<span class="comment">//修改静态变量</span></span><br><span class="line">    </span><br><span class="line">    name = <span class="string">"xiaoming"</span><span class="comment">//错误，因为name是属于对象的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>值得注意的是，在静态函数中不能调修改非静态成员，因为非静态成员是每个对象各自有的，而不是共享的。</p>
+<li>
+<p>值得注意的是，在静态函数中不能调修改非静态成员，因为非静态成员是每个对象各自有的，而不是共享的。</p>
 </li>
 </ul>
 <hr>
-<h4 id="类中const函数后缀、mutable"><a href="#类中const函数后缀、mutable" class="headerlink" title="类中const函数后缀、mutable"></a>类中const函数后缀、mutable</h4><h5 id="const函数后缀"><a href="#const函数后缀" class="headerlink" title="const函数后缀"></a>const函数后缀</h5><ul>
-<li><p>在类中，可以对成员函数后面添加const后缀</p>
-</li>
-<li><p>作用：告诫编译器，带后缀的成员函数不会修改成员变量。</p>
-</li>
-<li><p>具体代码:</p>
+<h4 id="类中const函数后缀-mutable"><a class="header-anchor" href="#类中const函数后缀-mutable">¶</a>类中const函数后缀、mutable</h4>
+<h5 id="const函数后缀"><a class="header-anchor" href="#const函数后缀">¶</a>const函数后缀</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">()</span> <span class="keyword">const</span></span>&#123;</span><br><span class="line">        name = <span class="string">"xiaoming"</span>;<span class="comment">//报错：因为在const后缀中的函数中不允许修改成员变量   </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>在类中，可以对成员函数后面添加const后缀</p>
 </li>
-<li><p>编译后报错 : <img src="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/3.png"></p>
+<li>
+<p>作用：告诫编译器，带后缀的成员函数不会修改成员变量。</p>
+</li>
+<li>
+<p>具体代码:</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">()</span> <span class="keyword">const</span></span>&#123;</span><br><span class="line">        name = <span class="string">"xiaoming"</span>;<span class="comment">//报错：因为在const后缀中的函数中不允许修改成员变量   </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>编译后报错 : <img src="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/3.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="mutable"><a href="#mutable" class="headerlink" title="mutable"></a>mutable</h5><ul>
-<li><p>mutable关键字的作用即是<u>反制const后缀成员函数</u>。</p>
-</li>
-<li><p>作用让某个成员变量可以在const后缀的成员函数中修改。</p>
-</li>
-<li><p>具体代码:</p>
+<h5 id="mutable"><a class="header-anchor" href="#mutable">¶</a>mutable</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">mutable</span> <span class="built_in">string</span> name;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">()</span> <span class="keyword">const</span></span>&#123;</span><br><span class="line">        name = <span class="string">"xiaoming"</span>;<span class="comment">//编译通过  </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>mutable关键字的作用即是<u>反制const后缀成员函数</u>。</p>
+</li>
+<li>
+<p>作用让某个成员变量可以在const后缀的成员函数中修改。</p>
+</li>
+<li>
+<p>具体代码:</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">    <span class="keyword">mutable</span> <span class="built_in">string</span> name;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">()</span> <span class="keyword">const</span></span>&#123;</span><br><span class="line">        name = <span class="string">"xiaoming"</span>;<span class="comment">//编译通过  </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -673,7 +700,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -765,7 +792,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#static关键字"><span class="nav-number">1.</span> <span class="nav-text">static关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#静态变量在普通函数"><span class="nav-number">1.1.</span> <span class="nav-text">静态变量在普通函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类中的静态变量"><span class="nav-number">1.2.</span> <span class="nav-text">类中的静态变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#static成员函数"><span class="nav-number">1.3.</span> <span class="nav-text">static成员函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类中const函数后缀、mutable"><span class="nav-number">2.</span> <span class="nav-text">类中const函数后缀、mutable</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#const函数后缀"><span class="nav-number">2.1.</span> <span class="nav-text">const函数后缀</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mutable"><span class="nav-number">2.2.</span> <span class="nav-text">mutable</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#static关键字"><span class="nav-number">1.</span> <span class="nav-text">¶static关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#静态变量在普通函数"><span class="nav-number">1.1.</span> <span class="nav-text">¶静态变量在普通函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类中的静态变量"><span class="nav-number">1.2.</span> <span class="nav-text">¶类中的静态变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#static成员函数"><span class="nav-number">1.3.</span> <span class="nav-text">¶static成员函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类中const函数后缀-mutable"><span class="nav-number">2.</span> <span class="nav-text">¶类中const函数后缀、mutable</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#const函数后缀"><span class="nav-number">2.1.</span> <span class="nav-text">¶const函数后缀</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mutable"><span class="nav-number">2.2.</span> <span class="nav-text">¶mutable</span></a></li></ol></li></ol></div>
             
 
           </div>
