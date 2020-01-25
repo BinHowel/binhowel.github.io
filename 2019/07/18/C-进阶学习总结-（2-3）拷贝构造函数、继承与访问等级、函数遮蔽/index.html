@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶拷贝构造函数 ¶拷贝构造函数是什么？   拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。   12345678910111213class student&amp;#123;  public:    student()&amp;#123;        cout &amp;lt;&amp;lt; &quot; 这是student()构造函数&quot; &amp;lt;&amp;lt; endl;">
+<meta name="description" content="拷贝构造函数拷贝构造函数是什么？ 拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。  12345678910111213class student&amp;#123;  public:    student()&amp;#123;        cout &amp;lt;&amp;lt; &quot; 这是student()构造函数&quot; &amp;lt;&amp;lt; endl;    &amp;#125;">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（2.3）拷贝构造函数、继承与访问等级、函数遮蔽">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶拷贝构造函数 ¶拷贝构造函数是什么？   拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。   12345678910111213class student&amp;#123;  public:    student()&amp;#123;        cout &amp;lt;&amp;lt; &quot; 这是student()构造函数&quot; &amp;lt;&amp;lt; endl;">
+<meta property="og:description" content="拷贝构造函数拷贝构造函数是什么？ 拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。  12345678910111213class student&amp;#123;  public:    student()&amp;#123;        cout &amp;lt;&amp;lt; &quot; 这是student()构造函数&quot; &amp;lt;&amp;lt; endl;    &amp;#125;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/2.png">
@@ -98,7 +98,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:57:45.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（2.3）拷贝构造函数、继承与访问等级、函数遮蔽">
-<meta name="twitter:description" content="¶拷贝构造函数 ¶拷贝构造函数是什么？   拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。   12345678910111213class student&amp;#123;  public:    student()&amp;#123;        cout &amp;lt;&amp;lt; &quot; 这是student()构造函数&quot; &amp;lt;&amp;lt; endl;">
+<meta name="twitter:description" content="拷贝构造函数拷贝构造函数是什么？ 拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。  12345678910111213class student&amp;#123;  public:    student()&amp;#123;        cout &amp;lt;&amp;lt; &quot; 这是student()构造函数&quot; &amp;lt;&amp;lt; endl;    &amp;#125;">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/1.png">
 
 
@@ -399,28 +399,20 @@
       
 
       
-        <h4 id="拷贝构造函数"><a class="header-anchor" href="#拷贝构造函数">¶</a>拷贝构造函数</h4>
-<h5 id="拷贝构造函数是什么？"><a class="header-anchor" href="#拷贝构造函数是什么？">¶</a>拷贝构造函数是什么？</h5>
-<ul>
-<li>
-<p>拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。</p>
+        <h4 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h4><h5 id="拷贝构造函数是什么？"><a href="#拷贝构造函数是什么？" class="headerlink" title="拷贝构造函数是什么？"></a>拷贝构造函数是什么？</h5><ul>
+<li><p>拷贝构造函数是一个特殊的构造函数。与普通构造函数不同的是，当对象执行拷贝的时候将会自动调用拷贝构造函数。</p>
 </li>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    student()&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">" 这是student()构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student s1;<span class="comment">//调用student()构造函数</span></span><br><span class="line">    student s2;<span class="comment">//调用student()构造函数</span></span><br><span class="line">    student s3 = s2;<span class="comment">//没有调用student()构造函数</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    student()&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">" 这是student()构造函数"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    student s1;<span class="comment">//调用student()构造函数</span></span><br><span class="line">    student s2;<span class="comment">//调用student()构造函数</span></span><br><span class="line">    student s3 = s2;<span class="comment">//没有调用student()构造函数</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/1.png" title="结果构造函数只被调用了2次"></p>
+<li><p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/1.png" title="结果构造函数只被调用了2次"></p>
 </li>
-<li>
-<p>为什么s3对象被创建的时候没有调用无参的构造函数呢？原因就是s3执行了拷贝操作，调用的是默认的拷贝构造函数。</p>
+<li><p>为什么s3对象被创建的时候没有调用无参的构造函数呢？原因就是s3执行了拷贝操作，调用的是默认的拷贝构造函数。</p>
 </li>
 </ul>
 <hr>
-<h5 id="拷贝构造函数-v2"><a class="header-anchor" href="#拷贝构造函数-v2">¶</a>拷贝构造函数</h5>
-<ul>
+<h5 id="拷贝构造函数-1"><a href="#拷贝构造函数-1" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h5><ul>
 <li>拷贝构造函数与构造函数一样，当没有自己定义的拷贝构造函数的时候，会像构造函数一样系统自动生成一个空函数体的默认拷贝构造函数。</li>
-<li>拷贝构造函数的形参中包含一个该类对象的引用(通常是const 修饰)
-<ul>
+<li>拷贝构造函数的形参中包含一个该类对象的引用(通常是const 修饰)<ul>
 <li><code>student(const student&amp; T);</code></li>
 </ul>
 </li>
@@ -431,92 +423,22 @@
 <li>实验结果: <img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/2.png"></li>
 </ul>
 <hr>
-<h4 id="继承与访问等级"><a class="header-anchor" href="#继承与访问等级">¶</a>继承与访问等级</h4>
-<ul>
-<li>
-<p>三种访问权限</p>
+<h4 id="继承与访问等级"><a href="#继承与访问等级" class="headerlink" title="继承与访问等级"></a>继承与访问等级</h4><ul>
+<li><p>三种访问权限</p>
 <ul>
 <li>public：可以被任意实体所访问</li>
 <li>protected：只允许本类<strong>或者子类</strong>的成员函数来访问</li>
 <li>private：只允许本类的成员函数访问</li>
 </ul>
 </li>
-<li>
-<p>三种继承访问</p>
+<li><p>三种继承访问</p>
 <ul>
 <li>public、protected、private</li>
 </ul>
 </li>
-<li>
-<table>
-<thead>
-<tr>
-<th>基类中的访问权限</th>
-<th>子类继承基类的继承方式</th>
-<th>子类得到的访问权限</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public</td>
-<td>public</td>
-<td>public</td>
-</tr>
-<tr>
-<td>protected</td>
-<td>public</td>
-<td>protected</td>
-</tr>
-<tr>
-<td>private</td>
-<td>public</td>
-<td>子类无访问权限</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>public</td>
-<td>protected</td>
-<td>protected</td>
-</tr>
-<tr>
-<td>protected</td>
-<td>protected</td>
-<td>protected</td>
-</tr>
-<tr>
-<td>private</td>
-<td>protected</td>
-<td>子类无访问权限</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>public</td>
-<td>private</td>
-<td>private</td>
-</tr>
-<tr>
-<td>protected</td>
-<td>private</td>
-<td>private</td>
-</tr>
-<tr>
-<td>private</td>
-<td>private</td>
-<td>子类无访问权限</td>
-</tr>
-</tbody>
-</table>
+<li><p>| 基类中的访问权限 | 子类继承基类的继承方式 | 子类得到的访问权限 |<br>| ———————— | ——————————— | ————————— |<br>| public           | public                 | public             |<br>| protected        | public                 | protected          |<br>| private          | public                 | 子类无访问权限     |<br>|                  |                        |                    |<br>| public           | protected              | protected          |<br>| protected        | protected              | protected          |<br>| private          | protected              | 子类无访问权限     |<br>|                  |                        |                    |<br>| public           | private                | private            |<br>| protected        | private                | private            |<br>| private          | private                | 子类无访问权限     |</p>
 </li>
-<li>
-<p>总结：</p>
+<li><p>总结：</p>
 <ul>
 <li>子类public继承父类不改变父类的访问权限</li>
 <li>protected继承将父类中public成员变为子类的protected成员</li>
@@ -527,53 +449,39 @@
 </li>
 </ul>
 <hr>
-<h4 id="函数遮蔽"><a class="header-anchor" href="#函数遮蔽">¶</a>函数遮蔽</h4>
-<ul>
-<li>
-<p>当出现父类中与子类中都含有同名的函数时会出现函数遮蔽现象，即子类调用该函数时，父类的<strong>重载函数</strong>将不可见</p>
+<h4 id="函数遮蔽"><a href="#函数遮蔽" class="headerlink" title="函数遮蔽"></a>函数遮蔽</h4><ul>
+<li><p>当出现父类中与子类中都含有同名的函数时会出现函数遮蔽现象，即子类调用该函数时，父类的<strong>重载函数</strong>将不可见</p>
 </li>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是父类的fun1(int i)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是父类的fun1(int i,int k)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>:</span><span class="keyword">public</span> student</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是子类的fun1(int i)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person p1;</span><br><span class="line">	p1.fun1(<span class="number">1</span>);</span><br><span class="line">    p1.fun(<span class="number">2</span>,<span class="number">1</span>)<span class="comment">//报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是父类的fun1(int i)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是父类的fun1(int i,int k)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>:</span><span class="keyword">public</span> student</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是子类的fun1(int i)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person p1;</span><br><span class="line">	p1.fun1(<span class="number">1</span>);</span><br><span class="line">    p1.fun(<span class="number">2</span>,<span class="number">1</span>)<span class="comment">//报错</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/3.png"> <img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/3.1.png"></p>
+<li><p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/3.png"> <img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/3.1.png"></p>
 </li>
 </ul>
-<h5 id="如何解决函数遮蔽？"><a class="header-anchor" href="#如何解决函数遮蔽？">¶</a>如何解决函数遮蔽？</h5>
+<h5 id="如何解决函数遮蔽？"><a href="#如何解决函数遮蔽？" class="headerlink" title="如何解决函数遮蔽？"></a>如何解决函数遮蔽？</h5><ul>
+<li><p>用域运算符</p>
 <ul>
-<li>
-<p>用域运算符</p>
-<ul>
-<li>
-<p>父类名：：函数名</p>
+<li><p>父类名：：函数名</p>
 </li>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person p1;</span><br><span class="line">	p1.student::fun1(<span class="number">1</span>);</span><br><span class="line">    p1.student::fun1(<span class="number">1</span>，<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person p1;</span><br><span class="line">	p1.student::fun1(<span class="number">1</span>);</span><br><span class="line">    p1.student::fun1(<span class="number">1</span>，<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/4.png"></p>
+<li><p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/4.png"></p>
 </li>
 </ul>
 </li>
-<li>
-<p>用using关键字(C++11)</p>
+<li><p>用using关键字(C++11)</p>
 <ul>
-<li>
-<p>子类中成员函数中加using 父类名：：函数名</p>
+<li><p>子类中成员函数中加using 父类名：：函数名</p>
 </li>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>:</span><span class="keyword">public</span> student</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是子类的fun1(int i)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">using</span> student::fun1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person p1;</span><br><span class="line">	p1.fun1(<span class="number">1</span>);</span><br><span class="line">    p1.fun1(<span class="number">1</span>，<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span>:</span><span class="keyword">public</span> student</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是子类的fun1(int i)"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">using</span> student::fun1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    person p1;</span><br><span class="line">	p1.fun1(<span class="number">1</span>);</span><br><span class="line">    p1.fun1(<span class="number">1</span>，<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/5.png" title="注意单参的子类同名函数将被遮蔽"></p>
+<li><p>实验结果：<img src="/2019/07/18/C-进阶学习总结-（2-3）拷贝构造函数、继承与访问等级、函数遮蔽/5.png" title="注意单参的子类同名函数将被遮蔽"></p>
 </li>
-<li>
-<p>可以发现此时父类的重载函数也可以使用了，但是单参的<code>fun1()</code>函数将被子类的遮蔽。</p>
+<li><p>可以发现此时父类的重载函数也可以使用了，但是单参的<code>fun1()</code>函数将被子类的遮蔽。</p>
 </li>
 </ul>
 </li>
 </ul>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -778,7 +686,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">101</span>
+                  <span class="site-state-item-count">102</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -870,7 +778,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#拷贝构造函数"><span class="nav-number">1.</span> <span class="nav-text">¶拷贝构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#拷贝构造函数是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">¶拷贝构造函数是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#拷贝构造函数-v2"><span class="nav-number">1.2.</span> <span class="nav-text">¶拷贝构造函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承与访问等级"><span class="nav-number">2.</span> <span class="nav-text">¶继承与访问等级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数遮蔽"><span class="nav-number">3.</span> <span class="nav-text">¶函数遮蔽</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何解决函数遮蔽？"><span class="nav-number">3.1.</span> <span class="nav-text">¶如何解决函数遮蔽？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#拷贝构造函数"><span class="nav-number">1.</span> <span class="nav-text">拷贝构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#拷贝构造函数是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">拷贝构造函数是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#拷贝构造函数-1"><span class="nav-number">1.2.</span> <span class="nav-text">拷贝构造函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承与访问等级"><span class="nav-number">2.</span> <span class="nav-text">继承与访问等级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数遮蔽"><span class="nav-number">3.</span> <span class="nav-text">函数遮蔽</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何解决函数遮蔽？"><span class="nav-number">3.1.</span> <span class="nav-text">如何解决函数遮蔽？</span></a></li></ol></li></ol></div>
             
 
           </div>
