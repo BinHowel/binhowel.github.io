@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="邻接矩阵的DFS(深度优先搜索)代码实现及思路 实现邻接矩阵DFS算法的前提   思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。  代码1：  1234567891011121314class MGraph&amp;#123; ....      vector&amp;lt;boo">
+<meta name="description" content="¶邻接矩阵的DFS(深度优先搜索)代码实现及思路  实现邻接矩阵DFS算法的前提    思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。   代码1：   1234567891011121314class MGraph&amp;#123; ....      vector&amp;l">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（6.7）深度优先搜索(邻接矩阵)">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/21/数据结构学习总结-（6-7）深度优先搜索-邻接矩阵/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="邻接矩阵的DFS(深度优先搜索)代码实现及思路 实现邻接矩阵DFS算法的前提   思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。  代码1：  1234567891011121314class MGraph&amp;#123; ....      vector&amp;lt;boo">
+<meta property="og:description" content="¶邻接矩阵的DFS(深度优先搜索)代码实现及思路  实现邻接矩阵DFS算法的前提    思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。   代码1：   1234567891011121314class MGraph&amp;#123; ....      vector&amp;l">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/21/数据结构学习总结-（6-7）深度优先搜索-邻接矩阵/1.png">
 <meta property="og:updated_time" content="2019-08-22T07:42:47.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（6.7）深度优先搜索(邻接矩阵)">
-<meta name="twitter:description" content="邻接矩阵的DFS(深度优先搜索)代码实现及思路 实现邻接矩阵DFS算法的前提   思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。  代码1：  1234567891011121314class MGraph&amp;#123; ....      vector&amp;lt;boo">
+<meta name="twitter:description" content="¶邻接矩阵的DFS(深度优先搜索)代码实现及思路  实现邻接矩阵DFS算法的前提    思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。   代码1：   1234567891011121314class MGraph&amp;#123; ....      vector&amp;l">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/08/21/数据结构学习总结-（6-7）深度优先搜索-邻接矩阵/1.png">
 
 
@@ -394,35 +394,41 @@
       
 
       
-        <h4 id="邻接矩阵的DFS-深度优先搜索-代码实现及思路"><a href="#邻接矩阵的DFS-深度优先搜索-代码实现及思路" class="headerlink" title="邻接矩阵的DFS(深度优先搜索)代码实现及思路"></a>邻接矩阵的DFS(深度优先搜索)代码实现及思路</h4><ol>
+        <h4 id="邻接矩阵的dfs-深度优先搜索-代码实现及思路"><a class="header-anchor" href="#邻接矩阵的dfs-深度优先搜索-代码实现及思路">¶</a>邻接矩阵的DFS(深度优先搜索)代码实现及思路</h4>
+<ol>
 <li><strong>实现邻接矩阵DFS算法的前提</strong></li>
 </ol>
 <ul>
-<li><p>思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。</p>
+<li>
+<p>思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，即已经访问过的顶点将被标记已被访问，没有访问的将被标记未访问。</p>
 </li>
-<li><p>代码1：</p>
+<li>
+<p>代码1：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MGraph</span>&#123;</span></span><br><span class="line"> ....</span><br><span class="line">     </span><br><span class="line"> <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;Mark;<span class="comment">//标记数组</span></span><br><span class="line">     </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*创建标记数组*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create_mark</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//避免重复创建+验证</span></span><br><span class="line">    <span class="keyword">if</span>(Mark.size() != Vertex.size())<span class="keyword">return</span>;<span class="comment">//Vertex是顶点数组</span></span><br><span class="line">    </span><br><span class="line">    Mark.resize(Vertex.size(),<span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MGraph</span>&#123;</span></span><br><span class="line"> ....</span><br><span class="line">     </span><br><span class="line"> <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;Mark;<span class="comment">//标记数组</span></span><br><span class="line">     </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*创建标记数组*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create_mark</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//避免重复创建+验证</span></span><br><span class="line">    <span class="keyword">if</span>(Mark.size() != Vertex.size())<span class="keyword">return</span>;<span class="comment">//Vertex是顶点数组</span></span><br><span class="line">    </span><br><span class="line">    Mark.resize(Vertex.size(),<span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<ol>
+<ol start="2">
 <li><strong>遍历实现DFS</strong></li>
 </ol>
 <ul>
-<li><p>思路：根据标识数组来确定是否要访问，函数参数可以更加顶点数组来指定结点开始，并可以通过函数指针作为参数之一多样化的去遍历图</p>
+<li>
+<p>思路：根据标识数组来确定是否要访问，函数参数可以更加顶点数组来指定结点开始，并可以通过函数指针作为参数之一多样化的去遍历图</p>
 </li>
-<li><p>代码：</p>
+<li>
+<p>代码：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> ID,<span class="keyword">void</span>(*visit)(<span class="keyword">const</span> VT&amp; vertex))</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ID &lt; <span class="number">0</span> || ID &gt; Mark.size())<span class="keyword">return</span>;</span><br><span class="line">    Mark[ID] = <span class="literal">true</span>;</span><br><span class="line">    vistit(Vertex[ID]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; Vertex.size(); k++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(Edges[ID][k] != definfo)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!Mark[k])</span><br><span class="line">                DFS(k,visit);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> ID,<span class="keyword">void</span>(*visit)(<span class="keyword">const</span> VT&amp; vertex))</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ID &lt; <span class="number">0</span> || ID &gt; Mark.size())<span class="keyword">return</span>;</span><br><span class="line">    Mark[ID] = <span class="literal">true</span>;</span><br><span class="line">    vistit(Vertex[ID]);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; Vertex.size(); k++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(Edges[ID][k] != definfo)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!Mark[k])</span><br><span class="line">                DFS(k,visit);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <p><strong>代码解析</strong></p>
 <img src="/2019/08/21/数据结构学习总结-（6-7）深度优先搜索-邻接矩阵/1.png">
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -449,11 +455,9 @@
 </tr>
 </tbody>
 </table>
-</div>
 <ul>
 <li>邻接矩阵</li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -495,9 +499,9 @@
 </tr>
 </tbody>
 </table>
-</div>
 <ul>
-<li>第一步<code>DFS(unsigned int ID,void(*visit)(const VT&amp; vertex))</code><ul>
+<li>第一步<code>DFS(unsigned int ID,void(*visit)(const VT&amp; vertex))</code>
+<ul>
 <li>Mark[0] = true；</li>
 <li>输出了A</li>
 <li>Edge[0] [0]不输出，输出B,C,D</li>
@@ -505,20 +509,23 @@
 </li>
 </ul>
 <hr>
-<ol>
+<ol start="3">
 <li>堆栈实现</li>
 </ol>
 <ul>
-<li><p>思路：通过堆栈来模拟递归实现</p>
+<li>
+<p>思路：通过堆栈来模拟递归实现</p>
 </li>
-<li><p>代码：</p>
+<li>
+<p>代码：</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS2</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> ID,<span class="keyword">void</span>(*visit)(<span class="keyword">const</span> VT&amp; vertex))</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ID &lt; <span class="number">0</span> || ID &gt; Vertex.size())<span class="keyword">return</span>;</span><br><span class="line">    create_mark();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Vertex.size(); i++)&#123;</span><br><span class="line">        DFS_(i,visit);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS_</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> ID,<span class="keyword">void</span>(*visit)(<span class="keyword">const</span> VT&amp; vertex))</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ID &lt; <span class="number">0</span> || ID &gt; Vertex.size())<span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.push(ID);</span><br><span class="line">    Mark[ID] = <span class="literal">true</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(!s.empty())&#123;</span><br><span class="line">        <span class="keyword">auto</span> v = s.top();s.pop();</span><br><span class="line">        visit(Vertex[v]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> w = <span class="number">0</span>; w &lt; Vertex.size(); w++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(Edge[ID][w] != definfo)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!Mark[w])&#123;</span><br><span class="line">                s.push(w);</span><br><span class="line">                Mark[w] = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS2</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> ID,<span class="keyword">void</span>(*visit)(<span class="keyword">const</span> VT&amp; vertex))</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ID &lt; <span class="number">0</span> || ID &gt; Vertex.size())<span class="keyword">return</span>;</span><br><span class="line">    create_mark();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Vertex.size(); i++)&#123;</span><br><span class="line">        DFS_(i,visit);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS_</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> ID,<span class="keyword">void</span>(*visit)(<span class="keyword">const</span> VT&amp; vertex))</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ID &lt; <span class="number">0</span> || ID &gt; Vertex.size())<span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.push(ID);</span><br><span class="line">    Mark[ID] = <span class="literal">true</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(!s.empty())&#123;</span><br><span class="line">        <span class="keyword">auto</span> v = s.top();s.pop();</span><br><span class="line">        visit(Vertex[v]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> w = <span class="number">0</span>; w &lt; Vertex.size(); w++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(Edge[ID][w] != definfo)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!Mark[w])&#123;</span><br><span class="line">                s.push(w);</span><br><span class="line">                Mark[w] = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -723,7 +730,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">105</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -815,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#邻接矩阵的DFS-深度优先搜索-代码实现及思路"><span class="nav-number">1.</span> <span class="nav-text">邻接矩阵的DFS(深度优先搜索)代码实现及思路</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#邻接矩阵的dfs-深度优先搜索-代码实现及思路"><span class="nav-number">1.</span> <span class="nav-text">¶邻接矩阵的DFS(深度优先搜索)代码实现及思路</span></a></li></ol></div>
             
 
           </div>

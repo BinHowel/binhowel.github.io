@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="哈夫曼树的构建哈夫曼树的构建步骤 根据权重进行从小到大排列 取最小的两个构成一个子树,并使两个的权值相加用来代替这两个结点 根据这个新的权重再进行排列 重复1.2.3步   代码实现(顺序结构储存) 结点的构建  根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据  1234567891011121314struct haffmanNode&amp;#123;    int weigth">
+<meta name="description" content="¶哈夫曼树的构建 ¶哈夫曼树的构建步骤  根据权重进行从小到大排列 取最小的两个构成一个子树,并使两个的权值相加用来代替这两个结点 根据这个新的权重再进行排列 重复1.2.3步   ¶代码实现(顺序结构储存)   结点的构建   根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据   1234567891011121314struct haffmanNode&amp;#123;    i">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.14）哈夫曼树的构建代码实现">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14）哈夫曼树的构建代码实现/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="哈夫曼树的构建哈夫曼树的构建步骤 根据权重进行从小到大排列 取最小的两个构成一个子树,并使两个的权值相加用来代替这两个结点 根据这个新的权重再进行排列 重复1.2.3步   代码实现(顺序结构储存) 结点的构建  根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据  1234567891011121314struct haffmanNode&amp;#123;    int weigth">
+<meta property="og:description" content="¶哈夫曼树的构建 ¶哈夫曼树的构建步骤  根据权重进行从小到大排列 取最小的两个构成一个子树,并使两个的权值相加用来代替这两个结点 根据这个新的权重再进行排列 重复1.2.3步   ¶代码实现(顺序结构储存)   结点的构建   根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据   1234567891011121314struct haffmanNode&amp;#123;    i">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14）哈夫曼树的构建代码实现/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14）哈夫曼树的构建代码实现/2.png">
 <meta property="og:updated_time" content="2019-08-11T14:37:32.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.14）哈夫曼树的构建代码实现">
-<meta name="twitter:description" content="哈夫曼树的构建哈夫曼树的构建步骤 根据权重进行从小到大排列 取最小的两个构成一个子树,并使两个的权值相加用来代替这两个结点 根据这个新的权重再进行排列 重复1.2.3步   代码实现(顺序结构储存) 结点的构建  根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据  1234567891011121314struct haffmanNode&amp;#123;    int weigth">
+<meta name="twitter:description" content="¶哈夫曼树的构建 ¶哈夫曼树的构建步骤  根据权重进行从小到大排列 取最小的两个构成一个子树,并使两个的权值相加用来代替这两个结点 根据这个新的权重再进行排列 重复1.2.3步   ¶代码实现(顺序结构储存)   结点的构建   根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据   1234567891011121314struct haffmanNode&amp;#123;    i">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/08/11/数据结构学习总结-（5-14）哈夫曼树的构建代码实现/1.png">
 
 
@@ -395,56 +395,75 @@
       
 
       
-        <h4 id="哈夫曼树的构建"><a href="#哈夫曼树的构建" class="headerlink" title="哈夫曼树的构建"></a>哈夫曼树的构建</h4><h5 id="哈夫曼树的构建步骤"><a href="#哈夫曼树的构建步骤" class="headerlink" title="哈夫曼树的构建步骤"></a>哈夫曼树的构建步骤</h5><ol>
+        <h4 id="哈夫曼树的构建"><a class="header-anchor" href="#哈夫曼树的构建">¶</a>哈夫曼树的构建</h4>
+<h5 id="哈夫曼树的构建步骤"><a class="header-anchor" href="#哈夫曼树的构建步骤">¶</a>哈夫曼树的构建步骤</h5>
+<ol>
 <li>根据权重进行从小到大排列</li>
 <li>取最小的两个构成一个子树,并使两个的权值相加用来代替这两个结点</li>
 <li>根据这个新的权重再进行排列</li>
 <li>重复1.2.3步</li>
 </ol>
 <hr>
-<h5 id="代码实现-顺序结构储存"><a href="#代码实现-顺序结构储存" class="headerlink" title="代码实现(顺序结构储存)"></a>代码实现(顺序结构储存)</h5><ul>
-<li><p>结点的构建</p>
+<h5 id="代码实现-顺序结构储存"><a class="header-anchor" href="#代码实现-顺序结构储存">¶</a>代码实现(顺序结构储存)</h5>
 <ul>
-<li><p>根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据</p>
+<li>
+<p>结点的构建</p>
+<ul>
+<li>
+<p>根据哈夫曼树的构建，结点首先要包含权值、左右子树指针，其次要包含数据</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">haffmanNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> weigth;<span class="comment">//权值</span></span><br><span class="line">    <span class="keyword">char</span> data;<span class="comment">//数据</span></span><br><span class="line">    </span><br><span class="line">    haffmanNode* L_Node;<span class="comment">//左孩子</span></span><br><span class="line">    haffmanNode* R_Node;<span class="comment">//右孩子</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*顺序结构存储二叉树*/</span></span><br><span class="line"></span><br><span class="line">haffmanNode node[<span class="number">256</span>]；</span><br><span class="line"></span><br><span class="line">haffmanNode allL_Node[<span class="number">128</span>];</span><br><span class="line">haffmanNode allR_Node[<span class="number">128</span>];</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">haffmanNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> weigth;<span class="comment">//权值</span></span><br><span class="line">    <span class="keyword">char</span> data;<span class="comment">//数据</span></span><br><span class="line">    </span><br><span class="line">    haffmanNode* L_Node;<span class="comment">//左孩子</span></span><br><span class="line">    haffmanNode* R_Node;<span class="comment">//右孩子</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*顺序结构存储二叉树*/</span></span><br><span class="line"></span><br><span class="line">haffmanNode node[<span class="number">256</span>]；</span><br><span class="line"></span><br><span class="line">haffmanNode allL_Node[<span class="number">128</span>];</span><br><span class="line">haffmanNode allR_Node[<span class="number">128</span>];</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p>根据权值进行排序(冒泡排序)</p>
+<li>
+<p>根据权值进行排序(冒泡排序)</p>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sortHaffmanNode</span><span class="params">(haffmanNode* nodes,<span class="keyword">int</span> length)</span></span>&#123;</span><br><span class="line">    haffmanNode temp;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length<span class="number">-1</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; length - <span class="number">1</span> - i; k++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nodes[k].weight &lt; nodes[k+<span class="number">1</span>].weight)&#123;</span><br><span class="line">                temp = nodes[k];</span><br><span class="line">                nodes[k] = nodes[k+<span class="number">1</span>];</span><br><span class="line">                nodes[k+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sortHaffmanNode</span><span class="params">(haffmanNode* nodes,<span class="keyword">int</span> length)</span></span>&#123;</span><br><span class="line">    haffmanNode temp;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length<span class="number">-1</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; length - <span class="number">1</span> - i; k++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nodes[k].weight &lt; nodes[k+<span class="number">1</span>].weight)&#123;</span><br><span class="line">                temp = nodes[k];</span><br><span class="line">                nodes[k] = nodes[k+<span class="number">1</span>];</span><br><span class="line">                nodes[k+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>哈夫曼树的构建</p>
+<li>
+<p>哈夫曼树的构建</p>
 <ul>
-<li><p>对结点先进行排序取最小的构成一颗树</p>
+<li>
+<p>对结点先进行排序取最小的构成一颗树</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateHaffmanTree</span><span class="params">(haffmanNode* nodes, <span class="keyword">int</span> length)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(length &lt;= <span class="number">1</span>)<span class="keyword">return</span>;<span class="comment">//递归出口</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*根据权值进行排序*/</span></span><br><span class="line">    sortHaffmanNode(nodes,length);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*用来压缩成哈夫曼编码用*/</span></span><br><span class="line">    allL_Node[length] = nodes[length<span class="number">-1</span>];<span class="comment">//保存左结点</span></span><br><span class="line">    allR_Node[length] = nodes[length<span class="number">-2</span>];<span class="comment">//保存右结点</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*取最小权重的两个结点重新组成树*/</span></span><br><span class="line">    haffmanNode parent;</span><br><span class="line">    parent.weight = allL_Node[length].weight + allR_Node[length].weight;</span><br><span class="line">    </span><br><span class="line">    parent.L_Node = &amp;allL_Node[length];</span><br><span class="line">    parent.R_Node = &amp;allR_Node[length];</span><br><span class="line">    </span><br><span class="line">    nodes[length - <span class="number">2</span>] = parent;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//递归直至哈夫曼树创建完成</span></span><br><span class="line">    CreateHaffmanTree(nodes,length - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateHaffmanTree</span><span class="params">(haffmanNode* nodes, <span class="keyword">int</span> length)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(length &lt;= <span class="number">1</span>)<span class="keyword">return</span>;<span class="comment">//递归出口</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*根据权值进行排序*/</span></span><br><span class="line">    sortHaffmanNode(nodes,length);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*用来压缩成哈夫曼编码用*/</span></span><br><span class="line">    allL_Node[length] = nodes[length<span class="number">-1</span>];<span class="comment">//保存左结点</span></span><br><span class="line">    allR_Node[length] = nodes[length<span class="number">-2</span>];<span class="comment">//保存右结点</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*取最小权重的两个结点重新组成树*/</span></span><br><span class="line">    haffmanNode parent;</span><br><span class="line">    parent.weight = allL_Node[length].weight + allR_Node[length].weight;</span><br><span class="line">    </span><br><span class="line">    parent.L_Node = &amp;allL_Node[length];</span><br><span class="line">    parent.R_Node = &amp;allR_Node[length];</span><br><span class="line">    </span><br><span class="line">    nodes[length - <span class="number">2</span>] = parent;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//递归直至哈夫曼树创建完成</span></span><br><span class="line">    CreateHaffmanTree(nodes,length - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<h4 id="哈夫曼树构建解析"><a href="#哈夫曼树构建解析" class="headerlink" title="哈夫曼树构建解析"></a>哈夫曼树构建解析</h4><p>例图：<img src="/2019/08/11/数据结构学习总结-（5-14）哈夫曼树的构建代码实现/1.png"></p>
+<h4 id="哈夫曼树构建解析"><a class="header-anchor" href="#哈夫曼树构建解析">¶</a>哈夫曼树构建解析</h4>
+<p>例图：<img src="/2019/08/11/数据结构学习总结-（5-14）哈夫曼树的构建代码实现/1.png"></p>
 <ul>
-<li><p>第一步：<code>void CreateHaffmanTree(haffNode* node, int length)</code></p>
+<li>
+<p>第一步：<code>void CreateHaffmanTree(haffNode* node, int length)</code></p>
 <ul>
-<li><p>node数组内容{A(12),B(26),C(5),D(18),E(4)}，length = 5；</p>
+<li>
+<p>node数组内容{A(12),B(26),C(5),D(18),E(4)}，length = 5；</p>
 </li>
-<li><p>排序后 node{B,D,A,C,E},取最小结点C、E组成树</p>
+<li>
+<p>排序后 node{B,D,A,C,E},取最小结点C、E组成树</p>
 </li>
-<li><p><code>allL_Node[5] = C、allR_Node[5] = E</code></p>
+<li>
+<p><code>allL_Node[5] = C、allR_Node[5] = E</code></p>
 </li>
-<li><p>parent1：weight = (4 + 5)9、L_Node = C、R_Node = E</p>
+<li>
+<p>parent1：weight = (4 + 5)9、L_Node = C、R_Node = E</p>
 </li>
-<li><p>node 数组内容变更为{B(26),D(18),A(12),parent1(9)}</p>
+<li>
+<p>node 数组内容变更为{B(26),D(18),A(12),parent1(9)}</p>
 </li>
 </ul>
 </li>
-<li><p>第二步：<code>CreateHaffmanTree(node, length - 1(4))</code></p>
+<li>
+<p>第二步：<code>CreateHaffmanTree(node, length - 1(4))</code></p>
 <ul>
 <li>node 数组内容{B(26),D(18),A(12),parent1(9)}，length = 4</li>
 <li>排序后 node{B,D,A,parent1},取最小结点A、parent1组成树</li>
@@ -453,7 +472,8 @@
 <li>node 数组内容变更为{B(26),D(18),parent2(21)}</li>
 </ul>
 </li>
-<li><p>第三步：<code>CreateHaffmanTree(node, length - 1(3))</code></p>
+<li>
+<p>第三步：<code>CreateHaffmanTree(node, length - 1(3))</code></p>
 <ul>
 <li>node 数组内容{B(26),D(18),parent2(21)}、length = 3</li>
 <li>排序后 node{B,parent2,D},取最小结点parent2、D组成树</li>
@@ -462,7 +482,8 @@
 <li>node 数组内容变更为{B(26),parent3(39)}</li>
 </ul>
 </li>
-<li><p>第四步：<code>CreateHaffmanTree(node, length - 1(2))</code></p>
+<li>
+<p>第四步：<code>CreateHaffmanTree(node, length - 1(2))</code></p>
 <ul>
 <li>node 数组内容{B(26),parent3(39)}、length = 2</li>
 <li>排序后 node{parent3,B},取最小结点parent3、B组成树</li>
@@ -471,7 +492,8 @@
 <li>node 数组内容变更为{parent4(65)}</li>
 </ul>
 </li>
-<li><p>第五步：<code>CreateHaffmanTree(node, length - 1(1))</code></p>
+<li>
+<p>第五步：<code>CreateHaffmanTree(node, length - 1(1))</code></p>
 <ul>
 <li>length = 1 符合<code>if(length &lt;= 1)return;</code>结束递归，哈夫曼树创建完毕</li>
 </ul>
@@ -479,7 +501,6 @@
 </ul>
 <hr>
 <img src="/2019/08/11/数据结构学习总结-（5-14）哈夫曼树的构建代码实现/2.png">
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -502,8 +523,6 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -526,8 +545,7 @@
 </tr>
 </tbody>
 </table>
-</div>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -732,7 +750,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">105</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -824,7 +842,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树的构建"><span class="nav-number">1.</span> <span class="nav-text">哈夫曼树的构建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼树的构建步骤"><span class="nav-number">1.1.</span> <span class="nav-text">哈夫曼树的构建步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码实现-顺序结构储存"><span class="nav-number">1.2.</span> <span class="nav-text">代码实现(顺序结构储存)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树构建解析"><span class="nav-number">2.</span> <span class="nav-text">哈夫曼树构建解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树的构建"><span class="nav-number">1.</span> <span class="nav-text">¶哈夫曼树的构建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼树的构建步骤"><span class="nav-number">1.1.</span> <span class="nav-text">¶哈夫曼树的构建步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码实现-顺序结构储存"><span class="nav-number">1.2.</span> <span class="nav-text">¶代码实现(顺序结构储存)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼树构建解析"><span class="nav-number">2.</span> <span class="nav-text">¶哈夫曼树构建解析</span></a></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="学习总结,Java学习总结,Java,">
+  <meta name="keywords" content="学习总结,Java,Java学习总结,">
 
 
 
@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="响应时的乱码当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子 1234567891011121314151617181920212223242526272829303132package Demo;import javax.servlet.ServletException;import javax.servlet.ht">
-<meta name="keywords" content="学习总结,Java学习总结,Java">
+<meta name="description" content="¶响应时的乱码 当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子 1234567891011121314151617181920212223242526272829303132package Demo;import javax.servlet.ServletException;import javax.servlet.">
+<meta name="keywords" content="学习总结,Java,Java学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(1.4)Servlet响应、请求乱码问题">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="响应时的乱码当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子 1234567891011121314151617181920212223242526272829303132package Demo;import javax.servlet.ServletException;import javax.servlet.ht">
+<meta property="og:description" content="¶响应时的乱码 当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子 1234567891011121314151617181920212223242526272829303132package Demo;import javax.servlet.ServletException;import javax.servlet.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/2.png">
@@ -96,7 +96,7 @@
 <meta property="og:updated_time" content="2020-01-18T13:29:37.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(1.4)Servlet响应、请求乱码问题">
-<meta name="twitter:description" content="响应时的乱码当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子 1234567891011121314151617181920212223242526272829303132package Demo;import javax.servlet.ServletException;import javax.servlet.ht">
+<meta name="twitter:description" content="¶响应时的乱码 当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子 1234567891011121314151617181920212223242526272829303132package Demo;import javax.servlet.ServletException;import javax.servlet.">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/1.png">
 
 
@@ -397,64 +397,84 @@
       
 
       
-        <h4 id="响应时的乱码"><a href="#响应时的乱码" class="headerlink" title="响应时的乱码"></a>响应时的乱码</h4><p>当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子</p>
+        <h4 id="响应时的乱码"><a class="header-anchor" href="#响应时的乱码">¶</a>响应时的乱码</h4>
+<p>当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Code</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Post is ok"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Get is ok"</span>);</span><br><span class="line">        </span><br><span class="line">        response.setContentType(<span class="string">"text/html"</span>);</span><br><span class="line">        PrintWriter out = response.getWriter();</span><br><span class="line">        out.println(<span class="string">"&lt;HTML&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;HEAD&gt;&lt;TITLE&gt;A Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"This is "</span>);</span><br><span class="line">        out.println(<span class="keyword">this</span>.getClass());</span><br><span class="line">        out.println(<span class="string">",using the Get method"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"你好世界"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;/HTML&gt;"</span>);</span><br><span class="line">        out.flush();</span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上文是通过get请求，当打开该servlet后，会打印一个html页面出来。</p>
 <img src="/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/1.png" title="源码中的你好世界为乱码">
 <p>可以发现，响应至网站的内容含有中文的部分变为乱码 无法识别</p>
-<h5 id="解决方案1"><a href="#解决方案1" class="headerlink" title="解决方案1"></a>解决方案1</h5><p>对于本案例，可以直接在html标签中的<code>&lt;Head&gt;</code>标签中添加<code>&lt;meta charset = &#39;utf-8&#39;/&gt;</code>来实现</p>
+<h5 id="解决方案1"><a class="header-anchor" href="#解决方案1">¶</a>解决方案1</h5>
+<p>对于本案例，可以直接在html标签中的<code>&lt;Head&gt;</code>标签中添加<code>&lt;meta charset = 'utf-8'/&gt;</code>来实现</p>
 <ul>
-<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">response.setContentType(<span class="string">"text/html"</span>);</span><br><span class="line">   PrintWriter out = response.getWriter();</span><br><span class="line">   out.println(<span class="string">"&lt;HTML&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;HEAD&gt;&lt;TITLE&gt;A Servlet&lt;/TITLE&gt;&lt;meta charset = 'utf-8'/&gt;&lt;/HEAD&gt;"</span>);<span class="comment">//进行添加&lt;meta charset = 'utf-8'/&gt;</span></span><br><span class="line">   out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"This is "</span>);</span><br><span class="line">   out.println(<span class="keyword">this</span>.getClass());</span><br><span class="line">   out.println(<span class="string">",using the Get method"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"你好世界"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;/HTML&gt;"</span>);</span><br><span class="line">   out.flush();</span><br><span class="line">   out.close();</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">response.setContentType(<span class="string">"text/html"</span>);</span><br><span class="line">   PrintWriter out = response.getWriter();</span><br><span class="line">   out.println(<span class="string">"&lt;HTML&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;HEAD&gt;&lt;TITLE&gt;A Servlet&lt;/TITLE&gt;&lt;meta charset = 'utf-8'/&gt;&lt;/HEAD&gt;"</span>);<span class="comment">//进行添加&lt;meta charset = 'utf-8'/&gt;</span></span><br><span class="line">   out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"This is "</span>);</span><br><span class="line">   out.println(<span class="keyword">this</span>.getClass());</span><br><span class="line">   out.println(<span class="string">",using the Get method"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"你好世界"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;/HTML&gt;"</span>);</span><br><span class="line">   out.flush();</span><br><span class="line">   out.close();</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="解决方案2"><a href="#解决方案2" class="headerlink" title="解决方案2"></a>解决方案2</h5><p>  可以直接对content-type属性进行设置</p>
+<h5 id="解决方案2"><a class="header-anchor" href="#解决方案2">¶</a>解决方案2</h5>
+<p>可以直接对content-type属性进行设置</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//response.setContentType("text/html");</span></span><br><span class="line">response.setContentType(<span class="string">"text/html;charset = utf-8"</span>);<span class="comment">//对其识别字符集进行设置</span></span><br><span class="line">   PrintWriter out = response.getWriter();</span><br><span class="line">   out.println(<span class="string">"&lt;HTML&gt;"</span>);</span><br><span class="line">   out.println(<span class="string">"&lt;HEAD&gt;&lt;TITLE&gt;A Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;"</span>);</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/2.png" title="可以看出中文字符被解析成功">
 <hr>
-<h5 id="附加：content-type"><a href="#附加：content-type" class="headerlink" title="附加：content-type"></a>附加：content-type</h5><ul>
-<li><p>Content-Type</p>
+<h5 id="附加：content-type"><a class="header-anchor" href="#附加：content-type">¶</a>附加：content-type</h5>
+<ul>
+<li>
+<p>Content-Type</p>
 <ul>
 <li>MediaType，即是Internet Media Type，互联网媒体类型；也叫做MIME类型，在Http协议消息头中，使用Content-Type来表示具体请求中的媒体类型信息。</li>
 </ul>
 </li>
-<li><p>常见的媒体格式类型如下：</p>
-<ul>
-<li>text/html ： HTML格式</li>
-<li>​    text/plain ：纯文本格式      </li>
-<li>​    text/xml ：  XML格式</li>
-<li>​    image/gif ：gif图片格式    </li>
-<li>​    image/jpeg ：jpg图片格式 </li>
-<li><p>​    image/png：png图片格式</p>
+<li>
+<p>常见的媒体格式类型如下：</p>
+</li>
+<li>
+<p>text/html ： HTML格式</p>
+</li>
+<li>
+<p>​    text/plain ：纯文本格式</p>
+</li>
+<li>
+<p>​    text/xml ：  XML格式</p>
+</li>
+<li>
+<p>​    image/gif ：gif图片格式</p>
+</li>
+<li>
+<p>​    image/jpeg ：jpg图片格式</p>
+</li>
+<li>
+<p>​    image/png：png图片格式</p>
 <p>以application开头的媒体格式类型：</p>
 </li>
 </ul>
 <ul>
 <li>application/xhtml+xml ：XHTML格式</li>
 <li>application/xml     ： XML数据格式</li>
-<li>application/atom+xml  ：Atom XML聚合格式    </li>
+<li>application/atom+xml  ：Atom XML聚合格式</li>
 <li>application/json    ： JSON数据格式</li>
-<li>application/pdf       ：pdf格式  </li>
+<li>application/pdf       ：pdf格式</li>
 <li>application/msword  ： Word文档格式</li>
 <li>application/octet-stream ： 二进制流数据（如常见的文件下载）</li>
-<li><p>application/x-www-form-urlencoded ： <code>&lt;form encType=&quot;&quot;&gt;</code>中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）</p>
-<p>另外一种常见的媒体格式是上传文件之时使用的：</p>
-</li>
-<li><p>​    multipart/form-data ： 需要在表单中进行文件上传时，就需要使用该格式</p>
-</li>
+<li>application/x-www-form-urlencoded ： <code>&lt;form encType=&quot;&quot;&gt;</code>中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）</li>
 </ul>
-</li>
+<pre><code> 另外一种常见的媒体格式是上传文件之时使用的：
+</code></pre>
+<ul>
+<li>​    multipart/form-data ： 需要在表单中进行文件上传时，就需要使用该格式</li>
 </ul>
 <hr>
-<h4 id="请求时的乱码"><a href="#请求时的乱码" class="headerlink" title="请求时的乱码"></a>请求时的乱码</h4><p>当我们通过表单进行获取用户名或者密码的时候，通常可能会出现提交的时候用户名是中文字符，当提交至服务器进行处理的时候，这个阶段就可能会出现中文的乱码。</p>
+<h4 id="请求时的乱码"><a class="header-anchor" href="#请求时的乱码">¶</a>请求时的乱码</h4>
+<p>当我们通过表单进行获取用户名或者密码的时候，通常可能会出现提交的时候用户名是中文字符，当提交至服务器进行处理的时候，这个阶段就可能会出现中文的乱码。</p>
 <ul>
 <li>通过post提交来处理</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Post is ok"</span>);</span><br><span class="line"></span><br><span class="line">    String n = request.getParameter(<span class="string">"um"</span>);</span><br><span class="line">    String pw = request.getParameter(<span class="string">"pw"</span>);</span><br><span class="line">    System.out.println(<span class="string">"用户名:"</span> + n);</span><br><span class="line">    System.out.println(<span class="string">"密码:"</span> + pw);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/3.png" title="实际服务器中获取的不是对应的中文用户名，而是一段乱码">
-<h5 id="对于post提交"><a href="#对于post提交" class="headerlink" title="对于post提交"></a>对于post提交</h5><h6 id="解决方案1-1"><a href="#解决方案1-1" class="headerlink" title="解决方案1"></a>解决方案1</h6><p>通过使用 <code>request.setCharacterEncoding(&quot;utf-8&quot;);</code>来设置请求req对象的获取请求的字符集</p>
+<h5 id="对于post提交"><a class="header-anchor" href="#对于post提交">¶</a>对于post提交</h5>
+<h6 id="解决方案1-v2"><a class="header-anchor" href="#解决方案1-v2">¶</a>解决方案1</h6>
+<p>通过使用 <code>request.setCharacterEncoding(&quot;utf-8&quot;);</code>来设置请求req对象的获取请求的字符集</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Post is ok"</span>);</span><br><span class="line">    </span><br><span class="line">        request.setCharacterEncoding(<span class="string">"utf-8"</span>);<span class="comment">//设置获取的字符集</span></span><br><span class="line"></span><br><span class="line">        String n = request.getParameter(<span class="string">"um"</span>);</span><br><span class="line">        String pw = request.getParameter(<span class="string">"pw"</span>);</span><br><span class="line">        System.out.println(<span class="string">"用户名:"</span> + n);</span><br><span class="line">        System.out.println(<span class="string">"密码:"</span> + pw);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/18/JavaWeb学习总结-1-4-Servlet响应、请求乱码问题/4.png" title="可以发现获取的中文字符已经不是乱码">
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -533,9 +553,9 @@
           
             <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
           
-            <a href="/tags/Java学习总结/" rel="tag"><i class="fa fa-tag"></i> Java学习总结</a>
-          
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/Java学习总结/" rel="tag"><i class="fa fa-tag"></i> Java学习总结</a>
           
         </div>
       
@@ -659,7 +679,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">105</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -751,7 +771,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#响应时的乱码"><span class="nav-number">1.</span> <span class="nav-text">响应时的乱码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解决方案1"><span class="nav-number">1.1.</span> <span class="nav-text">解决方案1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决方案2"><span class="nav-number">1.2.</span> <span class="nav-text">解决方案2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#附加：content-type"><span class="nav-number">1.3.</span> <span class="nav-text">附加：content-type</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求时的乱码"><span class="nav-number">2.</span> <span class="nav-text">请求时的乱码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对于post提交"><span class="nav-number">2.1.</span> <span class="nav-text">对于post提交</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#解决方案1-1"><span class="nav-number">2.1.1.</span> <span class="nav-text">解决方案1</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#响应时的乱码"><span class="nav-number">1.</span> <span class="nav-text">¶响应时的乱码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解决方案1"><span class="nav-number">1.1.</span> <span class="nav-text">¶解决方案1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决方案2"><span class="nav-number">1.2.</span> <span class="nav-text">¶解决方案2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#附加：content-type"><span class="nav-number">1.3.</span> <span class="nav-text">¶附加：content-type</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求时的乱码"><span class="nav-number">2.</span> <span class="nav-text">¶请求时的乱码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#对于post提交"><span class="nav-number">2.1.</span> <span class="nav-text">¶对于post提交</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#解决方案1-v2"><span class="nav-number">2.1.1.</span> <span class="nav-text">¶解决方案1</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="学习总结,Java学习总结,Java,">
+  <meta name="keywords" content="学习总结,Java,Java学习总结,">
 
 
 
@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="AJAX AJAX: “ Asnchronous JavaScript and XMI” 中文意思:异步Javascript和yML. 指一种创建交互式网页应用的网页开发技术。 AJAX并非缩写词,而是由Jesse James Gaiiett创造的名词。   不是指一种单一的技术,而是有机地利用了一系列相关的技术:  web标准( Standards-Based Presentation )XHT">
-<meta name="keywords" content="学习总结,Java学习总结,Java">
+<meta name="description" content="¶AJAX  AJAX: &amp;quot; Asnchronous JavaScript and XMI&amp;quot;  中文意思:异步Javascript和yML. 指一种创建交互式网页应用的网页开发技术。 AJAX并非缩写词,而是由Jesse James Gaiiett创造的名词。   不是指一种单一的技术,而是有机地利用了一系列相关的技术:  web标准( Standards-Based Pres">
+<meta name="keywords" content="学习总结,Java,Java学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(4.2)AJAX">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/26/JavaWeb学习总结-4-2-AJAX/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="AJAX AJAX: “ Asnchronous JavaScript and XMI” 中文意思:异步Javascript和yML. 指一种创建交互式网页应用的网页开发技术。 AJAX并非缩写词,而是由Jesse James Gaiiett创造的名词。   不是指一种单一的技术,而是有机地利用了一系列相关的技术:  web标准( Standards-Based Presentation )XHT">
+<meta property="og:description" content="¶AJAX  AJAX: &amp;quot; Asnchronous JavaScript and XMI&amp;quot;  中文意思:异步Javascript和yML. 指一种创建交互式网页应用的网页开发技术。 AJAX并非缩写词,而是由Jesse James Gaiiett创造的名词。   不是指一种单一的技术,而是有机地利用了一系列相关的技术:  web标准( Standards-Based Pres">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/26/JavaWeb学习总结-4-2-AJAX/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/26/JavaWeb学习总结-4-2-AJAX/2.png">
@@ -103,7 +103,7 @@
 <meta property="og:updated_time" content="2020-01-27T12:37:34.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(4.2)AJAX">
-<meta name="twitter:description" content="AJAX AJAX: “ Asnchronous JavaScript and XMI” 中文意思:异步Javascript和yML. 指一种创建交互式网页应用的网页开发技术。 AJAX并非缩写词,而是由Jesse James Gaiiett创造的名词。   不是指一种单一的技术,而是有机地利用了一系列相关的技术:  web标准( Standards-Based Presentation )XHT">
+<meta name="twitter:description" content="¶AJAX  AJAX: &amp;quot; Asnchronous JavaScript and XMI&amp;quot;  中文意思:异步Javascript和yML. 指一种创建交互式网页应用的网页开发技术。 AJAX并非缩写词,而是由Jesse James Gaiiett创造的名词。   不是指一种单一的技术,而是有机地利用了一系列相关的技术:  web标准( Standards-Based Pres">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/01/26/JavaWeb学习总结-4-2-AJAX/1.png">
 
 
@@ -404,38 +404,45 @@
       
 
       
-        <h4 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h4><ul>
-<li>AJAX: “ Asnchronous JavaScript and XMI”<ul>
+        <h4 id="ajax"><a class="header-anchor" href="#ajax">¶</a>AJAX</h4>
+<ul>
+<li>AJAX: &quot; Asnchronous JavaScript and XMI&quot;
+<ul>
 <li>中文意思:异步Javascript和yML.</li>
 <li>指一种创建交互式网页应用的网页开发技术。</li>
 <li>AJAX并非缩写词,而是由Jesse James Gaiiett创造的名词。</li>
 </ul>
 </li>
-<li>不是指一种单一的技术,而是有机地利用了一系列相关的技术: <ul>
-<li>web标准( Standards-Based Presentation )XHTML+CSs的表示, </li>
+<li>不是指一种单一的技术,而是有机地利用了一系列相关的技术:
+<ul>
+<li>web标准( Standards-Based Presentation )XHTML+CSs的表示,</li>
 <li>使用DOM ( Document Object Model )进行动态显示及交互,</li>
-<li>使用XML和XSLT进行数据交换及相关操作, </li>
+<li>使用XML和XSLT进行数据交换及相关操作,</li>
 <li>使用XMHttpReauest进行异步数据查询、检索.</li>
 <li>简单理解为: JavaScript + XMttpReauest + CSS +服务器端的集合.</li>
 </ul>
 </li>
 </ul>
-<h5 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h5><ul>
+<h5 id="优点"><a class="header-anchor" href="#优点">¶</a>优点</h5>
+<ul>
 <li>传统的web应用允许用户向web服务器发送一个请求。服务器接收并处理然后返回一个新的网页(同步)。</li>
 <li>这个做法浪费了许多带宽,因为在前后两个页面中的大部分HTML代码往往是相同的。</li>
 <li>AJAX应用可以仅向服务器发送并取回必需的数据,并在客户端采用Javascript处理来自服务器的响应</li>
 <li>因为在服务器和浏览器之间交换的数据大量减少(大约只有原来的5%)结果我们就能看到响应更快的应用。同时很多的处理工作可以在发出请求的客户端机器上完成,所以Web服务器的处理时间也减少了。</li>
 <li>Ajax在本质上是一个浏览器端的技术</li>
-<li>Ajax技术之主要目的在于局部交换客户端及服务器间之数据 </li>
+<li>Ajax技术之主要目的在于局部交换客户端及服务器间之数据</li>
 <li>能够不用重新载入整个版面来更新资料,也就是所谓的Refresh without Reload(轻刷新)</li>
 <li>与服务器之间的沟通,完全是透过Javascript来实行</li>
 <li>本身传送的资料量很小,反应更快,让网络程序更像一个桌面应用程序</li>
 <li>AJAX就是运用Javascript在后台悄悄帮你去跟服务器要资料,最后再由 Javascript或DOM来帮你呈现结果,因为所有动作都是由Javascript代劳,所以省去了网页重载的麻烦,使用者也感受不到等待的痛苦</li>
 </ul>
 <hr>
-<h4 id="AJAX常用API及简单实例"><a href="#AJAX常用API及简单实例" class="headerlink" title="AJAX常用API及简单实例"></a>AJAX常用API及简单实例</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line">    //异步对象，可以发送异步请求，可以接受服务器响应</span><br><span class="line">    var obj = new XMLHttpRequest();</span><br><span class="line">    </span><br><span class="line">    //访问数据的位置</span><br><span class="line">    obj.open("post","Hello.html");</span><br><span class="line">    </span><br><span class="line">    //访问时发送的数据或请求（参数会传递至服务器）</span><br><span class="line">    obj.send(null);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h5 id="常用api"><a href="#常用api" class="headerlink" title="常用api"></a>常用api</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">obj.readystate: 准备状态0.1.2.3.4</span><br><span class="line">obj.status :服务器响应的状态码(404/403/500/200/304) </span><br><span class="line">obj.responseText:服务器给我们的响应文本</span><br><span class="line">obj.onreadystatechange事件: readystate发生变化时触发</span><br></pre></td></tr></table></figure>
-<h6 id="readyState属性"><a href="#readyState属性" class="headerlink" title="readyState属性"></a>readyState属性</h6><p>readyState属性指出了XMLHttpRequest对象在发送/接收数据过程中所处的几个状态。XMLHtpRequest对象会经历5种不同的状态。</p>
+<h4 id="ajax常用api及简单实例"><a class="header-anchor" href="#ajax常用api及简单实例">¶</a>AJAX常用API及简单实例</h4>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line">    //异步对象，可以发送异步请求，可以接受服务器响应</span><br><span class="line">    var obj = new XMLHttpRequest();</span><br><span class="line">    </span><br><span class="line">    //访问数据的位置</span><br><span class="line">    obj.open("post","Hello.html");</span><br><span class="line">    </span><br><span class="line">    //访问时发送的数据或请求（参数会传递至服务器）</span><br><span class="line">    obj.send(null);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="常用api"><a class="header-anchor" href="#常用api">¶</a>常用api</h5>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">obj.readystate: 准备状态0.1.2.3.4</span><br><span class="line">obj.status :服务器响应的状态码(404/403/500/200/304) </span><br><span class="line">obj.responseText:服务器给我们的响应文本</span><br><span class="line">obj.onreadystatechange事件: readystate发生变化时触发</span><br></pre></td></tr></table></figure>
+<h6 id="readystate属性"><a class="header-anchor" href="#readystate属性">¶</a>readyState属性</h6>
+<p>readyState属性指出了XMLHttpRequest对象在发送/接收数据过程中所处的几个状态。XMLHtpRequest对象会经历5种不同的状态。</p>
 <ul>
 <li>0：未初始化。对象已经创建,但还未初始化,即还没调用 open方法;</li>
 <li>1：已打开。对象已经创建并初始化,但还未调用send方法：</li>
@@ -443,14 +450,16 @@
 <li>3：正在接收。已经接收了部分数据,但还不能使用该对象的属性和方法,因为状态和响应头不完整;</li>
 <li>4：已加载。所有数据接收完毕</li>
 </ul>
-<h6 id="status属性"><a href="#status属性" class="headerlink" title="status属性"></a>status属性</h6><ul>
+<h6 id="status属性"><a class="header-anchor" href="#status属性">¶</a>status属性</h6>
+<ul>
 <li>服务器发送的每一个响应也都带有首部信息。三位数的状态码是服务器发送的响应中最重要的首部信息,并且属于超文本传输协议中的一部分。</li>
-<li>常用状态码及其含义:<ul>
+<li>常用状态码及其含义:
+<ul>
 <li>404没找到页面(not found)</li>
 <li>403禁止访问(forbidden)</li>
-<li>500内部服务器出错(internal service error) </li>
+<li>500内部服务器出错(internal service error)</li>
 <li>200一切正常(ok)</li>
-<li>304没有被修改(not modif ied) </li>
+<li>304没有被修改(not modif ied)</li>
 </ul>
 </li>
 <li>在XMLHLLReauest对象中,服务器发送的状态码都保存在status属性里。通过把这个值和200或 304比较,可以确保服务器是否已发送了一个成功的响应</li>
@@ -458,7 +467,10 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Register<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"application/javascript"</span>&gt;</span></span><br><span class="line">    var obj = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">    obj.onreadystatechange = function () &#123;</span><br><span class="line">        alert(obj.readyState);</span><br><span class="line">    &#125;</span><br><span class="line">    obj.open("post","HelloHtml.html");</span><br><span class="line">    obj.send(null);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/1.png" title="通过使用onreadystatechange函数可以看出，当异步请求对象开始发送异步请求时，其readystate再发送改变，一共有5个加载环节">
 <hr>
-<h4 id="一些简单演示功能实例"><a href="#一些简单演示功能实例" class="headerlink" title="一些简单演示功能实例"></a>一些简单演示功能实例</h4><h5 id="时间数据刷新"><a href="#时间数据刷新" class="headerlink" title="时间数据刷新"></a>时间数据刷新</h5><h6 id="v1-0"><a href="#v1-0" class="headerlink" title="v1.0"></a>v1.0</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: ShuHao</span><br><span class="line">  Date: <span class="number">2020</span>/<span class="number">1</span>/<span class="number">27</span></span><br><span class="line">  Time: <span class="number">18</span>:<span class="number">14</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;ShowTimeAndDate&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">当前时间为：&lt;span id="time"&gt;&lt;/span&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;button type="button" onclick="getTime()"&gt;获取时间&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="function">function <span class="title">getTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取异步请求对象</span></span><br><span class="line">        <span class="keyword">var</span> obj = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        obj.onreadystatechange = function () &#123;</span><br><span class="line">            <span class="keyword">var</span> islast = (obj.readyState==<span class="number">4</span>);</span><br><span class="line">            <span class="keyword">var</span> isSuccess = (obj.status==<span class="number">200</span>||obj.status==<span class="number">304</span>);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(islast &amp;&amp; isSuccess)&#123;</span><br><span class="line">                <span class="keyword">var</span> data = obj.responseText;</span><br><span class="line">                <span class="keyword">var</span> tspan = document.getElementById(<span class="string">'time'</span>);</span><br><span class="line">                tspan.innerHTML = data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        obj.open(<span class="string">"get"</span>,<span class="string">"Date.jsp"</span>)</span><br><span class="line"></span><br><span class="line">        obj.send(<span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="一些简单演示功能实例"><a class="header-anchor" href="#一些简单演示功能实例">¶</a>一些简单演示功能实例</h4>
+<h5 id="时间数据刷新"><a class="header-anchor" href="#时间数据刷新">¶</a>时间数据刷新</h5>
+<h6 id="v1-0"><a class="header-anchor" href="#v1-0">¶</a>v1.0</h6>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: ShuHao</span><br><span class="line">  Date: <span class="number">2020</span>/<span class="number">1</span>/<span class="number">27</span></span><br><span class="line">  Time: <span class="number">18</span>:<span class="number">14</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;ShowTimeAndDate&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">当前时间为：&lt;span id="time"&gt;&lt;/span&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;button type="button" onclick="getTime()"&gt;获取时间&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="function">function <span class="title">getTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取异步请求对象</span></span><br><span class="line">        <span class="keyword">var</span> obj = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        obj.onreadystatechange = function () &#123;</span><br><span class="line">            <span class="keyword">var</span> islast = (obj.readyState==<span class="number">4</span>);</span><br><span class="line">            <span class="keyword">var</span> isSuccess = (obj.status==<span class="number">200</span>||obj.status==<span class="number">304</span>);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(islast &amp;&amp; isSuccess)&#123;</span><br><span class="line">                <span class="keyword">var</span> data = obj.responseText;</span><br><span class="line">                <span class="keyword">var</span> tspan = document.getElementById(<span class="string">'time'</span>);</span><br><span class="line">                tspan.innerHTML = data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        obj.open(<span class="string">"get"</span>,<span class="string">"Date.jsp"</span>)</span><br><span class="line"></span><br><span class="line">        obj.send(<span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/2.png" title="上述JSP页面展示">
 <p>数据源<code>Date.jsp</code></p>
 <ul>
@@ -466,10 +478,12 @@
 </ul>
 <figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">"java.util.Date"</span> %&gt;&lt;%--</span><br><span class="line">  Created by IntelliJ IDEA.</span><br><span class="line">  User: ShuHao</span><br><span class="line">  Date: <span class="number">2020</span>/<span class="number">1</span>/<span class="number">27</span></span><br><span class="line">  Time: <span class="number">18</span>:<span class="number">06</span></span><br><span class="line">  To change <span class="keyword">this</span> template use File | Settings | File Templates.</span><br><span class="line">--%&gt;</span><br><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;%</span><br><span class="line">    out.print(<span class="keyword">new</span> Date());</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/3.png" title="点击按钮后">
-<h6 id="v2-0-实现动态刷新页面2"><a href="#v2-0-实现动态刷新页面2" class="headerlink" title="v2.0(实现动态刷新页面2)"></a>v2.0(实现动态刷新页面2)</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在getTime()函数内添加一个计时期</span></span><br><span class="line">setTimeout(<span class="string">"getTime()"</span>,<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="function">function <span class="title">getTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> obj = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        obj.onreadystatechange = function () &#123;</span><br><span class="line">            <span class="keyword">var</span> islast = (obj.readyState==<span class="number">4</span>);</span><br><span class="line">            <span class="keyword">var</span> isSuccess = (obj.status==<span class="number">200</span>||obj.status==<span class="number">304</span>);</span><br><span class="line">            <span class="keyword">if</span>(islast &amp;&amp; isSuccess)&#123;</span><br><span class="line">                <span class="keyword">var</span> data = obj.responseText;</span><br><span class="line">                <span class="keyword">var</span> tspan = document.getElementById(<span class="string">'time'</span>);</span><br><span class="line">                tspan.innerHTML = data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        obj.open(<span class="string">"get"</span>,<span class="string">"Date.jsp"</span>)</span><br><span class="line"></span><br><span class="line">        obj.send(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        setTimeout(<span class="string">"getTime()"</span>,<span class="number">1000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="v2-0-实现动态刷新页面2"><a class="header-anchor" href="#v2-0-实现动态刷新页面2">¶</a>v2.0(实现动态刷新页面2)</h6>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在getTime()函数内添加一个计时期</span></span><br><span class="line">setTimeout(<span class="string">"getTime()"</span>,<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="function">function <span class="title">getTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> obj = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        obj.onreadystatechange = function () &#123;</span><br><span class="line">            <span class="keyword">var</span> islast = (obj.readyState==<span class="number">4</span>);</span><br><span class="line">            <span class="keyword">var</span> isSuccess = (obj.status==<span class="number">200</span>||obj.status==<span class="number">304</span>);</span><br><span class="line">            <span class="keyword">if</span>(islast &amp;&amp; isSuccess)&#123;</span><br><span class="line">                <span class="keyword">var</span> data = obj.responseText;</span><br><span class="line">                <span class="keyword">var</span> tspan = document.getElementById(<span class="string">'time'</span>);</span><br><span class="line">                tspan.innerHTML = data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        obj.open(<span class="string">"get"</span>,<span class="string">"Date.jsp"</span>)</span><br><span class="line"></span><br><span class="line">        obj.send(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        setTimeout(<span class="string">"getTime()"</span>,<span class="number">1000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/4.png" title="可以发现后台一直访问Date.jsp 导致页面的时间也不停的刷新">
 <hr>
-<h5 id="简单的用户名存在检测"><a href="#简单的用户名存在检测" class="headerlink" title="简单的用户名存在检测"></a>简单的用户名存在检测</h5><ul>
+<h5 id="简单的用户名存在检测"><a class="header-anchor" href="#简单的用户名存在检测">¶</a>简单的用户名存在检测</h5>
+<ul>
 <li>实例说明</li>
 </ul>
 <p>很多时候在注册的时候都要进行用户检测，看该用户名是否注册过。所以这里可以更新ajax进行提交异步请求来检测用户在注册时输入的用户是否注册过</p>
@@ -478,11 +492,13 @@
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/5.png" title="上述代码展示的测试也面">
 <p><strong>后台服务端</strong></p>
 <ul>
-<li>总体处理流程：<ul>
+<li>总体处理流程：
+<ul>
 <li>获取在展示页面获取的内容</li>
 <li>在程序控制进行输出</li>
 <li>用获取到的用户连接数据库进行查询是否存在</li>
-<li>返回结果至此servlet后端服务器输出的页面<ul>
+<li>返回结果至此servlet后端服务器输出的页面
+<ul>
 <li>如果存在则显示true</li>
 <li>不存在则显示false</li>
 </ul>
@@ -494,9 +510,11 @@
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/6.png" title="此时数据库存在的用户">
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/7.png" title="测试1">
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/8.png" title="测试2">
-<h6 id="小修改使用post方式进行传参"><a href="#小修改使用post方式进行传参" class="headerlink" title="小修改使用post方式进行传参"></a>小修改使用post方式进行传参</h6><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*修改处*/</span></span><br><span class="line">obj.open(<span class="string">"post"</span>,<span class="string">"./HaveName"</span>);</span><br><span class="line">obj.send(<span class="string">"un="</span> +username);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*全部代码*/</span></span><br></pre></td></tr></table></figure>
+<h6 id="小修改使用post方式进行传参"><a class="header-anchor" href="#小修改使用post方式进行传参">¶</a>小修改使用post方式进行传参</h6>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*修改处*/</span></span><br><span class="line">obj.open(<span class="string">"post"</span>,<span class="string">"./HaveName"</span>);</span><br><span class="line">obj.send(<span class="string">"un="</span> +username);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*全部代码*/</span></span><br></pre></td></tr></table></figure>
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/9.png" title="修改后">
-<h6 id="进行提示优化"><a href="#进行提示优化" class="headerlink" title="进行提示优化"></a>进行提示优化</h6><ul>
+<h6 id="进行提示优化"><a class="header-anchor" href="#进行提示优化">¶</a>进行提示优化</h6>
+<ul>
 <li>当用户名查询存在时报已存在</li>
 <li>不存在时报可用</li>
 </ul>
@@ -504,12 +522,13 @@
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/10.png">
 <img src="/2020/01/26/JavaWeb学习总结-4-2-AJAX/11.png" title="测试图">
 <hr>
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<h4 id="其他"><a class="header-anchor" href="#其他">¶</a>其他</h4>
+<ul>
 <li>注意在传参过程中的乱码问题</li>
 <li>处理时要考虑IE浏览器的兼容问题</li>
-<li><code>obj.setRequestHeader(&#39;Content-type&#39;,&#39;application/x-www-form-urlencoded&#39;)</code>用来处理post请求的主体类型，使用post必填。填在open之后</li>
+<li><code>obj.setRequestHeader('Content-type','application/x-www-form-urlencoded')</code>用来处理post请求的主体类型，使用post必填。填在open之后</li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -588,9 +607,9 @@
           
             <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
           
-            <a href="/tags/Java学习总结/" rel="tag"><i class="fa fa-tag"></i> Java学习总结</a>
-          
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/Java学习总结/" rel="tag"><i class="fa fa-tag"></i> Java学习总结</a>
           
         </div>
       
@@ -714,7 +733,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">105</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -806,7 +825,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX"><span class="nav-number">1.</span> <span class="nav-text">AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优点"><span class="nav-number">1.1.</span> <span class="nav-text">优点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX常用API及简单实例"><span class="nav-number">2.</span> <span class="nav-text">AJAX常用API及简单实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常用api"><span class="nav-number">2.1.</span> <span class="nav-text">常用api</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#readyState属性"><span class="nav-number">2.1.1.</span> <span class="nav-text">readyState属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#status属性"><span class="nav-number">2.1.2.</span> <span class="nav-text">status属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些简单演示功能实例"><span class="nav-number">3.</span> <span class="nav-text">一些简单演示功能实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#时间数据刷新"><span class="nav-number">3.1.</span> <span class="nav-text">时间数据刷新</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#v1-0"><span class="nav-number">3.1.1.</span> <span class="nav-text">v1.0</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#v2-0-实现动态刷新页面2"><span class="nav-number">3.1.2.</span> <span class="nav-text">v2.0(实现动态刷新页面2)</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简单的用户名存在检测"><span class="nav-number">3.2.</span> <span class="nav-text">简单的用户名存在检测</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小修改使用post方式进行传参"><span class="nav-number">3.2.1.</span> <span class="nav-text">小修改使用post方式进行传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#进行提示优化"><span class="nav-number">3.2.2.</span> <span class="nav-text">进行提示优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax"><span class="nav-number">1.</span> <span class="nav-text">¶AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优点"><span class="nav-number">1.1.</span> <span class="nav-text">¶优点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax常用api及简单实例"><span class="nav-number">2.</span> <span class="nav-text">¶AJAX常用API及简单实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常用api"><span class="nav-number">2.1.</span> <span class="nav-text">¶常用api</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#readystate属性"><span class="nav-number">2.1.1.</span> <span class="nav-text">¶readyState属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#status属性"><span class="nav-number">2.1.2.</span> <span class="nav-text">¶status属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些简单演示功能实例"><span class="nav-number">3.</span> <span class="nav-text">¶一些简单演示功能实例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#时间数据刷新"><span class="nav-number">3.1.</span> <span class="nav-text">¶时间数据刷新</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#v1-0"><span class="nav-number">3.1.1.</span> <span class="nav-text">¶v1.0</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#v2-0-实现动态刷新页面2"><span class="nav-number">3.1.2.</span> <span class="nav-text">¶v2.0(实现动态刷新页面2)</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简单的用户名存在检测"><span class="nav-number">3.2.</span> <span class="nav-text">¶简单的用户名存在检测</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小修改使用post方式进行传参"><span class="nav-number">3.2.1.</span> <span class="nav-text">¶小修改使用post方式进行传参</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#进行提示优化"><span class="nav-number">3.2.2.</span> <span class="nav-text">¶进行提示优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">¶其他</span></a></li></ol></div>
             
 
           </div>

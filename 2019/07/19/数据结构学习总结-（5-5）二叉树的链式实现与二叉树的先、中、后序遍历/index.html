@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="二叉树的链式实现创建链表二叉树 二叉树的链表实现有两种情况  二叉链表：一个结点带有指向左右子树的指针和一个数据    三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针       现以二叉链表为例创建一个二叉树    1234567891011121314struct BiTreeNode&amp;#123;    char data;    BiTreeNode* L_Node">
+<meta name="description" content="¶二叉树的链式实现 ¶创建链表二叉树   二叉树的链表实现有两种情况  二叉链表：一个结点带有指向左右子树的指针和一个数据       三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针          现以二叉链表为例创建一个二叉树      1234567891011121314struct BiTreeNode&amp;#123;    char data;    BiTre">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.5）二叉树的链式实现与二叉树的先、中、后序遍历">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="二叉树的链式实现创建链表二叉树 二叉树的链表实现有两种情况  二叉链表：一个结点带有指向左右子树的指针和一个数据    三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针       现以二叉链表为例创建一个二叉树    1234567891011121314struct BiTreeNode&amp;#123;    char data;    BiTreeNode* L_Node">
+<meta property="og:description" content="¶二叉树的链式实现 ¶创建链表二叉树   二叉树的链表实现有两种情况  二叉链表：一个结点带有指向左右子树的指针和一个数据       三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针          现以二叉链表为例创建一个二叉树      1234567891011121314struct BiTreeNode&amp;#123;    char data;    BiTre">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/2.png">
@@ -102,7 +102,7 @@
 <meta property="og:updated_time" content="2019-07-19T09:34:52.668Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.5）二叉树的链式实现与二叉树的先、中、后序遍历">
-<meta name="twitter:description" content="二叉树的链式实现创建链表二叉树 二叉树的链表实现有两种情况  二叉链表：一个结点带有指向左右子树的指针和一个数据    三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针       现以二叉链表为例创建一个二叉树    1234567891011121314struct BiTreeNode&amp;#123;    char data;    BiTreeNode* L_Node">
+<meta name="twitter:description" content="¶二叉树的链式实现 ¶创建链表二叉树   二叉树的链表实现有两种情况  二叉链表：一个结点带有指向左右子树的指针和一个数据       三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针          现以二叉链表为例创建一个二叉树      1234567891011121314struct BiTreeNode&amp;#123;    char data;    BiTre">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/1.png">
 
 
@@ -403,104 +403,145 @@
       
 
       
-        <h4 id="二叉树的链式实现"><a href="#二叉树的链式实现" class="headerlink" title="二叉树的链式实现"></a>二叉树的链式实现</h4><h5 id="创建链表二叉树"><a href="#创建链表二叉树" class="headerlink" title="创建链表二叉树"></a>创建链表二叉树</h5><ul>
-<li><p>二叉树的链表实现有两种情况</p>
+        <h4 id="二叉树的链式实现"><a class="header-anchor" href="#二叉树的链式实现">¶</a>二叉树的链式实现</h4>
+<h5 id="创建链表二叉树"><a class="header-anchor" href="#创建链表二叉树">¶</a>创建链表二叉树</h5>
 <ul>
-<li>二叉链表：一个结点带有指向左右子树的指针和一个数据<ul>
-<li><img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/1.png"></li>
-</ul>
-</li>
-<li>三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针<ul>
-<li><img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/2.png">
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>现以二叉链表为例创建一个二叉树</p>
+<li>
+<p>二叉树的链表实现有两种情况</p>
 <ul>
-<li><img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png">
+<li>二叉链表：一个结点带有指向左右子树的指针和一个数据
+<ul>
+<li>
+<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/1.png">
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BiTreeNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> data;</span><br><span class="line">    BiTreeNode* L_Node = <span class="literal">nullptr</span>;<span class="comment">//指向左子树的指针</span></span><br><span class="line">    BiTreeNode* R_Node = <span class="literal">nullptr</span>;<span class="comment">//指向右子树的指针</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    BiTreeNode* T = <span class="keyword">new</span> BiTreeNode(); T-&gt;data = <span class="string">'A'</span>;</span><br><span class="line">	T-&gt;L_Node = <span class="keyword">new</span> BiTreeNode(); T-&gt;L_Node-&gt;data = <span class="string">'B'</span>;</span><br><span class="line">	T-&gt;R_Node = <span class="keyword">new</span> BiTreeNode(); T-&gt;R_Node-&gt;data = <span class="string">'C'</span>;</span><br><span class="line">	BiTreeNode* p = T-&gt;L_Node;</span><br><span class="line">	p-&gt;L_Node = <span class="keyword">new</span> BiTreeNode(); p-&gt;L_Node-&gt;data = <span class="string">'D'</span>;</span><br><span class="line">	p-&gt;R_Node = <span class="keyword">new</span> BiTreeNode(); p-&gt;R_Node-&gt;data = <span class="string">'E'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</ul>
+</li>
+<li>三叉链表：除了带有分别指向左右子树的两个指针外还有一个指向双亲结点的指针
+<ul>
+<li>
+<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/2.png">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>现以二叉链表为例创建一个二叉树</p>
+<ul>
+<li>
+<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png">
+</li>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BiTreeNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> data;</span><br><span class="line">    BiTreeNode* L_Node = <span class="literal">nullptr</span>;<span class="comment">//指向左子树的指针</span></span><br><span class="line">    BiTreeNode* R_Node = <span class="literal">nullptr</span>;<span class="comment">//指向右子树的指针</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    BiTreeNode* T = <span class="keyword">new</span> BiTreeNode(); T-&gt;data = <span class="string">'A'</span>;</span><br><span class="line">	T-&gt;L_Node = <span class="keyword">new</span> BiTreeNode(); T-&gt;L_Node-&gt;data = <span class="string">'B'</span>;</span><br><span class="line">	T-&gt;R_Node = <span class="keyword">new</span> BiTreeNode(); T-&gt;R_Node-&gt;data = <span class="string">'C'</span>;</span><br><span class="line">	BiTreeNode* p = T-&gt;L_Node;</span><br><span class="line">	p-&gt;L_Node = <span class="keyword">new</span> BiTreeNode(); p-&gt;L_Node-&gt;data = <span class="string">'D'</span>;</span><br><span class="line">	p-&gt;R_Node = <span class="keyword">new</span> BiTreeNode(); p-&gt;R_Node-&gt;data = <span class="string">'E'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h4><ul>
+<h4 id="二叉树的遍历"><a class="header-anchor" href="#二叉树的遍历">¶</a>二叉树的遍历</h4>
+<ul>
 <li><u>遍历</u>对于二叉树来说是非常重要的。遍历是数结构插入、删除、修改、查找和排序运算的前提，<u>是二叉树一切运算的基础和核心</u>。</li>
-<li>二叉树的遍历分为三种<ul>
+<li>二叉树的遍历分为三种
+<ul>
 <li>前序遍历(根-左子树-右子树)</li>
 <li>中序遍历(左子树-根-右子树)</li>
 <li>后序遍历(左子树-右子树-根)</li>
 </ul>
 </li>
 </ul>
-<h5 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h5><ul>
-<li><p>前序遍历就是先从根开始然后<strong>递归</strong>左子树再<strong>递归</strong>右子树。</p>
-</li>
-<li><p>例如：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png"></p>
-</li>
-<li><p>遍历的结果为： A、B、D、E、C</p>
-</li>
-<li><p>代码实现：</p>
+<h5 id="前序遍历"><a class="header-anchor" href="#前序遍历">¶</a>前序遍历</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pre_Traversal</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span>;<span class="comment">//如果T为空那么就结束</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;<span class="comment">//先从根开始</span></span><br><span class="line">    Pre_Traversal(T-&gt;L_Node);<span class="comment">//递归遍历左子树</span></span><br><span class="line">    Pre_Traversal(T-&gt;R_Node);<span class="comment">//递归遍历右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>前序遍历就是先从根开始然后<strong>递归</strong>左子树再<strong>递归</strong>右子树。</p>
 </li>
-<li><p>实验结果：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/4.png"></p>
+<li>
+<p>例如：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png"></p>
+</li>
+<li>
+<p>遍历的结果为： A、B、D、E、C</p>
+</li>
+<li>
+<p>代码实现：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pre_Traversal</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span>;<span class="comment">//如果T为空那么就结束</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;<span class="comment">//先从根开始</span></span><br><span class="line">    Pre_Traversal(T-&gt;L_Node);<span class="comment">//递归遍历左子树</span></span><br><span class="line">    Pre_Traversal(T-&gt;R_Node);<span class="comment">//递归遍历右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实验结果：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/4.png"></p>
 </li>
 </ul>
 </li>
-<li><p>具体递归实现解释：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/5.png"></p>
+<li>
+<p>具体递归实现解释：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/5.png"></p>
 </li>
 </ul>
 <hr>
-<h5 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h5><ul>
-<li><p>中序遍历就是先<strong>递归</strong>左子树开始然后再到根再<strong>递归</strong>右子树。</p>
-</li>
-<li><p>例如：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png"></p>
-</li>
-<li><p>遍历的结果为： D、B、E、A、C</p>
-</li>
-<li><p>代码实现：</p>
+<h5 id="中序遍历"><a class="header-anchor" href="#中序遍历">¶</a>中序遍历</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Mid_Traversal</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span>;<span class="comment">//如果T为空那么就结束</span></span><br><span class="line">    </span><br><span class="line">    Mid_Traversal(T-&gt;L_Node);<span class="comment">//递归遍历左子树</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">    Mid_Traversal(T-&gt;R_Node);<span class="comment">//递归遍历右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>中序遍历就是先<strong>递归</strong>左子树开始然后再到根再<strong>递归</strong>右子树。</p>
 </li>
-<li><p>实验结果：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/6.png"></p>
+<li>
+<p>例如：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png"></p>
+</li>
+<li>
+<p>遍历的结果为： D、B、E、A、C</p>
+</li>
+<li>
+<p>代码实现：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Mid_Traversal</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span>;<span class="comment">//如果T为空那么就结束</span></span><br><span class="line">    </span><br><span class="line">    Mid_Traversal(T-&gt;L_Node);<span class="comment">//递归遍历左子树</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">    Mid_Traversal(T-&gt;R_Node);<span class="comment">//递归遍历右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实验结果：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/6.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h5><ul>
-<li><p>例如：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png"></p>
-</li>
-<li><p>遍历的结果为： D、E、B、C、A</p>
-</li>
-<li><p>代码实现：</p>
+<h5 id="后序遍历"><a class="header-anchor" href="#后序遍历">¶</a>后序遍历</h5>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Post_Traversal</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span>;<span class="comment">//如果T为空那么就结束</span></span><br><span class="line">    </span><br><span class="line">    Post_Traversal(T-&gt;L_Node);<span class="comment">//递归遍历左子树</span></span><br><span class="line">    Post_Traversal(T-&gt;R_Node);<span class="comment">//递归遍历右子树</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>例如：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/3.png"></p>
 </li>
-<li><p>实验结果：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/7.png"></p>
+<li>
+<p>遍历的结果为： D、E、B、C、A</p>
 </li>
-</ul>
+<li>
+<p>代码实现：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Post_Traversal</span><span class="params">(BiTreeNode* T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!T)<span class="keyword">return</span>;<span class="comment">//如果T为空那么就结束</span></span><br><span class="line">    </span><br><span class="line">    Post_Traversal(T-&gt;L_Node);<span class="comment">//递归遍历左子树</span></span><br><span class="line">    Post_Traversal(T-&gt;R_Node);<span class="comment">//递归遍历右子树</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>具体文字解释：</p>
-</li>
-<li><p>①先从<code>Post_Traversal(T(A))</code>开始进入函数执行<code>Post_Traversal(T(A)-&gt;L_Node(B))</code></p>
-</li>
-<li><p>②在<code>Post_Traversal(T(B))</code>中又先执行执行<code>Post_Traversal(T(B)-&gt;L_Node(D))</code></p>
-</li>
-<li><p>③在执行<code>Post_Traversal(T(D))</code>的时候因为执行D结点中的<code>Post_Traversal(T(D)-&gt;L_Node)</code>为空结束递归，执行下一句<code>Post_Traversal(T(D)-&gt;R_Node)</code>也为空结束递归，执行<code>cout &lt;&lt; ‘D’;</code>到这里<code>Post_Traversal(T(D))</code>函数执行完毕，继续执行B结点中的<code>Post_Traversal(T(B)-&gt;R_Node(E))</code></p>
-</li>
-<li><p>④在执行<code>Post_Traversal(T(E))</code>的时候发现E的左右子树都为空，那么就只执行了<code>cout &lt;&lt; ‘E’;</code>返回B结点执行下一句<code>cout &lt;&lt; ‘B’;</code>至此<code>Post_Traversal(T(A)-&gt;L_Node(B))</code>已经执行完毕返回至A结点</p>
-</li>
-<li><p>⑤执行A结点中的<code>Post_Traversal(T(A)-&gt;R_Node(C))</code>也就是执行<code>Post_Traversal(T(C))</code>发现C结点的左右子树也为空，那么只执行了C结点中的<code>cout &lt;&lt; ‘C’;</code>返回A结点的函数，到这里A结点的<code>Post_Traversal(T(A)-&gt;R_Node(C))</code>执行完毕，再执行下一句<code>cout &lt;&lt; ‘A’;</code></p>
-</li>
-<li><p>⑥当<code>cout &lt;&lt; ‘A’;</code>执行完毕后<code>Post_Traversal(T(A))</code>函数结束。屏幕上输出DEBCA</p>
+<li>
+<p>实验结果：<img src="/2019/07/19/数据结构学习总结-（5-5）二叉树的链式实现与二叉树的先、中、后序遍历/7.png"></p>
 </li>
 </ul>
-<p>—（本文完）</p>
+</li>
+<li>
+<p>具体文字解释：</p>
+</li>
+<li>
+<p>①先从<code>Post_Traversal(T(A))</code>开始进入函数执行<code>Post_Traversal(T(A)-&gt;L_Node(B))</code></p>
+</li>
+<li>
+<p>②在<code>Post_Traversal(T(B))</code>中又先执行执行<code>Post_Traversal(T(B)-&gt;L_Node(D))</code></p>
+</li>
+<li>
+<p>③在执行<code>Post_Traversal(T(D))</code>的时候因为执行D结点中的<code>Post_Traversal(T(D)-&gt;L_Node)</code>为空结束递归，执行下一句<code>Post_Traversal(T(D)-&gt;R_Node)</code>也为空结束递归，执行<code>cout &lt;&lt; ‘D’;</code>到这里<code>Post_Traversal(T(D))</code>函数执行完毕，继续执行B结点中的<code>Post_Traversal(T(B)-&gt;R_Node(E))</code></p>
+</li>
+<li>
+<p>④在执行<code>Post_Traversal(T(E))</code>的时候发现E的左右子树都为空，那么就只执行了<code>cout &lt;&lt; ‘E’;</code>返回B结点执行下一句<code>cout &lt;&lt; ‘B’;</code>至此<code>Post_Traversal(T(A)-&gt;L_Node(B))</code>已经执行完毕返回至A结点</p>
+</li>
+<li>
+<p>⑤执行A结点中的<code>Post_Traversal(T(A)-&gt;R_Node(C))</code>也就是执行<code>Post_Traversal(T(C))</code>发现C结点的左右子树也为空，那么只执行了C结点中的<code>cout &lt;&lt; ‘C’;</code>返回A结点的函数，到这里A结点的<code>Post_Traversal(T(A)-&gt;R_Node(C))</code>执行完毕，再执行下一句<code>cout &lt;&lt; ‘A’;</code></p>
+</li>
+<li>
+<p>⑥当<code>cout &lt;&lt; ‘A’;</code>执行完毕后<code>Post_Traversal(T(A))</code>函数结束。屏幕上输出DEBCA</p>
+</li>
+</ul>
+<p>–（本文完）</p>
 
       
     </div>
@@ -705,7 +746,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">105</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -797,7 +838,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的链式实现"><span class="nav-number">1.</span> <span class="nav-text">二叉树的链式实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建链表二叉树"><span class="nav-number">1.1.</span> <span class="nav-text">创建链表二叉树</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的遍历"><span class="nav-number">2.</span> <span class="nav-text">二叉树的遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#前序遍历"><span class="nav-number">2.1.</span> <span class="nav-text">前序遍历</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#中序遍历"><span class="nav-number">2.2.</span> <span class="nav-text">中序遍历</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#后序遍历"><span class="nav-number">2.3.</span> <span class="nav-text">后序遍历</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的链式实现"><span class="nav-number">1.</span> <span class="nav-text">¶二叉树的链式实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建链表二叉树"><span class="nav-number">1.1.</span> <span class="nav-text">¶创建链表二叉树</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树的遍历"><span class="nav-number">2.</span> <span class="nav-text">¶二叉树的遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#前序遍历"><span class="nav-number">2.1.</span> <span class="nav-text">¶前序遍历</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#中序遍历"><span class="nav-number">2.2.</span> <span class="nav-text">¶中序遍历</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#后序遍历"><span class="nav-number">2.3.</span> <span class="nav-text">¶后序遍历</span></a></li></ol></li></ol></div>
             
 
           </div>
