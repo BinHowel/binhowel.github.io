@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶类型转换构造函数 实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。 例如：   123456789101112class A&amp;#123;    int num;    A(int i):num(i)&amp;#123;&amp;#125;    &amp;#125;int main()&amp;#123;    int k = 100;        A a = k;//使整型k转换类型为A    A a2">
+<meta name="description" content="类型转换构造函数实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。 例如：  123456789101112class A&amp;#123;    int num;    A(int i):num(i)&amp;#123;&amp;#125;    &amp;#125;int main()&amp;#123;    int k = 100;        A a = k;//使整型k转换类型为A    A a2 =">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-(2.11)类型转换构造函数、运算符、类成员指针">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶类型转换构造函数 实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。 例如：   123456789101112class A&amp;#123;    int num;    A(int i):num(i)&amp;#123;&amp;#125;    &amp;#125;int main()&amp;#123;    int k = 100;        A a = k;//使整型k转换类型为A    A a2">
+<meta property="og:description" content="类型转换构造函数实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。 例如：  123456789101112class A&amp;#123;    int num;    A(int i):num(i)&amp;#123;&amp;#125;    &amp;#125;int main()&amp;#123;    int k = 100;        A a = k;//使整型k转换类型为A    A a2 =">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/2.png">
@@ -97,7 +97,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:58:52.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-(2.11)类型转换构造函数、运算符、类成员指针">
-<meta name="twitter:description" content="¶类型转换构造函数 实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。 例如：   123456789101112class A&amp;#123;    int num;    A(int i):num(i)&amp;#123;&amp;#125;    &amp;#125;int main()&amp;#123;    int k = 100;        A a = k;//使整型k转换类型为A    A a2">
+<meta name="twitter:description" content="类型转换构造函数实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。 例如：  123456789101112class A&amp;#123;    int num;    A(int i):num(i)&amp;#123;&amp;#125;    &amp;#125;int main()&amp;#123;    int k = 100;        A a = k;//使整型k转换类型为A    A a2 =">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/1.png">
 
 
@@ -398,40 +398,29 @@
       
 
       
-        <h4 id="类型转换构造函数"><a class="header-anchor" href="#类型转换构造函数">¶</a>类型转换构造函数</h4>
-<p>实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。</p>
+        <h4 id="类型转换构造函数"><a href="#类型转换构造函数" class="headerlink" title="类型转换构造函数"></a>类型转换构造函数</h4><p>实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。</p>
 <p>例如：</p>
 <ul>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    A(<span class="keyword">int</span> i):num(i)&#123;&#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">100</span>;</span><br><span class="line">    </span><br><span class="line">    A a = k;<span class="comment">//使整型k转换类型为A</span></span><br><span class="line">    A a2 = <span class="number">120</span>; <span class="comment">//把整型转换成类型A变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    A(<span class="keyword">int</span> i):num(i)&#123;&#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">100</span>;</span><br><span class="line">    </span><br><span class="line">    A a = k;<span class="comment">//使整型k转换类型为A</span></span><br><span class="line">    A a2 = <span class="number">120</span>; <span class="comment">//把整型转换成类型A变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
-<h4 id="类型转换运算符"><a class="header-anchor" href="#类型转换运算符">¶</a>类型转换运算符</h4>
-<p>与类型转换构造函数的作用相反，类型转换构造函数是将某个类型转换成该类类型，而类型转换运算符则把该类类型转换成特点的类型</p>
+<h4 id="类型转换运算符"><a href="#类型转换运算符" class="headerlink" title="类型转换运算符"></a>类型转换运算符</h4><p>与类型转换构造函数的作用相反，类型转换构造函数是将某个类型转换成该类类型，而类型转换运算符则把该类类型转换成特点的类型</p>
 <p>定义格式：<code>operator type()</code>||<code>operator type() const</code>(一般会加const后缀，防止值被修改)</p>
 <p>例如：</p>
 <ul>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line">    A(<span class="keyword">int</span> i):num(i)&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">operator</span> <span class="title">int</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    A a;</span><br><span class="line">  <span class="keyword">int</span> k = a + <span class="number">100</span>;<span class="comment">//结果K的值为200</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line">    A(<span class="keyword">int</span> i):num(i)&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">operator</span> <span class="title">int</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    A a;</span><br><span class="line">  <span class="keyword">int</span> k = a + <span class="number">100</span>;<span class="comment">//结果K的值为200</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="显示调用类型转换运算符"><a class="header-anchor" href="#显示调用类型转换运算符">¶</a>显示调用类型转换运算符</h5>
-<p>即：把类型转换运算符当做该类对象的成员函数进行调用</p>
+<h5 id="显示调用类型转换运算符"><a href="#显示调用类型转换运算符" class="headerlink" title="显示调用类型转换运算符"></a>显示调用类型转换运算符</h5><p>即：把类型转换运算符当做该类对象的成员函数进行调用</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    A a;</span><br><span class="line">  <span class="keyword">int</span> k = a.<span class="keyword">operator</span> <span class="keyword">int</span>() + <span class="number">100</span>;<span class="comment">//显示调用类型转换运算符</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="禁止使用隐式调用类型转换运算符"><a class="header-anchor" href="#禁止使用隐式调用类型转换运算符">¶</a>禁止使用隐式调用类型转换运算符</h5>
-<p>对类型转换构造函数同时适用：在前面加<code>explicit</code>(禁止编译器为我们做隐式类型转换)</p>
+<h5 id="禁止使用隐式调用类型转换运算符"><a href="#禁止使用隐式调用类型转换运算符" class="headerlink" title="禁止使用隐式调用类型转换运算符"></a>禁止使用隐式调用类型转换运算符</h5><p>对类型转换构造函数同时适用：在前面加<code>explicit</code>(禁止编译器为我们做隐式类型转换)</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line">    A(<span class="keyword">int</span> i):num(i)&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="keyword">operator</span> <span class="title">int</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    A a;</span><br><span class="line">  <span class="keyword">int</span> k = a + <span class="number">100</span>;<span class="comment">//报错，</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/1.png">
 <hr>
-<h4 id="类成员指针"><a class="header-anchor" href="#类成员指针">¶</a>类成员指针</h4>
-<h5 id="类成员函数指针"><a class="header-anchor" href="#类成员函数指针">¶</a>类成员函数指针</h5>
-<ul>
-<li>
-<p>定义：指向类成员函数的指针</p>
-</li>
-<li>
-<p>格式：</p>
+<h4 id="类成员指针"><a href="#类成员指针" class="headerlink" title="类成员指针"></a>类成员指针</h4><h5 id="类成员函数指针"><a href="#类成员函数指针" class="headerlink" title="类成员函数指针"></a>类成员函数指针</h5><ul>
+<li>定义：指向类成员函数的指针</li>
+<li><p>格式：</p>
 <ul>
 <li>声明普通成员函数指针：<code>类名：：*函数指针变量名</code></li>
 <li>获取类成员函数地址：<code>&amp;类名：：成员函数名</code></li>
@@ -439,23 +428,19 @@
 </ul>
 </li>
 </ul>
-<h6 id="普通成员函数"><a class="header-anchor" href="#普通成员函数">¶</a>普通成员函数</h6>
-<p><strong>注意点</strong>：成员函数属于类，只要类存在这函数地址就存在(有无对象被创建没关系)、<strong>若要使用成员函数指针需要绑定到一个类对象上去</strong></p>
+<h6 id="普通成员函数"><a href="#普通成员函数" class="headerlink" title="普通成员函数"></a>普通成员函数</h6><p><strong>注意点</strong>：成员函数属于类，只要类存在这函数地址就存在(有无对象被创建没关系)、<strong>若要使用成员函数指针需要绑定到一个类对象上去</strong></p>
 <ul>
 <li>范例：</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Afunc</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是类A中的普通成员函数Afunc，参数I："</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">/*声明函数指针*/</span></span><br><span class="line">    <span class="keyword">void</span>(A::*Func)(<span class="keyword">int</span>);</span><br><span class="line">    <span class="comment">/*给函数指针赋予类成员函数地址值*/</span></span><br><span class="line">    Func = &amp;A::Afunc;</span><br><span class="line">    </span><br><span class="line">    A a;</span><br><span class="line">    A* a2;</span><br><span class="line">    (a.*Func)(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">//(a2-&gt;*Func)(200);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>实验结果：<img src="/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/2.png"></p>
-<h6 id="虚成员函数"><a class="header-anchor" href="#虚成员函数">¶</a>虚成员函数</h6>
-<ul>
+<h6 id="虚成员函数"><a href="#虚成员函数" class="headerlink" title="虚成员函数"></a>虚成员函数</h6><ul>
 <li>范例：</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Afunc</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是类A中的普通成员函数Afunc，参数I："</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">virtualFunc</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;<span class="built_in">cout</span> &lt;&lt; <span class="string">"这是类A中的虚成员函数virtualFunc，参数I："</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">/*声明函数指针*/</span></span><br><span class="line">    <span class="keyword">void</span>(A::*virtualFunc)(<span class="keyword">int</span>) = &amp;A::virtualFunc;</span><br><span class="line">    A a;</span><br><span class="line">    (a.*Func)(<span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>实验结果：<img src="/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/3.png"></p>
-<h6 id="静态类成员函数"><a class="header-anchor" href="#静态类成员函数">¶</a>静态类成员函数</h6>
-<ul>
-<li>格式：
-<ul>
+<p>  实验结果：<img src="/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/3.png"></p>
+<h6 id="静态类成员函数"><a href="#静态类成员函数" class="headerlink" title="静态类成员函数"></a>静态类成员函数</h6><ul>
+<li>格式：<ul>
 <li>声明普通成员函数指针：<code>*函数指针名</code>   (eg: <code>void(*staticFunc)(int)</code>)</li>
 <li>获取地址：<code>&amp;类名：：成员函数名</code></li>
 <li>使用：直接 <code>函数指针名(参数)</code></li>
@@ -463,22 +448,19 @@
 </li>
 </ul>
 <hr>
-<h5 id="类成员变量"><a class="header-anchor" href="#类成员变量">¶</a>类成员变量</h5>
-<p>格式：</p>
+<h5 id="类成员变量"><a href="#类成员变量" class="headerlink" title="类成员变量"></a>类成员变量</h5><p>格式：</p>
 <ul>
 <li>定义指针: <code>类型 类名：：*指针名</code></li>
 <li>获取地址: <code>&amp;类名：：成员变量名</code></li>
 </ul>
-<p>**注意：**此时获取的地址<u>不是该成员变量在内存中的地址</u>，而是对于类来说的偏移量</p>
-<h6 id="普通成员变量"><a class="header-anchor" href="#普通成员变量">¶</a>普通成员变量</h6>
-<p>范例：</p>
+<p><strong>注意：</strong>此时获取的地址<u>不是该成员变量在内存中的地址</u>，而是对于类来说的偏移量</p>
+<h6 id="普通成员变量"><a href="#普通成员变量" class="headerlink" title="普通成员变量"></a>普通成员变量</h6><p>范例：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> num1;</span><br><span class="line">    <span class="keyword">int</span> num2;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> B::*P_num = &amp;B::num1;</span><br><span class="line">    </span><br><span class="line">    B b;</span><br><span class="line">    b.*P_num = <span class="number">100</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"此时类B中的成员变量num1的值为 "</span> &lt;&lt; b.num1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>实验结果：<img src="/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/4.png"></p>
-<h6 id="静态成员变量"><a class="header-anchor" href="#静态成员变量">¶</a>静态成员变量</h6>
-<p>范例：</p>
+<h6 id="静态成员变量"><a href="#静态成员变量" class="headerlink" title="静态成员变量"></a>静态成员变量</h6><p>范例：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> num1;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> num2;<span class="comment">//此时只是声明了一个静态变量。要在类外定义</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">int</span> B::num2 = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* static_P_num = &amp;B::num2;</span><br><span class="line">    </span><br><span class="line">    B b;</span><br><span class="line">    *static_P_num = <span class="number">100</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"此时类B中的静态成员变量num2的值为 "</span> &lt;&lt; b.num2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>实验结果：<img src="/2019/09/11/C-进阶学习总结-2-11-类型转换构造函数、运算符、类成员指针/5.png"></p>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -775,7 +757,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#类型转换构造函数"><span class="nav-number">1.</span> <span class="nav-text">¶类型转换构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型转换运算符"><span class="nav-number">2.</span> <span class="nav-text">¶类型转换运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#显示调用类型转换运算符"><span class="nav-number">2.1.</span> <span class="nav-text">¶显示调用类型转换运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#禁止使用隐式调用类型转换运算符"><span class="nav-number">2.2.</span> <span class="nav-text">¶禁止使用隐式调用类型转换运算符</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类成员指针"><span class="nav-number">3.</span> <span class="nav-text">¶类成员指针</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#类成员函数指针"><span class="nav-number">3.1.</span> <span class="nav-text">¶类成员函数指针</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#普通成员函数"><span class="nav-number">3.1.1.</span> <span class="nav-text">¶普通成员函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#虚成员函数"><span class="nav-number">3.1.2.</span> <span class="nav-text">¶虚成员函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态类成员函数"><span class="nav-number">3.1.3.</span> <span class="nav-text">¶静态类成员函数</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类成员变量"><span class="nav-number">3.2.</span> <span class="nav-text">¶类成员变量</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#普通成员变量"><span class="nav-number">3.2.1.</span> <span class="nav-text">¶普通成员变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态成员变量"><span class="nav-number">3.2.2.</span> <span class="nav-text">¶静态成员变量</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#类型转换构造函数"><span class="nav-number">1.</span> <span class="nav-text">类型转换构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型转换运算符"><span class="nav-number">2.</span> <span class="nav-text">类型转换运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#显示调用类型转换运算符"><span class="nav-number">2.1.</span> <span class="nav-text">显示调用类型转换运算符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#禁止使用隐式调用类型转换运算符"><span class="nav-number">2.2.</span> <span class="nav-text">禁止使用隐式调用类型转换运算符</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类成员指针"><span class="nav-number">3.</span> <span class="nav-text">类成员指针</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#类成员函数指针"><span class="nav-number">3.1.</span> <span class="nav-text">类成员函数指针</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#普通成员函数"><span class="nav-number">3.1.1.</span> <span class="nav-text">普通成员函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#虚成员函数"><span class="nav-number">3.1.2.</span> <span class="nav-text">虚成员函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态类成员函数"><span class="nav-number">3.1.3.</span> <span class="nav-text">静态类成员函数</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类成员变量"><span class="nav-number">3.2.</span> <span class="nav-text">类成员变量</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#普通成员变量"><span class="nav-number">3.2.1.</span> <span class="nav-text">普通成员变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#静态成员变量"><span class="nav-number">3.2.2.</span> <span class="nav-text">静态成员变量</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

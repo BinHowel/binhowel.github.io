@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="学习总结,Java,Java学习总结,">
+  <meta name="keywords" content="学习总结,Java学习总结,Java,">
 
 
 
@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶反射   反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。   JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。   ¶相关API  java.lang包下  Class&amp;lt;T&amp;gt;:表示一个正在运行的Java应用程">
-<meta name="keywords" content="学习总结,Java,Java学习总结">
+<meta name="description" content="反射 反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。  JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。   相关API java.lang包下 Class&amp;lt;T&amp;gt;:表示一个正在运行的Java应用程序中的类和接口">
+<meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(3.2)反射与动态实例化">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶反射   反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。   JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。   ¶相关API  java.lang包下  Class&amp;lt;T&amp;gt;:表示一个正在运行的Java应用程">
+<meta property="og:description" content="反射 反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。  JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。   相关API java.lang包下 Class&amp;lt;T&amp;gt;:表示一个正在运行的Java应用程序中的类和接口">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/2.png">
@@ -99,7 +99,7 @@
 <meta property="og:updated_time" content="2020-01-25T06:56:14.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(3.2)反射与动态实例化">
-<meta name="twitter:description" content="¶反射   反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。   JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。   ¶相关API  java.lang包下  Class&amp;lt;T&amp;gt;:表示一个正在运行的Java应用程">
+<meta name="twitter:description" content="反射 反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。  JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。   相关API java.lang包下 Class&amp;lt;T&amp;gt;:表示一个正在运行的Java应用程序中的类和接口">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/1.png">
 
 
@@ -400,31 +400,25 @@
       
 
       
-        <h4 id="反射"><a class="header-anchor" href="#反射">¶</a>反射</h4>
-<ul>
-<li>
-<p>反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。</p>
+        <h4 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h4><ul>
+<li><p>反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。</p>
 </li>
-<li>
-<p>JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。</p>
+<li><p>JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一个方法;这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。</p>
 </li>
 </ul>
-<h5 id="相关api"><a class="header-anchor" href="#相关api">¶</a>相关API</h5>
-<ul>
-<li>java.lang包下
-<ul>
+<h5 id="相关API"><a href="#相关API" class="headerlink" title="相关API"></a>相关API</h5><ul>
+<li>java.lang包下<ul>
 <li><code>Class&lt;T&gt;</code>:表示一个正在运行的Java应用程序中的类和接口,是 Reflection的起源</li>
 </ul>
 </li>
-<li>java.lang.reflect包下
-<ul>
+<li>java.lang.reflect包下<ul>
 <li>Field类:代表类的成员变量(也称类的属性)</li>
 <li>Method类:代表类的方法Constructor类:代表类的构造方法</li>
 <li>Array类:提供了动态创建数组,以及访问数组的元素的静态方法</li>
 </ul>
 </li>
 </ul>
-<h6 id="class-t"><a class="header-anchor" href="#class-t">¶</a><code>Class&lt;T&gt;</code></h6>
+<h6 id="Class-lt-T-gt"><a href="#Class-lt-T-gt" class="headerlink" title="Class&lt;T&gt;"></a><code>Class&lt;T&gt;</code></h6><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -461,75 +455,61 @@
 </tr>
 </tbody>
 </table>
-<h6 id="method"><a class="header-anchor" href="#method">¶</a>Method</h6>
-<ul>
-<li>获得当前类以及超类的public Method:
-<ul>
+</div>
+<h6 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h6><ul>
+<li>获得当前类以及超类的public Method:<ul>
 <li><code>Method[] arrMethods = classType. getMethods();</code></li>
 </ul>
 </li>
-<li>获得当前类申明的所有Method:
-<ul>
+<li>获得当前类申明的所有Method:<ul>
 <li><code>Method[] arrMethods = classType. getDeclaredMethods();</code></li>
 </ul>
 </li>
-<li>获得当前类以及超类指定的public Method:
-<ul>
+<li>获得当前类以及超类指定的public Method:<ul>
 <li><code>Method method = classType. getMethod(String name,Class&lt;?&gt;... parameterTypes);</code></li>
 </ul>
 </li>
-<li>获得当前类申明的指定的Method:
-<ul>
+<li>获得当前类申明的指定的Method:<ul>
 <li><code>Method method = classType. getDeclaredMethod(String name, Class&lt;?&gt;... parameterTypes)</code></li>
 </ul>
 </li>
-<li>通过反射动态运行指定Method:
-<ul>
+<li>通过反射动态运行指定Method:<ul>
 <li><code>Object obj = method. invoke(Object obj, Object... args)</code></li>
 </ul>
 </li>
 </ul>
-<h6 id="field"><a class="header-anchor" href="#field">¶</a>Field</h6>
-<ul>
-<li>获得当前类以及超类的public Field:
-<ul>
+<h6 id="Field"><a href="#Field" class="headerlink" title="Field"></a>Field</h6><ul>
+<li>获得当前类以及超类的public Field:<ul>
 <li><code>Field[] arrFields = classType. getFields();</code></li>
 </ul>
 </li>
-<li>获得当前类申明的所有Field:
-<ul>
+<li>获得当前类申明的所有Field:<ul>
 <li><code>Field[] arrFields = classType. getDeclaredFields();</code></li>
 </ul>
 </li>
-<li>获得当前类以及超类指定的public Field:
-<ul>
+<li>获得当前类以及超类指定的public Field:<ul>
 <li><code>Field field = classType. getField(String name);</code></li>
 </ul>
 </li>
-<li>获得当前类申明的指定的Field:
-<ul>
+<li>获得当前类申明的指定的Field:<ul>
 <li><code>Field field = classType. getDeclaredField(String name);</code></li>
 </ul>
 </li>
-<li>通过反射动态设定Field的值:
-<ul>
+<li>通过反射动态设定Field的值:<ul>
 <li><code>fieldType.set(Object obj, Object value);</code></li>
 </ul>
 </li>
-<li>通过反射动态获取Field的值:
-<ul>
+<li>通过反射动态获取Field的值:<ul>
 <li><code>Object obj = fieldType. get(Object obj);</code></li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="反射的作用"><a class="header-anchor" href="#反射的作用">¶</a>反射的作用</h4>
-<p>反射最主要的作用之一就是可以动态的实例化对象。这里的动态的实例化对象可以类比成动态创建数组一样</p>
+<h4 id="反射的作用"><a href="#反射的作用" class="headerlink" title="反射的作用"></a>反射的作用</h4><p>反射最主要的作用之一就是可以动态的实例化对象。这里的动态的实例化对象可以类比成动态创建数组一样</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//类比C++的数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">5</span>];<span class="comment">//这样创建一个数组它就已经在编译时就规定好了这个arr数组有5个空间</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*动态规划数组*/</span></span><br><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line"><span class="keyword">int</span>* nums = <span class="keyword">new</span> <span class="keyword">int</span>[a]<span class="comment">//这种创建数组为动态创建，可以更加自己的需要在程序运行的时候进行设置数组的大小</span></span><br></pre></td></tr></table></figure>
 <p>而反射中的动态实例化也是差不多的道理</p>
 <p>例如 我可以通过object来接一些数据，当我需要最终的对象类型是Student时，我就输入一个字符串让这个Object自动加载Student类中的内容、然后时object对象变成Student对象，而此时我又需要一个Book对象的时候可以输入一段字符串使这个object对象加载Book对象中的内容。进行设置转成Book对象。这与以往的自动类型检查机制不同，其中就是可以根据自己的需要在程序跑起来的时候进动态的实例化所需要的对象</p>
-<h5 id="动态实例化过程"><a class="header-anchor" href="#动态实例化过程">¶</a>动态实例化过程</h5>
-<ul>
+<h5 id="动态实例化过程"><a href="#动态实例化过程" class="headerlink" title="动态实例化过程"></a>动态实例化过程</h5><ul>
 <li>首先创建两个类Student与Book 内含一些参数与对应的get、set方法</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Javabean;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> ShuHao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/1/25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="keyword">public</span> String class_name;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    <span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name, String class_name)</span> </span></span><br><span class="line"><span class="function">    <span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span></span><br><span class="line"><span class="function">    <span class="keyword">public</span> String <span class="title">getClass_name</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setClass_name</span><span class="params">(String class_name)</span> </span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
@@ -538,24 +518,20 @@
 <img src="/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/1.png" title="当我们输入要求加载Student类的时候，这个object就转换成Student对象">
 <img src="/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/2.png" title="当我们输入要求加载Book类的时候，这个object就转换成Book对象">
 <p>可以发现这些选择实例化对应的对象的操作都是程序已经在运行的时候发生的</p>
-<h6 id="动态获取实例化的其他获取方法"><a class="header-anchor" href="#动态获取实例化的其他获取方法">¶</a>动态获取实例化的其他获取方法</h6>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Class c = Class.forName(command);</span><br><span class="line"><span class="comment">/*方法1：反射实例化(无参)*/</span></span><br><span class="line">Object o = c.newInstance();<span class="comment">//已被淘汰过期</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*方法2：反射实例化(无参)*/</span></span><br><span class="line">Object o = c.getConstructor(new class[]());</span><br><span class="line"></span><br><span class="line"><span class="comment">/*方法3：反射实例化(带参)*/</span></span><br><span class="line">Object o = c.getConstructor(new class[]())。newInstance(new Object[]&#123;"对应类参数..."&#125;);</span><br></pre></td></tr></table></figure>
+<h6 id="动态获取实例化的其他获取方法"><a href="#动态获取实例化的其他获取方法" class="headerlink" title="动态获取实例化的其他获取方法"></a>动态获取实例化的其他获取方法</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Class c = Class.forName(command);</span><br><span class="line"><span class="comment">/*方法1：反射实例化(无参)*/</span></span><br><span class="line">Object o = c.newInstance();<span class="comment">//已被淘汰过期</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*方法2：反射实例化(无参)*/</span></span><br><span class="line">Object o = c.getConstructor(new class[]());</span><br><span class="line"></span><br><span class="line"><span class="comment">/*方法3：反射实例化(带参)*/</span></span><br><span class="line">Object o = c.getConstructor(new class[]())。newInstance(new Object[]&#123;"对应类参数..."&#125;);</span><br></pre></td></tr></table></figure>
 <p>带参的出现，可以得到的结果就是动态实例化对象还可以更具需求自己调用想实例化的类对象的构造函数并设置对应的类内参数</p>
 <hr>
-<h5 id="动态获取类对象中的方法"><a class="header-anchor" href="#动态获取类对象中的方法">¶</a>动态获取类对象中的方法</h5>
-<p>以上在动态获取类对象的基础上，还可以获取其对应对象类中的所有方法</p>
+<h5 id="动态获取类对象中的方法"><a href="#动态获取类对象中的方法" class="headerlink" title="动态获取类对象中的方法"></a>动态获取类对象中的方法</h5><p>以上在动态获取类对象的基础上，还可以获取其对应对象类中的所有方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> ShuHao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/1/25</span></span><br><span class="line"><span class="comment"> * 用于测试反射机制</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FanSeTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] agrs)</span></span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String command = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            System.out.print(<span class="string">"输入操作类"</span>);</span><br><span class="line">            command = input.next();</span><br><span class="line">            Class c = Class.forName(command);</span><br><span class="line">            Object o = c.newInstance();</span><br><span class="line">            System.out.println(<span class="string">"获取类成功！你动态实例化的类为"</span>+ o.getClass().getName());</span><br><span class="line"></span><br><span class="line">            Method[] m = c.getMethods();</span><br><span class="line">            System.out.println(<span class="string">"\n该类的方法有："</span>);</span><br><span class="line">            <span class="keyword">for</span>(Method s:m) System.out.println(s.getName());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/3.png" title="可以发现对应Book的类方法所有被获取了出来">
-<h6 id="你甚至可以动态的调用对应的类方法"><a class="header-anchor" href="#你甚至可以动态的调用对应的类方法">¶</a>你甚至可以动态的调用对应的类方法</h6>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FanSeTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] agrs)</span></span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String command = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            System.out.print(<span class="string">"输入操作类"</span>);</span><br><span class="line">            command = input.next();</span><br><span class="line">            Class c = Class.forName(command);</span><br><span class="line">            Object o = c.getConstructor(<span class="keyword">new</span> Class[]&#123;String.class,String.class&#125;).newInstance(<span class="keyword">new</span> Object[]&#123;<span class="string">"444111"</span>,<span class="string">"西游记"</span>&#125;);<span class="comment">//调用对应加载类的构造函数进行设置</span></span><br><span class="line">            </span><br><span class="line">            System.out.println(<span class="string">"获取类成功！你动态实例化的类为"</span>+ o.getClass().getName());</span><br><span class="line">            </span><br><span class="line">            Method isGetidMethod = c.getMethod(<span class="string">"getid"</span>,<span class="keyword">new</span> Class[]&#123;&#125;);</span><br><span class="line">            Object id = isGetidMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            Method isGetnameMethod = c.getMethod(<span class="string">"getName"</span>,<span class="keyword">new</span> Class[]&#123;&#125;);</span><br><span class="line">            Object name = isGetnameMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            System.out.println(<span class="string">"Book类对象内的ID为 "</span> + id + <span class="string">" 书名为 "</span> + name);</span><br><span class="line">            </span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="你甚至可以动态的调用对应的类方法"><a href="#你甚至可以动态的调用对应的类方法" class="headerlink" title="你甚至可以动态的调用对应的类方法"></a>你甚至可以动态的调用对应的类方法</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FanSeTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] agrs)</span></span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String command = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            System.out.print(<span class="string">"输入操作类"</span>);</span><br><span class="line">            command = input.next();</span><br><span class="line">            Class c = Class.forName(command);</span><br><span class="line">            Object o = c.getConstructor(<span class="keyword">new</span> Class[]&#123;String.class,String.class&#125;).newInstance(<span class="keyword">new</span> Object[]&#123;<span class="string">"444111"</span>,<span class="string">"西游记"</span>&#125;);<span class="comment">//调用对应加载类的构造函数进行设置</span></span><br><span class="line">            </span><br><span class="line">            System.out.println(<span class="string">"获取类成功！你动态实例化的类为"</span>+ o.getClass().getName());</span><br><span class="line">            </span><br><span class="line">            Method isGetidMethod = c.getMethod(<span class="string">"getid"</span>,<span class="keyword">new</span> Class[]&#123;&#125;);</span><br><span class="line">            Object id = isGetidMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            Method isGetnameMethod = c.getMethod(<span class="string">"getName"</span>,<span class="keyword">new</span> Class[]&#123;&#125;);</span><br><span class="line">            Object name = isGetnameMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            System.out.println(<span class="string">"Book类对象内的ID为 "</span> + id + <span class="string">" 书名为 "</span> + name);</span><br><span class="line">            </span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/4.png" title="这里以Book进行演示动态调用，还可以通过输入对应的方法名来动态调用其他的方法">
 <p><strong>含参数的动态调用</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Method issetMethod = c.getMethod(<span class="string">"setid"</span>,<span class="keyword">new</span> Class[]&#123;String.class&#125;);</span><br><span class="line">issetMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;<span class="string">"123456"</span>&#125;);</span><br></pre></td></tr></table></figure>
 <p><strong>详细测试代码</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> ShuHao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/1/25</span></span><br><span class="line"><span class="comment"> * 用于测试反射机制</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FanSeTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] agrs)</span></span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String command = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            System.out.print(<span class="string">"输入操作类"</span>);</span><br><span class="line">            command = input.next();</span><br><span class="line">            Class c = Class.forName(command);</span><br><span class="line">            Object o = c.getConstructor(<span class="keyword">new</span> Class[]&#123;String.class,String.class&#125;).newInstance(<span class="keyword">new</span> Object[]&#123;<span class="string">"444111"</span>,<span class="string">"西游记"</span>&#125;);</span><br><span class="line">            System.out.println(<span class="string">"获取类成功！你动态实例化的类为"</span>+ o.getClass().getName());</span><br><span class="line"></span><br><span class="line">            Method isGetidMethod = c.getMethod(<span class="string">"getid"</span>,<span class="keyword">new</span> Class[]&#123;&#125;);</span><br><span class="line">            Object id = isGetidMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            Method isGetnameMethod = c.getMethod(<span class="string">"getName"</span>,<span class="keyword">new</span> Class[]&#123;&#125;);</span><br><span class="line">            Object name = isGetnameMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            System.out.println(<span class="string">"Book类对象内的ID为 "</span> + id + <span class="string">" 书名为 "</span> + name);</span><br><span class="line"></span><br><span class="line">            Method issetMethod = c.getMethod(<span class="string">"setid"</span>,<span class="keyword">new</span> Class[]&#123;String.class&#125;);</span><br><span class="line">            issetMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;<span class="string">"123456"</span>&#125;);</span><br><span class="line">            id = isGetidMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            name = isGetnameMethod.invoke(o,<span class="keyword">new</span> Object[]&#123;&#125;);</span><br><span class="line">            System.out.println(<span class="string">"Book类对象内的ID为 "</span> + id + <span class="string">" 书名为 "</span> + name);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/5.png" title="可以看到调用了对应Book类中的setid方法">
-<h6 id="动态属性访问"><a class="header-anchor" href="#动态属性访问">¶</a>动态属性访问</h6>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FanSeTest2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] agrs)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Class c = Class.forName(<span class="string">"Javabean.Book"</span>);</span><br><span class="line"></span><br><span class="line">        Object o = c.getConstructor(<span class="keyword">new</span> Class[]&#123;String.class,String.class&#125;).newInstance(<span class="keyword">new</span> Object[]&#123;<span class="string">"666"</span>,<span class="string">"红楼梦"</span>&#125;);</span><br><span class="line"></span><br><span class="line">        Field field = c.getField(<span class="string">"id"</span>);</span><br><span class="line">        Field field2 = c.getField(<span class="string">"name"</span>);</span><br><span class="line">        String id = field.get(o).toString();</span><br><span class="line">        String name = field2.get(o).toString();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"Book类对象内的ID为 "</span> + id + <span class="string">" 书名为 "</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="动态属性访问"><a href="#动态属性访问" class="headerlink" title="动态属性访问"></a>动态属性访问</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FanSeTest2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] agrs)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Class c = Class.forName(<span class="string">"Javabean.Book"</span>);</span><br><span class="line"></span><br><span class="line">        Object o = c.getConstructor(<span class="keyword">new</span> Class[]&#123;String.class,String.class&#125;).newInstance(<span class="keyword">new</span> Object[]&#123;<span class="string">"666"</span>,<span class="string">"红楼梦"</span>&#125;);</span><br><span class="line"></span><br><span class="line">        Field field = c.getField(<span class="string">"id"</span>);</span><br><span class="line">        Field field2 = c.getField(<span class="string">"name"</span>);</span><br><span class="line">        String id = field.get(o).toString();</span><br><span class="line">        String name = field2.get(o).toString();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"Book类对象内的ID为 "</span> + id + <span class="string">" 书名为 "</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/6.png" title="调用出对应的Book的成员变量id 和 name">
 <p><strong>设置参数</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*接着上述代码*/</span></span><br><span class="line">field.set(o,<span class="string">"520"</span>);</span><br><span class="line"> id = field.get(o).toString();</span><br><span class="line"> name = field2.get(o).toString();</span><br><span class="line"> System.out.println(<span class="string">"Book类对象内的ID为 "</span> + id + <span class="string">" 书名为 "</span> + name);</span><br></pre></td></tr></table></figure>
@@ -563,22 +539,19 @@
 <p><strong>附加</strong></p>
 <p>可以使用<code>field.setAccessible(true)</code>进行降权操作，即允许调用私有属性</p>
 <hr>
-<h5 id="其他"><a class="header-anchor" href="#其他">¶</a>其他</h5>
-<ul>
-<li>动态调用方法的相关方法的参数中
-<ul>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><ul>
+<li>动态调用方法的相关方法的参数中<ul>
 <li>Class[]：为参数类型数组</li>
 <li>object[]：为对应参数的值或对象</li>
 </ul>
 </li>
 </ul>
-<h4 id="小结"><a class="header-anchor" href="#小结">¶</a>小结</h4>
-<p>反射最主要的使用情况</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>反射最主要的使用情况</p>
 <ul>
 <li>有两个程序员，一个程序员在写程序的时候，需要使用第二个程序员所写的类，但第二个程序员并没完成他所写的类。那么第一个程序员的代码能否通过编译呢？这是不能通过编译的。利用Java反射的机制，就可以让第一个程序员在没有得到第二个程序员所写的类的时候，来完成自身代码的编译。只是如果这个类还没有，获取时会获取不到，但不会导致编译错误，更不会导致程序的崩溃。</li>
 <li>可以在远程进行操作程序，动态的创建需要的对象和调用需要的方法</li>
 </ul>
-<p>—（本文完）</p>
+<p>—-（本文完）</p>
 
       
     </div>
@@ -657,9 +630,9 @@
           
             <a href="/tags/学习总结/" rel="tag"><i class="fa fa-tag"></i> 学习总结</a>
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
             <a href="/tags/Java学习总结/" rel="tag"><i class="fa fa-tag"></i> Java学习总结</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
         </div>
       
@@ -875,7 +848,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#反射"><span class="nav-number">1.</span> <span class="nav-text">¶反射</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#相关api"><span class="nav-number">1.1.</span> <span class="nav-text">¶相关API</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#class-t"><span class="nav-number">1.1.1.</span> <span class="nav-text">¶Class&lt;T&gt;</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#method"><span class="nav-number">1.1.2.</span> <span class="nav-text">¶Method</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#field"><span class="nav-number">1.1.3.</span> <span class="nav-text">¶Field</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反射的作用"><span class="nav-number">2.</span> <span class="nav-text">¶反射的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动态实例化过程"><span class="nav-number">2.1.</span> <span class="nav-text">¶动态实例化过程</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#动态获取实例化的其他获取方法"><span class="nav-number">2.1.1.</span> <span class="nav-text">¶动态获取实例化的其他获取方法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#动态获取类对象中的方法"><span class="nav-number">2.2.</span> <span class="nav-text">¶动态获取类对象中的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#你甚至可以动态的调用对应的类方法"><span class="nav-number">2.2.1.</span> <span class="nav-text">¶你甚至可以动态的调用对应的类方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#动态属性访问"><span class="nav-number">2.2.2.</span> <span class="nav-text">¶动态属性访问</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他"><span class="nav-number">2.3.</span> <span class="nav-text">¶其他</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">3.</span> <span class="nav-text">¶小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#反射"><span class="nav-number">1.</span> <span class="nav-text">反射</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#相关API"><span class="nav-number">1.1.</span> <span class="nav-text">相关API</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Class-lt-T-gt"><span class="nav-number">1.1.1.</span> <span class="nav-text">Class&lt;T&gt;</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Method"><span class="nav-number">1.1.2.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Field"><span class="nav-number">1.1.3.</span> <span class="nav-text">Field</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反射的作用"><span class="nav-number">2.</span> <span class="nav-text">反射的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动态实例化过程"><span class="nav-number">2.1.</span> <span class="nav-text">动态实例化过程</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#动态获取实例化的其他获取方法"><span class="nav-number">2.1.1.</span> <span class="nav-text">动态获取实例化的其他获取方法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#动态获取类对象中的方法"><span class="nav-number">2.2.</span> <span class="nav-text">动态获取类对象中的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#你甚至可以动态的调用对应的类方法"><span class="nav-number">2.2.1.</span> <span class="nav-text">你甚至可以动态的调用对应的类方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#动态属性访问"><span class="nav-number">2.2.2.</span> <span class="nav-text">动态属性访问</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他"><span class="nav-number">2.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
