@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="顺序结构的逆置算法与思路： 夹逼法：  思路：通过对数组头部和尾部相互对调并向中间靠近。  实现：(假设以整型为数据类型实现)  12345678910//length为顺序表总长度。bool Convert()&amp;#123;    int temp;//用来对换位置时使用的临时变量    for(int i = 0; i &amp;lt; length/2; i++)&amp;#123;//注意：length要除">
+<meta name="description" content="¶顺序结构的逆置算法与思路：   夹逼法：   思路：通过对数组头部和尾部相互对调并向中间靠近。   实现：(假设以整型为数据类型实现)   12345678910//length为顺序表总长度。bool Convert()&amp;#123;    int temp;//用来对换位置时使用的临时变量    for(int i = 0; i &amp;lt; length/2; i++)&amp;#123;//注意：le">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（2.9）顺序存储结构与链式存储结构的逆置">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/22/数据结构学习总结-（2-9）顺序存储结构与链式存储结构的逆置/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="顺序结构的逆置算法与思路： 夹逼法：  思路：通过对数组头部和尾部相互对调并向中间靠近。  实现：(假设以整型为数据类型实现)  12345678910//length为顺序表总长度。bool Convert()&amp;#123;    int temp;//用来对换位置时使用的临时变量    for(int i = 0; i &amp;lt; length/2; i++)&amp;#123;//注意：length要除">
+<meta property="og:description" content="¶顺序结构的逆置算法与思路：   夹逼法：   思路：通过对数组头部和尾部相互对调并向中间靠近。   实现：(假设以整型为数据类型实现)   12345678910//length为顺序表总长度。bool Convert()&amp;#123;    int temp;//用来对换位置时使用的临时变量    for(int i = 0; i &amp;lt; length/2; i++)&amp;#123;//注意：le">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-22T16:26:32.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（2.9）顺序存储结构与链式存储结构的逆置">
-<meta name="twitter:description" content="顺序结构的逆置算法与思路： 夹逼法：  思路：通过对数组头部和尾部相互对调并向中间靠近。  实现：(假设以整型为数据类型实现)  12345678910//length为顺序表总长度。bool Convert()&amp;#123;    int temp;//用来对换位置时使用的临时变量    for(int i = 0; i &amp;lt; length/2; i++)&amp;#123;//注意：length要除">
+<meta name="twitter:description" content="¶顺序结构的逆置算法与思路：   夹逼法：   思路：通过对数组头部和尾部相互对调并向中间靠近。   实现：(假设以整型为数据类型实现)   12345678910//length为顺序表总长度。bool Convert()&amp;#123;    int temp;//用来对换位置时使用的临时变量    for(int i = 0; i &amp;lt; length/2; i++)&amp;#123;//注意：le">
 
 
 
@@ -392,44 +392,59 @@
       
 
       
-        <h4 id="顺序结构的逆置算法与思路："><a href="#顺序结构的逆置算法与思路：" class="headerlink" title="顺序结构的逆置算法与思路："></a>顺序结构的逆置算法与思路：</h4><ul>
-<li><p>夹逼法：</p>
+        <h4 id="顺序结构的逆置算法与思路："><a class="header-anchor" href="#顺序结构的逆置算法与思路：">¶</a>顺序结构的逆置算法与思路：</h4>
+<ul>
+<li>
+<p>夹逼法：</p>
 </li>
-<li><p>思路：通过对数组头部和尾部相互对调并向中间靠近。</p>
+<li>
+<p>思路：通过对数组头部和尾部相互对调并向中间靠近。</p>
 </li>
-<li><p>实现：(假设以整型为数据类型实现)</p>
+<li>
+<p>实现：(假设以整型为数据类型实现)</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//length为顺序表总长度。</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;<span class="comment">//用来对换位置时使用的临时变量</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length/<span class="number">2</span>; i++)&#123;<span class="comment">//注意：length要除于2！！！！length要除于2！！！！</span></span><br><span class="line">         temp = datas[i];</span><br><span class="line">        datas[i] = datas[length - <span class="number">1</span> - i];<span class="comment">//前后换位置并向中间靠近</span></span><br><span class="line">        datas[length - <span class="number">1</span> - i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//length为顺序表总长度。</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;<span class="comment">//用来对换位置时使用的临时变量</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length/<span class="number">2</span>; i++)&#123;<span class="comment">//注意：length要除于2！！！！length要除于2！！！！</span></span><br><span class="line">         temp = datas[i];</span><br><span class="line">        datas[i] = datas[length - <span class="number">1</span> - i];<span class="comment">//前后换位置并向中间靠近</span></span><br><span class="line">        datas[length - <span class="number">1</span> - i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><font color="red"><strong>注意</strong></font>：这里的length是要除于2的，因为只需向中间靠近即可而不是再往中间远离。即：移动的范围只是数组长度的一半。</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p>算法优化：</p>
+<li>
+<p>算法优化：</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//length为顺序表总长度。</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;<span class="comment">//用来对换位置时使用的临时变量</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ，j = length - <span class="number">1</span>; i &lt; j; i++,j--)&#123;</span><br><span class="line">         temp = datas[i];</span><br><span class="line">        datas[i] = datas[j];<span class="comment">//前后换位置并向中间靠近</span></span><br><span class="line">        datas[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//length为顺序表总长度。</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;<span class="comment">//用来对换位置时使用的临时变量</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ，j = length - <span class="number">1</span>; i &lt; j; i++,j--)&#123;</span><br><span class="line">         temp = datas[i];</span><br><span class="line">        datas[i] = datas[j];<span class="comment">//前后换位置并向中间靠近</span></span><br><span class="line">        datas[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>此方法更能体现夹逼法。</p>
-</li>
-</ul>
-<hr>
-<h4 id="链式存储结构的逆置算法与思路："><a href="#链式存储结构的逆置算法与思路：" class="headerlink" title="链式存储结构的逆置算法与思路："></a>链式存储结构的逆置算法与思路：</h4><ul>
-<li><p>思路：把头结点和数据结点断开，然后把数据结点一个个<strong>前插</strong>进链表。（循环链表和单向链表均适用）,具体做法先让一个结点指针p保存第一个数据的地址，然后让头结点的next指针归零（即：使其与数据结点断开），开始循环：让一个临时指针指向p的下一个数据的地址，然后把这个第一个数据插入头结点后面（此时p指向为第一个数据的地址），即：<code>p-&gt;next = head-&gt;next;head -&gt;next = p;</code>其次移动指针p到下一个数据，这里就要运用到一开始的临时指针了。循环上面的操作，直到把所有数据都前插完毕。</p>
-</li>
-<li><p>实现1(单向链表)：</p>
-</li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LNode* p = head-&gt;next;</span><br><span class="line">    LNode* temp = <span class="literal">nullptr</span>;<span class="comment">//临时指针</span></span><br><span class="line">    head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(p)&#123;</span><br><span class="line">        temp = p-&gt;next;<span class="comment">//获取下一个数据的值</span></span><br><span class="line">        </span><br><span class="line">        p-&gt;next = head-&gt;next;<span class="comment">//前插</span></span><br><span class="line">        head-&gt;next = p;</span><br><span class="line">        </span><br><span class="line">        p = temp;<span class="comment">//移动指针到下一个数据</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实现2(循环链表)</p>
-</li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LNode* p = head-&gt;next;</span><br><span class="line">    LNode* temp = <span class="literal">nullptr</span>;<span class="comment">//临时指针</span></span><br><span class="line">    head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(p!=head)&#123;</span><br><span class="line">        temp = p-&gt;next;<span class="comment">//获取下一个数据的值</span></span><br><span class="line">        </span><br><span class="line">        p-&gt;next = head-&gt;next;<span class="comment">//前插</span></span><br><span class="line">        head-&gt;next = p;</span><br><span class="line">        </span><br><span class="line">        p = temp;<span class="comment">//移动指针到下一个数据</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>前后只是循环条件发生变化。</p>
+<li>
+<p>此方法更能体现夹逼法。</p>
 </li>
 </ul>
 <hr>
-<p>—（本文完）&lt;原创&gt;&lt;待增添修改&gt;</p>
+<h4 id="链式存储结构的逆置算法与思路："><a class="header-anchor" href="#链式存储结构的逆置算法与思路：">¶</a>链式存储结构的逆置算法与思路：</h4>
+<ul>
+<li>
+<p>思路：把头结点和数据结点断开，然后把数据结点一个个<strong>前插</strong>进链表。（循环链表和单向链表均适用）,具体做法先让一个结点指针p保存第一个数据的地址，然后让头结点的next指针归零（即：使其与数据结点断开），开始循环：让一个临时指针指向p的下一个数据的地址，然后把这个第一个数据插入头结点后面（此时p指向为第一个数据的地址），即：<code>p-&gt;next = head-&gt;next;head -&gt;next = p;</code>其次移动指针p到下一个数据，这里就要运用到一开始的临时指针了。循环上面的操作，直到把所有数据都前插完毕。</p>
+</li>
+<li>
+<p>实现1(单向链表)：</p>
+</li>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LNode* p = head-&gt;next;</span><br><span class="line">    LNode* temp = <span class="literal">nullptr</span>;<span class="comment">//临时指针</span></span><br><span class="line">    head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(p)&#123;</span><br><span class="line">        temp = p-&gt;next;<span class="comment">//获取下一个数据的值</span></span><br><span class="line">        </span><br><span class="line">        p-&gt;next = head-&gt;next;<span class="comment">//前插</span></span><br><span class="line">        head-&gt;next = p;</span><br><span class="line">        </span><br><span class="line">        p = temp;<span class="comment">//移动指针到下一个数据</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实现2(循环链表)</p>
+</li>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Convert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LNode* p = head-&gt;next;</span><br><span class="line">    LNode* temp = <span class="literal">nullptr</span>;<span class="comment">//临时指针</span></span><br><span class="line">    head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(p!=head)&#123;</span><br><span class="line">        temp = p-&gt;next;<span class="comment">//获取下一个数据的值</span></span><br><span class="line">        </span><br><span class="line">        p-&gt;next = head-&gt;next;<span class="comment">//前插</span></span><br><span class="line">        head-&gt;next = p;</span><br><span class="line">        </span><br><span class="line">        p = temp;<span class="comment">//移动指针到下一个数据</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>前后只是循环条件发生变化。</p>
+</li>
+</ul>
+<hr>
+<p>–（本文完）&lt;原创&gt;&lt;待增添修改&gt;</p>
 
       
     </div>
@@ -726,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序结构的逆置算法与思路："><span class="nav-number">1.</span> <span class="nav-text">顺序结构的逆置算法与思路：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链式存储结构的逆置算法与思路："><span class="nav-number">2.</span> <span class="nav-text">链式存储结构的逆置算法与思路：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序结构的逆置算法与思路："><span class="nav-number">1.</span> <span class="nav-text">¶顺序结构的逆置算法与思路：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链式存储结构的逆置算法与思路："><span class="nav-number">2.</span> <span class="nav-text">¶链式存储结构的逆置算法与思路：</span></a></li></ol></div>
             
 
           </div>

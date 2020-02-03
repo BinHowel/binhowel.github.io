@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="同步通讯 浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。 如果我们想向服务器提交数据,就必须进行页面跳转 ,如果我们想实时获得服务端数据,就必须不停地刷新页面。 有时候可能我们只是想更新极少的数据,这也要发请求,重新加载整个页面,浪费资源,降低访问速度  异步通讯 在不刷新页">
+<meta name="description" content="¶同步通讯  浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。 如果我们想向服务器提交数据,就必须进行页面跳转 ,如果我们想实时获得服务端数据,就必须不停地刷新页面。 有时候可能我们只是想更新极少的数据,这也要发请求,重新加载整个页面,浪费资源,降低访问速度  ¶异步通讯  在">
 <meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(4.1)AJAX前奏-对于同步通讯与异步通讯的理解">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/26/JavaWeb学习总结-4-1-AJAX前奏-对于同步通讯与异步通讯的理解/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="同步通讯 浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。 如果我们想向服务器提交数据,就必须进行页面跳转 ,如果我们想实时获得服务端数据,就必须不停地刷新页面。 有时候可能我们只是想更新极少的数据,这也要发请求,重新加载整个页面,浪费资源,降低访问速度  异步通讯 在不刷新页">
+<meta property="og:description" content="¶同步通讯  浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。 如果我们想向服务器提交数据,就必须进行页面跳转 ,如果我们想实时获得服务端数据,就必须不停地刷新页面。 有时候可能我们只是想更新极少的数据,这也要发请求,重新加载整个页面,浪费资源,降低访问速度  ¶异步通讯  在">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-01-26T03:36:23.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(4.1)AJAX前奏-对于同步通讯与异步通讯的理解">
-<meta name="twitter:description" content="同步通讯 浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。 如果我们想向服务器提交数据,就必须进行页面跳转 ,如果我们想实时获得服务端数据,就必须不停地刷新页面。 有时候可能我们只是想更新极少的数据,这也要发请求,重新加载整个页面,浪费资源,降低访问速度  异步通讯 在不刷新页">
+<meta name="twitter:description" content="¶同步通讯  浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。 如果我们想向服务器提交数据,就必须进行页面跳转 ,如果我们想实时获得服务端数据,就必须不停地刷新页面。 有时候可能我们只是想更新极少的数据,这也要发请求,重新加载整个页面,浪费资源,降低访问速度  ¶异步通讯  在">
 
 
 
@@ -392,24 +392,30 @@
       
 
       
-        <h4 id="同步通讯"><a href="#同步通讯" class="headerlink" title="同步通讯"></a>同步通讯</h4><ul>
+        <h4 id="同步通讯"><a class="header-anchor" href="#同步通讯">¶</a>同步通讯</h4>
+<ul>
 <li>浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。</li>
 <li>如果我们想向服务器提交数据,就必须进行页面跳转 ,如果我们想实时获得服务端数据,就必须不停地刷新页面。</li>
 <li>有时候可能我们只是想更新极少的数据,这也要发请求,重新加载整个页面,浪费资源,降低访问速度</li>
 </ul>
-<h4 id="异步通讯"><a href="#异步通讯" class="headerlink" title="异步通讯"></a>异步通讯</h4><ul>
-<li>在不刷新页面的情况下与服务器进行通讯，就被称为异步通讯<ul>
+<h4 id="异步通讯"><a class="header-anchor" href="#异步通讯">¶</a>异步通讯</h4>
+<ul>
+<li>在不刷新页面的情况下与服务器进行通讯，就被称为异步通讯
+<ul>
 <li>框架：如果使用一组框架构造了一个网页，可以只更新其中一个框架，而不必惊动整个页面</li>
 <li><code>XMLHttpRequest</code>：该对象是对JavaScript的一个扩展,可使网页与服务器进行通信。是创建Ajax应用的最佳选择。实际上通常把 Ajax当成<code>XMLHttpRequest</code>对象的代名词</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h4><p>总的来说：</p>
+<h4 id="总述"><a class="header-anchor" href="#总述">¶</a>总述</h4>
+<p>总的来说：</p>
 <ul>
-<li><p><strong>同步加载（刷新）：</strong>每次刷新的是整个页面的数据</p>
+<li>
+<p>**同步加载（刷新）：**每次刷新的是整个页面的数据</p>
 </li>
-<li><p><strong>异步加载（刷新）：</strong>每次刷新的是整个页面的部分数据</p>
+<li>
+<p>**异步加载（刷新）：**每次刷新的是整个页面的部分数据</p>
 </li>
 </ul>
 
@@ -708,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#同步通讯"><span class="nav-number">1.</span> <span class="nav-text">同步通讯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步通讯"><span class="nav-number">2.</span> <span class="nav-text">异步通讯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总述"><span class="nav-number">3.</span> <span class="nav-text">总述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#同步通讯"><span class="nav-number">1.</span> <span class="nav-text">¶同步通讯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步通讯"><span class="nav-number">2.</span> <span class="nav-text">¶异步通讯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总述"><span class="nav-number">3.</span> <span class="nav-text">¶总述</span></a></li></ol></div>
             
 
           </div>

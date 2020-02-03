@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="迭代器的基本概念; 迭代器是一种遍历容器元素的一种数据类型，这种数据类型类似指针。 通过迭代器可以读取容器中的数据元素，也可以修改里面的数据元素  容器迭代器类型：(vector为例) 代码定义： 12vector&amp;lt;int&amp;gt; arrays = &amp;#123;12,34,88&amp;#125;;vector&amp;lt;int&amp;gt;::iterator iter;//迭代器定义，其中vector&amp;l">
+<meta name="description" content="¶迭代器的基本概念;  迭代器是一种遍历容器元素的一种数据类型，这种数据类型类似指针。 通过迭代器可以读取容器中的数据元素，也可以修改里面的数据元素  ¶容器迭代器类型：(vector为例)   代码定义： 12vector&amp;lt;int&amp;gt; arrays = &amp;#123;12,34,88&amp;#125;;vector&amp;lt;int&amp;gt;::iterator iter;//迭代器定义，其中vec">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（1.6）迭代器">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/26/C-进阶学习总结-（1-6）迭代器/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="迭代器的基本概念; 迭代器是一种遍历容器元素的一种数据类型，这种数据类型类似指针。 通过迭代器可以读取容器中的数据元素，也可以修改里面的数据元素  容器迭代器类型：(vector为例) 代码定义： 12vector&amp;lt;int&amp;gt; arrays = &amp;#123;12,34,88&amp;#125;;vector&amp;lt;int&amp;gt;::iterator iter;//迭代器定义，其中vector&amp;l">
+<meta property="og:description" content="¶迭代器的基本概念;  迭代器是一种遍历容器元素的一种数据类型，这种数据类型类似指针。 通过迭代器可以读取容器中的数据元素，也可以修改里面的数据元素  ¶容器迭代器类型：(vector为例)   代码定义： 12vector&amp;lt;int&amp;gt; arrays = &amp;#123;12,34,88&amp;#125;;vector&amp;lt;int&amp;gt;::iterator iter;//迭代器定义，其中vec">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/26/C-进阶学习总结-（1-6）迭代器/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/06/26/C-进阶学习总结-（1-6）迭代器/2.png">
@@ -100,7 +100,7 @@
 <meta property="og:updated_time" content="2019-09-20T07:57:22.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（1.6）迭代器">
-<meta name="twitter:description" content="迭代器的基本概念; 迭代器是一种遍历容器元素的一种数据类型，这种数据类型类似指针。 通过迭代器可以读取容器中的数据元素，也可以修改里面的数据元素  容器迭代器类型：(vector为例) 代码定义： 12vector&amp;lt;int&amp;gt; arrays = &amp;#123;12,34,88&amp;#125;;vector&amp;lt;int&amp;gt;::iterator iter;//迭代器定义，其中vector&amp;l">
+<meta name="twitter:description" content="¶迭代器的基本概念;  迭代器是一种遍历容器元素的一种数据类型，这种数据类型类似指针。 通过迭代器可以读取容器中的数据元素，也可以修改里面的数据元素  ¶容器迭代器类型：(vector为例)   代码定义： 12vector&amp;lt;int&amp;gt; arrays = &amp;#123;12,34,88&amp;#125;;vector&amp;lt;int&amp;gt;::iterator iter;//迭代器定义，其中vec">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/06/26/C-进阶学习总结-（1-6）迭代器/1.png">
 
 
@@ -401,22 +401,28 @@
       
 
       
-        <h4 id="迭代器的基本概念"><a href="#迭代器的基本概念" class="headerlink" title="迭代器的基本概念;"></a>迭代器的基本概念;</h4><ul>
+        <h4 id="迭代器的基本概念"><a class="header-anchor" href="#迭代器的基本概念">¶</a>迭代器的基本概念;</h4>
+<ul>
 <li>迭代器是一种遍历容器元素的一种数据类型，这种数据类型类似指针。</li>
 <li>通过迭代器可以读取容器中的数据元素，也可以修改里面的数据元素</li>
 </ul>
-<h5 id="容器迭代器类型：-vector为例"><a href="#容器迭代器类型：-vector为例" class="headerlink" title="容器迭代器类型：(vector为例)"></a>容器迭代器类型：(vector为例)</h5><ul>
-<li><p>代码定义：</p>
+<h5 id="容器迭代器类型：-vector为例"><a class="header-anchor" href="#容器迭代器类型：-vector为例">¶</a>容器迭代器类型：(vector为例)</h5>
+<ul>
+<li>
+<p>代码定义：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays = &#123;<span class="number">12</span>,<span class="number">34</span>,<span class="number">88</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter;<span class="comment">//迭代器定义，其中vector&lt;int&gt;::iterator是数据类型</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>操作</p>
+<li>
+<p>操作</p>
 <ul>
-<li><code>begin()/end()</code><ul>
+<li><code>begin()/end()</code>
+<ul>
 <li>用来返回迭代类型。</li>
 <li>具体用法: <img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/1.png"></li>
 </ul>
 </li>
-<li><code>rend()/rbegin()</code><ul>
+<li><code>rend()/rbegin()</code>
+<ul>
 <li>这个是配套于<code>vector&lt;int&gt;::r_iterator iter</code></li>
 <li>具体用法: <img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/2.png"></li>
 </ul>
@@ -425,63 +431,84 @@
 </li>
 </ul>
 <hr>
-<h4 id="实际运用："><a href="#实际运用：" class="headerlink" title="实际运用："></a>实际运用：</h4><ul>
-<li><p>1.用for语句遍历一个容器：</p>
+<h4 id="实际运用："><a class="header-anchor" href="#实际运用：">¶</a>实际运用：</h4>
 <ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"> 	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"> </span><br><span class="line"> 	<span class="keyword">for</span> (iter = arrays.begin(); iter != arrays.end(); iter++) &#123;</span><br><span class="line"> 		<span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>1.用for语句遍历一个容器：</p>
+<ul>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"> 	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = arrays.begin();</span><br><span class="line"> </span><br><span class="line"> 	<span class="keyword">for</span> (iter = arrays.begin(); iter != arrays.end(); iter++) &#123;</span><br><span class="line"> 		<span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>实验结果：<img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/3.png"></p>
+<li>
+<p>实验结果：<img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/3.png"></p>
 </li>
 </ul>
 </li>
-<li><p>可以看出，迭代器类型是一个类似于指针一样的东西，允许自增/自减。在获得值或者修改的时候是用<code>*iter</code>进行操作。</p>
+<li>
+<p>可以看出，迭代器类型是一个类似于指针一样的东西，允许自增/自减。在获得值或者修改的时候是用<code>*iter</code>进行操作。</p>
 </li>
 </ul>
 <hr>
-<h4 id="const-iterator迭代器"><a href="#const-iterator迭代器" class="headerlink" title="const_iterator迭代器"></a><code>const_iterator</code>迭代器</h4><ul>
-<li><p>不能改变迭代器指向的地址的内容。类似常量指针。</p>
+<h4 id="const-iterator迭代器"><a class="header-anchor" href="#const-iterator迭代器">¶</a><code>const_iterator</code>迭代器</h4>
+<ul>
+<li>
+<p>不能改变迭代器指向的地址的内容。类似常量指针。</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"> 	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::const_iterator iter = arrays.begin();</span><br><span class="line"> </span><br><span class="line"> 	<span class="keyword">for</span> (iter = arrays.begin(); iter != arrays.end(); iter++) &#123;</span><br><span class="line"> 		<span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> 		(*iter)++;<span class="comment">//报错。不能修改值</span></span><br><span class="line"> </span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"> 	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::const_iterator iter = arrays.begin();</span><br><span class="line"> </span><br><span class="line"> 	<span class="keyword">for</span> (iter = arrays.begin(); iter != arrays.end(); iter++) &#123;</span><br><span class="line"> 		<span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> 		(*iter)++;<span class="comment">//报错。不能修改值</span></span><br><span class="line"> </span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/4.png">
 </li>
-<li><p><strong>使用情形1：</strong></p>
+<li>
+<p><strong>使用情形1：</strong></p>
 <ul>
 <li>如果你的<strong>容器类型是常量</strong>的话<code>const vector&lt;int&gt; arrays</code>，那么你就<strong>只能</strong>且<strong>一定要常量迭代器</strong>。</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h5 id="cbegin-cend-（C-11后才有的新特性）"><a href="#cbegin-cend-（C-11后才有的新特性）" class="headerlink" title="cbegin()/cend()（C++11后才有的新特性）"></a><code>cbegin()/cend()</code>（C++11后才有的新特性）</h5><ul>
-<li>这两个函数与<code>begin()/end()</code>很相似，只是无论迭代器类型是常量迭代器还是普通迭代器<strong>都返回一个常量迭代器</strong><ul>
+<h5 id="cbegin-cend-c-11后才有的新特性"><a class="header-anchor" href="#cbegin-cend-c-11后才有的新特性">¶</a><code>cbegin()/cend()</code>（C++11后才有的新特性）</h5>
+<ul>
+<li>这两个函数与<code>begin()/end()</code>很相似，只是无论迭代器类型是常量迭代器还是普通迭代器<strong>都返回一个常量迭代器</strong>
+<ul>
 <li>原来的<code>begin()/end()</code>会根据迭代器类型来返回。</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="迭代器失控"><a href="#迭代器失控" class="headerlink" title="迭代器失控"></a>迭代器失控</h4><ul>
-<li><p><strong>正常操作：</strong></p>
+<h4 id="迭代器失控"><a class="header-anchor" href="#迭代器失控">¶</a>迭代器失控</h4>
+<ul>
+<li>
+<p><strong>正常操作：</strong></p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> a::arrays)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> a::arrays)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>运行结果：<img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/5.png"></p>
+<li>
+<p>运行结果：<img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/5.png"></p>
 </li>
 </ul>
 <ul>
-<li><p><strong>错误操作:</strong></p>
+<li>
+<p><strong>错误操作:</strong></p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> a::arrays)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">100</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//上面等价于</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> a::arrays)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">100</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//上面等价于</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>运行结果: <img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/6.png"> <img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/7.png"><img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/8.png"></p>
+<li>
+<p>运行结果: <img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/6.png"> <img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/7.png"><img src="/2019/06/26/C-进阶学习总结-（1-6）迭代器/8.png"></p>
 </li>
-<li><p><strong>结论</strong>：千万不要在迭代器操作过程中，千万不要改变<code>vector</code>(容器)的<strong>容量</strong>。这样错误的操作即：从容器删除，增加（使容器容量改变），可能会使迭代器指针失控，不能代表容器中的元素,在多数情况下程序会奔溃。</p>
+<li>
+<p><strong>结论</strong>：千万不要在迭代器操作过程中，千万不要改变<code>vector</code>(容器)的<strong>容量</strong>。这样错误的操作即：从容器删除，增加（使容器容量改变），可能会使迭代器指针失控，不能代表容器中的元素,在多数情况下程序会奔溃。</p>
 </li>
-<li><p><strong>如果一定要在循环中进行容量增减操作</strong>：</p>
+<li>
+<p><strong>如果一定要在循环中进行容量增减操作</strong>：</p>
 </li>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">100</span>);</span><br><span class="line">    <span class="keyword">break</span>；<span class="comment">//直接break；</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//再开一个迭代器循环，此时的迭代器指针的值将重新赋值。</span></span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;arrays = &#123;<span class="number">12</span>,<span class="number">56</span>,<span class="number">88</span>,<span class="number">96</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    arrays.push_back(<span class="number">100</span>);</span><br><span class="line">    <span class="keyword">break</span>；<span class="comment">//直接break；</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//再开一个迭代器循环，此时的迭代器指针的值将重新赋值。</span></span><br><span class="line"><span class="keyword">for</span>(iter = arrays.begin(); iter != arrays.end(); iter++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *iter &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
-<p>—（本文完）&lt;原创&gt;</p>
+<p>–（本文完）&lt;原创&gt;</p>
 
       
     </div>
@@ -778,7 +805,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器的基本概念"><span class="nav-number">1.</span> <span class="nav-text">迭代器的基本概念;</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#容器迭代器类型：-vector为例"><span class="nav-number">1.1.</span> <span class="nav-text">容器迭代器类型：(vector为例)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实际运用："><span class="nav-number">2.</span> <span class="nav-text">实际运用：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const-iterator迭代器"><span class="nav-number">3.</span> <span class="nav-text">const_iterator迭代器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#cbegin-cend-（C-11后才有的新特性）"><span class="nav-number">3.1.</span> <span class="nav-text">cbegin()/cend()（C++11后才有的新特性）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器失控"><span class="nav-number">4.</span> <span class="nav-text">迭代器失控</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器的基本概念"><span class="nav-number">1.</span> <span class="nav-text">¶迭代器的基本概念;</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#容器迭代器类型：-vector为例"><span class="nav-number">1.1.</span> <span class="nav-text">¶容器迭代器类型：(vector为例)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实际运用："><span class="nav-number">2.</span> <span class="nav-text">¶实际运用：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const-iterator迭代器"><span class="nav-number">3.</span> <span class="nav-text">¶const_iterator迭代器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#cbegin-cend-c-11后才有的新特性"><span class="nav-number">3.1.</span> <span class="nav-text">¶cbegin()/cend()（C++11后才有的新特性）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器失控"><span class="nav-number">4.</span> <span class="nav-text">¶迭代器失控</span></a></li></ol></div>
             
 
           </div>
