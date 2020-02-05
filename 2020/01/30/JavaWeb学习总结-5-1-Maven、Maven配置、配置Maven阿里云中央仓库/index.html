@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶Maven简介 Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。 说白了： 在实际开发中，一般需要引入外部的jar包进行开发，例如MySQL的jar包、C3P0的一些jar包，而Maven则会根据程序员自己的需要自动的在网络上去下载相关的所有jar包，而不用程序员手动的去网上下载。综上Maven在实际开发中将非常方便。 ¶Maven的配置(">
+<meta name="description" content="Maven简介Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。 说白了： 在实际开发中，一般需要引入外部的jar包进行开发，例如MySQL的jar包、C3P0的一些jar包，而Maven则会根据程序员自己的需要自动的在网络上去下载相关的所有jar包，而不用程序员手动的去网上下载。综上Maven在实际开发中将非常方便。 Maven的配置(IDE">
 <meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(5.1)Maven、Maven配置、配置Maven阿里云中央仓库">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/30/JavaWeb学习总结-5-1-Maven、Maven配置、配置Maven阿里云中央仓库/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶Maven简介 Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。 说白了： 在实际开发中，一般需要引入外部的jar包进行开发，例如MySQL的jar包、C3P0的一些jar包，而Maven则会根据程序员自己的需要自动的在网络上去下载相关的所有jar包，而不用程序员手动的去网上下载。综上Maven在实际开发中将非常方便。 ¶Maven的配置(">
+<meta property="og:description" content="Maven简介Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。 说白了： 在实际开发中，一般需要引入外部的jar包进行开发，例如MySQL的jar包、C3P0的一些jar包，而Maven则会根据程序员自己的需要自动的在网络上去下载相关的所有jar包，而不用程序员手动的去网上下载。综上Maven在实际开发中将非常方便。 Maven的配置(IDE">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/30/JavaWeb学习总结-5-1-Maven、Maven配置、配置Maven阿里云中央仓库/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/30/JavaWeb学习总结-5-1-Maven、Maven配置、配置Maven阿里云中央仓库/2.png">
@@ -96,7 +96,7 @@
 <meta property="og:updated_time" content="2020-01-30T15:20:46.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(5.1)Maven、Maven配置、配置Maven阿里云中央仓库">
-<meta name="twitter:description" content="¶Maven简介 Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。 说白了： 在实际开发中，一般需要引入外部的jar包进行开发，例如MySQL的jar包、C3P0的一些jar包，而Maven则会根据程序员自己的需要自动的在网络上去下载相关的所有jar包，而不用程序员手动的去网上下载。综上Maven在实际开发中将非常方便。 ¶Maven的配置(">
+<meta name="twitter:description" content="Maven简介Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。 说白了： 在实际开发中，一般需要引入外部的jar包进行开发，例如MySQL的jar包、C3P0的一些jar包，而Maven则会根据程序员自己的需要自动的在网络上去下载相关的所有jar包，而不用程序员手动的去网上下载。综上Maven在实际开发中将非常方便。 Maven的配置(IDE">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/01/30/JavaWeb学习总结-5-1-Maven、Maven配置、配置Maven阿里云中央仓库/1.png">
 
 
@@ -397,18 +397,16 @@
       
 
       
-        <h4 id="maven简介"><a class="header-anchor" href="#maven简介">¶</a>Maven简介</h4>
-<p><a href="https://baike.baidu.com/item/Maven" target="_blank" rel="noopener">Maven</a>项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的<a href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/6854630" target="_blank" rel="noopener">项目管理工具</a>软件。</p>
+        <h4 id="Maven简介"><a href="#Maven简介" class="headerlink" title="Maven简介"></a>Maven简介</h4><p><a href="https://baike.baidu.com/item/Maven" target="_blank" rel="noopener">Maven</a>项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的<a href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/6854630" target="_blank" rel="noopener">项目管理工具</a>软件。</p>
 <p>说白了：</p>
 <p>在实际开发中，一般需要引入外部的jar包进行开发，例如MySQL的jar包、C3P0的一些jar包，而Maven则会根据程序员自己的需要自动的在网络上去下载相关的所有jar包，而不用程序员手动的去网上下载。综上Maven在实际开发中将非常方便。</p>
-<h4 id="maven的配置-idea"><a class="header-anchor" href="#maven的配置-idea">¶</a>Maven的配置(IDEA)</h4>
-<p>Maven通常在Eclipse 和IDEA都有自带。所有可以通过这些编译器配置自带的Maven，这里以IDEA为例(Eclipse 配置也差不多相同)</p>
+<h4 id="Maven的配置-IDEA"><a href="#Maven的配置-IDEA" class="headerlink" title="Maven的配置(IDEA)"></a>Maven的配置(IDEA)</h4><p>Maven通常在Eclipse 和IDEA都有自带。所有可以通过这些编译器配置自带的Maven，这里以IDEA为例(Eclipse 配置也差不多相同)</p>
 <ul>
 <li>首先打开IDEA的设置，搜索Maven</li>
 </ul>
 <img src="/2020/01/30/JavaWeb学习总结-5-1-Maven、Maven配置、配置Maven阿里云中央仓库/1.png" title="其中那个Maven home是对应的Maven版本">
 <ul>
-<li>配置IDEA自带的Maven(这里选择的是Maven3)，设置自带Maven的settings.xml位置路径到 用户设置路径区域</li>
+<li>配置IDEA自带的Maven(这里选择的是Maven3)，设置自带Maven的settings.xml位置路径到 用户设置路径区域 </li>
 </ul>
 <img src="/2020/01/30/JavaWeb学习总结-5-1-Maven、Maven配置、配置Maven阿里云中央仓库/2.png">
 <ul>
@@ -619,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -711,7 +709,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#maven简介"><span class="nav-number">1.</span> <span class="nav-text">¶Maven简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maven的配置-idea"><span class="nav-number">2.</span> <span class="nav-text">¶Maven的配置(IDEA)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Maven简介"><span class="nav-number">1.</span> <span class="nav-text">Maven简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Maven的配置-IDEA"><span class="nav-number">2.</span> <span class="nav-text">Maven的配置(IDEA)</span></a></li></ol></div>
             
 
           </div>

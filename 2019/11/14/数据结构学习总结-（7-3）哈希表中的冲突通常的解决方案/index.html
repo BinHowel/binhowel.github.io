@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="¶冲突的解决方案 冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   ¶开放地址法 一个Key具有多个候选哈希地址。   开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上   实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    ¶线性探测再散列   原地址H0发生了冲突  则第i次冲突的探测地址">
+<meta name="description" content="冲突的解决方案冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   开放地址法一个Key具有多个候选哈希地址。  开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上  实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    线性探测再散列 原地址H0发生了冲突  则第i次冲突的探测地址 Hi = (Ho+">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶冲突的解决方案 冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   ¶开放地址法 一个Key具有多个候选哈希地址。   开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上   实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    ¶线性探测再散列   原地址H0发生了冲突  则第i次冲突的探测地址">
+<meta property="og:description" content="冲突的解决方案冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   开放地址法一个Key具有多个候选哈希地址。  开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上  实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    线性探测再散列 原地址H0发生了冲突  则第i次冲突的探测地址 Hi = (Ho+">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/1.gif">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/2.png">
 <meta property="og:updated_time" content="2019-11-14T15:49:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（7.3）哈希表中的冲突通常的解决方案">
-<meta name="twitter:description" content="¶冲突的解决方案 冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   ¶开放地址法 一个Key具有多个候选哈希地址。   开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上   实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    ¶线性探测再散列   原地址H0发生了冲突  则第i次冲突的探测地址">
+<meta name="twitter:description" content="冲突的解决方案冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。  开放地址法 再哈希法 封闭地址法   开放地址法一个Key具有多个候选哈希地址。  开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上  实现：  线性探测再散列 二次探测再散列 伪随机探测再散列    线性探测再散列 原地址H0发生了冲突  则第i次冲突的探测地址 Hi = (Ho+">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/1.gif">
 
 
@@ -395,22 +395,18 @@
       
 
       
-        <h4 id="冲突的解决方案"><a class="header-anchor" href="#冲突的解决方案">¶</a>冲突的解决方案</h4>
-<p>冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。</p>
+        <h4 id="冲突的解决方案"><a href="#冲突的解决方案" class="headerlink" title="冲突的解决方案"></a>冲突的解决方案</h4><p>冲突就是多个关键字映射到同一个哈希表地址上去了，出现冲突情况有下列几种解决方法。</p>
 <ul>
 <li>开放地址法</li>
 <li>再哈希法</li>
 <li>封闭地址法</li>
 </ul>
 <hr>
-<h5 id="开放地址法"><a class="header-anchor" href="#开放地址法">¶</a>开放地址法</h5>
-<p>一个Key具有多个候选哈希地址。</p>
+<h5 id="开放地址法"><a href="#开放地址法" class="headerlink" title="开放地址法"></a>开放地址法</h5><p>一个Key具有多个候选哈希地址。</p>
 <ul>
-<li>
-<p>开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上</p>
+<li><p>开放地址：如果这个地址冲突，尝试其他地址，即不“封闭”在一个地址上</p>
 </li>
-<li>
-<p>实现：</p>
+<li><p>实现：</p>
 <ul>
 <li>线性探测再散列</li>
 <li>二次探测再散列</li>
@@ -418,29 +414,25 @@
 </ul>
 </li>
 </ul>
-<h6 id="线性探测再散列"><a class="header-anchor" href="#线性探测再散列">¶</a>线性探测再散列</h6>
-<ul>
-<li>
-<p>原地址H<sub>0</sub>发生了冲突</p>
+<h6 id="线性探测再散列"><a href="#线性探测再散列" class="headerlink" title="线性探测再散列"></a>线性探测再散列</h6><ul>
+<li><p>原地址H<sub>0</sub>发生了冲突</p>
 <ul>
 <li>则第i次冲突的探测地址</li>
 <li>H<sub>i</sub> = (H<sub>o</sub>+ i)%m</li>
 </ul>
 </li>
-<li>
-<p>例如</p>
+<li><p>例如</p>
 <ul>
 <li>一个关键字映射地址为3</li>
 <li>另一个关键字通过哈希函数也映射为3</li>
 <li>那么第二个关键字则会检索4号地址空不空，如果空那么就存储进去，反之继续往检索</li>
 </ul>
 <img src="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/1.gif">
-<br>
+<p><br></p>
 </li>
 </ul>
 <ul>
-<li>
-<p>线性探索法容易产生堆积：</p>
+<li><p>线性探索法容易产生堆积：</p>
 <ul>
 <li>冲突的关键字只好向后寻找可用的空单元</li>
 <li>结果又占据了其他关键字的位置</li>
@@ -448,19 +440,17 @@
 </ul>
 <p>因为如果当前地址产生了冲突，尝试下一个地址，这样容易造成“连续的一大串”地址冲突，使得查找次数增加</p>
 </li>
-<li>
-<p><strong>改进</strong>：使用二次探测再散列</p>
+<li><p><strong>改进</strong>：使用二次探测再散列</p>
 </li>
 </ul>
 <ul>
-<li>如果当前地址冲突，“下一个”的地址不是紧挨着，而是离远一些，而且冲突次数越多，离得越远</li>
+<li><p>如果当前地址冲突，“下一个”的地址不是紧挨着，而是离远一些，而且冲突次数越多，离得越远</p>
+<p><br></p>
+<p><br></p>
+</li>
 </ul>
-  <br>
-  <br>
-<h6 id="二次探测再散列"><a class="header-anchor" href="#二次探测再散列">¶</a>二次探测再散列</h6>
-<ul>
-<li>原地址H<sub>0</sub>发生了冲突
-<ul>
+<h6 id="二次探测再散列"><a href="#二次探测再散列" class="headerlink" title="二次探测再散列"></a>二次探测再散列</h6><ul>
+<li>原地址H<sub>0</sub>发生了冲突<ul>
 <li>i 为冲突的次数</li>
 <li>m 为哈希表大小</li>
 <li>H<sub>i</sub> = (H<sub>o</sub>+ i<sup>2</sup>) % m</li>
@@ -468,27 +458,20 @@
 </li>
 </ul>
 <hr>
-<h4 id="再哈希法"><a class="header-anchor" href="#再哈希法">¶</a>再哈希法</h4>
-<p>若原地址H<sub>0</sub> = Hash<sub>0</sub>(key)冲突，则下一个地址换另外一个哈希函数进行 即：H<sub>i</sub> = Hash<sub>i</sub>(key)。</p>
+<h4 id="再哈希法"><a href="#再哈希法" class="headerlink" title="再哈希法"></a>再哈希法</h4><p>若原地址H<sub>0</sub> = Hash<sub>0</sub>(key)冲突，则下一个地址换另外一个哈希函数进行 即：H<sub>i</sub> = Hash<sub>i</sub>(key)。</p>
 <hr>
-<h4 id="封闭地址法"><a class="header-anchor" href="#封闭地址法">¶</a>封闭地址法</h4>
-<p>即便映射在哈希表上的地址发生了冲突也想办法在该地址内进行存储。<br>
-常用的有：</p>
+<h4 id="封闭地址法"><a href="#封闭地址法" class="headerlink" title="封闭地址法"></a>封闭地址法</h4><p>即便映射在哈希表上的地址发生了冲突也想办法在该地址内进行存储。<br>常用的有：</p>
 <ul>
 <li>链表法</li>
 </ul>
-<h5 id="链表法"><a class="header-anchor" href="#链表法">¶</a>链表法</h5>
-<ul>
+<h5 id="链表法"><a href="#链表法" class="headerlink" title="链表法"></a>链表法</h5><ul>
 <li>映射到同一个地址到数据存放在链表中</li>
-<li>
-<img src="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/2.png">
+<li><img src="/2019/11/14/数据结构学习总结-（7-3）哈希表中的冲突通常的解决方案/2.png">
 </li>
 </ul>
 <hr>
-<h4 id="附加：判断冲突可能性判断-载荷因子"><a class="header-anchor" href="#附加：判断冲突可能性判断-载荷因子">¶</a>附加：判断冲突可能性判断（载荷因子）</h4>
-<ul>
-<li>载荷因子 = 填入表中的元素个数/散列表的长度
-<ul>
+<h4 id="附加：判断冲突可能性判断（载荷因子）"><a href="#附加：判断冲突可能性判断（载荷因子）" class="headerlink" title="附加：判断冲突可能性判断（载荷因子）"></a>附加：判断冲突可能性判断（载荷因子）</h4><ul>
+<li>载荷因子 = 填入表中的元素个数/散列表的长度<ul>
 <li>载荷因子小，说明哈希表表内空位较多</li>
 <li>载荷因子大，说明哈希表内空位少</li>
 </ul>
@@ -699,7 +682,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -791,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#冲突的解决方案"><span class="nav-number">1.</span> <span class="nav-text">¶冲突的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#开放地址法"><span class="nav-number">1.1.</span> <span class="nav-text">¶开放地址法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#线性探测再散列"><span class="nav-number">1.1.1.</span> <span class="nav-text">¶线性探测再散列</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二次探测再散列"><span class="nav-number">1.1.2.</span> <span class="nav-text">¶二次探测再散列</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再哈希法"><span class="nav-number">2.</span> <span class="nav-text">¶再哈希法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封闭地址法"><span class="nav-number">3.</span> <span class="nav-text">¶封闭地址法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#链表法"><span class="nav-number">3.1.</span> <span class="nav-text">¶链表法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附加：判断冲突可能性判断-载荷因子"><span class="nav-number">4.</span> <span class="nav-text">¶附加：判断冲突可能性判断（载荷因子）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#冲突的解决方案"><span class="nav-number">1.</span> <span class="nav-text">冲突的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#开放地址法"><span class="nav-number">1.1.</span> <span class="nav-text">开放地址法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#线性探测再散列"><span class="nav-number">1.1.1.</span> <span class="nav-text">线性探测再散列</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二次探测再散列"><span class="nav-number">1.1.2.</span> <span class="nav-text">二次探测再散列</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再哈希法"><span class="nav-number">2.</span> <span class="nav-text">再哈希法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封闭地址法"><span class="nav-number">3.</span> <span class="nav-text">封闭地址法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#链表法"><span class="nav-number">3.1.</span> <span class="nav-text">链表法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附加：判断冲突可能性判断（载荷因子）"><span class="nav-number">4.</span> <span class="nav-text">附加：判断冲突可能性判断（载荷因子）</span></a></li></ol></div>
             
 
           </div>

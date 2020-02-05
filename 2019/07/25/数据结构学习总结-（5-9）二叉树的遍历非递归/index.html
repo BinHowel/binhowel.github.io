@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶递归的优缺点 二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处  递归的优点：  代码简洁   递归的缺点：  过多递归会影响系统内存和程序运行效率     ¶二叉树非递归的">
+<meta name="description" content="递归的优缺点二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处  递归的优点： 代码简洁   递归的缺点： 过多递归会影响系统内存和程序运行效率     二叉树非递归的代码实现及">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.9）二叉树的遍历非递归">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶递归的优缺点 二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处  递归的优点：  代码简洁   递归的缺点：  过多递归会影响系统内存和程序运行效率     ¶二叉树非递归的">
+<meta property="og:description" content="递归的优缺点二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处  递归的优点： 代码简洁   递归的缺点： 过多递归会影响系统内存和程序运行效率     二叉树非递归的代码实现及">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/2.png">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-07-25T07:51:36.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.9）二叉树的遍历非递归">
-<meta name="twitter:description" content="¶递归的优缺点 二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处  递归的优点：  代码简洁   递归的缺点：  过多递归会影响系统内存和程序运行效率     ¶二叉树非递归的">
+<meta name="twitter:description" content="递归的优缺点二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处  递归的优点： 代码简洁   递归的缺点： 过多递归会影响系统内存和程序运行效率     二叉树非递归的代码实现及">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/1.png">
 
 
@@ -396,293 +396,134 @@
       
 
       
-        <h4 id="递归的优缺点"><a class="header-anchor" href="#递归的优缺点">¶</a>递归的优缺点</h4>
-<p>二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处</p>
+        <h4 id="递归的优缺点"><a href="#递归的优缺点" class="headerlink" title="递归的优缺点"></a>递归的优缺点</h4><p>二叉树的遍历可以使用递归的方式来实现，递归调用函数思路简单，且可以让代码简洁清晰，但是递归也有其不够好的地方的。总所周知程序中函数的调用是要消耗系统内存的，在小范围小幅度的递归对程序不会有太大的影响，但是如果递归的深度太大，会使内存枯竭，程序崩溃。即：递归即有好处也有坏处</p>
 <ul>
-<li>递归的优点：
-<ul>
+<li>递归的优点：<ul>
 <li>代码简洁</li>
 </ul>
 </li>
-<li>递归的缺点：
-<ul>
+<li>递归的缺点：<ul>
 <li>过多递归会影响系统内存和程序运行效率</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="二叉树非递归的代码实现及思路"><a class="header-anchor" href="#二叉树非递归的代码实现及思路">¶</a>二叉树非递归的代码实现及思路</h4>
-<p>正如上面所说，函数递归在遍历较小的二叉树是没有太大的问题的。但若遍历深度巨大的二叉树，使用递归来遍历是不太可行的。所以二叉树非递归的方式来实现遍历也理所当然的变的重要。</p>
+<h4 id="二叉树非递归的代码实现及思路"><a href="#二叉树非递归的代码实现及思路" class="headerlink" title="二叉树非递归的代码实现及思路"></a>二叉树非递归的代码实现及思路</h4><p>正如上面所说，函数递归在遍历较小的二叉树是没有太大的问题的。但若遍历深度巨大的二叉树，使用递归来遍历是不太可行的。所以二叉树非递归的方式来实现遍历也理所当然的变的重要。</p>
 <ul>
-<li>
-<p>二叉树非递归遍历的实现<strong>思路</strong>：通过栈数据结构，进行入栈操作，先把树的每一个结点的左孩子入栈直至访问到叶结点，随后进行访问，访问一个出栈一个，并检测此时的右孩子是否为空，若不空，重复上述的操作即可。</p>
+<li><p>二叉树非递归遍历的实现<strong>思路</strong>：通过栈数据结构，进行入栈操作，先把树的每一个结点的左孩子入栈直至访问到叶结点，随后进行访问，访问一个出栈一个，并检测此时的右孩子是否为空，若不空，重复上述的操作即可。</p>
 </li>
-<li>
-<p>代码实现:</p>
+<li><p>代码实现:</p>
 <ul>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Mid_Traversal</span><span class="params">(BiTreeNode* Root)</span></span>&#123;</span><br><span class="line">    <span class="built_in">stack</span>&lt;BiTreeNode*&gt; s;</span><br><span class="line">    BiTreeNode* T = Root;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(T)&#123;</span><br><span class="line">            s.push(T);</span><br><span class="line">            T = T-&gt;L_Node;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        T = s.top();</span><br><span class="line">        s.pop();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; T-&gt;data &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        T = T-&gt;R_Node;</span><br><span class="line">    &#125;<span class="keyword">while</span>(!s.Empty()||T);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Mid_Traversal</span><span class="params">(BiTreeNode* Root)</span></span>&#123;</span><br><span class="line">    <span class="built_in">stack</span>&lt;BiTreeNode*&gt; s;</span><br><span class="line">    BiTreeNode* T = Root;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(T)&#123;</span><br><span class="line">            s.push(T);</span><br><span class="line">            T = T-&gt;L_Node;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        T = s.top();</span><br><span class="line">        s.pop();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; T-&gt;data &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        T = T-&gt;R_Node;</span><br><span class="line">    &#125;<span class="keyword">while</span>(!s.Empty()||T);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>实验结果:<img src="/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/1.png"></p>
+<li><p>实验结果:<img src="/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/1.png"></p>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="函数流程演示"><a class="header-anchor" href="#函数流程演示">¶</a>函数流程演示</h4>
-<img src="/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/2.png">
+<h4 id="函数流程演示"><a href="#函数流程演示" class="headerlink" title="函数流程演示"></a>函数流程演示</h4><img src="/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/2.png">
 <ul>
-<li>
-<p>第一步：A结点不空进入循环，入栈。</p>
+<li><p>第一步：A结点不空进入循环，入栈。</p>
 <ul>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">A</td>
-</tr>
-</tbody>
-</table>
+<li>| 栈顶 |<br>| :—: |<br>|  A   |</li>
+</ul>
+</li>
+<li><p>第二步：B结点入栈、第三次循环D结点入栈。</p>
+<ul>
+<li>| 栈顶 |<br>| :—: |<br>|  D   |<br>|  B   |<br>|  A   |</li>
+</ul>
+</li>
+<li><p>第三步：跳出循环，T指针指向栈顶,访问栈顶数据，并出栈。</p>
+<ul>
+<li><p><code>T：-&gt;D</code></p>
+</li>
+<li><p><strong>输出了D</strong></p>
+</li>
+<li><p>| 栈顶 |<br>| :—: |<br>|  B   |<br>|  A   |</p>
 </li>
 </ul>
 </li>
-<li>
-<p>第二步：B结点入栈、第三次循环D结点入栈。</p>
-<ul>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">D</td>
-</tr>
-<tr>
-<td style="text-align:center">B</td>
-</tr>
-<tr>
-<td style="text-align:center">A</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-</li>
-<li>
-<p>第三步：跳出循环，T指针指向栈顶,访问栈顶数据，并出栈。</p>
-<ul>
-<li>
-<p><code>T：-&gt;D</code></p>
-</li>
-<li>
-<p><strong>输出了D</strong></p>
-</li>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">B</td>
-</tr>
-<tr>
-<td style="text-align:center">A</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-</li>
-<li>
-<p>第四步：T重新指向此时指向结点的右孩子。第一次外循环结束。</p>
+<li><p>第四步：T重新指向此时指向结点的右孩子。第一次外循环结束。</p>
 <ul>
 <li><code>T：-&gt;D.R_Node(nullptr)</code></li>
 </ul>
 </li>
-<li>
-<p>第五步：开始第二次外循环，因为T为空内循环不执行、T指向栈顶，访问栈顶数据。</p>
+<li><p>第五步：开始第二次外循环，因为T为空内循环不执行、T指向栈顶，访问栈顶数据。</p>
 <ul>
-<li>
-<p><code>T：-&gt;B</code></p>
+<li><p><code>T：-&gt;B</code></p>
 </li>
-<li>
-<p><strong>输出了B</strong></p>
+<li><p><strong>输出了B</strong></p>
 </li>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">A</td>
-</tr>
-</tbody>
-</table>
+<li><p>| 栈顶 |<br>| :—: |<br>|  A   |</p>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li>
-<p>第六步：T指向了B结点的右孩子E，结束第二次外循环。</p>
+<li><p>第六步：T指向了B结点的右孩子E，结束第二次外循环。</p>
 <ul>
 <li><code>T：-&gt;E</code></li>
 </ul>
 </li>
-<li>
-<p>第七步：此时T不空执行内循环，E入栈,T指向E结点的左孩子,因为E结点的左孩子为空跳出循环。</p>
+<li><p>第七步：此时T不空执行内循环，E入栈,,T指向E结点的左孩子,因为E结点的左孩子为空跳出循环。</p>
 <ul>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">E</td>
-</tr>
-<tr>
-<td style="text-align:center">A</td>
-</tr>
-</tbody>
-</table>
+<li>| 栈顶 |<br>| :—: |<br>|  E   |<br>|  A   |</li>
+</ul>
+</li>
+<li><p>第八步：T指向栈顶，访问栈顶数据，出栈。</p>
+<ul>
+<li><p><code>T：-&gt;E</code></p>
+</li>
+<li><p><strong>输出了E</strong></p>
+</li>
+<li><p>| 栈顶 |<br>| :—: |<br>|  A   |</p>
 </li>
 </ul>
 </li>
-<li>
-<p>第八步：T指向栈顶，访问栈顶数据，出栈。</p>
-<ul>
-<li>
-<p><code>T：-&gt;E</code></p>
-</li>
-<li>
-<p><strong>输出了E</strong></p>
-</li>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">A</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-</li>
-<li>
-<p>第九步：T指向E结点的右孩子，因为为空所以结束第三次外循环。</p>
+<li><p>第九步：T指向E结点的右孩子，因为为空所以结束第三次外循环。</p>
 <ul>
 <li><code>T：-&gt;E.R_Node(nullptr)</code></li>
 </ul>
 </li>
-<li>
-<p>第十步：因为此时T为空不执行内循环，T指向栈顶，访问栈顶数据，出栈。</p>
+<li><p>第十步：因为此时T为空不执行内循环，T指向栈顶，访问栈顶数据，出栈。</p>
 <ul>
-<li>
-<p><code>T：-&gt;A</code></p>
+<li><p><code>T：-&gt;A</code></p>
 </li>
-<li>
-<p><strong>输出了A</strong></p>
+<li><p><strong>输出了A</strong></p>
 </li>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">空</td>
-</tr>
-</tbody>
-</table>
+<li><p>| 栈顶 |<br>| :—: |<br>|  空  |</p>
 </li>
 </ul>
 </li>
-<li>
-<p>第十一步：T指向A结点的右孩子C，因为是空栈，所以也结束第四次外循环，重新开始下一轮循环。</p>
+<li><p>第十一步：T指向A结点的右孩子C，因为是空栈，所以也结束第四次外循环，重新开始下一轮循环。</p>
 <ul>
 <li><code>T：-&gt;C</code></li>
 </ul>
 </li>
-<li>
-<p>第十二步：T不为空，指向内循环，入栈，更新T指向C的左孩子，为空结束内循环。</p>
+<li><p>第十二步：T不为空，指向内循环，入栈，更新T指向C的左孩子，为空结束内循环。</p>
 <ul>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">C</td>
-</tr>
-</tbody>
-</table>
-</li>
+<li>| 栈顶 |<br>| :—: |<br>|  C   |</li>
 </ul>
 </li>
-<li>
-<p>第十三步：T指向栈顶，访问栈顶，出栈</p>
+<li><p>第十三步：T指向栈顶，访问栈顶，出栈</p>
 <ul>
-<li>
-<p><code>T：-&gt;C</code></p>
+<li><p><code>T：-&gt;C</code></p>
 </li>
-<li>
-<p><strong>输出了C</strong></p>
+<li><p><strong>输出了C</strong></p>
 </li>
-<li>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">栈顶</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">空</td>
-</tr>
-</tbody>
-</table>
+<li><p>| 栈顶 |<br>| :—: |<br>|  空  |</p>
 </li>
 </ul>
 </li>
-<li>
-<p>第十四步：T指向C结点的右孩子，但为空，且栈也为空栈，跳出外循环。结束遍历操作。</p>
+<li><p>第十四步：T指向C结点的右孩子，但为空，且栈也为空栈，跳出外循环。结束遍历操作。</p>
 </li>
-<li>
-<p>结果输出：D、B、E、A、C</p>
+<li><p>结果输出：D、B、E、A、C</p>
 </li>
-<li>
-<img src="/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/3.png">
+<li><img src="/2019/07/25/数据结构学习总结-（5-9）二叉树的遍历非递归/3.png">
 </li>
 </ul>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -887,7 +728,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -979,7 +820,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归的优缺点"><span class="nav-number">1.</span> <span class="nav-text">¶递归的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树非递归的代码实现及思路"><span class="nav-number">2.</span> <span class="nav-text">¶二叉树非递归的代码实现及思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数流程演示"><span class="nav-number">3.</span> <span class="nav-text">¶函数流程演示</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#递归的优缺点"><span class="nav-number">1.</span> <span class="nav-text">递归的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉树非递归的代码实现及思路"><span class="nav-number">2.</span> <span class="nav-text">二叉树非递归的代码实现及思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数流程演示"><span class="nav-number">3.</span> <span class="nav-text">函数流程演示</span></a></li></ol></div>
             
 
           </div>

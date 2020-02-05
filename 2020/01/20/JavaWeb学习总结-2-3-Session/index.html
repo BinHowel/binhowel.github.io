@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="¶HTTP通信 ​	JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。 当用户发送另一条请求时，所有的请求与响应都和上一次一样，客户和服务器之间必须重新建立连接。 即：">
+<meta name="description" content="HTTP通信​    JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。 当用户发送另一条请求时，所有的请求与响应都和上一次一样，客户和服务器之间必须重新建立连接。 即">
 <meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(2.3)Session">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-3-Session/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶HTTP通信 ​	JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。 当用户发送另一条请求时，所有的请求与响应都和上一次一样，客户和服务器之间必须重新建立连接。 即：">
+<meta property="og:description" content="HTTP通信​    JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。 当用户发送另一条请求时，所有的请求与响应都和上一次一样，客户和服务器之间必须重新建立连接。 即">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-3-Session/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-3-Session/2.png">
@@ -96,7 +96,7 @@
 <meta property="og:updated_time" content="2020-01-20T12:24:23.807Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(2.3)Session">
-<meta name="twitter:description" content="¶HTTP通信 ​	JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。 当用户发送另一条请求时，所有的请求与响应都和上一次一样，客户和服务器之间必须重新建立连接。 即：">
+<meta name="twitter:description" content="HTTP通信​    JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。 当用户发送另一条请求时，所有的请求与响应都和上一次一样，客户和服务器之间必须重新建立连接。 即">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-3-Session/1.png">
 
 
@@ -397,74 +397,54 @@
       
 
       
-        <h4 id="http通信"><a class="header-anchor" href="#http通信">¶</a>HTTP通信</h4>
-<p>​	JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。</p>
+        <h4 id="HTTP通信"><a href="#HTTP通信" class="headerlink" title="HTTP通信"></a>HTTP通信</h4><p>​    JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应信息,然后把它回送给客户端。这一过程结束后,服务器就关闭了该连接,而不会一直与客户端保持着连接的状态。</p>
 <p>当用户发送另一条请求时，所有的请求与响应都和上一次一样，客户和服务器之间必须重新建立连接。</p>
 <p>即：你访问一个网站，此时会发出一个请求，然后服务器给与回应两者就断开了，你和网站的服务器不是一直有着连接，而是这种一瞬间的短连接，这也就是为什么你访问一个网站后 断网了，网站依旧可以在该页面进行浏览。</p>
-<h5 id="http的无状态性"><a class="header-anchor" href="#http的无状态性">¶</a>HTTP的无状态性</h5>
-<p>​	Web服务器需要为大量的用户服务。对于一个服务器接受一条网络连接就意味着通过一个套接字侦听进入的请求,如果一服务器同时连接大量的用户, 这会消耗掉服务器大量的资源,包括线程和内存。</p>
+<h5 id="HTTP的无状态性"><a href="#HTTP的无状态性" class="headerlink" title="HTTP的无状态性"></a>HTTP的无状态性</h5><p>​    Web服务器需要为大量的用户服务。对于一个服务器接受一条网络连接就意味着通过一个套接字侦听进入的请求,如果一服务器同时连接大量的用户, 这会消耗掉服务器大量的资源,包括线程和内存。</p>
 <p>为了能够服务于大量的用户, HTTP被设计成在每一次新请求中都使用新的连接,这种特性称为HTTP的无状态性。</p>
-<h4 id="session"><a class="header-anchor" href="#session">¶</a>Session</h4>
-<p>既然http是无状态的,那服务器该如何对多个用户进行区分呢?</p>
+<h4 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h4><p>既然http是无状态的,那服务器该如何对多个用户进行区分呢?</p>
 <p>我们常进的网站通常都是每次只需要登录一次,然后就记住了用户信息和登录状态,这是如何实现的呢?这就需要一种机制来唯一的标识用户,以便跟踪用户在站点中的行为。</p>
 <p>这就是我们要说的会话对象session,可以利用会话对象session来记录用户的数据信息。</p>
 <p>即：JavaWeb可以通过Session来记录每一个用户的使用情况，它是跟踪于浏览器的，假设你登入了一个网站，下次再打开时，它会保持你现在的登入状态，这就是Session的用法之一。</p>
 <ul>
-<li>
-<p>从一个用户打开浏览器并连接到服务器开始到用户关闭浏览器离开这个服务器结束称做一个会话。</p>
+<li><p>从一个用户打开浏览器并连接到服务器开始到用户关闭浏览器离开这个服务器结束称做一个会话。</p>
 </li>
-<li>
-<p><strong>在多次HTTP连接间维护用户与不同请求之间关联的情况称为维护一个会话(session)</strong></p>
+<li><p><strong>在多次HTTP连接间维护用户与不同请求之间关联的情况称为维护一个会话(session)</strong></p>
 </li>
-<li>
-<p>当一个用户连接到服务器时可能到不同的页面,而许多 WEB程序需要用户在客户端的一系列请求之间能够互相关联,实现不同的页面之间数据的传递和共享, 而HTTP协议是无状态的,基于WEB的应用程序需要维护这样的状态,这就需要session,利用session可以保存访问者访问页面的数据信息。</p>
-</li>
+<li>当一个用户连接到服务器时可能到不同的页面,而许多 WEB程序需要用户在客户端的一系列请求之间能够互相关联,实现不同的页面之间数据的传递和共享, 而HTTP协议是无状态的,基于WEB的应用程序需要维护这样的状态,这就需要session,利用session可以保存访问者访问页面的数据信息。</li>
 </ul>
-<h5 id="特征"><a class="header-anchor" href="#特征">¶</a>特征</h5>
-<ul>
-<li>
-<p>会话能够把用户与同一用户发出的不同请求之间关联起来。不同用户的会话应当是相互独立的。</p>
+<h5 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h5><ul>
+<li><p>会话能够把用户与同一用户发出的不同请求之间关联起来。不同用户的会话应当是相互独立的。</p>
 </li>
-<li>
-<p>会话一旦建立就应当一直存在,直到用户空闲时间超过了某一个时间界限,容器才应当释放该会话资源。</p>
+<li><p>会话一旦建立就应当一直存在,直到用户空闲时间超过了某一个时间界限,容器才应当释放该会话资源。</p>
 <ul>
 <li>例如你登入一个页面，然后很久都没有去访问了，然后就要你重新登入。称为Session过期</li>
 </ul>
 </li>
-<li>
-<p>在会话的存活期间,用户可能给服务器发送了很多请求 ,该用户的这些请求信息都可以存储在会话中。</p>
-</li>
+<li>在会话的存活期间,用户可能给服务器发送了很多请求 ,该用户的这些请求信息都可以存储在会话中。</li>
 </ul>
 <hr>
-<h4 id="session使用演示"><a class="header-anchor" href="#session使用演示">¶</a>Session使用演示</h4>
-<h5 id="session的属性"><a class="header-anchor" href="#session的属性">¶</a>Session的属性</h5>
-<ul>
-<li>
-<p>Session对象使用以下方法管理绑定到会话的属性</p>
+<h4 id="Session使用演示"><a href="#Session使用演示" class="headerlink" title="Session使用演示"></a>Session使用演示</h4><h5 id="Session的属性"><a href="#Session的属性" class="headerlink" title="Session的属性"></a>Session的属性</h5><ul>
+<li><p>Session对象使用以下方法管理绑定到会话的属性</p>
 <ul>
 <li>设置: void setAttribute(String name, Object value);</li>
 <li>获取: Object getAttribute(String name);</li>
 <li>移除: void removeAttribute(String name) ;</li>
 </ul>
 </li>
-<li>
-<p>与Map的用法相似,其实内部就是键值对。</p>
+<li><p>与Map的用法相似,其实内部就是键值对。</p>
 </li>
 </ul>
-<h5 id="使用演示"><a class="header-anchor" href="#使用演示">¶</a>使用演示</h5>
-<ul>
+<h5 id="使用演示"><a href="#使用演示" class="headerlink" title="使用演示"></a>使用演示</h5><ul>
 <li>创建两个Servlet 一个名为setSession 用来给session内存值设置值，一个为ShowSession用来展示session内的值</li>
 <li>在使用session时，要先使用request对象获取HttpSession的对象才能对session进行操作使用</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> SessionTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpSession;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SetSession</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        </span><br><span class="line">        HttpSession session = request.getSession();<span class="comment">//获取HttpSession对象</span></span><br><span class="line">        session.setAttribute(<span class="string">"Test"</span>,<span class="string">"HelloWord"</span>);<span class="comment">//往1session内存值</span></span><br><span class="line">        session.setAttribute(<span class="string">"Test2"</span>,<span class="number">1234</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> SessionTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpSession;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShowSession</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        HttpSession session = request.getSession();<span class="comment">//获取HttpSession对象</span></span><br><span class="line">		</span><br><span class="line">        <span class="comment">/*打印session内的数据*/</span></span><br><span class="line">        response.getWriter().println(<span class="string">"从session获取的内容 :"</span> + session.getAttribute(<span class="string">"Test"</span>));</span><br><span class="line">        response.getWriter().println(<span class="string">"从session获取的内容2 :"</span> + session.getAttribute(<span class="string">"Test2"</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="注意点"><a class="header-anchor" href="#注意点">¶</a>注意点:</h5>
-<ul>
-<li>
-<p>session是根据浏览器不同而不同的，例如你使用IE浏览器对session进行了设置值，然后换另一个浏览器访问展示session页面也会没有接受到session里设置的值</p>
+<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点:"></a>注意点:</h5><ul>
+<li><p>session是根据浏览器不同而不同的，例如你使用IE浏览器对session进行了设置值，然后换另一个浏览器访问展示session页面也会没有接受到session里设置的值</p>
 </li>
-<li>
-<p>与ServletContext对象不同的是，当session过期或者被销毁的时候其值会消失，而不是一直存在与项目本身(主要体现与不同的浏览器进行访问)</p>
+<li><p>与ServletContext对象不同的是，当session过期或者被销毁的时候其值会消失，而不是一直存在与项目本身(主要体现与不同的浏览器进行访问)</p>
 </li>
 </ul>
 <img src="/2020/01/20/JavaWeb学习总结-2-3-Session/1.png" title="当打开SetSession后，再打开ShowSession">
@@ -473,47 +453,39 @@
 <img src="/2020/01/20/JavaWeb学习总结-2-3-Session/3.png" title="这里换了一个IE浏览器进行访问ShowSession，数据不见了">
 <p>可以发现，这里就跟以往提到的ServletContext不同了。当换一个浏览器的时候以往给session设置的值不见了，说明session是对于浏览器来说的，即，通过浏览器来辨认不同的用户</p>
 <hr>
-<h4 id="session的id"><a class="header-anchor" href="#session的id">¶</a>session的ID</h4>
-<p>根据上述演示实例，可以发现，同一个浏览器下session是共享的，换一个浏览器session就不同了，实质上：</p>
+<h4 id="session的ID"><a href="#session的ID" class="headerlink" title="session的ID"></a>session的ID</h4><p>根据上述演示实例，可以发现，同一个浏览器下session是共享的，换一个浏览器session就不同了，实质上：</p>
 <ul>
-<li>
-<p>WEB容器在创建每一个新的HTTP会话对象时,都会赋予一个新的ID号。WEB容器保证它在Web应用范围内是唯一的。</p>
+<li><p>WEB容器在创建每一个新的HTTP会话对象时,都会赋予一个新的ID号。WEB容器保证它在Web应用范围内是唯一的。</p>
 </li>
-<li>
-<p>这个ID号可以通过Session对象的<code>getld()</code>获得。例如:<code>String sessionld=session.getd();</code></p>
+<li><p>这个ID号可以通过Session对象的<code>getld()</code>获得。例如:<code>String sessionld=session.getd();</code></p>
 </li>
 </ul>
 <p>例如：修改上例的Showsession</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> SessionTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpSession;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShowSession</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        HttpSession session = request.getSession();</span><br><span class="line">        response.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        response.setContentType(<span class="string">"text/html;charset=UTF-8"</span>);</span><br><span class="line">        response.getWriter().println(<span class="string">"从session获取的内容 :"</span> + session.getAttribute(<span class="string">"Test"</span>));</span><br><span class="line">        response.getWriter().println(<span class="string">"从session获取的内容2 :"</span> + session.getAttribute(<span class="string">"Test2"</span>));</span><br><span class="line">        </span><br><span class="line">       	response.getWriter().println(<span class="string">"该浏览器的SessionID为 :"</span> + session.getId());<span class="comment">//这里我们把sessionID打印出来</span></span><br><span class="line">   </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/01/20/JavaWeb学习总结-2-3-Session/4.png" title="可以发现 不同的浏览器其sessionID是不同的，说明每个浏览器对应的session都不同">
-<h4 id="终止session"><a class="header-anchor" href="#终止session">¶</a>终止Session</h4>
-<p>​	这里的终止不是说完全把session进行销毁，而是创建一个新的session，session是一直都会有的。</p>
+<h4 id="终止Session"><a href="#终止Session" class="headerlink" title="终止Session"></a>终止Session</h4><p>​    这里的终止不是说完全把session进行销毁，而是创建一个新的session，session是一直都会有的。</p>
 <ol>
-<li>
-<p>直接调用invalidate方法,终止会话</p>
+<li><p>直接调用invalidate方法,终止会话</p>
 <ul>
 <li><code>session.invalidate();</code></li>
 </ul>
 </li>
-<li>
-<p>设置会话超时时间,单位为<strong>秒</strong></p>
+<li><p>设置会话超时时间,单位为<strong>秒</strong></p>
 <ul>
 <li><code>session.setMaxinactivelnterval(600);</code></li>
 </ul>
 </li>
-<li>
-<p>在web.xml文件中配置超时时间,<strong>单位分钟</strong></p>
+<li><p>在web.xml文件中配置超时时间,<strong>单位分钟</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>30<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ul>
-<li>当我们不设置session的timeout时,它是有默认时长的,不同的Web服务器默认时长可能不同。
-<ul>
+<li>当我们不设置session的timeout时,它是有默认时长的,不同的Web服务器默认时长可能不同。<ul>
 <li>Tomcat的默认超时时间是30分钟,可以在conf目录下的web. xml中查看timeout</li>
 </ul>
 </li>
 </ul>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -718,7 +690,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -810,7 +782,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#http通信"><span class="nav-number">1.</span> <span class="nav-text">¶HTTP通信</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#http的无状态性"><span class="nav-number">1.1.</span> <span class="nav-text">¶HTTP的无状态性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#session"><span class="nav-number">2.</span> <span class="nav-text">¶Session</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#特征"><span class="nav-number">2.1.</span> <span class="nav-text">¶特征</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#session使用演示"><span class="nav-number">3.</span> <span class="nav-text">¶Session使用演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#session的属性"><span class="nav-number">3.1.</span> <span class="nav-text">¶Session的属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用演示"><span class="nav-number">3.2.</span> <span class="nav-text">¶使用演示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点"><span class="nav-number">3.3.</span> <span class="nav-text">¶注意点:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#session的id"><span class="nav-number">4.</span> <span class="nav-text">¶session的ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#终止session"><span class="nav-number">5.</span> <span class="nav-text">¶终止Session</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP通信"><span class="nav-number">1.</span> <span class="nav-text">HTTP通信</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#HTTP的无状态性"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP的无状态性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Session"><span class="nav-number">2.</span> <span class="nav-text">Session</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#特征"><span class="nav-number">2.1.</span> <span class="nav-text">特征</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Session使用演示"><span class="nav-number">3.</span> <span class="nav-text">Session使用演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Session的属性"><span class="nav-number">3.1.</span> <span class="nav-text">Session的属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用演示"><span class="nav-number">3.2.</span> <span class="nav-text">使用演示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点"><span class="nav-number">3.3.</span> <span class="nav-text">注意点:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#session的ID"><span class="nav-number">4.</span> <span class="nav-text">session的ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#终止Session"><span class="nav-number">5.</span> <span class="nav-text">终止Session</span></a></li></ol></div>
             
 
           </div>

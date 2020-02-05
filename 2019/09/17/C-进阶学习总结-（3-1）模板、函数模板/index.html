@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="¶模板 所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。 模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。  ¶函数模板 ¶函数模板定义与使用 会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。  格式：  template&amp;lt;typename T&amp;gt; T 函数名(参数)">
+<meta name="description" content="模板所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。 模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。  函数模板函数模板定义与使用会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。  格式： template&amp;lt;typename T&amp;gt; T 函数名(参数) templat">
 <meta name="keywords" content="C++,学习总结,C++学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++进阶学习总结-（3.1）模板、函数模板">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/09/17/C-进阶学习总结-（3-1）模板、函数模板/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶模板 所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。 模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。  ¶函数模板 ¶函数模板定义与使用 会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。  格式：  template&amp;lt;typename T&amp;gt; T 函数名(参数)">
+<meta property="og:description" content="模板所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。 模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。  函数模板函数模板定义与使用会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。  格式： template&amp;lt;typename T&amp;gt; T 函数名(参数) templat">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-09-20T07:58:30.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++进阶学习总结-（3.1）模板、函数模板">
-<meta name="twitter:description" content="¶模板 所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。 模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。  ¶函数模板 ¶函数模板定义与使用 会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。  格式：  template&amp;lt;typename T&amp;gt; T 函数名(参数)">
+<meta name="twitter:description" content="模板所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。 模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。  函数模板函数模板定义与使用会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。  格式： template&amp;lt;typename T&amp;gt; T 函数名(参数) templat">
 
 
 
@@ -392,16 +392,12 @@
       
 
       
-        <h4 id="模板"><a class="header-anchor" href="#模板">¶</a>模板</h4>
-<p>所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要<strong>提供具体的程序实例</strong>。</p>
+        <h4 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h4><p>所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要<strong>提供具体的程序实例</strong>。</p>
 <p>模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。</p>
 <hr>
-<h4 id="函数模板"><a class="header-anchor" href="#函数模板">¶</a>函数模板</h4>
-<h5 id="函数模板定义与使用"><a class="header-anchor" href="#函数模板定义与使用">¶</a>函数模板定义与使用</h5>
-<p>会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。</p>
+<h4 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h4><h5 id="函数模板定义与使用"><a href="#函数模板定义与使用" class="headerlink" title="函数模板定义与使用"></a>函数模板定义与使用</h5><p>会更具实际类型来推断模板实际类型的函数，一般情况下会编译器会自动判别。</p>
 <ul>
-<li>格式：
-<ul>
+<li>格式：<ul>
 <li><code>template&lt;typename T&gt; T 函数名(参数)</code></li>
 <li><code>template&lt;class T&gt; T 函数名(参数)</code></li>
 </ul>
@@ -411,24 +407,20 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="function">T <span class="title">add</span><span class="params">(T a,T b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"12 + 13 = "</span> &lt;&lt; add(<span class="number">12</span>,<span class="number">13</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"5.6 + 12.3 = "</span> &lt;&lt; add(<span class="number">5.6</span>,<span class="number">12.3</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>实验结果：</p>
 <p>实际上，函数模板会更具你实际给定的对象类型来生成对应的函数。例如：如果你给定T的类型为double，则系统会生成<code>double add(double a,double b)</code>给定整型int则会生成对应的函数<code>int add(int a,int b)</code>。</p>
-<h5 id="非类型模板参数"><a class="header-anchor" href="#非类型模板参数">¶</a>非类型模板参数</h5>
-<p>在模板参数列表中没有使用类型参数，而是给定实际的类型的参数</p>
+<h5 id="非类型模板参数"><a href="#非类型模板参数" class="headerlink" title="非类型模板参数"></a>非类型模板参数</h5><p>在模板参数列表中没有使用类型参数，而是给定实际的类型的参数</p>
 <ul>
 <li>格式：<code>template&lt;实际类型 T&gt;</code></li>
 </ul>
 <p>范例：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*需要在&lt;&gt;给定实际类型才能调用*/</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">int</span> a,<span class="keyword">int</span> b&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add1</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*混合型*/</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T,<span class="keyword">int</span> a,<span class="keyword">int</span> b&gt;</span><br><span class="line"><span class="function">T <span class="title">add2</span><span class="params">(T c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = c;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> a + b + (<span class="keyword">int</span>)c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*特殊：不用提供实际类型，由系统自动推断*/</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">unsigned</span> L1,<span class="keyword">unsigned</span> L2&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">charscomp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>(&amp;p1)[L1],<span class="keyword">const</span> <span class="keyword">char</span>(&amp;p2)[L2])</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">strcmp</span>(p1,p2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"12 + 13 = "</span> &lt;&lt; add1&lt;<span class="number">12</span>,<span class="number">13</span>&gt;() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*不需要在&lt;&gt;中给定实际类型*/</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; charscomp(<span class="string">"ShuHao"</span>,<span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h4 id="其他"><a class="header-anchor" href="#其他">¶</a>其他</h4>
-<ul>
-<li>
-<p>如果要声明函数模板为内联函数，那么inline关键字要在template与函数返回值之间。例如: <code>template&lt;typename T, int a&gt; inline T func(T b){return b+a}</code></p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<li><p>如果要声明函数模板为内联函数，那么inline关键字要在template与函数返回值之间。例如: <code>template&lt;typename T, int a&gt; inline T func(T b){return b+a}</code></p>
 </li>
-<li>
-<p>模板函数一般放在头文件中，再多个CPP文件中include该头文件不会出现函数重定义</p>
+<li><p>模板函数一般放在头文件中，再多个CPP文件中include该头文件不会出现函数重定义</p>
 </li>
 </ul>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -633,7 +625,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -725,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#模板"><span class="nav-number">1.</span> <span class="nav-text">¶模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数模板"><span class="nav-number">2.</span> <span class="nav-text">¶函数模板</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数模板定义与使用"><span class="nav-number">2.1.</span> <span class="nav-text">¶函数模板定义与使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非类型模板参数"><span class="nav-number">2.2.</span> <span class="nav-text">¶非类型模板参数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">¶其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#模板"><span class="nav-number">1.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数模板"><span class="nav-number">2.</span> <span class="nav-text">函数模板</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数模板定义与使用"><span class="nav-number">2.1.</span> <span class="nav-text">函数模板定义与使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非类型模板参数"><span class="nav-number">2.2.</span> <span class="nav-text">非类型模板参数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
 
           </div>

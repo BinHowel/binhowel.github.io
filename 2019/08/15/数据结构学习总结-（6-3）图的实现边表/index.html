@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="¶边表  边表是把图的顶点，和边分别用顺序表进行存储的结构 这种存储结构是最简单、最容易实现的图存储结构 缺点：如果边的数目过大，会使效率降低   ¶代码实现及思路   边表结构   思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现">
+<meta name="description" content="边表 边表是把图的顶点，和边分别用顺序表进行存储的结构 这种存储结构是最简单、最容易实现的图存储结构 缺点：如果边的数目过大，会使效率降低   代码实现及思路 边表结构  思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现。  代码实">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（6.3）图的实现边表">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-3）图的实现边表/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶边表  边表是把图的顶点，和边分别用顺序表进行存储的结构 这种存储结构是最简单、最容易实现的图存储结构 缺点：如果边的数目过大，会使效率降低   ¶代码实现及思路   边表结构   思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现">
+<meta property="og:description" content="边表 边表是把图的顶点，和边分别用顺序表进行存储的结构 这种存储结构是最简单、最容易实现的图存储结构 缺点：如果边的数目过大，会使效率降低   代码实现及思路 边表结构  思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现。  代码实">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-3）图的实现边表/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-3）图的实现边表/2.png">
 <meta property="og:updated_time" content="2019-08-15T15:38:47.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（6.3）图的实现边表">
-<meta name="twitter:description" content="¶边表  边表是把图的顶点，和边分别用顺序表进行存储的结构 这种存储结构是最简单、最容易实现的图存储结构 缺点：如果边的数目过大，会使效率降低   ¶代码实现及思路   边表结构   思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现">
+<meta name="twitter:description" content="边表 边表是把图的顶点，和边分别用顺序表进行存储的结构 这种存储结构是最简单、最容易实现的图存储结构 缺点：如果边的数目过大，会使效率降低   代码实现及思路 边表结构  思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现。  代码实">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/08/15/数据结构学习总结-（6-3）图的实现边表/1.png">
 
 
@@ -395,58 +395,44 @@
       
 
       
-        <h4 id="边表"><a class="header-anchor" href="#边表">¶</a>边表</h4>
-<ul>
+        <h4 id="边表"><a href="#边表" class="headerlink" title="边表"></a>边表</h4><ul>
 <li>边表是把图的顶点，和边分别用顺序表进行存储的结构</li>
 <li>这种存储结构是最简单、最容易实现的图存储结构</li>
 <li>缺点：如果边的数目过大，会使效率降低</li>
 </ul>
 <hr>
-<h4 id="代码实现及思路"><a class="header-anchor" href="#代码实现及思路">¶</a>代码实现及思路</h4>
+<h4 id="代码实现及思路"><a href="#代码实现及思路" class="headerlink" title="代码实现及思路"></a>代码实现及思路</h4><ul>
+<li><p>边表结构</p>
 <ul>
-<li>
-<p>边表结构</p>
-<ul>
-<li>
-<p>思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现。</p>
+<li><p>思路：因为边表是通过两个顺序表分别存储顶点集和边集的存储结构，所以在实现时可以通过创建顶点集和边集的结构，其中边集要有两个顶点在顶点集中的下标数值，和该边对应的权值。其中顺序表可以通过C++内置的vector结构实现。</p>
 </li>
-<li>
-<p>代码实现：</p>
+<li><p>代码实现：</p>
 <ul>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> VT,<span class="keyword">typename</span> Einfo&gt; <span class="class"><span class="keyword">class</span> <span class="title">ElistGraph</span>&#123;</span></span><br><span class="line">    <span class="comment">/*实现边集结构*/</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>&#123;</span></span><br><span class="line">        <span class="comment">/*边两头的顶点在顶点集的下标*/</span></span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="keyword">int</span> y;</span><br><span class="line">        Einfo info;<span class="comment">//用来存储权的数据</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*边集构造函数*/</span></span><br><span class="line">        Edge(<span class="keyword">int</span> i,<span class="keyword">int</span> j,Einfo info):x(i),y(j),info(info)&#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">vector</span>&lt;VT&gt;VerTex;<span class="comment">//顶点集</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;Edge&gt;Edges;<span class="comment">//边集</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">bool</span> undirected;<span class="comment">//用来标记是否为无向图</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/*边表构造函数(默认为无向表)*/</span></span><br><span class="line">     ElistGraph(<span class="keyword">bool</span> undirected = <span class="literal">true</span>):undirected(undirecter)&#123;&#125;; </span><br><span class="line">        </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> VT,<span class="keyword">typename</span> Einfo&gt; <span class="class"><span class="keyword">class</span> <span class="title">ElistGraph</span>&#123;</span></span><br><span class="line">    <span class="comment">/*实现边集结构*/</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>&#123;</span></span><br><span class="line">        <span class="comment">/*边两头的顶点在顶点集的下标*/</span></span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="keyword">int</span> y;</span><br><span class="line">        Einfo info;<span class="comment">//用来存储权的数据</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*边集构造函数*/</span></span><br><span class="line">        Edge(<span class="keyword">int</span> i,<span class="keyword">int</span> j,Einfo info):x(i),y(j),info(info)&#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">vector</span>&lt;VT&gt;VerTex;<span class="comment">//顶点集</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;Edge&gt;Edges;<span class="comment">//边集</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">bool</span> undirected;<span class="comment">//用来标记是否为无向图</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/*边表构造函数(默认为无向表)*/</span></span><br><span class="line">     ElistGraph(<span class="keyword">bool</span> undirected = <span class="literal">true</span>):undirected(undirecter)&#123;&#125;; </span><br><span class="line">        </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>添加顶点</p>
+<li><p>添加顶点</p>
 <ul>
-<li>
-<p>思路：直接通过对vector结构进行操作添加即可</p>
+<li><p>思路：直接通过对vector结构进行操作添加即可</p>
 </li>
-<li>
-<p>代码实现：</p>
+<li><p>代码实现：</p>
 <ul>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_VerTex</span><span class="params">(VT vertex)</span></span>&#123;VerTex.push_back(vertex);&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_VerTex</span><span class="params">(VT vertex)</span></span>&#123;VerTex.push_back(vertex);&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>添加边</p>
+<li><p>添加边</p>
 <ul>
-<li>
-<p>思路：跟添加顶点操作一致</p>
+<li><p>思路：跟添加顶点操作一致</p>
 </li>
-<li>
-<p>代码实现：</p>
+<li><p>代码实现：</p>
 <ul>
-<li>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_Edge</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> i, <span class="keyword">const</span> <span class="keyword">int</span> j, <span class="keyword">const</span> Einfo&amp; info)</span></span>&#123;Edges.push_back(Edge(i,j,info));&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_Edge</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> i, <span class="keyword">const</span> <span class="keyword">int</span> j, <span class="keyword">const</span> Einfo&amp; info)</span></span>&#123;Edges.push_back(Edge(i,j,info));&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -454,12 +440,11 @@
 </li>
 </ul>
 <hr>
-<h4 id="代码实现："><a class="header-anchor" href="#代码实现：">¶</a>代码实现：</h4>
-<img src="/2019/08/15/数据结构学习总结-（6-3）图的实现边表/1.png">
+<h4 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h4><img src="/2019/08/15/数据结构学习总结-（6-3）图的实现边表/1.png">
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* VT 顶点数据</span></span><br><span class="line"><span class="comment">* Einfo 边数据类型(权)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> VT,<span class="keyword">typename</span> Einfo&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElistGraph</span> &#123;</span></span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Edge</span> &#123;</span></span><br><span class="line">		<span class="keyword">int</span> x;</span><br><span class="line">		<span class="keyword">int</span> y;</span><br><span class="line">		Einfo info;</span><br><span class="line">		Edge(<span class="keyword">int</span> i, <span class="keyword">int</span> j, Einfo inf) :x(i), y(j), info(inf) &#123;&#125;;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;VT&gt; VerTex;</span><br><span class="line">	<span class="built_in">vector</span>&lt;Edge&gt; Edges;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">bool</span> undirected;<span class="comment">//判断是否为无向图</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">/*默认为有向图*/</span></span><br><span class="line">	ElistGraph(<span class="keyword">bool</span> undirected = <span class="literal">true</span>):undirected(undirected)&#123;&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*添加顶点*/</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Add_VerTex</span><span class="params">(VT vertex)</span> </span>&#123; VerTex.push_back(vertex); &#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*添加边*/</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Add_Edges</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> i, <span class="keyword">const</span> <span class="keyword">int</span> j, <span class="keyword">const</span> Einfo&amp; info)</span> </span>&#123; Edges.push_back(Edge(i, j ,info)); &#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*重载运算符*/</span></span><br><span class="line">	</span><br><span class="line">	VT <span class="keyword">operator</span>[](<span class="keyword">int</span> i)&#123;<span class="keyword">return</span> VerTex[i];&#125;</span><br><span class="line">	VT&amp; <span class="keyword">operator</span>[](<span class="keyword">int</span> i) &#123; <span class="keyword">return</span> VerTex[i]; &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*获得顶点数量*/</span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">get_n_VT</span><span class="params">()</span> <span class="keyword">const</span></span>&#123; <span class="keyword">return</span> VerTex.size(); &#125;</span><br><span class="line">	<span class="comment">/*获得边的数量*/</span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">get_n_e</span><span class="params">()</span> <span class="keyword">const</span></span>&#123; <span class="keyword">return</span> Edges.size(); &#125;</span><br><span class="line">	</span><br><span class="line">		<span class="comment">/*打印信息*/</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"顶点："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; x : VerTex) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="string">"边："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; e : Edges) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; e.x &lt;&lt; <span class="string">" "</span> &lt;&lt; e.y &lt;&lt; <span class="string">" "</span> &lt;&lt; e.info &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ElistGraph&lt;<span class="keyword">char</span>, <span class="keyword">double</span>&gt; G(<span class="literal">false</span>);</span><br><span class="line">	G.Add_VerTex(<span class="string">'A'</span>);</span><br><span class="line">	G.Add_VerTex(<span class="string">'B'</span>);</span><br><span class="line">	G.Add_VerTex(<span class="string">'C'</span>);</span><br><span class="line">	G.Add_VerTex(<span class="string">'D'</span>);</span><br><span class="line"></span><br><span class="line">	G.Add_Edges(<span class="number">0</span>, <span class="number">1</span>, <span class="number">12.3</span>);</span><br><span class="line">	G.Add_Edges(<span class="number">0</span>, <span class="number">3</span>, <span class="number">9.5</span>);</span><br><span class="line">	G.Add_Edges(<span class="number">0</span>, <span class="number">2</span>, <span class="number">3.1</span>);</span><br><span class="line">	G.Add_Edges(<span class="number">1</span>, <span class="number">2</span>, <span class="number">13</span>);</span><br><span class="line">	G.Add_Edges(<span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>);</span><br><span class="line"></span><br><span class="line">	G.print();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"顶点数量为: "</span> &lt;&lt; G.get_n_VT() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"边的数量为: "</span> &lt;&lt; G.get_n_e() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​</p>
+<p>​    </p>
 <p>实验结果：<img src="/2019/08/15/数据结构学习总结-（6-3）图的实现边表/2.png"></p>
-<p>–（本文完）</p>
+<p>—（本文完）</p>
 
       
     </div>
@@ -664,7 +649,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -756,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#边表"><span class="nav-number">1.</span> <span class="nav-text">¶边表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现及思路"><span class="nav-number">2.</span> <span class="nav-text">¶代码实现及思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现："><span class="nav-number">3.</span> <span class="nav-text">¶代码实现：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#边表"><span class="nav-number">1.</span> <span class="nav-text">边表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现及思路"><span class="nav-number">2.</span> <span class="nav-text">代码实现及思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现："><span class="nav-number">3.</span> <span class="nav-text">代码实现：</span></a></li></ol></div>
             
 
           </div>

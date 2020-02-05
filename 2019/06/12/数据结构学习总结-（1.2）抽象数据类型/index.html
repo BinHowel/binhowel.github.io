@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="¶抽象数据类型 ¶数据类型  定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称 ¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型  原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型">
+<meta name="description" content="抽象数据类型数据类型 定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称   例如在C/C++语言中的数据类型中是按取值不同分类的数据类型 原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型）等等">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-(1.2)抽象数据类型">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/06/12/数据结构学习总结-（1.2）抽象数据类型/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="¶抽象数据类型 ¶数据类型  定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称 ¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型  原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型">
+<meta property="og:description" content="抽象数据类型数据类型 定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称   例如在C/C++语言中的数据类型中是按取值不同分类的数据类型 原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型）等等">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-22T04:04:50.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-(1.2)抽象数据类型">
-<meta name="twitter:description" content="¶抽象数据类型 ¶数据类型  定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称 ¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型  原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型">
+<meta name="twitter:description" content="抽象数据类型数据类型 定义： 计算机中，内存空间是最有限的，不同的类型的数据分配的内存空间大小不同。 例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等  数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称   例如在C/C++语言中的数据类型中是按取值不同分类的数据类型 原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型）等等">
 
 
 
@@ -392,62 +392,46 @@
       
 
       
-        <h2 id="抽象数据类型"><a class="header-anchor" href="#抽象数据类型">¶</a>抽象数据类型</h2>
-<h4 id="数据类型"><a class="header-anchor" href="#数据类型">¶</a>数据类型</h4>
-<ul>
+        <h2 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h2><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ul>
 <li>定义： 计算机中，<strong>内存空间是最有限的</strong>，不同的类型的数据分配的内存空间大小不同。</li>
 <li>例如：在C++ 中 整型占4个字节，双精度浮点数占8个字节等等</li>
 </ul>
-<p><font color="red">数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称</font></p>
-<h5 id="例如在c-c-语言中的数据类型中是按取值不同分类的数据类型"><a class="header-anchor" href="#例如在c-c-语言中的数据类型中是按取值不同分类的数据类型">¶</a>例如在C/C++语言中的数据类型中是按<em>取值不同</em>分类的数据类型</h5>
-<ul>
+<font color="red">数据类型就是指一组性质相同的值和集合及定义在此集合上的一些操作的总称</font>
+
+
+<h5 id="例如在C-C-语言中的数据类型中是按取值不同分类的数据类型"><a href="#例如在C-C-语言中的数据类型中是按取值不同分类的数据类型" class="headerlink" title="例如在C/C++语言中的数据类型中是按取值不同分类的数据类型"></a>例如在C/C++语言中的数据类型中是按<em>取值不同</em>分类的数据类型</h5><ul>
 <li>原子型（不可再分）：不可再分的数据类型。例如：int(整型)、double（双精度浮点型）等等</li>
 <li>结构型（可再分）：若干个数据类型（包括原子型和结构型）组成的一个组合。例如：<strong>数组</strong>，类，结构体（C/C++）等。</li>
 </ul>
-<h4 id="抽象数据类型-abstruct-data-type-adt"><a class="header-anchor" href="#抽象数据类型-abstruct-data-type-adt">¶</a>抽象数据类型（Abstruct Data Type[ADT])</h4>
-<ul>
+<h4 id="抽象数据类型（Abstruct-Data-Type-ADT"><a href="#抽象数据类型（Abstruct-Data-Type-ADT" class="headerlink" title="抽象数据类型（Abstruct Data Type[ADT])"></a>抽象数据类型（Abstruct Data Type[ADT])</h4><ul>
 <li>定义：是对已有的数据类型进行抽象</li>
 </ul>
-<p><font color="red">抽象数据类型是指一个数据<strong>模型</strong>及定义在该模型上的一组操作</font></p>
-<ul>
-<li>模板：</li>
-</ul>
-<hr>
-<ul>
-<li>
-<ul>
+<font color="red">抽象数据类型是指一个数据**模型**及定义在该模型上的一组操作</font>
+
+<h2 id="模板："><a href="#模板：" class="headerlink" title="- 模板："></a>- 模板：</h2><ul>
+<li><ul>
 <li>ADT 抽象数据类型名</li>
 </ul>
 </li>
-<li>
-<ul>
-<li>Data
-<ul>
-<li>
-<pre><code>数据元素之间的逻辑关系的定义
-</code></pre>
-</li>
+<li><ul>
+<li>Data<ul>
+<li>数据元素之间的逻辑关系的定义</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<ul>
-<li>Operation
-<ul>
-<li>操作1
-<ul>
+<li><ul>
+<li>Operation<ul>
+<li>操作1<ul>
 <li>初始条件</li>
 <li>操作结果描述</li>
 </ul>
 </li>
-<li>操作2
-<ul>
+<li>操作2<ul>
 <li>…</li>
 </ul>
 </li>
-<li>操作n
-<ul>
+<li>操作n<ul>
 <li>…</li>
 </ul>
 </li>
@@ -455,43 +439,34 @@
 </li>
 </ul>
 </li>
-<li>
-<ul>
+<li><ul>
 <li>endADT</li>
 </ul>
 </li>
 </ul>
-<h5 id="个人理解：通过套用上面的模板-解释int-整型数据类型"><a class="header-anchor" href="#个人理解：通过套用上面的模板-解释int-整型数据类型">¶</a>个人理解：通过套用上面的模板 解释int（整型数据类型）</h5>
-<ul>
+<h5 id="个人理解：通过套用上面的模板-解释int（整型数据类型）"><a href="#个人理解：通过套用上面的模板-解释int（整型数据类型）" class="headerlink" title="个人理解：通过套用上面的模板 解释int（整型数据类型）"></a>个人理解：通过套用上面的模板 解释int（整型数据类型）</h5><ul>
 <li>int（整型）</li>
-<li>
-<ul>
+<li><ul>
 <li>是以线性结构存储一个int（整型）数据类型占4个字节</li>
 </ul>
 </li>
-<li>
-<ul>
-<li>Operation
-<ul>
-<li>操作1：加法
-<ul>
+<li><ul>
+<li>Operation<ul>
+<li>操作1：加法<ul>
 <li>需要两个数</li>
 <li>结果为两个数的和</li>
 </ul>
 </li>
-<li>操作2：减法
-<ul>
+<li>操作2：减法<ul>
 <li>需要两个数</li>
 <li>结果为两个数的差</li>
 </ul>
 </li>
-<li>操作3：乘法
-<ul>
+<li>操作3：乘法<ul>
 <li>…</li>
 </ul>
 </li>
-<li>操作4：除法
-<ul>
+<li>操作4：除法<ul>
 <li>…</li>
 </ul>
 </li>
@@ -501,10 +476,8 @@
 </li>
 </ul>
 <hr>
-<h4 id="个人总结："><a class="header-anchor" href="#个人总结：">¶</a>个人总结：</h4>
-<ol>
-<li>
-<p><strong>用自己的话简述下列术语：</strong></p>
+<h4 id="个人总结："><a href="#个人总结：" class="headerlink" title="个人总结："></a>个人总结：</h4><ol>
+<li><p><strong>用自己的话简述下列术语：</strong></p>
 <ul>
 <li>数据：类似一个或几个人的全部基本信息（姓名、性别、爱好等）。</li>
 </ul>
@@ -517,7 +490,7 @@
 <li>数据对象：单一个人的基本信息。</li>
 </ul>
 <ul>
-<li>数据结构：数据通过一定的结构、关系（计算方法【算法】）存储起来就是数据结构 例如：上面所说的数据 --多个人的基本信息 一般是用列表格的形式存储的，即所用的是<em>线性逻辑结构</em>存储的。</li>
+<li>数据结构：数据通过一定的结构、关系（计算方法【算法】）存储起来就是数据结构 例如：上面所说的数据 —多个人的基本信息 一般是用列表格的形式存储的，即所用的是<em>线性逻辑结构</em>存储的。</li>
 </ul>
 <ul>
 <li>存储结构（物理结构）：是对逻辑结构在计算机上的表示。即对上面的数据结构在计算机进行实习，如果是顺序存储结构，那么这些个人基本信息可能是用数组储存起来的。</li>
@@ -528,24 +501,21 @@
 <ul>
 <li>抽象数据类型：类似于数据类型，但是把一些东西抽象化成数据类型。例如游戏角色，它的数据元素（对比就是整型里面的整数）有很多，例如武器、玩家属性等、这个数据类型可以执行的动作有移动攻击等。</li>
 </ul>
-<ol start="2">
+<ol>
 <li><strong>数据结构和抽象数据类型的概念与程序设计语言中的数据类型概念的区别</strong></li>
 </ol>
 <ul>
-<li>
-<p>抽象数据类型是对软件设计过程中问题模型抽象出来的逻辑结构和在逻辑结构上的运算。</p>
+<li><p>抽象数据类型是对软件设计过程中问题模型抽象出来的逻辑结构和在逻辑结构上的运算。</p>
 <p>数据结构是计算机处理元素的组织形式的相互关系。</p>
 <p><em>程序设计语言中的数据类型是已经实现了的数据结构。</em></p>
 </li>
-<li>
-<p>即：一个还没有被实现（抽象数据类型）一个是已经实现的了（程序设计语言中的数据类型）</p>
+<li><p>即：一个还没有被实现（抽象数据类型）一个是已经实现的了（程序设计语言中的数据类型）</p>
 </li>
 </ul>
 <pre><code> 而数据结构是指： 数据的相互之间存在一种或多种特点关系的数据元素的集合。
 
  --（本文完）&lt;待完善&gt;
 </code></pre>
-
       
     </div>
     
@@ -749,7 +719,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -841,7 +811,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型"><span class="nav-number">1.</span> <span class="nav-text">¶抽象数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型"><span class="nav-number">1.0.1.</span> <span class="nav-text">¶数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#例如在c-c-语言中的数据类型中是按取值不同分类的数据类型"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">¶例如在C/C++语言中的数据类型中是按取值不同分类的数据类型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象数据类型-abstruct-data-type-adt"><span class="nav-number">1.0.2.</span> <span class="nav-text">¶抽象数据类型（Abstruct Data Type[ADT])</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#个人理解：通过套用上面的模板-解释int-整型数据类型"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">¶个人理解：通过套用上面的模板 解释int（整型数据类型）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人总结："><span class="nav-number">1.0.3.</span> <span class="nav-text">¶个人总结：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型"><span class="nav-number">1.</span> <span class="nav-text">抽象数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型"><span class="nav-number">1.0.1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#例如在C-C-语言中的数据类型中是按取值不同分类的数据类型"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">例如在C/C++语言中的数据类型中是按取值不同分类的数据类型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象数据类型（Abstruct-Data-Type-ADT"><span class="nav-number">1.0.2.</span> <span class="nav-text">抽象数据类型（Abstruct Data Type[ADT])</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#模板："><span class="nav-number">2.</span> <span class="nav-text">- 模板：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#个人理解：通过套用上面的模板-解释int（整型数据类型）"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">个人理解：通过套用上面的模板 解释int（整型数据类型）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个人总结："><span class="nav-number">2.0.1.</span> <span class="nav-text">个人总结：</span></a></li></div>
             
 
           </div>

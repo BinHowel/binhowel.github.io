@@ -286,6 +286,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/09/19/C-进阶学习总结-3-3-typename的使用场合及使用范例/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShuHaoHwang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="双子星Binaryؼ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/19/C-进阶学习总结-3-3-typename的使用场合及使用范例/" itemprop="url">C++进阶学习总结-(3.3)typename的使用场合及使用范例、函数指针参数化</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-19T21:19:55+08:00">
+                2019-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/C-学习/" itemprop="url" rel="index">
+                    <span itemprop="name">C++学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          typename的使用场合在类模板中存在自定义类型时 相关返回值函数必须添加typename
+范例：
+
+123456789101112131415161718192021template&lt;typ
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/19/C-进阶学习总结-3-3-typename的使用场合及使用范例/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+	  <div>
+     
+	  </div>
+	
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/09/18/C-进阶学习总结-3-2-类模板/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -390,13 +556,11 @@
       
         
           
-          ¶类模板
-¶模板参数类型
-使类能够根据给定的实际类型，来对类内的一些参数类型进行变化
+          类模板模板参数类型使类能够根据给定的实际类型，来对类内的一些参数类型进行变化
 编译器不能为类模板推断模板参数类型，所以要使用类模板，必须要在模板名后用&lt;&gt;来提供实际类型
 
 格式：
-
+temp
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -559,9 +723,8 @@
       
         
           
-          ¶模板
-所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。
-模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型
+          模板所谓泛型编程 是独立于任何特定类型类型的方式编写代码。使用泛型编程时，需要提供具体的程序实例。
+模板是泛型编程的基础，是一种在创建类或函数时的一种公式，根据给定的类型来决定公式中具体参数的类型值。
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -724,12 +887,10 @@
       
         
           
-          ¶类型转换构造函数
-实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。
+          类型转换构造函数实质：把某个类型的变量，通过类的构造函数隐式转换变为该类类型的变量。
 例如：
 
-
-123456789101112class A&#123;    int num;    A(int
+123456789101112class A&#123;    int num;    A(int i)
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -892,11 +1053,9 @@
       
         
           
-          ¶构造函数继承
-C++在继承的时候子类在构造的时候是会调用父类的构造函数的，但实际上，父类的默认构造函数、拷贝构造、移动构造函数是不会继承给子类的，子类只会继承父类由程序员自己定义的构造函数。
+          构造函数继承C++在继承的时候子类在构造的时候是会调用父类的构造函数的，但实际上，父类的默认构造函数、拷贝构造、移动构造函数是不会继承给子类的，子类只会继承父类由程序员自己定义的构造函数。
 
-
-1
+1234
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1059,9 +1218,8 @@ C++在继承的时候子类在构造的时候是会调用父类的构造函数�
       
         
           
-          ¶移动对象与移动构造函数
-
-移动对象：移动对象与拷贝对象不同的是，移动对象更像把所有权进行转交，例如要把对象B赋值给A，通常上会进行拷贝操作，即进行：创建B对象(开辟新内存空间)，把A的内容逐一拷贝进
+          移动对象与移动构造函数
+移动对象：移动对象与拷贝对象不同的是，移动对象更像把所有权进行转交，例如要把对象B赋值给A，通常上会进行拷贝操作，即进行：创建B对象(开辟新内存空间)，把A的内容逐一拷贝进B，
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1191,19 +1349,16 @@ C++在继承的时候子类在构造的时候是会调用父类的构造函数�
       
         
           
-          ¶条件概率与乘法公式
-
-
+          条件概率与乘法公式
 条件概率：
 
 P(B|A) = P(AB) / P(A)
 P(A|B) = P(AB) / P(B)
 
 
-
 乘法公式
 
-P(AB) = P(A) - P(B|A) = P(B
+P(AB) = P(A) - P(B|A) = P(B) - 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1333,33 +1488,30 @@ P(AB) = P(A) - P(B|A) = P(B
       
         
           
-          ¶事件运算及概率
-
+          事件运算及概率
 事件运算
-
 包含事件
-
 A
 
 
 并事件
-
 A∪B = A+B
 
 
 差事件
-
 A - B  = ACB = A - AB
 
 
 交事件
-
 A∩B = AB
 
 
 互斥事件
-
 AB = ∅
+
+
+对立事件
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1522,13 +1674,11 @@ AB = ∅
       
         
           
-          ¶邻接矩阵的DFS(深度优先搜索)代码实现及思路
-
+          邻接矩阵的DFS(深度优先搜索)代码实现及思路
 实现邻接矩阵DFS算法的前提
 
 
-
-思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问
+思路：要实现邻接矩阵的DFS算法，首先就要在邻接矩阵的结构中设置一个标记数组，用来对应顶点数组在遍历过程中的访问情况，
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1691,15 +1841,13 @@ AB = ∅
       
         
           
-          ¶图的遍历（图的遍历是图的基本运算）
-
+          图的遍历（图的遍历是图的基本运算）
 定义：从已给的连通图中的某一个顶点出发，沿着一些边去访问遍历图中所有的顶点，且使每个顶点仅被访问一次
 实质：找每个顶点的邻接点的过程
 
 
-¶遍历算法
-
-深度优先
+遍历算法
+深度优先搜索(D
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1745,175 +1893,11 @@ AB = ∅
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/08/18/数据结构学习总结-（6-5）图的实现-邻接表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ShuHaoHwang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="双子星Binaryؼ">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/18/数据结构学习总结-（6-5）图的实现-邻接表/" itemprop="url">数据结构学习总结-（6.5）图的实现-邻接表</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-18T00:31:21+08:00">
-                2019-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码学习/" itemprop="url" rel="index">
-                    <span itemprop="name">代码学习</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码学习/数据结构学习/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          ¶邻接表
-邻接表是一种顺序分配和链式分配相结合的存储结构，其顶点集由顺序表进行存储，其边则用邻接顶点来表示，而邻接点则用链式结构在顺序结构中的每一个顶点来承载，通俗点讲，就是把一堆链表用顺序表进行存储
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/18/数据结构学习总结-（6-5）图的实现-邻接表/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-	  <div>
-     
-	  </div>
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1961,7 +1945,7 @@ AB = ∅
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

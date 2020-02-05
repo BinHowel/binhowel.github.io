@@ -286,6 +286,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShuHaoHwang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="双子星Binaryؼ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/" itemprop="url">C++进阶学习总结-（2.2）类中的static函数/成员变量、类函数const后缀、mutable</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-12T01:26:36+08:00">
+                2019-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/C-学习/" itemprop="url" rel="index">
+                    <span itemprop="name">C++学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          static关键字
+静态关键字，无论是变量还是函数，只要加static关键字就会把其存储在静态常量区，与栈区堆区区分使用。静态，顾名思义就是不会动态变化的值。例如有一个静态变量，它会一直保持它原本的值
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/12/C-进阶学习总结-（2-2）类中的static函数-成员变量、类函数const后缀、mutable/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+	  <div>
+     
+	  </div>
+	
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/07/10/数据结构学习总结-（4-2）实现字符串strlen和strcpy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -390,14 +554,10 @@
       
         
           
-          ¶实现字符串中的简单操作一
-¶strlen()
-
-
+          实现字符串中的简单操作一strlen()
 作用：返回字符串的长度
 
-
-实现思路：因为在c/c中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c中可
+实现思路：因为在c/c++中字符串是以char*指针来实现的，并且这些字符串中的末尾都有一个‘\0’结束符，所以在c/c++中可以利
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -560,16 +720,13 @@
       
         
           
-          ¶(字符)串类型定义及概念
-¶串的一些概念
-
+          (字符)串类型定义及概念串的一些概念
 以(&quot;Hello world&quot;)为例
 主串：即整个字符串被称为主串。
-
 str = “Hello World”；str就是主串
 
 
-子
+子串：在主串
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -732,13 +889,10 @@ str = “Hello World”；str就是主串
       
         
           
-          ¶C++中的构造函数定义
-
-
+          C++中的构造函数定义
 在类中构造函数是在类对象创建时自动调用的，且不能主动调用构造函数，给类充当对其成员变量继续初始化的职能。
 
-
-1234567891011121314151617class
+1234567891011121314151617class stu
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -901,11 +1055,8 @@ str = “Hello World”；str就是主串
       
         
           
-          ¶顺序队列算法即实现思路
-¶顺序储存结构的队列定义(以char类型为例)
-
-
-实现思路：因为顺序队列是要基于数组来实现队列的操作，所以可以定义两个数值头数值(front)和尾数值(rear)，在创建队
+          顺序队列算法即实现思路顺序储存结构的队列定义(以char类型为例)
+实现思路：因为顺序队列是要基于数组来实现队列的操作，所以可以定义两个数值头数值(front)和尾数值(rear)，在创建队列的时候根
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1068,8 +1219,7 @@ str = “Hello World”；str就是主串
       
         
           
-          ¶C语言风格的类型转换
-12345678/*隐式转换*/int a = 100;double b = 2.3;cout &lt;&lt; a+b &lt;&lt;endl;//结果转换成double型
+          C语言风格的类型转换12345678/*隐式转换*/int a = 100;double b = 2.3;cout &lt;&lt; a+b &lt;&lt;endl;//结果转换成double型/*
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1232,12 +1382,9 @@ str = “Hello World”；str就是主串
       
         
           
-          ¶队列的基本概念及定义
-
-
+          队列的基本概念及定义
 定义：
-
-队列与栈相似，相比栈的先进后出，队列是先进先出为特征的，队列的增添必须是在队列后边进行添加，删除则在前面，正与它的名字一样，队列这种数据结构跟平常时人们买票排队一
+队列与栈相似，相比栈的先进后出，队列是先进先出为特征的，队列的增添必须是在队列后边进行添加，删除则在前面，正与它的名字一样，队列这种数据结构跟平常时人们买票排队一样，先去
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1389,10 +1536,9 @@ str = “Hello World”；str就是主串
       
         
           
-          ¶括号匹配
-
+          括号匹配
 对一段字符串进行检查和判断括号是否匹配。例如：{（）[]{}} 匹配。即出现一个左括号就一定要一个相对应的右括号与其匹配。
-实现思路：可以对一个字符串进行扫描和检查，如果是左括号那么就入
+实现思路：可以对一个字符串进行扫描和检查，如果是左括号那么就入栈，
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1555,13 +1701,14 @@ str = “Hello World”；str就是主串
       
         
           
-          ¶算法性能分析
-¶好的算法应当满足
-
+          算法性能分析好的算法应当满足
 正确性：算法应能满足具体问题的需求
 可读性：算法应应易于阅读和理解
 健壮性：输入数据非法时，算法也能适当作出反应或进行处理
 高效性：算法执行时间短，占用存储空间少
+
+
+时
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1713,13 +1860,11 @@ str = “Hello World”；str就是主串
       
         
           
-          ¶两数相加
-
+          两数相加
 问题：
-
 给定两个非空链表来表示两个非负整数。位数按照逆序方式储存，它们的每个节点只存储单个数字。将两数相加返回一个新的链表。你可以假设除了数字0之外，这两个数字都不会以零开头。
-
-示例
+示例：
+输入
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1765,172 +1910,11 @@ str = “Hello World”；str就是主串
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2019/06/29/栈的应用-进制的转换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ShuHaoHwang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="双子星Binaryؼ">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/29/栈的应用-进制的转换/" itemprop="url">栈的应用-进制的转换</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-29T20:32:55+08:00">
-                2019-06-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          ¶数制转换
-
-
-以十进制转八进制为例，十进制转八进制的时候是把十进制模8取其余数直至除尽，最终结果为余数从下到上的数。
-
-
-例如：
-
-
-结合数据结构栈，可以发现转换最终结果跟栈的出栈一样，所以用栈来实
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/06/29/栈的应用-进制的转换/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-	  <div>
-     
-	  </div>
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1978,7 +1962,7 @@ str = “Hello World”；str就是主串
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

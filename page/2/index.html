@@ -286,6 +286,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2020/01/26/JavaWeb学习总结-4-1-AJAX前奏-对于同步通讯与异步通讯的理解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShuHaoHwang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="双子星Binaryؼ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/26/JavaWeb学习总结-4-1-AJAX前奏-对于同步通讯与异步通讯的理解/" itemprop="url">JavaWeb学习总结(4.1)AJAX前奏-对于同步通讯与异步通讯的理解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-26T11:14:56+08:00">
+                2020-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/" itemprop="url" rel="index">
+                    <span itemprop="name">代码学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码学习/JavaWeb/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaWeb</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          同步通讯
+浏览器向服务器提交一个请求后等待服务器响应,服务器收到请求后作出处理,浏览器收到响应数据后显示出来,这就是传统B/S的同步通讯方式,页面中的内容都是同步加载到浏览器中的。
+如果我们想向服务器
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/01/26/JavaWeb学习总结-4-1-AJAX前奏-对于同步通讯与异步通讯的理解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+	  <div>
+     
+	  </div>
+	
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2020/01/24/JavaWeb学习总结-3-2-反射与动态实例化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -390,13 +555,10 @@
       
         
           
-          ¶反射
-
-
+          反射
 反射的概念主要是指程序可以访问、检测和修改它本身状态或行为的一种能力。
 
-
-JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它
+JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法;对于任意一个对象,都能够调用它的任意一
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -559,15 +721,13 @@ JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这�
       
         
           
-          ¶传统JDBC连接存在的问题
-开发基于数据库的程序时,传统的模式基本是按以下步骤:
+          传统JDBC连接存在的问题开发基于数据库的程序时,传统的模式基本是按以下步骤:
 
 在主程序中建立数据库连接-&gt;SQL操作-&gt;断开数据库连接。
 
 这种模式开发,存在的问题:
 
-
-普通的J
+普通的JDBC
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -730,8 +890,7 @@ JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这�
       
         
           
-          ¶MVC设计模式
-MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示
+          MVC设计模式MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -894,8 +1053,7 @@ MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(
       
         
           
-          ¶HTTP通信
-​	JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响应
+          HTTP通信​    JavaWeb应用程序运行是基于B/S的模式,用户通过客户端浏览器向Web服务器发送一个HTTP请求,服务器收到请求的同时一个连接就建立了,服务器根据请求做必要的处理并生成一个响
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1058,8 +1216,7 @@ MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(
       
         
           
-          ¶servletContext
-ServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的
+          servletContextServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1222,12 +1379,10 @@ ServletContext官方叫servlet上下文。服务器会为每一个工程创建�
       
         
           
-          ¶页面跳转的两种方式
-
+          页面跳转的两种方式
 请求转发
-
 服务器内部的转发,服务器内部跳转
-RequestDispatcher dispatcher = req.getRequestDispatcher(&quot;xxx
+RequestDispatcher dispatcher = req.getRequestDispatcher(&quot;xxx.js
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1390,9 +1545,8 @@ RequestDispatcher dispatcher = req.getRequestDispatcher(&quot;xxx
       
         
           
-          ¶响应时的乱码
-当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子
-123456789101112131415161718
+          响应时的乱码当Servlet向网站进行响应时，在响应的过程中，Java源程序的中文字符串数据发生至网站站点，可能会出现乱码问题，如下面的例子
+12345678910111213141516171819
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1555,11 +1709,10 @@ RequestDispatcher dispatcher = req.getRequestDispatcher(&quot;xxx
       
         
           
-          ¶HTTP请求方式
-
+          HTTP请求方式
 HTTP协议定义了GET和POST两种请求方法，POST方法是对请求发送的数据量没有限制
 GET是使用明文在浏览器地址栏直接显示请求字符串
-post是将数据隐含在HTTP协议的请
+post是将数据隐含在HTTP协议的请求报
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1722,11 +1875,9 @@ post是将数据隐含在HTTP协议的请
       
         
           
-          ¶IDEA添加Tomcat
-自用：https://blog.csdn.net/wsjzzcbq/article/details/89463304
-¶Servlet简介
-
-Servlet是用Java语言
+          IDEA添加Tomcat自用：https://blog.csdn.net/wsjzzcbq/article/details/89463304
+Servlet简介
+Servlet是用Java语言编写的程
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1772,175 +1923,11 @@ Servlet是用Java语言
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shuhaohwang.github.io/2020/01/14/JavaWeb学习总结-1-1-Tomcat安装与介绍/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ShuHaoHwang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="双子星Binaryؼ">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/14/JavaWeb学习总结-1-1-Tomcat安装与介绍/" itemprop="url">JavaWeb学习总结(1-1)Tomcat安装与使用介绍</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-14T00:11:20+08:00">
-                2020-01-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码学习/" itemprop="url" rel="index">
-                    <span itemprop="name">代码学习</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码学习/JavaWeb/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaWeb</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          ¶Tomcat介绍
-​	Tomcat 服务器是一个免费的开放源代码的Web 应用服务器是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache 服务器，可利用
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/01/14/JavaWeb学习总结-1-1-Tomcat安装与介绍/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-	  <div>
-     
-	  </div>
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1988,7 +1975,7 @@ Servlet是用Java语言
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">110</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
