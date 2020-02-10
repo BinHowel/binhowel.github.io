@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="哈夫曼编码哈夫曼编码是什么？哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：  要传输‘ABCADBBAED’这段数据。且你知道一个二进制转换编码表：  | 字符 | 编码 || :—: | :—: ||  A   | 000  ||  B   | 100  ||">
+<meta name="description" content="¶哈夫曼编码 ¶哈夫曼编码是什么？ 哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：   要传输‘ABCADBBAED’这段数据。且你知道一个二进制转换编码表：      字符 编码     A 000   B 100   C 110   D 111   E 101">
 <meta name="keywords" content="学习总结,数据结构,数据结构-学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习总结-（5.13）哈夫曼编码">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="哈夫曼编码哈夫曼编码是什么？哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：  要传输‘ABCADBBAED’这段数据。且你知道一个二进制转换编码表：  | 字符 | 编码 || :—: | :—: ||  A   | 000  ||  B   | 100  ||">
+<meta property="og:description" content="¶哈夫曼编码 ¶哈夫曼编码是什么？ 哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：   要传输‘ABCADBBAED’这段数据。且你知道一个二进制转换编码表：      字符 编码     A 000   B 100   C 110   D 111   E 101">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/2.png">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-08-09T17:49:51.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构学习总结-（5.13）哈夫曼编码">
-<meta name="twitter:description" content="哈夫曼编码哈夫曼编码是什么？哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：  要传输‘ABCADBBAED’这段数据。且你知道一个二进制转换编码表：  | 字符 | 编码 || :—: | :—: ||  A   | 000  ||  B   | 100  ||">
+<meta name="twitter:description" content="¶哈夫曼编码 ¶哈夫曼编码是什么？ 哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：   要传输‘ABCADBBAED’这段数据。且你知道一个二进制转换编码表：      字符 编码     A 000   B 100   C 110   D 111   E 101">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/1.png">
 
 
@@ -396,20 +396,56 @@
       
 
       
-        <h4 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h4><h5 id="哈夫曼编码是什么？"><a href="#哈夫曼编码是什么？" class="headerlink" title="哈夫曼编码是什么？"></a>哈夫曼编码是什么？</h5><p>哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：</p>
+        <h4 id="哈夫曼编码"><a class="header-anchor" href="#哈夫曼编码">¶</a>哈夫曼编码</h4>
+<h5 id="哈夫曼编码是什么？"><a class="header-anchor" href="#哈夫曼编码是什么？">¶</a>哈夫曼编码是什么？</h5>
+<p>哈夫曼编码是用来压缩数据的一种手段，在网络上信息的传输都是通过二进制来进行输送的（0和1），在进行数据输送的时候，首先就要将即将输送的数据进行转码，使其变为二进制再进行传输。例如：</p>
 <ul>
-<li><p>要传输<code>‘ABCADBBAED’</code>这段数据。且你知道一个二进制转换编码表：</p>
+<li>
+<p>要传输<code>‘ABCADBBAED’</code>这段数据。且你知道一个二进制转换编码表：</p>
 <ul>
-<li>| 字符 | 编码 |<br>| :—: | :—: |<br>|  A   | 000  |<br>|  B   | 100  |<br>|  C   | 110  |<br>|  D   | 111  |<br>|  E   | 101  |</li>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:center">编码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A</td>
+<td style="text-align:center">000</td>
+</tr>
+<tr>
+<td style="text-align:center">B</td>
+<td style="text-align:center">100</td>
+</tr>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:center">110</td>
+</tr>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:center">111</td>
+</tr>
+<tr>
+<td style="text-align:center">E</td>
+<td style="text-align:center">101</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
-<li><p>则这段字符串会先转换成二进制码：<code>000100110000111100100000101111</code></p>
+<li>
+<p>则这段字符串会先转换成二进制码：<code>000100110000111100100000101111</code></p>
 </li>
-<li><p>上面的二进制转换表编码是以3位进行编码的，而用哈夫曼编码进行编译转换，则会让这段字符串传输的时候能够更为简短。</p>
+<li>
+<p>上面的二进制转换表编码是以3位进行编码的，而用哈夫曼编码进行编译转换，则会让这段字符串传输的时候能够更为简短。</p>
 </li>
 </ul>
-<h5 id="哈夫曼编码的使用"><a href="#哈夫曼编码的使用" class="headerlink" title="哈夫曼编码的使用"></a>哈夫曼编码的使用</h5><p>哈夫曼编码是通过哈夫曼树进行转换出来的，例如在上面的字符串：<code>‘ABCADBBAED’</code>是出现在一个文章里面的，这个文章里面含有：</p>
-<div class="table-container">
+<h5 id="哈夫曼编码的使用"><a class="header-anchor" href="#哈夫曼编码的使用">¶</a>哈夫曼编码的使用</h5>
+<p>哈夫曼编码是通过哈夫曼树进行转换出来的，例如在上面的字符串：<code>‘ABCADBBAED’</code>是出现在一个文章里面的，这个文章里面含有：</p>
 <table>
 <thead>
 <tr>
@@ -440,44 +476,82 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>根据上表进行转换为哈夫曼树</p>
 <img src="/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/1.png">
 <p>通过对哈夫曼树处理，往左走为0往右走为1，通过记录会形成一个新的转换表</p>
 <img src="/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/2.png">
 <ul>
-<li>| 字符 | 编码 |<br>| :—: | :—: |<br>|  A   | 111  |<br>|  B   |  0   |<br>|  C   | 1100 |<br>|  D   |  10  |<br>|  E   | 1101 |</li>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:center">编码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A</td>
+<td style="text-align:center">111</td>
+</tr>
+<tr>
+<td style="text-align:center">B</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:center">1100</td>
+</tr>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">E</td>
+<td style="text-align:center">1101</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <p>根据表中的内容把要输送的字符串<code>‘ABCADBBAED’</code>进行转换成二进制<code>111011001111000111110110</code></p>
 <p>对比一开始用3个编码进行转换的字符串编码会发现，哈夫曼编码进行转换处理的二进制码数为24个，比前面的少了6个，可以发现运用哈夫曼编码可以使传输的二进制码被压缩成更简单二进制码。</p>
 <hr>
-<h5 id="哈夫曼编码的好处"><a href="#哈夫曼编码的好处" class="headerlink" title="哈夫曼编码的好处"></a>哈夫曼编码的好处</h5><ul>
-<li><strong>使转换的二进制码更简洁</strong><ul>
+<h5 id="哈夫曼编码的好处"><a class="header-anchor" href="#哈夫曼编码的好处">¶</a>哈夫曼编码的好处</h5>
+<ul>
+<li><strong>使转换的二进制码更简洁</strong>
+<ul>
 <li>哈夫曼编码是通过检测传输的字符串中字符的出现频率进行生成对应的编码表。采用的是前缀编码。</li>
 </ul>
 </li>
 <li><strong>因为采用的前缀的编码，进行译码的时候减少出错</strong></li>
-<li>….</li>
+<li>…</li>
 </ul>
 <hr>
-<h4 id="译码"><a href="#译码" class="headerlink" title="译码"></a>译码</h4><p>进行译码的过程很简单，通过一开始构建的哈夫曼树，进行译码。</p>
+<h4 id="译码"><a class="header-anchor" href="#译码">¶</a>译码</h4>
+<p>进行译码的过程很简单，通过一开始构建的哈夫曼树，进行译码。</p>
 <ul>
-<li><p>例如：<code>111011001111000111110110</code></p>
+<li>
+<p>例如：<code>111011001111000111110110</code></p>
 <ul>
-<li><img src="/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/2.png">
+<li>
+<img src="/2019/08/10/数据结构学习总结-（5-13）哈夫曼编码/2.png">
 </li>
 </ul>
 </li>
-<li><p>译码过程：<strong>从根开始</strong>遇到0就走左，遇到1就走右，当到达叶结点的时候，翻译出该字符，然后<strong>重新返回根结点重新识别</strong></p>
+<li>
+<p>译码过程：<strong>从根开始</strong>遇到0就走左，遇到1就走右，当到达叶结点的时候，翻译出该字符，然后<strong>重新返回根结点重新识别</strong></p>
 </li>
-<li><p>译码结果：ABCADBBAED</p>
+<li>
+<p>译码结果：ABCADBBAED</p>
 </li>
 </ul>
 <hr>
-<h5 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h5><ul>
+<h5 id="小结："><a class="header-anchor" href="#小结：">¶</a>小结：</h5>
+<ul>
 <li>从上面的译码过程可以看出，对哈夫曼编码编码后的二进制码进行译码的时候只需根据编码对哈夫曼树进行遍历即可。</li>
 </ul>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -682,7 +756,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -774,7 +848,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼编码"><span class="nav-number">1.</span> <span class="nav-text">哈夫曼编码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼编码是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">哈夫曼编码是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼编码的使用"><span class="nav-number">1.2.</span> <span class="nav-text">哈夫曼编码的使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼编码的好处"><span class="nav-number">1.3.</span> <span class="nav-text">哈夫曼编码的好处</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#译码"><span class="nav-number">2.</span> <span class="nav-text">译码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小结："><span class="nav-number">2.1.</span> <span class="nav-text">小结：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈夫曼编码"><span class="nav-number">1.</span> <span class="nav-text">¶哈夫曼编码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼编码是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">¶哈夫曼编码是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼编码的使用"><span class="nav-number">1.2.</span> <span class="nav-text">¶哈夫曼编码的使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#哈夫曼编码的好处"><span class="nav-number">1.3.</span> <span class="nav-text">¶哈夫曼编码的好处</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#译码"><span class="nav-number">2.</span> <span class="nav-text">¶译码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小结："><span class="nav-number">2.1.</span> <span class="nav-text">¶小结：</span></a></li></ol></li></ol></div>
             
 
           </div>

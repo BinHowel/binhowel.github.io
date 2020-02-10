@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="Mapper的接口式调用Mapper接口调用相关问题解决参考 在搭建好的一个Mybatis的基本环境 一开始是把对应的映射文件mapper放在项目目录下的resources下，如果再把放在放类包的那个文件下，又会找不到该文件。原因是：IDEA编译后默认会把resource下的文件放到target的classpath下，但是src下的只有Java文件编译生成.class文件放入classpath下，">
+<meta name="description" content="¶Mapper的接口式调用 Mapper接口调用相关问题解决参考 在搭建好的一个Mybatis的基本环境 一开始是把对应的映射文件mapper放在项目目录下的resources下，如果再把放在放类包的那个文件下，又会找不到该文件。原因是：IDEA编译后默认会把resource下的文件放到target的classpath下，但是src下的只有Java文件编译生成.class文件放入classpath">
 <meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(6.2)MyBatis基本查询、Mapper的接口式调用">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/02/02/JavaWeb学习总结-6-2-简单MyBatis环境搭建、Mapper的接口式调用/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="Mapper的接口式调用Mapper接口调用相关问题解决参考 在搭建好的一个Mybatis的基本环境 一开始是把对应的映射文件mapper放在项目目录下的resources下，如果再把放在放类包的那个文件下，又会找不到该文件。原因是：IDEA编译后默认会把resource下的文件放到target的classpath下，但是src下的只有Java文件编译生成.class文件放入classpath下，">
+<meta property="og:description" content="¶Mapper的接口式调用 Mapper接口调用相关问题解决参考 在搭建好的一个Mybatis的基本环境 一开始是把对应的映射文件mapper放在项目目录下的resources下，如果再把放在放类包的那个文件下，又会找不到该文件。原因是：IDEA编译后默认会把resource下的文件放到target的classpath下，但是src下的只有Java文件编译生成.class文件放入classpath">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/02/02/JavaWeb学习总结-6-2-简单MyBatis环境搭建、Mapper的接口式调用/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/02/02/JavaWeb学习总结-6-2-简单MyBatis环境搭建、Mapper的接口式调用/2.png">
@@ -96,7 +96,7 @@
 <meta property="og:updated_time" content="2020-02-03T08:42:18.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(6.2)MyBatis基本查询、Mapper的接口式调用">
-<meta name="twitter:description" content="Mapper的接口式调用Mapper接口调用相关问题解决参考 在搭建好的一个Mybatis的基本环境 一开始是把对应的映射文件mapper放在项目目录下的resources下，如果再把放在放类包的那个文件下，又会找不到该文件。原因是：IDEA编译后默认会把resource下的文件放到target的classpath下，但是src下的只有Java文件编译生成.class文件放入classpath下，">
+<meta name="twitter:description" content="¶Mapper的接口式调用 Mapper接口调用相关问题解决参考 在搭建好的一个Mybatis的基本环境 一开始是把对应的映射文件mapper放在项目目录下的resources下，如果再把放在放类包的那个文件下，又会找不到该文件。原因是：IDEA编译后默认会把resource下的文件放到target的classpath下，但是src下的只有Java文件编译生成.class文件放入classpath">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/02/02/JavaWeb学习总结-6-2-简单MyBatis环境搭建、Mapper的接口式调用/1.png">
 
 
@@ -397,7 +397,8 @@
       
 
       
-        <h4 id="Mapper的接口式调用"><a href="#Mapper的接口式调用" class="headerlink" title="Mapper的接口式调用"></a>Mapper的接口式调用</h4><p><a href="https://blog.csdn.net/Doctor_LY/article/details/83000745?utm_source=blogxgwz9" target="_blank" rel="noopener">Mapper接口调用相关问题解决参考</a></p>
+        <h4 id="mapper的接口式调用"><a class="header-anchor" href="#mapper的接口式调用">¶</a>Mapper的接口式调用</h4>
+<p><a href="https://blog.csdn.net/Doctor_LY/article/details/83000745?utm_source=blogxgwz9" target="_blank" rel="noopener">Mapper接口调用相关问题解决参考</a></p>
 <p>在搭建好的一个Mybatis的基本环境</p>
 <p>一开始是把对应的映射文件mapper放在项目目录下的resources下，如果再把放在放类包的那个文件下，又会找不到该文件。原因是：<strong>IDEA编译后默认会把resource下的文件放到target的classpath下，但是src下的只有Java文件编译生成.class文件放入classpath下，其他文件会忽略的。</strong></p>
 <p>所以解决这个问题要先在pom.xml文件内添加以下内容</p>
@@ -407,16 +408,19 @@
 <p>然后接口内写对应xml文件里面id的方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> mapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Javabean.User;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> User <span class="title">findOneById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h5 id="测试："><a href="#测试：" class="headerlink" title="测试："></a>测试：</h5><ul>
+<h5 id="测试："><a class="header-anchor" href="#测试：">¶</a>测试：</h5>
+<ul>
 <li>前面一样。获取一个一个数据库session会话后</li>
-<li>通过该会话获取一个上面写的抽象类类对象<ul>
+<li>通过该会话获取一个上面写的抽象类类对象
+<ul>
 <li><code>session.getMapper(xxxMapper.class);</code></li>
 </ul>
 </li>
 <li>用该对象调用相关的方法</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Mybatis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Javabean.User;</span><br><span class="line"><span class="keyword">import</span> mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> ShuHao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/1/31</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloMybatis</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        InputStream in =  HelloMybatis.class.getClassLoader().getResourceAsStream(<span class="string">"MyBatis.xml"</span>);</span><br><span class="line">        SqlSessionFactory factory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(in);</span><br><span class="line">        SqlSession session = factory.openSession();</span><br><span class="line">        </span><br><span class="line">        UserMapper mapper = session.getMapper(UserMapper.class);</span><br><span class="line">        User user = mapper.findOneById(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(user.getName());</span><br><span class="line">        session.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="MyBatis基本查询"><a href="#MyBatis基本查询" class="headerlink" title="MyBatis基本查询"></a>MyBatis基本查询</h4><img src="/2020/02/02/JavaWeb学习总结-6-2-简单MyBatis环境搭建、Mapper的接口式调用/2.png" title="数据库表单内的内容">
+<h4 id="mybatis基本查询"><a class="header-anchor" href="#mybatis基本查询">¶</a>MyBatis基本查询</h4>
+<img src="/2020/02/02/JavaWeb学习总结-6-2-简单MyBatis环境搭建、Mapper的接口式调用/2.png" title="数据库表单内的内容">
 <ul>
 <li>通过单项查询</li>
 </ul>
@@ -432,7 +436,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"PersonCount"</span>  <span class="attr">resultType</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line">    select count(id) as value from Person;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"AvgOfAge"</span>  <span class="attr">resultType</span>=<span class="string">"double"</span>&gt;</span></span><br><span class="line">    select avg(age) from Person;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Mybatis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Javabean.User;</span><br><span class="line"><span class="keyword">import</span> mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> ShuHao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020/1/31</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloMybatis</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        InputStream in =  HelloMybatis.class.getClassLoader().getResourceAsStream(<span class="string">"MyBatis.xml"</span>);</span><br><span class="line">        SqlSessionFactory factory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(in);</span><br><span class="line">        SqlSession session = factory.openSession();</span><br><span class="line">        UserMapper mapper = session.getMapper(UserMapper.class);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*获取总人数*/</span></span><br><span class="line">        Object obj = mapper.PersonCount();</span><br><span class="line">        System.out.println(obj);</span><br><span class="line">        <span class="comment">/*取值可以通过转化成map调用get函数进行取值*/</span></span><br><span class="line">        System.out.println(((Map)obj).get(<span class="string">"value"</span>));</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*获取平均年龄*/</span></span><br><span class="line">        System.out.println(mapper.AvgOfAge());</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        session.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/02/02/JavaWeb学习总结-6-2-简单MyBatis环境搭建、Mapper的接口式调用/4.png" title="输出结果">
-<p>注意：在map类型下，如果不使用SQL语句： as xxx 例如：<code>select count(id) as value from Person;</code> 变为 -》<code>select count(id)  from Person;</code> 结果会是 {count(id) = 11} 而不是 {value=11}</p>
+<p>注意：在map类型下，如果不使用SQL语句： as xxx 例如：<code>select count(id) as value from Person;</code> 变为 -》<code>select count(id) from Person;</code> 结果会是 {count(id) = 11} 而不是 {value=11}</p>
 
       
     </div>
@@ -637,7 +641,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -729,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Mapper的接口式调用"><span class="nav-number">1.</span> <span class="nav-text">Mapper的接口式调用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#测试："><span class="nav-number">1.1.</span> <span class="nav-text">测试：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyBatis基本查询"><span class="nav-number">2.</span> <span class="nav-text">MyBatis基本查询</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#mapper的接口式调用"><span class="nav-number">1.</span> <span class="nav-text">¶Mapper的接口式调用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#测试："><span class="nav-number">1.1.</span> <span class="nav-text">¶测试：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mybatis基本查询"><span class="nav-number">2.</span> <span class="nav-text">¶MyBatis基本查询</span></a></li></ol></div>
             
 
           </div>

@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="数据库命令基本命令 显示数据库总表：show databases;    创建用户数据库：create database name（库名）    进入数据库：use name(库名) 显示库内集合表单：show tables; 创建集合表单：create table name(表单名)（dataType(数据类型), data_name(数据名)…..）  创建表单后    查看集合表单内容：de">
+<meta name="description" content="¶数据库命令 ¶基本命令  显示数据库总表：show databases;       创建用户数据库：create database name（库名）       进入数据库：use name(库名) 显示库内集合表单：show tables; 创建集合表单：create table name(表单名)（dataType(数据类型), data_name(数据名) …）     创建表单后">
 <meta name="keywords" content="学习总结,数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库学习总结-（知识总汇）">
 <meta property="og:url" content="https://shuhaohwang.github.io/2019/11/17/数据库基础知识/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="数据库命令基本命令 显示数据库总表：show databases;    创建用户数据库：create database name（库名）    进入数据库：use name(库名) 显示库内集合表单：show tables; 创建集合表单：create table name(表单名)（dataType(数据类型), data_name(数据名)…..）  创建表单后    查看集合表单内容：de">
+<meta property="og:description" content="¶数据库命令 ¶基本命令  显示数据库总表：show databases;       创建用户数据库：create database name（库名）       进入数据库：use name(库名) 显示库内集合表单：show tables; 创建集合表单：create table name(表单名)（dataType(数据类型), data_name(数据名) …）     创建表单后">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/11/17/数据库基础知识/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2019/11/17/数据库基础知识/2.png">
@@ -110,7 +110,7 @@
 <meta property="og:updated_time" content="2020-02-05T09:36:35.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库学习总结-（知识总汇）">
-<meta name="twitter:description" content="数据库命令基本命令 显示数据库总表：show databases;    创建用户数据库：create database name（库名）    进入数据库：use name(库名) 显示库内集合表单：show tables; 创建集合表单：create table name(表单名)（dataType(数据类型), data_name(数据名)…..）  创建表单后    查看集合表单内容：de">
+<meta name="twitter:description" content="¶数据库命令 ¶基本命令  显示数据库总表：show databases;       创建用户数据库：create database name（库名）       进入数据库：use name(库名) 显示库内集合表单：show tables; 创建集合表单：create table name(表单名)（dataType(数据类型), data_name(数据名) …）     创建表单后">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2019/11/17/数据库基础知识/1.png">
 
 
@@ -400,60 +400,93 @@
       
 
       
-        <h4 id="数据库命令"><a href="#数据库命令" class="headerlink" title="数据库命令"></a>数据库命令</h4><h5 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h5><ul>
-<li>显示数据库总表：show databases;<ul>
-<li><img src="/2019/11/17/数据库基础知识/1.png"></li>
+        <h4 id="数据库命令"><a class="header-anchor" href="#数据库命令">¶</a>数据库命令</h4>
+<h5 id="基本命令"><a class="header-anchor" href="#基本命令">¶</a>基本命令</h5>
+<ul>
+<li>显示数据库总表：show databases;
+<ul>
+<li>
+<img src="/2019/11/17/数据库基础知识/1.png">
+</li>
 </ul>
 </li>
-<li>创建用户数据库：create database <u>name（库名）</u><ul>
-<li><img src="/2019/11/17/数据库基础知识/2.png"></li>
+<li>创建用户数据库：create database <u>name（库名）</u>
+<ul>
+<li>
+<img src="/2019/11/17/数据库基础知识/2.png">
+</li>
 </ul>
 </li>
 <li>进入数据库：use <u>name(库名)</u></li>
 <li>显示库内集合表单：show tables;</li>
-<li>创建集合表单：create table <u>name(表单名)</u>（<u>dataType(数据类型)</u>, <u>data_name(数据名)</u><br>…..）<ul>
-<li><img src="/2019/11/17/数据库基础知识/3.png"></li>
-<li>创建表单后</li>
-<li><img src="/2019/11/17/数据库基础知识/4.png"></li>
-</ul>
-</li>
-<li>查看集合表单内容：desc <u>name(表单名)</u><ul>
-<li><img src="/2019/11/17/数据库基础知识/5.png">
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="增删改查命令"><a href="#增删改查命令" class="headerlink" title="增删改查命令"></a>增删改查命令</h5><ul>
-<li>往集合表单添加信息：<ul>
-<li>insert into <u>name(表单名)</u>(dataname1,dataname2,dataname3….) values(data1,data2,data3…)</li>
-<li><img src="/2019/11/17/数据库基础知识/5-1.png"></li>
-<li>insert into <u>name(表单名) </u>values(data1,data2,data3…)//效果同上，默认以创建表单时数据单元的顺序</li>
-<li>insert into <u>name(表单名)</u> (dataname1，dataname2….)values(data1,data2 …..)//dataname之间可以替换，但后面的data值要更具前面的顺序进行填写<br><br></li>
-</ul>
-</li>
-<li>查看表单详情内容：<ul>
-<li>select * from <u>name(表单名)</u>;//遍历全表<ul>
-<li><img src="/2019/11/17/数据库基础知识/6.png"></li>
-</ul>
-</li>
-<li>select dataname1,dataname2….  from <u>name(表单名)</u>//选择性显示表单内容<ul>
-<li><img src="/2019/11/17/数据库基础知识/7.png"></li>
-<li><img src="/2019/11/17/数据库基础知识/8.png"></li>
-</ul>
-</li>
-<li>select * from <u>name(表单名)</u> where <u>something(条件)</u>//按照要求条件进行遍历<br><br></li>
-</ul>
-</li>
-<li>修改表单内数据项的内容<ul>
-<li>update <u>name(表单名)</u> set dataname1 = value,dataname2 = value….//把整个表单内容进行修改</li>
-<li>update <u>name(表单名)</u> set dataname1 = value,dataname2 = value…. where <u>something(条件）</u><img src="/2019/11/17/数据库基础知识/9.png">
-</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
+<li>创建集合表单：create table <u>name(表单名)</u>（<u>dataType(数据类型)</u>, <u>data_name(数据名)</u><br>
+…）
 <ul>
-<li><p>删除表单内数据项的内容</p>
+<li>
+<img src="/2019/11/17/数据库基础知识/3.png">
+</li>
+<li>创建表单后</li>
+<li>
+<img src="/2019/11/17/数据库基础知识/4.png">
+</li>
+</ul>
+</li>
+<li>查看集合表单内容：desc <u>name(表单名)</u>
+<ul>
+<li>
+<img src="/2019/11/17/数据库基础知识/5.png">
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="增删改查命令"><a class="header-anchor" href="#增删改查命令">¶</a>增删改查命令</h5>
+<ul>
+<li>往集合表单添加信息：
+<ul>
+<li>insert into <u>name(表单名)</u>(dataname1,dataname2,dataname3…) values(data1,data2,data3…)</li>
+<li>
+<img src="/2019/11/17/数据库基础知识/5-1.png">
+</li>
+<li>insert into <u>name(表单名) </u>values(data1,data2,data3…)//效果同上，默认以创建表单时数据单元的顺序</li>
+<li>insert into <u>name(表单名)</u> (dataname1，dataname2…)values(data1,data2 …)//dataname之间可以替换，但后面的data值要更具前面的顺序进行填写<br>
+<br></li>
+</ul>
+</li>
+<li>查看表单详情内容：
+<ul>
+<li>select * from <u>name(表单名)</u>;//遍历全表
+<ul>
+<li>
+<img src="/2019/11/17/数据库基础知识/6.png">
+</li>
+</ul>
+</li>
+<li>select dataname1,dataname2…  from <u>name(表单名)</u>//选择性显示表单内容
+<ul>
+<li>
+<img src="/2019/11/17/数据库基础知识/7.png">
+</li>
+<li>
+<img src="/2019/11/17/数据库基础知识/8.png">
+</li>
+</ul>
+</li>
+<li>select * from <u>name(表单名)</u> where <u>something(条件)</u>//按照要求条件进行遍历<br>
+<br></li>
+</ul>
+</li>
+<li>修改表单内数据项的内容
+<ul>
+<li>update <u>name(表单名)</u> set dataname1 = value,dataname2 = value…//把整个表单内容进行修改</li>
+<li>update <u>name(表单名)</u> set dataname1 = value,dataname2 = value… where <u>something(条件）</u><img src="/2019/11/17/数据库基础知识/9.png">
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>删除表单内数据项的内容</p>
 <ul>
 <li>delete from <u>name(表单名)</u> //删除表单内<strong>所有内容</strong>！！</li>
 <li>delete from <u>name(表单名)</u> where <u>something(条件)</u>//根据条件进行删除</li>
@@ -462,9 +495,9 @@
 </li>
 </ul>
 <hr>
-<h4 id="数据库数据类型"><a href="#数据库数据类型" class="headerlink" title="数据库数据类型"></a>数据库数据类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int:整型</span><br><span class="line">double：浮点型，例如double(6,2)表示最多6位，其中必须有2位小数，即此时最大值为9999.99</span><br><span class="line">char：固定长度字符串类型，char(10)中&apos;abc&apos;也占10位，空出来的7位将以空字符代替</span><br><span class="line">varchar：可变长度字符串类型；varchar(10)中&apos;abc&apos;占3位，10代表最大支持长度</span><br><span class="line">text：大文本类型，详情见下表。</span><br><span class="line">blob：字节类型，可以存储任意数据。</span><br><span class="line">data：日期类型，格式为：yyyy-MM-dd；</span><br><span class="line">time：时间类型，格式为：hh:mm:ss</span><br><span class="line">timestamp:时间戳类型 yyyy-MM-dd hh:mm:ss 会自己根据系统时间进行赋值、</span><br><span class="line">datatime：日期时间类型 yyyy-MM-dd hh:mm:ss</span><br></pre></td></tr></table></figure>
+<h4 id="数据库数据类型"><a class="header-anchor" href="#数据库数据类型">¶</a>数据库数据类型</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int:整型</span><br><span class="line">double：浮点型，例如double(6,2)表示最多6位，其中必须有2位小数，即此时最大值为9999.99</span><br><span class="line">char：固定长度字符串类型，char(10)中&apos;abc&apos;也占10位，空出来的7位将以空字符代替</span><br><span class="line">varchar：可变长度字符串类型；varchar(10)中&apos;abc&apos;占3位，10代表最大支持长度</span><br><span class="line">text：大文本类型，详情见下表。</span><br><span class="line">blob：字节类型，可以存储任意数据。</span><br><span class="line">data：日期类型，格式为：yyyy-MM-dd；</span><br><span class="line">time：时间类型，格式为：hh:mm:ss</span><br><span class="line">timestamp:时间戳类型 yyyy-MM-dd hh:mm:ss 会自己根据系统时间进行赋值、</span><br><span class="line">datatime：日期时间类型 yyyy-MM-dd hh:mm:ss</span><br></pre></td></tr></table></figure>
 <p><strong>大文本类型</strong></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -496,10 +529,10 @@
 </tr>
 </tbody>
 </table>
-</div>
 <hr>
-<h4 id="常用约束"><a href="#常用约束" class="headerlink" title="常用约束"></a>常用约束</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">主键约束：primary key</span><br><span class="line">唯一约束：unique[key]</span><br><span class="line">非空约束：not null</span><br><span class="line">外键约束：foreign key</span><br><span class="line"></span><br><span class="line">默认约束：default</span><br><span class="line">自动增长：auto_increment</span><br></pre></td></tr></table></figure>
-<p><br></p>
+<h4 id="常用约束"><a class="header-anchor" href="#常用约束">¶</a>常用约束</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">主键约束：primary key</span><br><span class="line">唯一约束：unique[key]</span><br><span class="line">非空约束：not null</span><br><span class="line">外键约束：foreign key</span><br><span class="line"></span><br><span class="line">默认约束：default</span><br><span class="line">自动增长：auto_increment</span><br></pre></td></tr></table></figure>
+<br>
 <ul>
 <li>主键约束：对某一项数据进行设置为主键后该行数据变为<strong>唯一且非空</strong>（类似公民的身份证号）</li>
 <li>唯一约束：数据唯一，<strong>不能出现重复</strong></li>
@@ -509,8 +542,9 @@
 <li>自动增长：会根据该项最大的数值创建新数据单元时<strong>会自动加一</strong></li>
 </ul>
 <hr>
-<h4 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">=、(!= &lt;&gt;)、&lt;、&lt;=、&gt;、&gt;=</span><br><span class="line">BETWEEN .... AND</span><br><span class="line">IN(set)</span><br><span class="line">IS NULL</span><br><span class="line">AND</span><br><span class="line">OR</span><br><span class="line">NOT</span><br></pre></td></tr></table></figure>
-<p><br></p>
+<h4 id="条件查询"><a class="header-anchor" href="#条件查询">¶</a>条件查询</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">=、(!= &lt;&gt;)、&lt;、&lt;=、&gt;、&gt;=</span><br><span class="line">BETWEEN .... AND</span><br><span class="line">IN(set)</span><br><span class="line">IS NULL</span><br><span class="line">AND</span><br><span class="line">OR</span><br><span class="line">NOT</span><br></pre></td></tr></table></figure>
+<br>
 <p>(1)查询性别是男并且薪资小于1000的记录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM users Where sex = &apos;M&apos; AND sal &lt; 1000;</span><br></pre></td></tr></table></figure>
 <p>(2)查询性别是女性 或者 薪资大于2500的记录</p>
@@ -522,7 +556,8 @@
 <p>或</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM users Where sal BETWEEN 1000 AND 2000;</span><br></pre></td></tr></table></figure>
 <hr>
-<h4 id="模糊查询（关键字查询）"><a href="#模糊查询（关键字查询）" class="headerlink" title="模糊查询（关键字查询）"></a>模糊查询（关键字查询）</h4><p>在SQL中可以使用<strong>like</strong>关键字实现模糊查询</p>
+<h4 id="模糊查询-关键字查询"><a class="header-anchor" href="#模糊查询-关键字查询">¶</a>模糊查询（关键字查询）</h4>
+<p>在SQL中可以使用<strong>like</strong>关键字实现模糊查询</p>
 <p>即：通过给定搜索条件，一个字或者几个字符进行查找内容，该查询支持两种通配符：</p>
 <p><code>_</code>可以匹配任意一个字符</p>
 <p><code>%</code>可以匹配任意0~n个字母，例如‘徐%’可以匹配所有以徐开头的内容</p>
@@ -533,7 +568,8 @@
 <p>(3)查询姓名中含有‘<strong>李</strong>’的用户</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">Where</span> <span class="keyword">name</span> <span class="keyword">like</span> <span class="string">'李%'</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">name</span>(表单名) <span class="keyword">order</span> <span class="keyword">by</span> dataname1(数据项) <span class="keyword">desc</span>(没加<span class="keyword">desc</span>那么就为升序，加了为降序)；</span><br></pre></td></tr></table></figure>
+<h4 id="排序"><a class="header-anchor" href="#排序">¶</a>排序</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">name</span>(表单名) <span class="keyword">order</span> <span class="keyword">by</span> dataname1(数据项) <span class="keyword">desc</span>(没加<span class="keyword">desc</span>那么就为升序，加了为降序)；</span><br></pre></td></tr></table></figure>
 <p>(1)通过年龄进行排序</p>
 <img src="/2019/11/17/数据库基础知识/11.png">
 <p>(2)当排序时出现了相同项，可以再根据其他项对两个相同的项进行排序</p>
@@ -543,7 +579,8 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">name</span>(表单名) <span class="keyword">order</span> <span class="keyword">by</span> dataname1(数据项) <span class="keyword">desc</span>，dataname2;</span><br></pre></td></tr></table></figure>
 <p>数据项1以降序排序，数据项2为升序排序</p>
 <hr>
-<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sum：求和</span><br><span class="line">max：求最大值</span><br><span class="line">min：求最小值</span><br><span class="line">avg：求平均值</span><br><span class="line">count：求个数</span><br></pre></td></tr></table></figure>
+<h4 id="聚合函数"><a class="header-anchor" href="#聚合函数">¶</a>聚合函数</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sum：求和</span><br><span class="line">max：求最大值</span><br><span class="line">min：求最小值</span><br><span class="line">avg：求平均值</span><br><span class="line">count：求个数</span><br></pre></td></tr></table></figure>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 函数名(数据项) <span class="keyword">from</span> <span class="keyword">name</span>(表单名)</span><br></pre></td></tr></table></figure>
 <p>(1)查询年龄总和</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(age) <span class="keyword">from</span> <span class="keyword">user</span></span><br></pre></td></tr></table></figure>
@@ -554,7 +591,7 @@
 <p>(3)求年龄大于18的用户有多少个</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(age) <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> age &gt;= <span class="number">18</span></span><br></pre></td></tr></table></figure>
 <img src="/2019/11/17/数据库基础知识/17.png">
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -757,7 +794,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -849,7 +886,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库命令"><span class="nav-number">1.</span> <span class="nav-text">数据库命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本命令"><span class="nav-number">1.1.</span> <span class="nav-text">基本命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增删改查命令"><span class="nav-number">1.2.</span> <span class="nav-text">增删改查命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库数据类型"><span class="nav-number">2.</span> <span class="nav-text">数据库数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用约束"><span class="nav-number">3.</span> <span class="nav-text">常用约束</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件查询"><span class="nav-number">4.</span> <span class="nav-text">条件查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模糊查询（关键字查询）"><span class="nav-number">5.</span> <span class="nav-text">模糊查询（关键字查询）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">6.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚合函数"><span class="nav-number">7.</span> <span class="nav-text">聚合函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库命令"><span class="nav-number">1.</span> <span class="nav-text">¶数据库命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本命令"><span class="nav-number">1.1.</span> <span class="nav-text">¶基本命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增删改查命令"><span class="nav-number">1.2.</span> <span class="nav-text">¶增删改查命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库数据类型"><span class="nav-number">2.</span> <span class="nav-text">¶数据库数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用约束"><span class="nav-number">3.</span> <span class="nav-text">¶常用约束</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件查询"><span class="nav-number">4.</span> <span class="nav-text">¶条件查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模糊查询-关键字查询"><span class="nav-number">5.</span> <span class="nav-text">¶模糊查询（关键字查询）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">6.</span> <span class="nav-text">¶排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚合函数"><span class="nav-number">7.</span> <span class="nav-text">¶聚合函数</span></a></li></ol></div>
             
 
           </div>

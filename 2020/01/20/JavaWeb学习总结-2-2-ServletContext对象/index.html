@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="servletContextServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。 它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，所以">
+<meta name="description" content="¶servletContext ServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。 它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，">
 <meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(2.2)ServletContext对象">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="servletContextServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。 它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，所以">
+<meta property="og:description" content="¶servletContext ServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。 它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/2.png">
@@ -96,7 +96,7 @@
 <meta property="og:updated_time" content="2020-01-20T12:24:10.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(2.2)ServletContext对象">
-<meta name="twitter:description" content="servletContextServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。 它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，所以">
+<meta name="twitter:description" content="¶servletContext ServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。 它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/1.png">
 
 
@@ -397,10 +397,12 @@
       
 
       
-        <h4 id="servletContext"><a href="#servletContext" class="headerlink" title="servletContext"></a>servletContext</h4><p>ServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。</p>
+        <h4 id="servletcontext"><a class="header-anchor" href="#servletcontext">¶</a>servletContext</h4>
+<p>ServletContext官方叫servlet上下文。服务器会为每一个工程创建一个对象，这个对象就是ServletContext对象。这个对象全局唯一，而且工程内部的所有servlet都共享这个对象。所以叫全局应用程序共享对象。</p>
 <p>它代表当前正在运行的web应用程序，也就是当前的网站。它是一个单例对象，整个web项目应用就仅此一个对象，且当web项目一启动就会创建，所以后面要使用它只能通过获取的方式</p>
 <p>里面包含了应用程序的一些基本信息，同时这个对象也可以当做容器来存取数据，想要获取该对象，需要使用request对象进行获取</p>
-<h4 id="使用演示"><a href="#使用演示" class="headerlink" title="使用演示"></a>使用演示</h4><ul>
+<h4 id="使用演示"><a class="header-anchor" href="#使用演示">¶</a>使用演示</h4>
+<ul>
 <li>编写两个<strong>servlet</strong> 一个为Setservlet 一个为 Showservlet</li>
 <li>对应访问路径</li>
 </ul>
@@ -413,7 +415,8 @@
 <li>Showservlet 的作用为 向ServletContext对象中进行取值</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> ServletContextTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletContext;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShowServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        request.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        response.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        response.setContentType(<span class="string">"text/html;charset=UTF-8"</span>);</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        ServletContext app = request.getServletContext();<span class="comment">//获取ServletContext对象</span></span><br><span class="line">        String str =(String) app.getAttribute(<span class="string">"Test"</span>);<span class="comment">//取得ServletContext对象中的值</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        PrintWriter out = response.getWriter();</span><br><span class="line">        out.println(<span class="string">"&lt;HTML&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;HEAD&gt;&lt;TITLE&gt;A Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"This is "</span>);</span><br><span class="line">        out.println(<span class="keyword">this</span>.getClass());</span><br><span class="line">        out.println(<span class="string">",using the Get method"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"获取到的内容为Test =  "</span> + str);<span class="comment">//输出该值</span></span><br><span class="line">        out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;/HTML&gt;"</span>);</span><br><span class="line">        out.flush();</span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doPost(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h5><ul>
+<h5 id="注意点："><a class="header-anchor" href="#注意点：">¶</a>注意点：</h5>
+<ul>
 <li>ServletContext是一个单例对象。整个Web项目都共用一个，有点类似于项目的全局变量区一样</li>
 <li>在往ServletContext对象进行存数据时，首先要使用request对象进行获取ServletContext的对象，然后使用<code>setAttribute(&quot;xx&quot;,&quot;aaaa&quot;);</code>方法进行存值，其存储方式类似于map容器，是一个键值对。</li>
 <li>在进行往ServletContext对象进行取对象时，使用<code>getAttribute(&quot;xxx&quot;)</code>方法进行数据取出，注意！该方法的返回值是object，所以自己要根据取出值进行类型转换</li>
@@ -421,12 +424,14 @@
 <img src="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/1.png" title="在地址栏输入Setservlet的地址进行访问">
 <img src="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/2.png" title="再访问Showservlet 可以发现在Setservlet里面保存的值在Showservlet 中被取出并输出">
 <hr>
-<h5 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h5><p>以该上述的演示为例子，如果先进行访问Showservlet 会发现其获得的值是null，原因是它没有提前进行存值，再访问Setservlet 页面进行通过<code>setAttribute()</code>方法进行存值后其ServletContext对象才有对应值。</p>
+<h5 id="特殊情况"><a class="header-anchor" href="#特殊情况">¶</a>特殊情况</h5>
+<p>以该上述的演示为例子，如果先进行访问Showservlet 会发现其获得的值是null，原因是它没有提前进行存值，再访问Setservlet 页面进行通过<code>setAttribute()</code>方法进行存值后其ServletContext对象才有对应值。</p>
 <img src="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/3.png" title="重启项目，并且直接访问Showservlet 页面可以发现，并没有获得值">
 <p>其次：只要服务器、该项目还在运行此值就将一直存在，除非通过重启</p>
-<h5 id="例如：不同的浏览器进行访问"><a href="#例如：不同的浏览器进行访问" class="headerlink" title="例如：不同的浏览器进行访问"></a>例如：不同的浏览器进行访问</h5><img src="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/4.png" title="当使用谷歌浏览器往ServletContext对象中存值 然后通过谷歌和IE浏览器分别打开Showservlet 进行查看">
+<h5 id="例如：不同的浏览器进行访问"><a class="header-anchor" href="#例如：不同的浏览器进行访问">¶</a>例如：不同的浏览器进行访问</h5>
+<img src="/2020/01/20/JavaWeb学习总结-2-2-ServletContext对象/4.png" title="当使用谷歌浏览器往ServletContext对象中存值 然后通过谷歌和IE浏览器分别打开Showservlet 进行查看">
 <p>可以看出ServletContext对象，无论是换一个浏览器进行访问它都存在且仅有一个，它是对于服务器来说，只要服务器、该项目还在运行此值就将一直存在，除非通过重启</p>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -631,7 +636,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -723,7 +728,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#servletContext"><span class="nav-number">1.</span> <span class="nav-text">servletContext</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用演示"><span class="nav-number">2.</span> <span class="nav-text">使用演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点："><span class="nav-number">2.1.</span> <span class="nav-text">注意点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#特殊情况"><span class="nav-number">2.2.</span> <span class="nav-text">特殊情况</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#例如：不同的浏览器进行访问"><span class="nav-number">2.3.</span> <span class="nav-text">例如：不同的浏览器进行访问</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#servletcontext"><span class="nav-number">1.</span> <span class="nav-text">¶servletContext</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用演示"><span class="nav-number">2.</span> <span class="nav-text">¶使用演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点："><span class="nav-number">2.1.</span> <span class="nav-text">¶注意点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#特殊情况"><span class="nav-number">2.2.</span> <span class="nav-text">¶特殊情况</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#例如：不同的浏览器进行访问"><span class="nav-number">2.3.</span> <span class="nav-text">¶例如：不同的浏览器进行访问</span></a></li></ol></li></ol></div>
             
 
           </div>

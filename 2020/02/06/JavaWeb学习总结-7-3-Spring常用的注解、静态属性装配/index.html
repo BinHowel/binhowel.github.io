@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="Spring常用的注解20个要掌握的注解 一、 用于创建对象的1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。 2）@Controller：标识该类为表现层 3）@Service：标识该类为业务层 4）@Repository：标识该类为持久层 二、 用于注入数据的 @Autowired：自动按">
+<meta name="description" content="¶Spring常用的注解 20个要掌握的注解 ¶一、 用于创建对象的 1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。 2）@Controller：标识该类为表现层 3）@Service：标识该类为业务层 4）@Repository：标识该类为持久层 ¶二、 用于注入数据的   @Autowi">
 <meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(7.3)Spring常用的注解、静态属性装配">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/02/06/JavaWeb学习总结-7-3-Spring常用的注解、静态属性装配/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="Spring常用的注解20个要掌握的注解 一、 用于创建对象的1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。 2）@Controller：标识该类为表现层 3）@Service：标识该类为业务层 4）@Repository：标识该类为持久层 二、 用于注入数据的 @Autowired：自动按">
+<meta property="og:description" content="¶Spring常用的注解 20个要掌握的注解 ¶一、 用于创建对象的 1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。 2）@Controller：标识该类为表现层 3）@Service：标识该类为业务层 4）@Repository：标识该类为持久层 ¶二、 用于注入数据的   @Autowi">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/02/06/JavaWeb学习总结-7-3-Spring常用的注解、静态属性装配/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/02/06/JavaWeb学习总结-7-3-Spring常用的注解、静态属性装配/2.png">
 <meta property="og:updated_time" content="2020-02-06T09:45:31.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(7.3)Spring常用的注解、静态属性装配">
-<meta name="twitter:description" content="Spring常用的注解20个要掌握的注解 一、 用于创建对象的1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。 2）@Controller：标识该类为表现层 3）@Service：标识该类为业务层 4）@Repository：标识该类为持久层 二、 用于注入数据的 @Autowired：自动按">
+<meta name="twitter:description" content="¶Spring常用的注解 20个要掌握的注解 ¶一、 用于创建对象的 1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。 2）@Controller：标识该类为表现层 3）@Service：标识该类为业务层 4）@Repository：标识该类为持久层 ¶二、 用于注入数据的   @Autowi">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/02/06/JavaWeb学习总结-7-3-Spring常用的注解、静态属性装配/1.png">
 
 
@@ -395,48 +395,66 @@
       
 
       
-        <h4 id="Spring常用的注解"><a href="#Spring常用的注解" class="headerlink" title="Spring常用的注解"></a>Spring常用的注解</h4><p><a href="https://www.jianshu.com/p/71e8971d2bc5?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" target="_blank" rel="noopener">20个要掌握的注解</a></p>
-<h5 id="一、-用于创建对象的"><a href="#一、-用于创建对象的" class="headerlink" title="一、 用于创建对象的"></a>一、 用于创建对象的</h5><p>1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。</p>
+        <h4 id="spring常用的注解"><a class="header-anchor" href="#spring常用的注解">¶</a>Spring常用的注解</h4>
+<p><a href="https://www.jianshu.com/p/71e8971d2bc5?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" target="_blank" rel="noopener">20个要掌握的注解</a></p>
+<h5 id="一-用于创建对象的"><a class="header-anchor" href="#一-用于创建对象的">¶</a>一、 用于创建对象的</h5>
+<p>1）@Component：将资源交给Spring进行管理，相当于在xml中配置了一个bean。该注解一般用于即不是表现层又不是业务层更不是持久层的类上面。</p>
 <p>2）@Controller：标识该类为表现层</p>
 <p>3）@Service：标识该类为业务层</p>
 <p>4）@Repository：标识该类为持久层</p>
-<h5 id="二、-用于注入数据的"><a href="#二、-用于注入数据的" class="headerlink" title="二、 用于注入数据的"></a>二、 用于注入数据的</h5><ol>
-<li><p>@Autowired：自动按照类型注入。当使用注解注入属性时，set 方法可以省略。它只能注入其他 bean 类型。当有多个 类型匹配时，使用要注入的对象变量名称作为 bean 的 id，在 spring 容器查找，找到了也可以注入成功。找不到 就报错。</p>
+<h5 id="二-用于注入数据的"><a class="header-anchor" href="#二-用于注入数据的">¶</a>二、 用于注入数据的</h5>
+<ol>
+<li>
+<p>@Autowired：自动按照类型注入。当使用注解注入属性时，set 方法可以省略。它只能注入其他 bean 类型。当有多个 类型匹配时，使用要注入的对象变量名称作为 bean 的 id，在 spring 容器查找，找到了也可以注入成功。找不到 就报错。</p>
 </li>
-<li><p>@Qualifier：在自动按照类型注入的基础之上，再按照 Bean 的 id 注入。它在给字段注入时不能独立使用，必须和 @Autowire 一起使用；但是给方法参数注入时，可以独立使用。</p>
+<li>
+<p>@Qualifier：在自动按照类型注入的基础之上，再按照 Bean 的 id 注入。它在给字段注入时不能独立使用，必须和 @Autowire 一起使用；但是给方法参数注入时，可以独立使用。</p>
 </li>
-<li><p>@Resource：直接按照 Bean 的 id 注入，如果根据id无法找到则根据类型进行查找。</p>
+<li>
+<p>@Resource：直接按照 Bean 的 id 注入，如果根据id无法找到则根据类型进行查找。</p>
 </li>
-<li><p>@Value：注入基本数据类型和 String 类型数据的</p>
+<li>
+<p>@Value：注入基本数据类型和 String 类型数据的</p>
 </li>
 </ol>
-<h5 id="三、-用于改变作用范围的"><a href="#三、-用于改变作用范围的" class="headerlink" title="三、 用于改变作用范围的"></a>三、 用于改变作用范围的</h5><ol>
+<h5 id="三-用于改变作用范围的"><a class="header-anchor" href="#三-用于改变作用范围的">¶</a>三、 用于改变作用范围的</h5>
+<ol>
 <li>@Scope：指定 bean 的作用范围（singleton 、prototype、 request 、session、globalsession）。</li>
 </ol>
-<h5 id="四、和生命周期相关的"><a href="#四、和生命周期相关的" class="headerlink" title="四、和生命周期相关的"></a>四、和生命周期相关的</h5><ol>
-<li><p>@PostConstruct：用于指定初始化方法。</p>
+<h5 id="四-和生命周期相关的"><a class="header-anchor" href="#四-和生命周期相关的">¶</a>四、和生命周期相关的</h5>
+<ol>
+<li>
+<p>@PostConstruct：用于指定初始化方法。</p>
 </li>
-<li><p>@PreDestroy：用于指定销毁方法。</p>
+<li>
+<p>@PreDestroy：用于指定销毁方法。</p>
 </li>
 </ol>
-<h5 id="五、新注解"><a href="#五、新注解" class="headerlink" title="五、新注解"></a>五、新注解</h5><ol>
-<li><p>@Configuration：用于指定当前类是一个 spring 配置类，当创建容器时会从该类上加载注解。获取容器时需要使用 AnnotationApplicationContext(有@Configuration 注解的类.class)。</p>
+<h5 id="五-新注解"><a class="header-anchor" href="#五-新注解">¶</a>五、新注解</h5>
+<ol>
+<li>
+<p>@Configuration：用于指定当前类是一个 spring 配置类，当创建容器时会从该类上加载注解。获取容器时需要使用 AnnotationApplicationContext(有@Configuration 注解的类.class)。</p>
 </li>
-<li><p>@ComponentScan：用于指定 spring 在初始化容器时要扫描的包。作用和在 spring 的 xml 配置文件中的：</p>
+<li>
+<p>@ComponentScan：用于指定 spring 在初始化容器时要扫描的包。作用和在 spring 的 xml 配置文件中的：</p>
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:component-scan base-package=&quot;com.demo&quot;/&gt;</span><br></pre></td></tr></table></figure>
 <p>是一样的。</p>
-<ol>
-<li><p>@Bean：该注解只能写在方法上，表明使用此方法创建一个对象，并且放入 spring 容器。</p>
+<ol start="3">
+<li>
+<p>@Bean：该注解只能写在方法上，表明使用此方法创建一个对象，并且放入 spring 容器。</p>
 </li>
-<li><p>@PropertySource：用于加载.properties 文件中的配置。例如我们配置数据源时，可以把连接数据库的信息写到 properties 配置文件中，就可以使用此注解指定 properties 配置文件的位置。</p>
+<li>
+<p>@PropertySource：用于加载.properties 文件中的配置。例如我们配置数据源时，可以把连接数据库的信息写到 properties 配置文件中，就可以使用此注解指定 properties 配置文件的位置。</p>
 </li>
-<li><p>@Import：用于导入其他配置类，在引入其他配置类时，可以不用再写@Configuration 注解。当然，写上也没问 题。</p>
+<li>
+<p>@Import：用于导入其他配置类，在引入其他配置类时，可以不用再写@Configuration 注解。当然，写上也没问 题。</p>
 </li>
 </ol>
 <hr>
-<h4 id="静态属性装配"><a href="#静态属性装配" class="headerlink" title="静态属性装配"></a>静态属性装配</h4><p>开发过程中有这样的一个情形，一个工具类我们要使用静态的方法去获取一个类对象，当这个类对象为静态且为的时候往往不能使用spring进行注入对象。</p>
+<h4 id="静态属性装配"><a class="header-anchor" href="#静态属性装配">¶</a>静态属性装配</h4>
+<p>开发过程中有这样的一个情形，一个工具类我们要使用静态的方法去获取一个类对象，当这个类对象为静态且为的时候往往不能使用spring进行注入对象。</p>
 <p>例如</p>
 <p>假设我们要通过工具类来获取spring内那个组件person类对象</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*person*/</span></span><br><span class="line"><span class="keyword">package</span> Javabean;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ImportResource;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resources;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Resource</span>(name = <span class="string">"PersonName2"</span>)</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name + <span class="string">","</span> + age + <span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -446,14 +464,15 @@
 <p><strong>原因</strong>是 spring无法注入对象至对应的<strong>静态</strong>对象</p>
 <p><strong>结论</strong>：<strong>spring不支持静态属性装配</strong></p>
 <hr>
-<h5 id="如何解决这个问题"><a href="#如何解决这个问题" class="headerlink" title="如何解决这个问题"></a>如何解决这个问题</h5><p>可以在工具类中通过一个方法进行中转</p>
+<h5 id="如何解决这个问题"><a class="header-anchor" href="#如何解决这个问题">¶</a>如何解决这个问题</h5>
+<p>可以在工具类中通过一个方法进行中转</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SetSpringPersontoThis</span><span class="params">(Person person)</span></span>&#123;</span><br><span class="line">	p = person;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>注</strong>：在方法前加入spring对应的注入注解，可以把对应的信息注入到其方法的参数中</p>
 <p>演示工具类整体代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> TestUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Javabean.Person;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span>  Person p;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">SetSpringPersontoThis</span><span class="params">(Person person)</span></span>&#123;</span><br><span class="line">        p = person;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Person <span class="title">getPerson</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2020/02/06/JavaWeb学习总结-7-3-Spring常用的注解、静态属性装配/2.png" title="测试结果">
 <p><strong>注意</strong>：没当你设置一个@Component组件类，你就要确保！该类能被扫描到。例如这个例子，一开始我没有在xml中设置该TestUtils包的扫描，造成了错误！！</p>
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -658,7 +677,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -750,7 +769,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring常用的注解"><span class="nav-number">1.</span> <span class="nav-text">Spring常用的注解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、-用于创建对象的"><span class="nav-number">1.1.</span> <span class="nav-text">一、 用于创建对象的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、-用于注入数据的"><span class="nav-number">1.2.</span> <span class="nav-text">二、 用于注入数据的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、-用于改变作用范围的"><span class="nav-number">1.3.</span> <span class="nav-text">三、 用于改变作用范围的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四、和生命周期相关的"><span class="nav-number">1.4.</span> <span class="nav-text">四、和生命周期相关的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五、新注解"><span class="nav-number">1.5.</span> <span class="nav-text">五、新注解</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态属性装配"><span class="nav-number">2.</span> <span class="nav-text">静态属性装配</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何解决这个问题"><span class="nav-number">2.1.</span> <span class="nav-text">如何解决这个问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#spring常用的注解"><span class="nav-number">1.</span> <span class="nav-text">¶Spring常用的注解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一-用于创建对象的"><span class="nav-number">1.1.</span> <span class="nav-text">¶一、 用于创建对象的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二-用于注入数据的"><span class="nav-number">1.2.</span> <span class="nav-text">¶二、 用于注入数据的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三-用于改变作用范围的"><span class="nav-number">1.3.</span> <span class="nav-text">¶三、 用于改变作用范围的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四-和生命周期相关的"><span class="nav-number">1.4.</span> <span class="nav-text">¶四、和生命周期相关的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五-新注解"><span class="nav-number">1.5.</span> <span class="nav-text">¶五、新注解</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态属性装配"><span class="nav-number">2.</span> <span class="nav-text">¶静态属性装配</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何解决这个问题"><span class="nav-number">2.1.</span> <span class="nav-text">¶如何解决这个问题</span></a></li></ol></li></ol></div>
             
 
           </div>

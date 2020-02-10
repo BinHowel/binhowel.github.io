@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="页面跳转的两种方式 请求转发 服务器内部的转发,服务器内部跳转 RequestDispatcher dispatcher = req.getRequestDispatcher(&amp;quot;xxx.jsp&amp;quot;); dispatcher.forward(req.resp);  类比你向张三借钱，张三没有，然后他自己去向李四借钱然后再给你，整个过程你只提出了一次请求，得到了一次回应   重定向">
+<meta name="description" content="¶页面跳转的两种方式  请求转发  服务器内部的转发,服务器内部跳转 RequestDispatcher dispatcher = req.getRequestDispatcher(&amp;quot;xxx.jsp&amp;quot;); dispatcher.forward(req.resp);    类比你向张三借钱，张三没有，然后他自己去向李四借钱然后再给你，整个过程你只提出了一次请求，得到了一次回应">
 <meta name="keywords" content="学习总结,Java学习总结,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb学习总结(2.1)请求响应和重定向">
 <meta property="og:url" content="https://shuhaohwang.github.io/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/index.html">
 <meta property="og:site_name" content="双子星Binaryؼ">
-<meta property="og:description" content="页面跳转的两种方式 请求转发 服务器内部的转发,服务器内部跳转 RequestDispatcher dispatcher = req.getRequestDispatcher(&amp;quot;xxx.jsp&amp;quot;); dispatcher.forward(req.resp);  类比你向张三借钱，张三没有，然后他自己去向李四借钱然后再给你，整个过程你只提出了一次请求，得到了一次回应   重定向">
+<meta property="og:description" content="¶页面跳转的两种方式  请求转发  服务器内部的转发,服务器内部跳转 RequestDispatcher dispatcher = req.getRequestDispatcher(&amp;quot;xxx.jsp&amp;quot;); dispatcher.forward(req.resp);    类比你向张三借钱，张三没有，然后他自己去向李四借钱然后再给你，整个过程你只提出了一次请求，得到了一次回应">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/1.png">
 <meta property="og:image" content="https://shuhaohwang.github.io/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/2.png">
@@ -102,7 +102,7 @@
 <meta property="og:updated_time" content="2020-01-19T14:08:19.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb学习总结(2.1)请求响应和重定向">
-<meta name="twitter:description" content="页面跳转的两种方式 请求转发 服务器内部的转发,服务器内部跳转 RequestDispatcher dispatcher = req.getRequestDispatcher(&amp;quot;xxx.jsp&amp;quot;); dispatcher.forward(req.resp);  类比你向张三借钱，张三没有，然后他自己去向李四借钱然后再给你，整个过程你只提出了一次请求，得到了一次回应   重定向">
+<meta name="twitter:description" content="¶页面跳转的两种方式  请求转发  服务器内部的转发,服务器内部跳转 RequestDispatcher dispatcher = req.getRequestDispatcher(&amp;quot;xxx.jsp&amp;quot;); dispatcher.forward(req.resp);    类比你向张三借钱，张三没有，然后他自己去向李四借钱然后再给你，整个过程你只提出了一次请求，得到了一次回应">
 <meta name="twitter:image" content="https://shuhaohwang.github.io/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/1.png">
 
 
@@ -403,32 +403,41 @@
       
 
       
-        <h4 id="页面跳转的两种方式"><a href="#页面跳转的两种方式" class="headerlink" title="页面跳转的两种方式"></a>页面跳转的两种方式</h4><ul>
-<li>请求转发<ul>
+        <h4 id="页面跳转的两种方式"><a class="header-anchor" href="#页面跳转的两种方式">¶</a>页面跳转的两种方式</h4>
+<ul>
+<li>请求转发
+<ul>
 <li>服务器内部的转发,服务器内部跳转</li>
 <li><code>RequestDispatcher dispatcher = req.getRequestDispatcher(&quot;xxx.jsp&quot;);</code></li>
 <li><code>dispatcher.forward(req.resp);</code></li>
-<li><img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/1.png"></li>
+<li>
+<img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/1.png">
+</li>
 <li>类比你向张三借钱，张三没有，然后他自己去向李四借钱然后再给你，整个过程你只提出了一次请求，得到了一次回应</li>
 </ul>
 </li>
-<li>重定向<ul>
+<li>重定向
+<ul>
 <li>服务器告诉浏览器跳转到某个页面(由浏览器完成)</li>
 <li><code>res.sendRedirect(“index.jsp”)</code></li>
-<li><img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/2.png"></li>
+<li>
+<img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/2.png">
+</li>
 <li>就类似你去借钱，向张三借，张三说没有，让你去找李四，然后你再去向李四借钱。整个过程你向两个人提出了请求，同时也获得了两次回应</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="重定向用法演示"><a href="#重定向用法演示" class="headerlink" title="重定向用法演示"></a>重定向用法演示</h4><ul>
+<h4 id="重定向用法演示"><a class="header-anchor" href="#重定向用法演示">¶</a>重定向用法演示</h4>
+<ul>
 <li>首先创建一个<strong>Servlet</strong>(命名为<code>Recive</code>)其访问路径为<code>src/Re.c</code></li>
 <li>然后对其进行重定向至自己创建的HelloHtml.html</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Rd_And_Rs;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Recive</span>  <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">"Recive`s Get is OK!"</span>);</span><br><span class="line">       String url = req.getContextPath();</span><br><span class="line">       System.out.println(<span class="string">"URL="</span>+ url);</span><br><span class="line"></span><br><span class="line">       resp.sendRedirect(url+<span class="string">"/HelloHtml.html"</span>);</span><br><span class="line">       <span class="keyword">return</span>;<span class="comment">//重定向后要结束当前方法</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doGet(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a><strong>注意点</strong></h5><ul>
+<h5 id="注意点"><a class="header-anchor" href="#注意点">¶</a><strong>注意点</strong></h5>
+<ul>
 <li><code>resp.sendRedirect(&quot;&quot;);</code>这个方法会使你这个Servlet被访问时重定向跳转至括号里面的内容页面，也就是说浏览器的地址栏的内容当你访问该Servlet时会发生改变，变为上述这个方法括号内的地址</li>
-<li><code>resp.sendRedirect(&quot;&quot;)</code>这个方法括号内默认是以你该Servlet文件为基准的而不是项目路径,即：例如你这个Servlet是位于 项目路径下的 src/Demo/Servlet,你要重定向至src中的其他文件就应该../Xxx</li>
+<li><code>resp.sendRedirect(&quot;&quot;)</code>这个方法括号内默认是以你该Servlet文件为基准的而不是项目路径,即：例如你这个Servlet是位于 项目路径下的 src/Demo/Servlet,你要重定向至src中的其他文件就应该…/Xxx</li>
 <li>重定向后要结束该方法。即：不应该继续执行<code>resp.sendRedirect(&quot;&quot;)</code>后面的代码了(重要！)</li>
 <li>request对象中的<code>getContextPath()</code>方法可以直接获取当前的项目路径，也就是<code>contextRoot</code></li>
 <li>重定向后之前的请求信息就没了，故不能通过表单来实现多个页面的数据传送</li>
@@ -437,20 +446,25 @@
 <img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/4.png" title="按下回车后，发现它重定向至HelloHtml.html">
 <img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/5.png" title="控制台中根据getContextPath()方法打印出了 项目路径 的信息">
 <hr>
-<h4 id="请求转发用法演示"><a href="#请求转发用法演示" class="headerlink" title="请求转发用法演示"></a>请求转发用法演示</h4><ul>
+<h4 id="请求转发用法演示"><a class="header-anchor" href="#请求转发用法演示">¶</a>请求转发用法演示</h4>
+<ul>
 <li>首先创建两个Servlet 一个名为 show 另一个为 code 两者的地址路径分别为 <code>../src/show.c</code> 和 <code>../src/Code</code></li>
-<li>其实创建一个表单<ul>
-<li><img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/6.png" title="此处为使用上文的HelloHtml.html中的表单演示 表单提交至show 文件中"></li>
+<li>其实创建一个表单
+<ul>
+<li>
+<img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/6.png" title="此处为使用上文的HelloHtml.html中的表单演示 表单提交至show 文件中">
+</li>
 </ul>
 </li>
 <li>其中这个show 将获取HelloHtml.html表单中的内容然后使用请求转发把值传至code 中进行打印</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*show*/</span></span><br><span class="line"><span class="keyword">package</span> Rd_And_Rs;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Demo.HelloServlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.RequestDispatcher;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Show</span> <span class="keyword">extends</span> <span class="title">HelloServlet</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Show`s Get is OK!"</span>);</span><br><span class="line"></span><br><span class="line">        RequestDispatcher dispatcher = req.getRequestDispatcher(<span class="string">"/src/Code"</span>);</span><br><span class="line">        req.setAttribute(<span class="string">"id"</span>,<span class="number">10223</span>);</span><br><span class="line">        dispatcher.forward(req,resp);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        doGet(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Code</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Post is ok"</span>);</span><br><span class="line">        doGet(request,response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Get is ok"</span>);</span><br><span class="line">        request.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        response.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        response.setContentType(<span class="string">"text/html;charset=UTF-8"</span>);</span><br><span class="line">        PrintWriter out = response.getWriter();</span><br><span class="line">        out.println(<span class="string">"&lt;HTML&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;HEAD&gt;&lt;TITLE&gt;A Servlet&lt;/TITLE&gt;&lt;/HEAD&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"This is "</span>);</span><br><span class="line">        out.println(<span class="keyword">this</span>.getClass());</span><br><span class="line">        out.println(<span class="string">",using the Get method"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"你好世界！注册成功！您的id为"</span> + request.getAttribute(<span class="string">"id"</span>));</span><br><span class="line">        out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"用户名为： "</span> + <span class="keyword">new</span> String(request.getParameter(<span class="string">"un"</span>)));</span><br><span class="line">        out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"密码为： "</span> + request.getParameter(<span class="string">"pw"</span>));</span><br><span class="line">        out.println(<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"请牢记！你们用户名和密码（づ￣3￣）づ╭❤～"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">        out.println(<span class="string">"&lt;/HTML&gt;"</span>);</span><br><span class="line">        out.flush();</span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h5><ul>
+<h5 id="注意点："><a class="header-anchor" href="#注意点：">¶</a>注意点：</h5>
+<ul>
 <li>注意乱码问题！</li>
 <li>要使用请求转发 首先要获取一个<code>RequestDispatcher</code>对象，该对象可以通过request对象的<code>getRequestDispatcher(&quot;xx&quot;);</code>方法进行获取。其实使用该<code>RequestDispatcher</code>对象的方法 <code>forward(req,resp);</code>进行跳转至request对象的<code>getRequestDispatcher(&quot;xx&quot;);</code>方法括号中填写的页面</li>
-<li>注意！<code>getRequestDispatcher(&quot;xx&quot;);</code>该方法中的参数 默认是以项目路径为准的，而不像重定向中以该Servlet 文件为准，即：你在括号中只填一个‘<code>&#39;/&#39;</code>它意味着是项目路径 下的 xxxx</li>
+<li>注意！<code>getRequestDispatcher(&quot;xx&quot;);</code>该方法中的参数 默认是以项目路径为准的，而不像重定向中以该Servlet 文件为准，即：你在括号中只填一个‘<code>'/'</code>它意味着是项目路径 下的 xxxx</li>
 <li>请求转发可以实现每个页面的数据传送不像重定向。</li>
 <li>请求转发中使用request对象的<code>setAttribute(“xx”,aaaa);</code>和 <code>getAttribute(&quot;xx&quot;)</code>方法自行设置传输数据和获取自定义的数据</li>
 <li>请求转发中进行跳转时默认是使用post进行数据提交</li>
@@ -459,7 +473,7 @@
 <img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/7.png" title="可以发现页面前面地址栏中的内容提交后 为show.c而不是Code这个文件对应的 code 地址，说明前后的页面跳转是由服务器来实现的,其次使用自行设置的数据也传输成功">
 <img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/8.png" title="请求跳转是使用post请求">
 <img src="/2020/01/19/JavaWeb学习总结-2-1-请求响应和重定向/9.png" title="在合理设置字符集后，使用中文字符依旧成功">
-<p>—（本文完）</p>
+<p>–（本文完）</p>
 
       
     </div>
@@ -664,7 +678,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">117</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -756,7 +770,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#页面跳转的两种方式"><span class="nav-number">1.</span> <span class="nav-text">页面跳转的两种方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重定向用法演示"><span class="nav-number">2.</span> <span class="nav-text">重定向用法演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点"><span class="nav-number">2.1.</span> <span class="nav-text">注意点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求转发用法演示"><span class="nav-number">3.</span> <span class="nav-text">请求转发用法演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点："><span class="nav-number">3.1.</span> <span class="nav-text">注意点：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#页面跳转的两种方式"><span class="nav-number">1.</span> <span class="nav-text">¶页面跳转的两种方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重定向用法演示"><span class="nav-number">2.</span> <span class="nav-text">¶重定向用法演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点"><span class="nav-number">2.1.</span> <span class="nav-text">¶注意点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求转发用法演示"><span class="nav-number">3.</span> <span class="nav-text">¶请求转发用法演示</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点："><span class="nav-number">3.1.</span> <span class="nav-text">¶注意点：</span></a></li></ol></li></ol></div>
             
 
           </div>
